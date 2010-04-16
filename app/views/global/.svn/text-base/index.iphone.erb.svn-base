@@ -1,0 +1,7 @@
+<ul title="Options" selected="true">
+  <li><%= link_to('Players', :controller => :player, :action => 'index') %></li>
+  <li><%= link_to('Games', :controller => :game, :action => 'index') %></li>
+  <li><%= link_to('Equipment', :controller => :equipment, :action => 'index') %></li>
+  <li><%= link_to('Player Summary', :controller => :player, :action => 'player_summary') %></li>
+  <li><%= link_to('Goalies on Deck', :controller => :player, :action => 'goalies_on_deck') %></li>
+</ul>

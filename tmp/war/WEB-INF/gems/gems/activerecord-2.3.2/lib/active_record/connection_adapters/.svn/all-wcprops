@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/!svn/ver/349/nrcanhockey/tmp/war/WEB-INF/gems/gems/activerecord-2.3.2/lib/active_record/connection_adapters
+END
+sqlite_adapter.rb
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/!svn/ver/216/nrcanhockey/tmp/war/WEB-INF/gems/gems/activerecord-2.3.2/lib/active_record/connection_adapters/sqlite_adapter.rb
+END
+abstract_adapter.rb
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/!svn/ver/216/nrcanhockey/tmp/war/WEB-INF/gems/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract_adapter.rb
+END
+postgresql_adapter.rb
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/!svn/ver/216/nrcanhockey/tmp/war/WEB-INF/gems/gems/activerecord-2.3.2/lib/active_record/connection_adapters/postgresql_adapter.rb
+END
+sqlite3_adapter.rb
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/!svn/ver/216/nrcanhockey/tmp/war/WEB-INF/gems/gems/activerecord-2.3.2/lib/active_record/connection_adapters/sqlite3_adapter.rb
+END
+mysql_adapter.rb
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/!svn/ver/216/nrcanhockey/tmp/war/WEB-INF/gems/gems/activerecord-2.3.2/lib/active_record/connection_adapters/mysql_adapter.rb
+END

@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/329/nrcanhockey/db/migrate
+END
+20090520192037_create_game_statuses.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/196/nrcanhockey/db/migrate/20090520192037_create_game_statuses.rb
+END
+20090520124405_create_games.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/196/nrcanhockey/db/migrate/20090520124405_create_games.rb
+END
+20090520125535_create_equipment.rb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/196/nrcanhockey/db/migrate/20090520125535_create_equipment.rb
+END
+20100406165859_add_columns_to_game.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/846/nrcanhockey/db/migrate/20100406165859_add_columns_to_game.rb
+END
+20090520125609_create_player_statuses.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/196/nrcanhockey/db/migrate/20090520125609_create_player_statuses.rb
+END
+20090520124247_create_players.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/196/nrcanhockey/db/migrate/20090520124247_create_players.rb
+END
+20090520125220_create_game_players.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/196/nrcanhockey/db/migrate/20090520125220_create_game_players.rb
+END
+20090729123904_add_columns_to_players.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/300/nrcanhockey/db/migrate/20090729123904_add_columns_to_players.rb
+END

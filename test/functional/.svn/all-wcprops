@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/201/nrcanhockey/test/functional
+END
+player_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/196/nrcanhockey/test/functional/player_controller_test.rb
+END
+global_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/198/nrcanhockey/test/functional/global_controller_test.rb
+END
+game_player_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/196/nrcanhockey/test/functional/game_player_controller_test.rb
+END
+equipment_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/201/nrcanhockey/test/functional/equipment_controller_test.rb
+END
+game_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/196/nrcanhockey/test/functional/game_controller_test.rb
+END

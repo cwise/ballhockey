@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/349/nrcanhockey/tmp/war/WEB-INF/app/views/game
+END
+_game.erb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/349/nrcanhockey/tmp/war/WEB-INF/app/views/game/_game.erb
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/349/nrcanhockey/tmp/war/WEB-INF/app/views/game/edit.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/349/nrcanhockey/tmp/war/WEB-INF/app/views/game/index.html.erb
+END

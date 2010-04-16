@@ -1,0 +1,13 @@
+<table>
+  <caption>Game</caption>
+  <thead>
+    <th>Action</th>
+    <th>Date</th>
+    <th>Number Playing</th>
+  </thead>
+  <tbody>
+    <%= render :partial => 'game', :collection => @games %>
+  </tbody>
+</table>
+
+<%=  index_nav %>

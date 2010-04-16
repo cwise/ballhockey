@@ -1,0 +1,6 @@
+<h1>NRCan Ball Hockey</h1>
+<p><%= link_to('Players', :controller => :player, :action => 'index') %></p>
+<p><%= link_to('Games', :controller => :game, :action => 'index') %></p>
+<p><%= link_to('Equipment', :controller => :equipment, :action => 'index') %></p>
+<p><%= link_to('Player Summary', :controller => :player, :action => 'player_summary') %></p>
+<p><%= link_to('Goalies on Deck', :controller => :player, :action => 'goalies_on_deck') %></p>

@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/349/nrcanhockey/test/fixtures
+END
+players.yml
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/196/nrcanhockey/test/fixtures/players.yml
+END
+game_statuses.yml
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/196/nrcanhockey/test/fixtures/game_statuses.yml
+END
+equipment.yml
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/196/nrcanhockey/test/fixtures/equipment.yml
+END
+player_statuses.yml
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/196/nrcanhockey/test/fixtures/player_statuses.yml
+END
+game_players.yml
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/196/nrcanhockey/test/fixtures/game_players.yml
+END
+games.yml
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/196/nrcanhockey/test/fixtures/games.yml
+END
+game_goalies.yml
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/349/nrcanhockey/test/fixtures/game_goalies.yml
+END

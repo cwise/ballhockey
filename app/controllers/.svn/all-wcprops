@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/349/nrcanhockey/app/controllers
+END
+player_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/306/nrcanhockey/app/controllers/player_controller.rb
+END
+global_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/845/nrcanhockey/app/controllers/global_controller.rb
+END
+application_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/845/nrcanhockey/app/controllers/application_controller.rb
+END
+game_player_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/200/nrcanhockey/app/controllers/game_player_controller.rb
+END
+equipment_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/201/nrcanhockey/app/controllers/equipment_controller.rb
+END
+game_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/852/nrcanhockey/app/controllers/game_controller.rb
+END

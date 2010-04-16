@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/!svn/ver/349/nrcanhockey/tmp/war/WEB-INF/gems/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract
+END
+connection_specification.rb
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svn/!svn/ver/349/nrcanhockey/tmp/war/WEB-INF/gems/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_specification.rb
+END
+quoting.rb
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/!svn/ver/349/nrcanhockey/tmp/war/WEB-INF/gems/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/quoting.rb
+END
+schema_statements.rb
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/!svn/ver/349/nrcanhockey/tmp/war/WEB-INF/gems/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/schema_statements.rb
+END
+connection_pool.rb
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/!svn/ver/349/nrcanhockey/tmp/war/WEB-INF/gems/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb
+END
+query_cache.rb
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/!svn/ver/349/nrcanhockey/tmp/war/WEB-INF/gems/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb
+END
+database_statements.rb
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/!svn/ver/349/nrcanhockey/tmp/war/WEB-INF/gems/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/database_statements.rb
+END
+schema_definitions.rb
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/!svn/ver/349/nrcanhockey/tmp/war/WEB-INF/gems/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/schema_definitions.rb
+END

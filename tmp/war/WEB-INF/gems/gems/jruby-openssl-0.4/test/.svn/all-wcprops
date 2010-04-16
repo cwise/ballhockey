@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/216/nrcanhockey/tmp/war/WEB-INF/gems/gems/jruby-openssl-0.4/test
+END
+pkcs7_mime_enveloped.message
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/!svn/ver/216/nrcanhockey/tmp/war/WEB-INF/gems/gems/jruby-openssl-0.4/test/pkcs7_mime_enveloped.message
+END
+test_java.rb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/216/nrcanhockey/tmp/war/WEB-INF/gems/gems/jruby-openssl-0.4/test/test_java.rb
+END
+ut_eof.rb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/216/nrcanhockey/tmp/war/WEB-INF/gems/gems/jruby-openssl-0.4/test/ut_eof.rb
+END
+test_integration.rb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/!svn/ver/216/nrcanhockey/tmp/war/WEB-INF/gems/gems/jruby-openssl-0.4/test/test_integration.rb
+END
+test_openssl.rb
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/216/nrcanhockey/tmp/war/WEB-INF/gems/gems/jruby-openssl-0.4/test/test_openssl.rb
+END
+pkcs7_multipart_signed.message
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/!svn/ver/216/nrcanhockey/tmp/war/WEB-INF/gems/gems/jruby-openssl-0.4/test/pkcs7_multipart_signed.message
+END
+test_java_attribute.rb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/!svn/ver/216/nrcanhockey/tmp/war/WEB-INF/gems/gems/jruby-openssl-0.4/test/test_java_attribute.rb
+END
+test_java_mime.rb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/216/nrcanhockey/tmp/war/WEB-INF/gems/gems/jruby-openssl-0.4/test/test_java_mime.rb
+END
+test_java_pkcs7.rb
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/216/nrcanhockey/tmp/war/WEB-INF/gems/gems/jruby-openssl-0.4/test/test_java_pkcs7.rb
+END
+test_pkey.rb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/216/nrcanhockey/tmp/war/WEB-INF/gems/gems/jruby-openssl-0.4/test/test_pkey.rb
+END
+pkcs7_mime_signed.message
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/!svn/ver/216/nrcanhockey/tmp/war/WEB-INF/gems/gems/jruby-openssl-0.4/test/pkcs7_mime_signed.message
+END
+test_cipher.rb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/216/nrcanhockey/tmp/war/WEB-INF/gems/gems/jruby-openssl-0.4/test/test_cipher.rb
+END
+test_java_bio.rb
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/216/nrcanhockey/tmp/war/WEB-INF/gems/gems/jruby-openssl-0.4/test/test_java_bio.rb
+END
+test_java_smime.rb
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/216/nrcanhockey/tmp/war/WEB-INF/gems/gems/jruby-openssl-0.4/test/test_java_smime.rb
+END

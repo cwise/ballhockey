@@ -1,0 +1,56 @@
+10
+
+dir
+844
+http://smyth100.local:8800/svn/nrcanhockey/tmp/war/WEB-INF/tmp
+http://smyth100.local:8800/svn
+delete
+
+
+2009-05-26T13:38:31.121547Z
+216
+cwise
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2952bf43-23c9-4694-8924-bd5f85576e58
+
+pids
+dir
+
+
+
+delete
+
+cache
+dir
+
+
+
+delete
+
+sessions
+dir
+
+
+
+delete
+
+sockets
+dir
+
+
+
+delete
+

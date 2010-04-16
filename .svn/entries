@@ -1,0 +1,119 @@
+10
+
+dir
+844
+http://smyth100.local:8800/svn/nrcanhockey
+http://smyth100.local:8800/svn
+
+
+
+2009-09-11T11:35:22.465965Z
+349
+cwise
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2952bf43-23c9-4694-8924-bd5f85576e58
+
+
+
+
+
+
+
+
+((conflict log dir update edited deleted (version http://smyth100.local:8800/svn 3 196 nrcanhockey/log none) (version http://smyth100.local:8800/svn 3 844 nrcanhockey/log dir)))
+
+test
+dir
+
+app
+dir
+
+log
+dir
+
+
+
+delete
+
+Rakefile
+file
+
+
+
+
+2009-05-20T12:38:32.000000Z
+17f2f134da4cd31ea095d5868ca89e86
+2009-05-20T19:57:18.633005Z
+196
+cwise
+
+db
+dir
+
+nbproject
+dir
+
+spec
+dir
+
+vendor
+dir
+
+README
+file
+
+
+
+
+2009-05-20T12:38:32.000000Z
+a58e68a7599c976f071d5b9c6fa67fb3
+2009-05-20T19:57:18.633005Z
+196
+cwise
+
+tmp
+dir
+
+Capfile
+file
+
+
+
+delete
+2009-05-21T13:14:45.000000Z
+d3c3576398a4876c920553b714bc177f
+2009-05-26T13:38:31.121547Z
+216
+cwise
+
+script
+dir
+
+config
+dir
+
+doc
+dir
+
+lib
+dir
+
+sqlscripts
+dir
+
+public
+dir
+

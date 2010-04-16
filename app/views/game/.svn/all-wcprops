@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/329/nrcanhockey/app/views/game
+END
+_game.erb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/329/nrcanhockey/app/views/game/_game.erb
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/846/nrcanhockey/app/views/game/edit.html.erb
+END
+index.iphone.erb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/845/nrcanhockey/app/views/game/index.iphone.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/329/nrcanhockey/app/views/game/index.html.erb
+END

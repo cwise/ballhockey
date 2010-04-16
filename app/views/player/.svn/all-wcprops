@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/306/nrcanhockey/app/views/player
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/300/nrcanhockey/app/views/player/edit.html.erb
+END
+goalies_on_deck.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/240/nrcanhockey/app/views/player/goalies_on_deck.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/306/nrcanhockey/app/views/player/index.html.erb
+END
+_player_summary.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/240/nrcanhockey/app/views/player/_player_summary.html.erb
+END
+player_summary.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/240/nrcanhockey/app/views/player/player_summary.html.erb
+END
+_player.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/300/nrcanhockey/app/views/player/_player.html.erb
+END
+_goalie_on_deck.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/240/nrcanhockey/app/views/player/_goalie_on_deck.html.erb
+END

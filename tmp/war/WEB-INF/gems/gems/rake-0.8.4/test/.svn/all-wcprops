@@ -1,0 +1,227 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/216/nrcanhockey/tmp/war/WEB-INF/gems/gems/rake-0.8.4/test
+END
+test_top_level_functions.rb
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/216/nrcanhockey/tmp/war/WEB-INF/gems/gems/rake-0.8.4/test/test_top_level_functions.rb
+END
+test_rake.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/216/nrcanhockey/tmp/war/WEB-INF/gems/gems/rake-0.8.4/test/test_rake.rb
+END
+test_clean.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/216/nrcanhockey/tmp/war/WEB-INF/gems/gems/rake-0.8.4/test/test_clean.rb
+END
+test_file_creation_task.rb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/!svn/ver/216/nrcanhockey/tmp/war/WEB-INF/gems/gems/rake-0.8.4/test/test_file_creation_task.rb
+END
+test_task_arguments.rb
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/216/nrcanhockey/tmp/war/WEB-INF/gems/gems/rake-0.8.4/test/test_task_arguments.rb
+END
+reqfile.rb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/216/nrcanhockey/tmp/war/WEB-INF/gems/gems/rake-0.8.4/test/reqfile.rb
+END
+test_ftp.rb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/216/nrcanhockey/tmp/war/WEB-INF/gems/gems/rake-0.8.4/test/test_ftp.rb
+END
+test_tasklib.rb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/216/nrcanhockey/tmp/war/WEB-INF/gems/gems/rake-0.8.4/test/test_tasklib.rb
+END
+test_rules.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/216/nrcanhockey/tmp/war/WEB-INF/gems/gems/rake-0.8.4/test/test_rules.rb
+END
+test_pathmap.rb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/216/nrcanhockey/tmp/war/WEB-INF/gems/gems/rake-0.8.4/test/test_pathmap.rb
+END
+test_earlytime.rb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/216/nrcanhockey/tmp/war/WEB-INF/gems/gems/rake-0.8.4/test/test_earlytime.rb
+END
+test_task_manager.rb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/216/nrcanhockey/tmp/war/WEB-INF/gems/gems/rake-0.8.4/test/test_task_manager.rb
+END
+test_file_task.rb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/216/nrcanhockey/tmp/war/WEB-INF/gems/gems/rake-0.8.4/test/test_file_task.rb
+END
+test_test_task.rb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/216/nrcanhockey/tmp/war/WEB-INF/gems/gems/rake-0.8.4/test/test_test_task.rb
+END
+rake_test_setup.rb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/216/nrcanhockey/tmp/war/WEB-INF/gems/gems/rake-0.8.4/test/rake_test_setup.rb
+END
+test_win32.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/216/nrcanhockey/tmp/war/WEB-INF/gems/gems/rake-0.8.4/test/test_win32.rb
+END
+check_expansion.rb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/216/nrcanhockey/tmp/war/WEB-INF/gems/gems/rake-0.8.4/test/check_expansion.rb
+END
+test_makefile_loader.rb
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/216/nrcanhockey/tmp/war/WEB-INF/gems/gems/rake-0.8.4/test/test_makefile_loader.rb
+END
+functional.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/216/nrcanhockey/tmp/war/WEB-INF/gems/gems/rake-0.8.4/test/functional.rb
+END
+test_application.rb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/216/nrcanhockey/tmp/war/WEB-INF/gems/gems/rake-0.8.4/test/test_application.rb
+END
+capture_stdout.rb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/216/nrcanhockey/tmp/war/WEB-INF/gems/gems/rake-0.8.4/test/capture_stdout.rb
+END
+shellcommand.rb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/216/nrcanhockey/tmp/war/WEB-INF/gems/gems/rake-0.8.4/test/shellcommand.rb
+END
+test_invocation_chain.rb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/216/nrcanhockey/tmp/war/WEB-INF/gems/gems/rake-0.8.4/test/test_invocation_chain.rb
+END
+test_filelist.rb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/216/nrcanhockey/tmp/war/WEB-INF/gems/gems/rake-0.8.4/test/test_filelist.rb
+END
+test_definitions.rb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/216/nrcanhockey/tmp/war/WEB-INF/gems/gems/rake-0.8.4/test/test_definitions.rb
+END
+test_require.rb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/216/nrcanhockey/tmp/war/WEB-INF/gems/gems/rake-0.8.4/test/test_require.rb
+END
+test_extension.rb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/216/nrcanhockey/tmp/war/WEB-INF/gems/gems/rake-0.8.4/test/test_extension.rb
+END
+test_multitask.rb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/216/nrcanhockey/tmp/war/WEB-INF/gems/gems/rake-0.8.4/test/test_multitask.rb
+END
+test_tasks.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/216/nrcanhockey/tmp/war/WEB-INF/gems/gems/rake-0.8.4/test/test_tasks.rb
+END
+in_environment.rb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/216/nrcanhockey/tmp/war/WEB-INF/gems/gems/rake-0.8.4/test/in_environment.rb
+END
+test_namespace.rb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/216/nrcanhockey/tmp/war/WEB-INF/gems/gems/rake-0.8.4/test/test_namespace.rb
+END
+test_fileutils.rb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/216/nrcanhockey/tmp/war/WEB-INF/gems/gems/rake-0.8.4/test/test_fileutils.rb
+END
+filecreation.rb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/216/nrcanhockey/tmp/war/WEB-INF/gems/gems/rake-0.8.4/test/filecreation.rb
+END
+session_functional.rb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/216/nrcanhockey/tmp/war/WEB-INF/gems/gems/rake-0.8.4/test/session_functional.rb
+END
+test_rdoc_task.rb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/216/nrcanhockey/tmp/war/WEB-INF/gems/gems/rake-0.8.4/test/test_rdoc_task.rb
+END
+reqfile2.rb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/216/nrcanhockey/tmp/war/WEB-INF/gems/gems/rake-0.8.4/test/reqfile2.rb
+END
+test_package_task.rb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/216/nrcanhockey/tmp/war/WEB-INF/gems/gems/rake-0.8.4/test/test_package_task.rb
+END

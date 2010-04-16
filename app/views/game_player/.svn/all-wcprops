@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/196/nrcanhockey/app/views/game_player
+END
+late.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/196/nrcanhockey/app/views/game_player/late.html.erb
+END
+maybe.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/196/nrcanhockey/app/views/game_player/maybe.html.erb
+END
+not_playing.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/196/nrcanhockey/app/views/game_player/not_playing.html.erb
+END
+playing.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/196/nrcanhockey/app/views/game_player/playing.html.erb
+END

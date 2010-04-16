@@ -1,0 +1,13 @@
+<ul title="Games" selected="true">
+  <caption>Game</caption>
+  <thead>
+    <th>Action</th>
+    <th>Date</th>
+    <th align="center">Number Playing</th>
+    <th>Status</th>
+    <th>Goalies</th>
+  </thead>
+  <tbody>
+    <%= render :partial => 'game', :collection => @games %>
+  </tbody>
+</ul>

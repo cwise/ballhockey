@@ -1,0 +1,50 @@
+# Logfile created on Tue Apr 06 13:04:22 -0400 2010
+
+Processing GlobalController#index (for 0:0:0:0:0:0:0:1%0 at 2010-04-06 13:04:24) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 115ms (View: 90, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing PlayerController#index (for 0:0:0:0:0:0:0:1%0 at 2010-04-06 13:13:15) [GET]
+Rendering template within layouts/application
+Rendering player/index
+Completed in 163ms (View: 95, DB: 14) | 200 OK [http://localhost/player]
+
+
+Processing PlayerController#index (for 0:0:0:0:0:0:0:1%0 at 2010-04-06 13:13:22) [GET]
+  Parameters: {"page"=>"2"}
+Rendering template within layouts/application
+Rendering player/index
+Completed in 78ms (View: 68, DB: 3) | 200 OK [http://localhost/player?page=2]
+
+
+Processing GlobalController#index (for 0:0:0:0:0:0:0:1%0 at 2010-04-06 13:13:23) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 21ms (View: 14, DB: 0) | 200 OK [http://localhost/global]
+
+
+Processing GameController#index (for 0:0:0:0:0:0:0:1%0 at 2010-04-06 13:13:24) [GET]
+Rendering template within layouts/application
+Rendering game/index
+Completed in 307ms (View: 247, DB: 23) | 200 OK [http://localhost/game]
+
+
+Processing GlobalController#index (for 0:0:0:0:0:0:0:1%0 at 2010-04-08 10:49:33) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 362ms (View: 332, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing GameController#index (for 0:0:0:0:0:0:0:1%0 at 2010-04-08 10:49:36) [GET]
+Rendering template within layouts/application
+Rendering game/index
+Completed in 432ms (View: 323, DB: 32) | 200 OK [http://localhost/game]
+
+
+Processing GameController#edit (for 0:0:0:0:0:0:0:1%0 at 2010-04-08 10:49:38) [GET]
+  Parameters: {"id"=>"158"}
+Rendering template within layouts/application
+Rendering game/edit
+Completed in 530ms (View: 459, DB: 56) | 200 OK [http://localhost/game/edit/158]

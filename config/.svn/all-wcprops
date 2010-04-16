@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/svn/!svn/ver/306/nrcanhockey/config
+END
+routes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/198/nrcanhockey/config/routes.rb
+END
+database.yml
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/196/nrcanhockey/config/database.yml
+END
+boot.rb
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/196/nrcanhockey/config/boot.rb
+END
+environment.rb
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/846/nrcanhockey/config/environment.rb
+END
+deploy.rb
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/216/nrcanhockey/config/deploy.rb
+END
+warble.rb
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/216/nrcanhockey/config/warble.rb
+END

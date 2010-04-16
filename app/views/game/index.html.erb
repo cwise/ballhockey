@@ -1,0 +1,19 @@
+<table>
+  <caption>Game</caption>
+  <thead>
+    <th>Action</th>
+    <th>Date</th>
+    <th align="center">Number Playing</th>
+    <th>Status</th>
+    <th>Goalies</th>
+  </thead>
+  <tbody>
+    <%= render :partial => 'game', :collection => @games %>
+  </tbody>
+</table>
+
+<div class='murmur_pagination'>
+  <%= will_paginate @games %>
+</div>
+
+<%=  index_nav %>

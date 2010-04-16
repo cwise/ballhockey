@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/349/nrcanhockey/app/views/hockey_mailer
+END
+cancel_game.html.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/846/nrcanhockey/app/views/hockey_mailer/cancel_game.html.rhtml
+END
+announce_game.html.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/846/nrcanhockey/app/views/hockey_mailer/announce_game.html.rhtml
+END
+call_game.html.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/846/nrcanhockey/app/views/hockey_mailer/call_game.html.rhtml
+END
+_active_player.erb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/196/nrcanhockey/app/views/hockey_mailer/_active_player.erb
+END

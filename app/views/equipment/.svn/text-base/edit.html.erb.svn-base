@@ -1,0 +1,14 @@
+<%= error_messages_for 'equipment' %>
+<% form_for :equipment do|f| %>
+  <table>
+    <caption>Equipment</caption>
+    <tr>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td><%= f.text_field :description %></td>
+    </tr>
+  </table>
+
+  <%= entry_nav %>
+<% end %>

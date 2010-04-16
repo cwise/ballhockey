@@ -1,0 +1,15 @@
+<table>
+  <caption>Player Summary</caption>
+  <thead>
+  <tr>
+    <th>Player</th>
+    <th align="center">Times Played</th>
+    <th>Last Played</th>
+    <th align="center">Times Played Goalie</th>
+    <th>Last Played Goalie</th>
+  </tr>
+  </thead>
+  <%= render :partial => 'player_summary', :collection => @sorted_players %>
+</table>
+<br/>
+<%= index_only_nav %>

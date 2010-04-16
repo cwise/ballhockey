@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/!svn/ver/329/nrcanhockey/test/unit
+END
+player_status_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/196/nrcanhockey/test/unit/player_status_test.rb
+END
+game_player_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/196/nrcanhockey/test/unit/game_player_test.rb
+END
+equipment_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/196/nrcanhockey/test/unit/equipment_test.rb
+END
+game_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/196/nrcanhockey/test/unit/game_test.rb
+END
+hockey_mailer_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/196/nrcanhockey/test/unit/hockey_mailer_test.rb
+END
+game_status_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/196/nrcanhockey/test/unit/game_status_test.rb
+END
+player_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/196/nrcanhockey/test/unit/player_test.rb
+END
+game_goalies_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/329/nrcanhockey/test/unit/game_goalies_test.rb
+END
