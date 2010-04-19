@@ -8,10 +8,10 @@ Rails::Initializer.run do |config|
 
   config.action_mailer.delivery_method = :smtp
   ActionMailer::Base.smtp_settings = {
-    :address => "smtp.broadband.rogers.com",
+    :address => "smtp.google.com",
     :port => 25,
-    :user_name => "chriswise@rogers.com",
-    :password => "cat2dogs",
+    :user_name => "mailer@murmurinformatics.com",
+    :password => "n3v3rspam",
     :authentication => :login
   }
 end
