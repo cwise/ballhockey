@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 36
-/svn/!svn/ver/306/nrcanhockey/config
+/svn/!svn/ver/927/nrcanhockey/config
 END
 routes.rb
 K 25
@@ -13,7 +13,7 @@ database.yml
 K 25
 svn:wc:ra_dav:version-url
 V 49
-/svn/!svn/ver/196/nrcanhockey/config/database.yml
+/svn/!svn/ver/927/nrcanhockey/config/database.yml
 END
 boot.rb
 K 25
@@ -25,7 +25,7 @@ environment.rb
 K 25
 svn:wc:ra_dav:version-url
 V 51
-/svn/!svn/ver/846/nrcanhockey/config/environment.rb
+/svn/!svn/ver/929/nrcanhockey/config/environment.rb
 END
 deploy.rb
 K 25

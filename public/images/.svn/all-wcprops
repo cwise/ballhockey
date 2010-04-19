@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 43
-/svn/!svn/ver/196/nrcanhockey/public/images
+/svn/!svn/ver/845/nrcanhockey/public/images
 END
 backButton.png
 K 25
@@ -75,17 +75,17 @@ svn:wc:ra_dav:version-url
 V 58
 /svn/!svn/ver/845/nrcanhockey/public/images/blueButton.png
 END
-selection.png
-K 25
-svn:wc:ra_dav:version-url
-V 57
-/svn/!svn/ver/845/nrcanhockey/public/images/selection.png
-END
 cancel.png
 K 25
 svn:wc:ra_dav:version-url
 V 54
 /svn/!svn/ver/845/nrcanhockey/public/images/cancel.png
+END
+selection.png
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/845/nrcanhockey/public/images/selection.png
 END
 listArrow.png
 K 25

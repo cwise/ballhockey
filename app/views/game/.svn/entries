@@ -1,14 +1,14 @@
 10
 
 dir
-844
+927
 http://smyth100.local:8800/svn/nrcanhockey/app/views/game
 http://smyth100.local:8800/svn
 
 
 
-2009-08-19T18:10:52.049633Z
-329
+2010-04-18T12:06:43.552121Z
+927
 cwise
 
 
@@ -28,7 +28,7 @@ cwise
 
 edit.html.erb
 file
-846
+
 
 
 
@@ -60,50 +60,16 @@ cwise
 
 2755
 
-_game.erb
-file
-
-
-
-delete
-2009-08-19T18:02:26.000000Z
-fab3502e17204d12b86cd1ea7d5c1a7c
-2009-08-19T18:10:52.049633Z
-329
-cwise
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-360
-
 index.iphone.erb
 file
-845
 
 
 
-2009-10-22T11:31:02.000000Z
-d0551794aaadf3dbd9aa4919a82f98b1
-2010-04-06T16:49:07.274605Z
-845
+
+2010-04-12T00:52:32.000000Z
+0122dc6d7a472d9bb1b74b648e553c3f
+2010-04-18T12:06:43.552121Z
+927
 cwise
 
 
@@ -126,7 +92,41 @@ cwise
 
 
 
-290
+109
+
+_game.iphone.erb
+file
+
+
+
+
+2010-04-12T00:54:50.000000Z
+a80d25a95937917ca7e5b3db9a5927f2
+2010-04-18T12:06:43.552121Z
+927
+cwise
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+77
 
 index.html.erb
 file
@@ -167,9 +167,12 @@ file
 
 
 
-add
 
+2010-04-12T00:53:07.000000Z
 fab3502e17204d12b86cd1ea7d5c1a7c
+2010-04-18T12:06:43.552121Z
+927
+cwise
 
 
 
@@ -181,7 +184,15 @@ fab3502e17204d12b86cd1ea7d5c1a7c
 
 
 
-copied
-http://smyth100.local:8800/svn/nrcanhockey/app/views/game/_game.erb
-844
+
+
+
+
+
+
+
+
+
+
+360
 

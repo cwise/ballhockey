@@ -1395,3 +1395,1084 @@ ActionView::MissingTemplate (Missing template game/edit.erb in view path app/vie
   /Library/jruby-1.4.0/bin/rdebug-ide:19
 
 Rendering rescues/layout (internal_server_error)
+/!\ FAILSAFE /!\  Fri Apr 16 16:19:09 -0400 2010
+  Status: 500 Internal Server Error
+  no such file to load -- mysql
+    /Library/jruby-1.4.0/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /Library/jruby-1.4.0/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:156:in `require'
+    /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:156:in `require'
+    /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/kernel/requires.rb:7:in `require_library_or_gem'
+    /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/kernel/reporting.rb:11:in `silence_warnings'
+    /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/kernel/requires.rb:5:in `require_library_or_gem'
+    /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:61:in `mysql_connection'
+    /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `send'
+    /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
+    /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
+    /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `checkout'
+    /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
+    /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `checkout'
+    /Library/jruby-1.4.0/lib/ruby/1.8/monitor.rb:242:in `mon_synchronize'
+    /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
+    /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
+    /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
+    /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
+    /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
+    /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+    /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+    /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+    /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+    /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+    /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+    /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+    /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+    /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+    /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+    /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+    /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+    /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:48:in `call'
+    /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+    /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+    /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+    /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+    /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
+    /Library/jruby-1.4.0/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Library/jruby-1.4.0/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:14:in `run'
+    /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+    /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/commands/server.rb:31:in `require'
+    /Library/jruby-1.4.0/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    ./script/server:3
+    ./script/server:109:in `debug_program'
+    /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.9/bin/rdebug-ide:87
+    /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.9/bin/rdebug-ide:19:in `load'
+    /Library/jruby-1.4.0/bin/rdebug-ide:19
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mGameStatus Load (2.0ms)[0m   [0mSELECT `game_statuses`.id FROM `game_statuses` WHERE (description = 'Send Update') LIMIT 1[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mINSERT INTO `game_statuses` (`description`, `created_at`, `updated_at`) VALUES('Send Update', '2010-04-18 11:39:48', '2010-04-18 11:39:48')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GlobalController#index (for 0:0:0:0:0:0:0:1%0 at 2010-04-18 07:41:13) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 301ms (View: 284, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#index (for 0:0:0:0:0:0:0:1%0 at 2010-04-18 07:41:16) [GET]
+  [4;36;1mGame Load (8.0ms)[0m   [0;1mSELECT * FROM `games` ORDER BY game_date desc LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering game/index
+  [4;35;1mGamePlayer Count (1.0ms)[0m   [0mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=146 AND player_status_id > 2[0m
+  [4;36;1mGameStatus Load (1.0ms)[0m   [0;1mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 2) [0m
+  [4;35;1mGameGoalie Load (1.0ms)[0m   [0mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 146) [0m
+Rendered game/_game (178.0ms)
+Completed in 353ms (View: 260, DB: 11) | 200 OK [http://localhost/game]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#new (for 0:0:0:0:0:0:0:1%0 at 2010-04-18 07:41:17) [GET]
+  [4;35;1mPlayerStatus Load (1.0ms)[0m   [0mSELECT * FROM `player_statuses` WHERE (description <> 'Maybe') [0m
+  [4;36;1mGameStatus Load (1.0ms)[0m   [0;1mSELECT * FROM `game_statuses` WHERE (description <> 'Send Update' ) [0m
+  [4;35;1mEquipment Load (2.0ms)[0m   [0mSELECT * FROM `equipment` [0m
+  [4;36;1mPlayer Load (2.0ms)[0m   [0;1mSELECT * FROM `players` WHERE (active = 1) [0m
+Rendering template within layouts/application
+Rendering game/edit
+  [4;35;1mPlayer Load (1.0ms)[0m   [0mSELECT * FROM `players` WHERE (`players`.`id` = 55) [0m
+  [4;36;1mPlayer Load (1.0ms)[0m   [0;1mSELECT * FROM `players` WHERE (`players`.`id` = 56) [0m
+Completed in 680ms (View: 467, DB: 8) | 200 OK [http://localhost/game/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#new (for 0:0:0:0:0:0:0:1%0 at 2010-04-18 07:41:47) [POST]
+  Parameters: {"authenticity_token"=>"H0a/OuK5xene/xGltEgjyWTmFQHRsiaJo//C1tSvk+M=", "game"=>{"game_date(1i)"=>"2010", "game_date(2i)"=>"4", "game_date(3i)"=>"18", "game_status_id"=>"1", "organizer"=>"Wise", "organizer_address"=>"cwise@murmurinformatics.com", "message"=>"This is just a test that you can ignore Mike. I am trying to add the \"Send Update\" functionality."}, "game_player_55"=>{"player_id"=>"55", "id"=>"", "player_status_id"=>"1", "equipment_id"=>"5", "goalie"=>"0"}, "game_player_56"=>{"player_id"=>"56", "id"=>"", "player_status_id"=>"1", "equipment_id"=>"5", "goalie"=>"0"}}
+  [4;36;1mPlayerStatus Load (1.0ms)[0m   [0;1mSELECT * FROM `player_statuses` WHERE (description <> 'Maybe') [0m
+  [4;35;1mGameStatus Load (0.0ms)[0m   [0mSELECT * FROM `game_statuses` WHERE (description <> 'Send Update' ) [0m
+  [4;36;1mEquipment Load (1.0ms)[0m   [0;1mSELECT * FROM `equipment` [0m
+WARNING: Can't mass-assign these protected attributes: id
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mGame Load (0.0ms)[0m   [0mSELECT `games`.id FROM `games` WHERE (`games`.`game_date` = '2010-04-18') LIMIT 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO `games` (`game_date`, `message`, `created_at`, `updated_at`, `game_status_id`, `organizer`, `organizer_address`) VALUES('2010-04-18', 'This is just a test that you can ignore Mike. I am trying to add the \"Send Update\" functionality.', '2010-04-18 11:41:48', '2010-04-18 11:41:48', 1, 'Wise', 'cwise@murmurinformatics.com')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO `game_players` (`game_id`, `player_id`, `player_status_id`, `equipment_id`, `created_at`, `updated_at`, `goalie`) VALUES(147, 55, 1, 5, '2010-04-18 11:41:48', '2010-04-18 11:41:48', 0)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO `game_players` (`game_id`, `player_id`, `player_status_id`, `equipment_id`, `created_at`, `updated_at`, `goalie`) VALUES(147, 56, 1, 5, '2010-04-18 11:41:48', '2010-04-18 11:41:48', 0)[0m
+Redirected to http://localhost:3000/game
+  [4;35;1mPlayer Load (1.0ms)[0m   [0mSELECT * FROM `players` WHERE (`players`.`id` = 55) [0m
+Sent mail to cwise@murmurinformatics.com
+
+Date: Sun, 18 Apr 2010 07:41:48 -0400
+From: mailer@murmurinformatics.com
+Reply-To: cwise@murmurinformatics.com
+To: cwise@murmurinformatics.com
+Subject: NRCan Ball Hockey Game for 2010-04-18?
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>This is just a test that you can ignore Mike. I am trying to add the "Send Update" functionality. (<a href='mailto:cwise@murmurinformatics.com'>Wise</a>)</p>
+    <br/>
+    <p>Please respond by clicking one of the following links:</p>
+    <p><a href="http://nrcanhockey.murmurinfo.ca/game_player/playing/4317">Playing</a></p>
+    <p><a href="http://nrcanhockey.murmurinfo.ca/game_player/not_playing/4317">NOT Playing</a></p>
+    <p><a href="http://nrcanhockey.murmurinfo.ca/game_player/late/4317">Late</a></p>
+    <br/>
+    <p>To check the status of this game at any time:</p>
+    <p><a href="http://nrcanhockey.murmurinfo.ca/game/view/147">Game Status</a></p>
+  </body>
+</html>
+  [4;36;1mPlayer Load (1.0ms)[0m   [0;1mSELECT * FROM `players` WHERE (`players`.`id` = 56) [0m
+Sent mail to Mike.Villeneuve@NRCan-RNCan.gc.ca
+
+Date: Sun, 18 Apr 2010 07:41:49 -0400
+From: mailer@murmurinformatics.com
+Reply-To: cwise@murmurinformatics.com
+To: Mike.Villeneuve@NRCan-RNCan.gc.ca
+Subject: NRCan Ball Hockey Game for 2010-04-18?
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>This is just a test that you can ignore Mike. I am trying to add the "Send Update" functionality. (<a href='mailto:cwise@murmurinformatics.com'>Wise</a>)</p>
+    <br/>
+    <p>Please respond by clicking one of the following links:</p>
+    <p><a href="http://nrcanhockey.murmurinfo.ca/game_player/playing/4318">Playing</a></p>
+    <p><a href="http://nrcanhockey.murmurinfo.ca/game_player/not_playing/4318">NOT Playing</a></p>
+    <p><a href="http://nrcanhockey.murmurinfo.ca/game_player/late/4318">Late</a></p>
+    <br/>
+    <p>To check the status of this game at any time:</p>
+    <p><a href="http://nrcanhockey.murmurinfo.ca/game/view/147">Game Status</a></p>
+  </body>
+</html>
+Completed in 2116ms (DB: 5) | 302 Found [http://localhost/game/new]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#index (for 0:0:0:0:0:0:0:1%0 at 2010-04-18 07:41:50) [GET]
+  [4;36;1mGame Load (2.0ms)[0m   [0;1mSELECT * FROM `games` ORDER BY game_date desc LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering game/index
+  [4;35;1mGamePlayer Count (1.0ms)[0m   [0mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=147 AND player_status_id > 2[0m
+  [4;36;1mGameStatus Load (1.0ms)[0m   [0;1mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 1) [0m
+  [4;35;1mGameGoalie Load (1.0ms)[0m   [0mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 147) [0m
+Rendered game/_game (92.0ms)
+  [4;36;1mGamePlayer Count (1.0ms)[0m   [0;1mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=146 AND player_status_id > 2[0m
+  [4;35;1mGameStatus Load (1.0ms)[0m   [0mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 2) [0m
+  [4;36;1mGameGoalie Load (1.0ms)[0m   [0;1mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 146) [0m
+Rendered game/_game (18.0ms)
+Completed in 169ms (View: 124, DB: 9) | 200 OK [http://localhost/game]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#edit (for 0:0:0:0:0:0:0:1%0 at 2010-04-18 07:54:46) [GET]
+  Parameters: {"id"=>"147"}
+  [4;36;1mGame Load (1.0ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 147) [0m
+  [4;35;1mPlayerStatus Load (0.0ms)[0m   [0mSELECT * FROM `player_statuses` WHERE (description <> 'Maybe') [0m
+  [4;36;1mGameStatus Load (1.0ms)[0m   [0;1mSELECT * FROM `game_statuses` [0m
+  [4;35;1mEquipment Load (2.0ms)[0m   [0mSELECT * FROM `equipment` [0m
+Rendering template within layouts/application
+Rendering game/edit
+  [4;36;1mGamePlayer Count (1.0ms)[0m   [0;1mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=147 AND player_status_id > 2[0m
+  [4;35;1mGamePlayer Load (1.0ms)[0m   [0mSELECT gp.* FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=147 ORDER BY sp.description, equipment_id DESC[0m
+  [4;36;1mPlayer Load (1.0ms)[0m   [0;1mSELECT * FROM `players` WHERE (`players`.`id` = 55) [0m
+  [4;35;1mPlayer Load (1.0ms)[0m   [0mSELECT * FROM `players` WHERE (`players`.`id` = 56) [0m
+Completed in 374ms (View: 281, DB: 8) | 200 OK [http://localhost/game/edit/147]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#index (for 0:0:0:0:0:0:0:1%0 at 2010-04-18 07:57:23) [GET]
+  [4;35;1mGame Load (1.0ms)[0m   [0mSELECT * FROM `games` ORDER BY game_date desc LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering game/index
+  [4;36;1mGamePlayer Count (1.0ms)[0m   [0;1mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=147 AND player_status_id > 2[0m
+  [4;35;1mGameStatus Load (1.0ms)[0m   [0mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 1) [0m
+  [4;36;1mGameGoalie Load (1.0ms)[0m   [0;1mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 147) [0m
+Rendered game/_game (85.0ms)
+  [4;35;1mGamePlayer Count (0.0ms)[0m   [0mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=146 AND player_status_id > 2[0m
+  [4;36;1mGameStatus Load (1.0ms)[0m   [0;1mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 2) [0m
+  [4;35;1mGameGoalie Load (0.0ms)[0m   [0mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 146) [0m
+Rendered game/_game (15.0ms)
+Completed in 157ms (View: 114, DB: 5) | 200 OK [http://localhost/game]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#edit (for 0:0:0:0:0:0:0:1%0 at 2010-04-18 07:57:25) [GET]
+  Parameters: {"id"=>"147"}
+  [4;35;1mGame Load (1.0ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 147) [0m
+  [4;36;1mPlayerStatus Load (1.0ms)[0m   [0;1mSELECT * FROM `player_statuses` WHERE (description <> 'Maybe') [0m
+  [4;35;1mGameStatus Load (1.0ms)[0m   [0mSELECT * FROM `game_statuses` [0m
+  [4;36;1mEquipment Load (2.0ms)[0m   [0;1mSELECT * FROM `equipment` [0m
+Rendering template within layouts/application
+Rendering game/edit
+  [4;35;1mGamePlayer Count (0.0ms)[0m   [0mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=147 AND player_status_id > 2[0m
+  [4;36;1mGamePlayer Load (1.0ms)[0m   [0;1mSELECT gp.* FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=147 ORDER BY sp.description, equipment_id DESC[0m
+  [4;35;1mPlayer Load (1.0ms)[0m   [0mSELECT * FROM `players` WHERE (`players`.`id` = 55) [0m
+  [4;36;1mPlayer Load (1.0ms)[0m   [0;1mSELECT * FROM `players` WHERE (`players`.`id` = 56) [0m
+Completed in 299ms (View: 208, DB: 8) | 200 OK [http://localhost/game/edit/147]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#edit (for 0:0:0:0:0:0:0:1%0 at 2010-04-18 07:57:36) [POST]
+  Parameters: {"authenticity_token"=>"H0a/OuK5xene/xGltEgjyWTmFQHRsiaJo//C1tSvk+M=", "game"=>{"game_date(1i)"=>"2010", "game_date(2i)"=>"4", "game_date(3i)"=>"18", "game_status_id"=>"4", "organizer"=>"Wise", "organizer_address"=>"cwise@murmurinformatics.com", "message"=>"We need more players - who is in?"}, "game_player_55"=>{"player_id"=>"55", "id"=>"4317", "player_status_id"=>"1", "equipment_id"=>"5", "goalie"=>"0"}, "game_player_56"=>{"player_id"=>"56", "id"=>"4318", "player_status_id"=>"1", "equipment_id"=>"5", "goalie"=>"0"}, "id"=>"147"}
+  [4;36;1mGame Load (1.0ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 147) [0m
+  [4;35;1mPlayerStatus Load (0.0ms)[0m   [0mSELECT * FROM `player_statuses` WHERE (description <> 'Maybe') [0m
+  [4;36;1mGameStatus Load (1.0ms)[0m   [0;1mSELECT * FROM `game_statuses` [0m
+  [4;35;1mEquipment Load (1.0ms)[0m   [0mSELECT * FROM `equipment` [0m
+  [4;36;1mGamePlayer Load (1.0ms)[0m   [0;1mSELECT gp.* FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=147 ORDER BY sp.description, equipment_id DESC[0m
+WARNING: Can't mass-assign these protected attributes: id
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mGame Load (1.0ms)[0m   [0mSELECT `games`.id FROM `games` WHERE (`games`.`game_date` = '2010-04-18' AND `games`.id <> 147) LIMIT 1[0m
+  [4;36;1mGame Update (0.0ms)[0m   [0;1mUPDATE `games` SET `game_status_id` = 4, `message` = 'We need more players - who is in?', `updated_at` = '2010-04-18 11:57:36' WHERE `id` = 147[0m
+
+ArgumentError (wrong # of arguments(1 for 0)):
+  app/controllers/game_controller.rb:73:in `is_send_update?'
+  app/controllers/game_controller.rb:73:in `edit'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.9/bin/rdebug-ide:87
+  /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.9/bin/rdebug-ide:19:in `load'
+  /Library/jruby-1.4.0/bin/rdebug-ide:19
+
+Rendered rescues/_trace (260.0ms)
+Rendered rescues/_request_and_response (16.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#edit (for 0:0:0:0:0:0:0:1%0 at 2010-04-18 07:58:33) [GET]
+  Parameters: {"id"=>"147"}
+  [4;36;1mGame Load (1.0ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 147) [0m
+  [4;35;1mPlayerStatus Load (1.0ms)[0m   [0mSELECT * FROM `player_statuses` WHERE (description <> 'Maybe') [0m
+  [4;36;1mGameStatus Load (1.0ms)[0m   [0;1mSELECT * FROM `game_statuses` [0m
+  [4;35;1mEquipment Load (2.0ms)[0m   [0mSELECT * FROM `equipment` [0m
+Rendering template within layouts/application
+Rendering game/edit
+  [4;36;1mGamePlayer Count (1.0ms)[0m   [0;1mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=147 AND player_status_id > 2[0m
+  [4;35;1mGamePlayer Load (1.0ms)[0m   [0mSELECT gp.* FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=147 ORDER BY sp.description, equipment_id DESC[0m
+  [4;36;1mPlayer Load (0.0ms)[0m   [0;1mSELECT * FROM `players` WHERE (`players`.`id` = 55) [0m
+  [4;35;1mPlayer Load (1.0ms)[0m   [0mSELECT * FROM `players` WHERE (`players`.`id` = 56) [0m
+Completed in 266ms (View: 178, DB: 8) | 200 OK [http://localhost/game/edit/147]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#edit (for 0:0:0:0:0:0:0:1%0 at 2010-04-18 07:58:38) [POST]
+  Parameters: {"authenticity_token"=>"H0a/OuK5xene/xGltEgjyWTmFQHRsiaJo//C1tSvk+M=", "game"=>{"game_date(1i)"=>"2010", "game_date(2i)"=>"4", "game_date(3i)"=>"18", "game_status_id"=>"4", "organizer"=>"Wise", "organizer_address"=>"cwise@murmurinformatics.com", "message"=>"We need more players - who is in?"}, "game_player_55"=>{"player_id"=>"55", "id"=>"4317", "player_status_id"=>"1", "equipment_id"=>"5", "goalie"=>"0"}, "game_player_56"=>{"player_id"=>"56", "id"=>"4318", "player_status_id"=>"1", "equipment_id"=>"5", "goalie"=>"0"}, "id"=>"147"}
+  [4;35;1mGame Load (1.0ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 147) [0m
+  [4;36;1mPlayerStatus Load (1.0ms)[0m   [0;1mSELECT * FROM `player_statuses` WHERE (description <> 'Maybe') [0m
+  [4;35;1mGameStatus Load (0.0ms)[0m   [0mSELECT * FROM `game_statuses` [0m
+  [4;36;1mEquipment Load (1.0ms)[0m   [0;1mSELECT * FROM `equipment` [0m
+  [4;35;1mGamePlayer Load (1.0ms)[0m   [0mSELECT gp.* FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=147 ORDER BY sp.description, equipment_id DESC[0m
+WARNING: Can't mass-assign these protected attributes: id
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mGame Load (1.0ms)[0m   [0;1mSELECT `games`.id FROM `games` WHERE (`games`.`game_date` = '2010-04-18' AND `games`.id <> 147) LIMIT 1[0m
+Redirected to http://localhost:3000/game
+Completed in 189ms (DB: 6) | 302 Found [http://localhost/game/edit/147]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#index (for 0:0:0:0:0:0:0:1%0 at 2010-04-18 07:58:38) [GET]
+  [4;36;1mGame Load (1.0ms)[0m   [0;1mSELECT * FROM `games` ORDER BY game_date desc LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering game/index
+  [4;35;1mGamePlayer Count (0.0ms)[0m   [0mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=147 AND player_status_id > 2[0m
+  [4;36;1mGameStatus Load (1.0ms)[0m   [0;1mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 4) [0m
+  [4;35;1mGameGoalie Load (1.0ms)[0m   [0mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 147) [0m
+Rendered game/_game (76.0ms)
+  [4;36;1mGamePlayer Count (1.0ms)[0m   [0;1mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=146 AND player_status_id > 2[0m
+  [4;35;1mGameStatus Load (1.0ms)[0m   [0mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 2) [0m
+  [4;36;1mGameGoalie Load (1.0ms)[0m   [0;1mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 146) [0m
+Rendered game/_game (15.0ms)
+Completed in 146ms (View: 101, DB: 6) | 200 OK [http://localhost/game]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#index (for 0:0:0:0:0:0:0:1%0 at 2010-04-18 07:59:04) [GET]
+  [4;36;1mGame Load (1.0ms)[0m   [0;1mSELECT * FROM `games` ORDER BY game_date desc LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering game/index
+  [4;35;1mGamePlayer Count (1.0ms)[0m   [0mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=147 AND player_status_id > 2[0m
+  [4;36;1mGameStatus Load (1.0ms)[0m   [0;1mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 4) [0m
+  [4;35;1mGameGoalie Load (1.0ms)[0m   [0mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 147) [0m
+Rendered game/_game (90.0ms)
+  [4;36;1mGamePlayer Count (0.0ms)[0m   [0;1mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=146 AND player_status_id > 2[0m
+  [4;35;1mGameStatus Load (1.0ms)[0m   [0mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 2) [0m
+  [4;36;1mGameGoalie Load (1.0ms)[0m   [0;1mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 146) [0m
+Rendered game/_game (15.0ms)
+Completed in 160ms (View: 116, DB: 7) | 200 OK [http://localhost/game]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#edit (for 0:0:0:0:0:0:0:1%0 at 2010-04-18 07:59:17) [GET]
+  Parameters: {"id"=>"147"}
+  [4;36;1mGame Load (1.0ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 147) [0m
+  [4;35;1mPlayerStatus Load (1.0ms)[0m   [0mSELECT * FROM `player_statuses` WHERE (description <> 'Maybe') [0m
+  [4;36;1mGameStatus Load (1.0ms)[0m   [0;1mSELECT * FROM `game_statuses` [0m
+  [4;35;1mEquipment Load (1.0ms)[0m   [0mSELECT * FROM `equipment` [0m
+Rendering template within layouts/application
+Rendering game/edit
+  [4;36;1mGamePlayer Count (0.0ms)[0m   [0;1mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=147 AND player_status_id > 2[0m
+  [4;35;1mGamePlayer Load (1.0ms)[0m   [0mSELECT gp.* FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=147 ORDER BY sp.description, equipment_id DESC[0m
+  [4;36;1mPlayer Load (1.0ms)[0m   [0;1mSELECT * FROM `players` WHERE (`players`.`id` = 55) [0m
+  [4;35;1mPlayer Load (2.0ms)[0m   [0mSELECT * FROM `players` WHERE (`players`.`id` = 56) [0m
+Completed in 353ms (View: 244, DB: 9) | 200 OK [http://localhost/game/edit/147]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#edit (for 0:0:0:0:0:0:0:1%0 at 2010-04-18 07:59:21) [POST]
+  Parameters: {"authenticity_token"=>"H0a/OuK5xene/xGltEgjyWTmFQHRsiaJo//C1tSvk+M=", "game"=>{"game_date(1i)"=>"2010", "game_date(2i)"=>"4", "game_date(3i)"=>"18", "game_status_id"=>"1", "organizer"=>"Wise", "organizer_address"=>"cwise@murmurinformatics.com", "message"=>"We need more players - who is in?"}, "game_player_55"=>{"player_id"=>"55", "id"=>"4317", "player_status_id"=>"1", "equipment_id"=>"5", "goalie"=>"0"}, "game_player_56"=>{"player_id"=>"56", "id"=>"4318", "player_status_id"=>"1", "equipment_id"=>"5", "goalie"=>"0"}, "id"=>"147"}
+  [4;35;1mGame Load (1.0ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 147) [0m
+  [4;36;1mPlayerStatus Load (0.0ms)[0m   [0;1mSELECT * FROM `player_statuses` WHERE (description <> 'Maybe') [0m
+  [4;35;1mGameStatus Load (0.0ms)[0m   [0mSELECT * FROM `game_statuses` [0m
+  [4;36;1mEquipment Load (1.0ms)[0m   [0;1mSELECT * FROM `equipment` [0m
+  [4;35;1mGamePlayer Load (1.0ms)[0m   [0mSELECT gp.* FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=147 ORDER BY sp.description, equipment_id DESC[0m
+WARNING: Can't mass-assign these protected attributes: id
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mGame Load (0.0ms)[0m   [0;1mSELECT `games`.id FROM `games` WHERE (`games`.`game_date` = '2010-04-18' AND `games`.id <> 147) LIMIT 1[0m
+  [4;35;1mGame Update (1.0ms)[0m   [0mUPDATE `games` SET `game_status_id` = 1, `updated_at` = '2010-04-18 11:59:21' WHERE `id` = 147[0m
+Redirected to http://localhost:3000/game
+Completed in 191ms (DB: 5) | 302 Found [http://localhost/game/edit/147]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#index (for 0:0:0:0:0:0:0:1%0 at 2010-04-18 07:59:21) [GET]
+  [4;35;1mGame Load (1.0ms)[0m   [0mSELECT * FROM `games` ORDER BY game_date desc LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering game/index
+  [4;36;1mGamePlayer Count (1.0ms)[0m   [0;1mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=147 AND player_status_id > 2[0m
+  [4;35;1mGameStatus Load (1.0ms)[0m   [0mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 1) [0m
+  [4;36;1mGameGoalie Load (1.0ms)[0m   [0;1mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 147) [0m
+Rendered game/_game (76.0ms)
+  [4;35;1mGamePlayer Count (1.0ms)[0m   [0mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=146 AND player_status_id > 2[0m
+  [4;36;1mGameStatus Load (1.0ms)[0m   [0;1mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 2) [0m
+  [4;35;1mGameGoalie Load (1.0ms)[0m   [0mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 146) [0m
+Rendered game/_game (16.0ms)
+Completed in 140ms (View: 100, DB: 7) | 200 OK [http://localhost/game]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#edit (for 0:0:0:0:0:0:0:1%0 at 2010-04-18 07:59:37) [GET]
+  Parameters: {"id"=>"147"}
+  [4;35;1mGame Load (1.0ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 147) [0m
+  [4;36;1mPlayerStatus Load (1.0ms)[0m   [0;1mSELECT * FROM `player_statuses` WHERE (description <> 'Maybe') [0m
+  [4;35;1mGameStatus Load (0.0ms)[0m   [0mSELECT * FROM `game_statuses` [0m
+  [4;36;1mEquipment Load (1.0ms)[0m   [0;1mSELECT * FROM `equipment` [0m
+Rendering template within layouts/application
+Rendering game/edit
+  [4;35;1mGamePlayer Count (1.0ms)[0m   [0mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=147 AND player_status_id > 2[0m
+  [4;36;1mGamePlayer Load (1.0ms)[0m   [0;1mSELECT gp.* FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=147 ORDER BY sp.description, equipment_id DESC[0m
+  [4;35;1mPlayer Load (0.0ms)[0m   [0mSELECT * FROM `players` WHERE (`players`.`id` = 55) [0m
+  [4;36;1mPlayer Load (1.0ms)[0m   [0;1mSELECT * FROM `players` WHERE (`players`.`id` = 56) [0m
+Completed in 249ms (View: 167, DB: 6) | 200 OK [http://localhost/game/edit/147]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#edit (for 0:0:0:0:0:0:0:1%0 at 2010-04-18 07:59:43) [POST]
+  Parameters: {"authenticity_token"=>"H0a/OuK5xene/xGltEgjyWTmFQHRsiaJo//C1tSvk+M=", "game"=>{"game_date(1i)"=>"2010", "game_date(2i)"=>"4", "game_date(3i)"=>"18", "game_status_id"=>"4", "organizer"=>"Wise", "organizer_address"=>"cwise@murmurinformatics.com", "message"=>"We need more players - who is in?"}, "game_player_55"=>{"player_id"=>"55", "id"=>"4317", "player_status_id"=>"1", "equipment_id"=>"5", "goalie"=>"0"}, "game_player_56"=>{"player_id"=>"56", "id"=>"4318", "player_status_id"=>"1", "equipment_id"=>"5", "goalie"=>"0"}, "id"=>"147"}
+  [4;36;1mGame Load (1.0ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 147) [0m
+  [4;35;1mPlayerStatus Load (1.0ms)[0m   [0mSELECT * FROM `player_statuses` WHERE (description <> 'Maybe') [0m
+  [4;36;1mGameStatus Load (0.0ms)[0m   [0;1mSELECT * FROM `game_statuses` [0m
+  [4;35;1mEquipment Load (1.0ms)[0m   [0mSELECT * FROM `equipment` [0m
+  [4;36;1mGamePlayer Load (1.0ms)[0m   [0;1mSELECT gp.* FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=147 ORDER BY sp.description, equipment_id DESC[0m
+WARNING: Can't mass-assign these protected attributes: id
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mGame Load (1.0ms)[0m   [0mSELECT `games`.id FROM `games` WHERE (`games`.`game_date` = '2010-04-18' AND `games`.id <> 147) LIMIT 1[0m
+  [4;36;1mGame Update (1.0ms)[0m   [0;1mUPDATE `games` SET `game_status_id` = 4, `updated_at` = '2010-04-18 11:59:43' WHERE `id` = 147[0m
+  [4;35;1mPlayer Load (1.0ms)[0m   [0mSELECT * FROM `players` WHERE (`players`.`id` = 55) [0m
+Sent mail to cwise@murmurinformatics.com
+
+Date: Sun, 18 Apr 2010 08:00:02 -0400
+From: mailer@murmurinformatics.com
+Reply-To: cwise@murmurinformatics.com
+To: cwise@murmurinformatics.com
+Subject: NRCan Ball Hockey Game for 2010-04-18?
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>We need more players - who is in? (<a href='mailto:cwise@murmurinformatics.com'>Wise</a>)</p>
+    <br/>
+    <p>Please respond by clicking one of the following links:</p>
+    <p><a href="http://nrcanhockey.murmurinfo.ca/game_player/playing/4317">Playing</a></p>
+    <p><a href="http://nrcanhockey.murmurinfo.ca/game_player/not_playing/4317">NOT Playing</a></p>
+    <p><a href="http://nrcanhockey.murmurinfo.ca/game_player/late/4317">Late</a></p>
+    <br/>
+    <p>To check the status of this game at any time:</p>
+    <p><a href="http://nrcanhockey.murmurinfo.ca/game/view/147">Game Status</a></p>
+  </body>
+</html>
+  [4;36;1mPlayer Load (1.0ms)[0m   [0;1mSELECT * FROM `players` WHERE (`players`.`id` = 56) [0m
+Sent mail to Mike.Villeneuve@NRCan-RNCan.gc.ca
+
+Date: Sun, 18 Apr 2010 08:00:03 -0400
+From: mailer@murmurinformatics.com
+Reply-To: cwise@murmurinformatics.com
+To: Mike.Villeneuve@NRCan-RNCan.gc.ca
+Subject: NRCan Ball Hockey Game for 2010-04-18?
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>We need more players - who is in? (<a href='mailto:cwise@murmurinformatics.com'>Wise</a>)</p>
+    <br/>
+    <p>Please respond by clicking one of the following links:</p>
+    <p><a href="http://nrcanhockey.murmurinfo.ca/game_player/playing/4318">Playing</a></p>
+    <p><a href="http://nrcanhockey.murmurinfo.ca/game_player/not_playing/4318">NOT Playing</a></p>
+    <p><a href="http://nrcanhockey.murmurinfo.ca/game_player/late/4318">Late</a></p>
+    <br/>
+    <p>To check the status of this game at any time:</p>
+    <p><a href="http://nrcanhockey.murmurinfo.ca/game/view/147">Game Status</a></p>
+  </body>
+</html>
+  [4;35;1mGame Load (1.0ms)[0m   [0mSELECT `games`.id FROM `games` WHERE (`games`.`game_date` = '2010-04-18' AND `games`.id <> 147) LIMIT 1[0m
+Redirected to http://localhost:3000/game
+Completed in 20656ms (DB: 10) | 302 Found [http://localhost/game/edit/147]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#index (for 0:0:0:0:0:0:0:1%0 at 2010-04-18 08:00:04) [GET]
+  [4;35;1mGame Load (1.0ms)[0m   [0mSELECT * FROM `games` ORDER BY game_date desc LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering game/index
+  [4;36;1mGamePlayer Count (0.0ms)[0m   [0;1mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=147 AND player_status_id > 2[0m
+  [4;35;1mGameStatus Load (1.0ms)[0m   [0mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 4) [0m
+  [4;36;1mGameGoalie Load (1.0ms)[0m   [0;1mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 147) [0m
+Rendered game/_game (97.0ms)
+  [4;35;1mGamePlayer Count (1.0ms)[0m   [0mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=146 AND player_status_id > 2[0m
+  [4;36;1mGameStatus Load (0.0ms)[0m   [0;1mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 2) [0m
+  [4;35;1mGameGoalie Load (1.0ms)[0m   [0mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 146) [0m
+Rendered game/_game (14.0ms)
+Completed in 171ms (View: 124, DB: 5) | 200 OK [http://localhost/game]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#index (for 0:0:0:0:0:0:0:1%0 at 2010-04-18 08:02:36) [GET]
+  [4;35;1mGame Load (1.0ms)[0m   [0mSELECT * FROM `games` ORDER BY game_date desc LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering game/index
+  [4;36;1mGamePlayer Count (0.0ms)[0m   [0;1mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=147 AND player_status_id > 2[0m
+  [4;35;1mGameStatus Load (0.0ms)[0m   [0mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 4) [0m
+  [4;36;1mGameGoalie Load (0.0ms)[0m   [0;1mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 147) [0m
+Rendered game/_game (76.0ms)
+  [4;35;1mGamePlayer Count (0.0ms)[0m   [0mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=146 AND player_status_id > 2[0m
+  [4;36;1mGameStatus Load (0.0ms)[0m   [0;1mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 2) [0m
+  [4;35;1mGameGoalie Load (1.0ms)[0m   [0mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 146) [0m
+Rendered game/_game (13.0ms)
+Completed in 138ms (View: 104, DB: 3) | 200 OK [http://localhost/game]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#edit (for 0:0:0:0:0:0:0:1%0 at 2010-04-18 08:02:38) [GET]
+  Parameters: {"id"=>"147"}
+  [4;35;1mGame Load (1.0ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 147) [0m
+  [4;36;1mPlayerStatus Load (1.0ms)[0m   [0;1mSELECT * FROM `player_statuses` WHERE (description <> 'Maybe') [0m
+  [4;35;1mGameStatus Load (1.0ms)[0m   [0mSELECT * FROM `game_statuses` [0m
+  [4;36;1mEquipment Load (1.0ms)[0m   [0;1mSELECT * FROM `equipment` [0m
+Rendering template within layouts/application
+Rendering game/edit
+  [4;35;1mGamePlayer Count (1.0ms)[0m   [0mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=147 AND player_status_id > 2[0m
+  [4;36;1mGamePlayer Load (1.0ms)[0m   [0;1mSELECT gp.* FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=147 ORDER BY sp.description, equipment_id DESC[0m
+  [4;35;1mPlayer Load (0.0ms)[0m   [0mSELECT * FROM `players` WHERE (`players`.`id` = 55) [0m
+  [4;36;1mPlayer Load (1.0ms)[0m   [0;1mSELECT * FROM `players` WHERE (`players`.`id` = 56) [0m
+Completed in 240ms (View: 157, DB: 7) | 200 OK [http://localhost/game/edit/147]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#edit (for 0:0:0:0:0:0:0:1%0 at 2010-04-18 08:02:42) [POST]
+  Parameters: {"authenticity_token"=>"H0a/OuK5xene/xGltEgjyWTmFQHRsiaJo//C1tSvk+M=", "game"=>{"game_date(1i)"=>"2010", "game_date(2i)"=>"4", "game_date(3i)"=>"18", "game_status_id"=>"1", "organizer"=>"Wise", "organizer_address"=>"cwise@murmurinformatics.com", "message"=>"We need more players - who is in?"}, "game_player_55"=>{"player_id"=>"55", "id"=>"4317", "player_status_id"=>"1", "equipment_id"=>"5", "goalie"=>"0"}, "game_player_56"=>{"player_id"=>"56", "id"=>"4318", "player_status_id"=>"1", "equipment_id"=>"5", "goalie"=>"0"}, "id"=>"147"}
+  [4;36;1mGame Load (1.0ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 147) [0m
+  [4;35;1mPlayerStatus Load (1.0ms)[0m   [0mSELECT * FROM `player_statuses` WHERE (description <> 'Maybe') [0m
+  [4;36;1mGameStatus Load (1.0ms)[0m   [0;1mSELECT * FROM `game_statuses` [0m
+  [4;35;1mEquipment Load (1.0ms)[0m   [0mSELECT * FROM `equipment` [0m
+  [4;36;1mGamePlayer Load (0.0ms)[0m   [0;1mSELECT gp.* FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=147 ORDER BY sp.description, equipment_id DESC[0m
+WARNING: Can't mass-assign these protected attributes: id
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mGame Load (1.0ms)[0m   [0mSELECT `games`.id FROM `games` WHERE (`games`.`game_date` = '2010-04-18' AND `games`.id <> 147) LIMIT 1[0m
+  [4;36;1mGame Update (1.0ms)[0m   [0;1mUPDATE `games` SET `game_status_id` = 1, `updated_at` = '2010-04-18 12:02:42' WHERE `id` = 147[0m
+Redirected to http://localhost:3000/game
+Completed in 185ms (DB: 7) | 302 Found [http://localhost/game/edit/147]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#index (for 0:0:0:0:0:0:0:1%0 at 2010-04-18 08:02:42) [GET]
+  [4;36;1mGame Load (1.0ms)[0m   [0;1mSELECT * FROM `games` ORDER BY game_date desc LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering game/index
+  [4;35;1mGamePlayer Count (1.0ms)[0m   [0mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=147 AND player_status_id > 2[0m
+  [4;36;1mGameStatus Load (1.0ms)[0m   [0;1mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 1) [0m
+  [4;35;1mGameGoalie Load (1.0ms)[0m   [0mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 147) [0m
+Rendered game/_game (70.0ms)
+  [4;36;1mGamePlayer Count (1.0ms)[0m   [0;1mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=146 AND player_status_id > 2[0m
+  [4;35;1mGameStatus Load (1.0ms)[0m   [0mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 2) [0m
+  [4;36;1mGameGoalie Load (1.0ms)[0m   [0;1mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 146) [0m
+Rendered game/_game (14.0ms)
+Completed in 136ms (View: 100, DB: 7) | 200 OK [http://localhost/game]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#edit (for 0:0:0:0:0:0:0:1%0 at 2010-04-18 08:02:44) [GET]
+  Parameters: {"id"=>"147"}
+  [4;36;1mGame Load (1.0ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 147) [0m
+  [4;35;1mPlayerStatus Load (1.0ms)[0m   [0mSELECT * FROM `player_statuses` WHERE (description <> 'Maybe') [0m
+  [4;36;1mGameStatus Load (1.0ms)[0m   [0;1mSELECT * FROM `game_statuses` [0m
+  [4;35;1mEquipment Load (1.0ms)[0m   [0mSELECT * FROM `equipment` [0m
+Rendering template within layouts/application
+Rendering game/edit
+  [4;36;1mGamePlayer Count (0.0ms)[0m   [0;1mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=147 AND player_status_id > 2[0m
+  [4;35;1mGamePlayer Load (1.0ms)[0m   [0mSELECT gp.* FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=147 ORDER BY sp.description, equipment_id DESC[0m
+  [4;36;1mPlayer Load (1.0ms)[0m   [0;1mSELECT * FROM `players` WHERE (`players`.`id` = 55) [0m
+  [4;35;1mPlayer Load (1.0ms)[0m   [0mSELECT * FROM `players` WHERE (`players`.`id` = 56) [0m
+Completed in 246ms (View: 165, DB: 7) | 200 OK [http://localhost/game/edit/147]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#edit (for 0:0:0:0:0:0:0:1%0 at 2010-04-18 08:03:09) [POST]
+  Parameters: {"authenticity_token"=>"H0a/OuK5xene/xGltEgjyWTmFQHRsiaJo//C1tSvk+M=", "game"=>{"game_date(1i)"=>"2010", "game_date(2i)"=>"4", "game_date(3i)"=>"18", "game_status_id"=>"4", "organizer"=>"Wise", "organizer_address"=>"cwise@murmurinformatics.com", "message"=>"We only have one player so far... need some more to have a game!"}, "game_player_55"=>{"player_id"=>"55", "id"=>"4317", "player_status_id"=>"3", "equipment_id"=>"5", "goalie"=>"0"}, "game_player_56"=>{"player_id"=>"56", "id"=>"4318", "player_status_id"=>"1", "equipment_id"=>"5", "goalie"=>"0"}, "id"=>"147"}
+  [4;35;1mGame Load (1.0ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 147) [0m
+  [4;36;1mPlayerStatus Load (0.0ms)[0m   [0;1mSELECT * FROM `player_statuses` WHERE (description <> 'Maybe') [0m
+  [4;35;1mGameStatus Load (1.0ms)[0m   [0mSELECT * FROM `game_statuses` [0m
+  [4;36;1mEquipment Load (2.0ms)[0m   [0;1mSELECT * FROM `equipment` [0m
+  [4;35;1mGamePlayer Load (1.0ms)[0m   [0mSELECT gp.* FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=147 ORDER BY sp.description, equipment_id DESC[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mGamePlayer Update (0.0ms)[0m   [0;1mUPDATE `game_players` SET `player_status_id` = 3, `updated_at` = '2010-04-18 12:03:09' WHERE `id` = 4317[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mGame Load (1.0ms)[0m   [0mSELECT `games`.id FROM `games` WHERE (`games`.`game_date` = '2010-04-18' AND `games`.id <> 147) LIMIT 1[0m
+  [4;36;1mGame Update (0.0ms)[0m   [0;1mUPDATE `games` SET `game_status_id` = 4, `message` = 'We only have one player so far... need some more to have a game!', `updated_at` = '2010-04-18 12:03:09' WHERE `id` = 147[0m
+  [4;35;1mPlayer Load (0.0ms)[0m   [0mSELECT * FROM `players` WHERE (`players`.`id` = 55) [0m
+  [4;36;1mGamePlayer Load (1.0ms)[0m   [0;1mSELECT gp.* FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=147 AND player_status_id > 2[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `players` WHERE (`players`.`id` = 55) [0m
+Rendered hockey_mailer/_active_player (22.0ms)
+Sent mail to cwise@murmurinformatics.com
+
+Date: Sun, 18 Apr 2010 08:03:09 -0400
+From: mailer@murmurinformatics.com
+Reply-To: cwise@murmurinformatics.com
+To: cwise@murmurinformatics.com
+Subject: NRCan Ball Hockey Game Update for 2010-04-18?
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>We only have one player so far... need some more to have a game! (<a href='mailto:cwise@murmurinformatics.com'>Wise</a>)</p>
+    <br/>
+    <p>The following people are playing today:</p>
+    <p>Chris Wise</p>
+    <br/>
+    <p>Please respond by clicking one of the following links:</p>
+    <p><a href="http://nrcanhockey.murmurinfo.ca/game_player/playing/4317">Playing</a></p>
+    <p><a href="http://nrcanhockey.murmurinfo.ca/game_player/not_playing/4317">NOT Playing</a></p>
+    <p><a href="http://nrcanhockey.murmurinfo.ca/game_player/late/4317">Late</a></p>
+    <br/>
+    <p>To check the status of this game at any time:</p>
+    <p><a href="http://nrcanhockey.murmurinfo.ca/game/view/147">Game Status</a></p>
+  </body>
+</html>
+  [4;36;1mPlayer Load (0.0ms)[0m   [0;1mSELECT * FROM `players` WHERE (`players`.`id` = 56) [0m
+Rendered hockey_mailer/_active_player (0.0ms)
+Sent mail to Mike.Villeneuve@NRCan-RNCan.gc.ca
+
+Date: Sun, 18 Apr 2010 08:03:10 -0400
+From: mailer@murmurinformatics.com
+Reply-To: cwise@murmurinformatics.com
+To: Mike.Villeneuve@NRCan-RNCan.gc.ca
+Subject: NRCan Ball Hockey Game Update for 2010-04-18?
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>We only have one player so far... need some more to have a game! (<a href='mailto:cwise@murmurinformatics.com'>Wise</a>)</p>
+    <br/>
+    <p>The following people are playing today:</p>
+    <p>Chris Wise</p>
+    <br/>
+    <p>Please respond by clicking one of the following links:</p>
+    <p><a href="http://nrcanhockey.murmurinfo.ca/game_player/playing/4318">Playing</a></p>
+    <p><a href="http://nrcanhockey.murmurinfo.ca/game_player/not_playing/4318">NOT Playing</a></p>
+    <p><a href="http://nrcanhockey.murmurinfo.ca/game_player/late/4318">Late</a></p>
+    <br/>
+    <p>To check the status of this game at any time:</p>
+    <p><a href="http://nrcanhockey.murmurinfo.ca/game/view/147">Game Status</a></p>
+  </body>
+</html>
+  [4;35;1mGame Load (1.0ms)[0m   [0mSELECT `games`.id FROM `games` WHERE (`games`.`game_date` = '2010-04-18' AND `games`.id <> 147) LIMIT 1[0m
+  [4;36;1mGame Update (1.0ms)[0m   [0;1mUPDATE `games` SET `game_status_id` = 1, `updated_at` = '2010-04-18 12:03:11' WHERE `id` = 147[0m
+Redirected to http://localhost:3000/game
+Completed in 2126ms (DB: 10) | 302 Found [http://localhost/game/edit/147]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#index (for 0:0:0:0:0:0:0:1%0 at 2010-04-18 08:03:11) [GET]
+  [4;36;1mGame Load (1.0ms)[0m   [0;1mSELECT * FROM `games` ORDER BY game_date desc LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering game/index
+  [4;35;1mGamePlayer Count (1.0ms)[0m   [0mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=147 AND player_status_id > 2[0m
+  [4;36;1mGameStatus Load (0.0ms)[0m   [0;1mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 1) [0m
+  [4;35;1mGameGoalie Load (1.0ms)[0m   [0mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 147) [0m
+Rendered game/_game (75.0ms)
+  [4;36;1mGamePlayer Count (0.0ms)[0m   [0;1mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=146 AND player_status_id > 2[0m
+  [4;35;1mGameStatus Load (1.0ms)[0m   [0mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 2) [0m
+  [4;36;1mGameGoalie Load (1.0ms)[0m   [0;1mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 146) [0m
+Rendered game/_game (14.0ms)
+Completed in 134ms (View: 99, DB: 6) | 200 OK [http://localhost/game]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#edit (for 0:0:0:0:0:0:0:1%0 at 2010-04-18 08:03:14) [GET]
+  Parameters: {"id"=>"147"}
+  [4;36;1mGame Load (0.0ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 147) [0m
+  [4;35;1mPlayerStatus Load (0.0ms)[0m   [0mSELECT * FROM `player_statuses` WHERE (description <> 'Maybe') [0m
+  [4;36;1mGameStatus Load (1.0ms)[0m   [0;1mSELECT * FROM `game_statuses` [0m
+  [4;35;1mEquipment Load (1.0ms)[0m   [0mSELECT * FROM `equipment` [0m
+Rendering template within layouts/application
+Rendering game/edit
+  [4;36;1mGamePlayer Count (1.0ms)[0m   [0;1mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=147 AND player_status_id > 2[0m
+  [4;35;1mGamePlayer Load (1.0ms)[0m   [0mSELECT gp.* FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=147 ORDER BY sp.description, equipment_id DESC[0m
+  [4;36;1mPlayer Load (1.0ms)[0m   [0;1mSELECT * FROM `players` WHERE (`players`.`id` = 55) [0m
+  [4;35;1mPlayer Load (1.0ms)[0m   [0mSELECT * FROM `players` WHERE (`players`.`id` = 56) [0m
+Completed in 231ms (View: 146, DB: 6) | 200 OK [http://localhost/game/edit/147]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#edit (for 0:0:0:0:0:0:0:1%0 at 2010-04-18 08:03:26) [POST]
+  Parameters: {"authenticity_token"=>"H0a/OuK5xene/xGltEgjyWTmFQHRsiaJo//C1tSvk+M=", "game"=>{"game_date(1i)"=>"2010", "game_date(2i)"=>"4", "game_date(3i)"=>"18", "game_status_id"=>"2", "organizer"=>"Wise", "organizer_address"=>"cwise@murmurinformatics.com", "message"=>"Game on! Looks like we have enough."}, "game_player_55"=>{"player_id"=>"55", "id"=>"4317", "player_status_id"=>"3", "equipment_id"=>"5", "goalie"=>"0"}, "game_player_56"=>{"player_id"=>"56", "id"=>"4318", "player_status_id"=>"3", "equipment_id"=>"5", "goalie"=>"0"}, "id"=>"147"}
+  [4;35;1mGame Load (1.0ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 147) [0m
+  [4;36;1mPlayerStatus Load (0.0ms)[0m   [0;1mSELECT * FROM `player_statuses` WHERE (description <> 'Maybe') [0m
+  [4;35;1mGameStatus Load (1.0ms)[0m   [0mSELECT * FROM `game_statuses` [0m
+  [4;36;1mEquipment Load (1.0ms)[0m   [0;1mSELECT * FROM `equipment` [0m
+  [4;35;1mGamePlayer Load (1.0ms)[0m   [0mSELECT gp.* FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=147 ORDER BY sp.description, equipment_id DESC[0m
+WARNING: Can't mass-assign these protected attributes: id
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mGamePlayer Update (1.0ms)[0m   [0;1mUPDATE `game_players` SET `player_status_id` = 3, `updated_at` = '2010-04-18 12:03:26' WHERE `id` = 4318[0m
+  [4;35;1mGame Load (0.0ms)[0m   [0mSELECT `games`.id FROM `games` WHERE (`games`.`game_date` = '2010-04-18' AND `games`.id <> 147) LIMIT 1[0m
+  [4;36;1mGame Update (1.0ms)[0m   [0;1mUPDATE `games` SET `game_status_id` = 2, `message` = 'Game on! Looks like we have enough.', `updated_at` = '2010-04-18 12:03:26' WHERE `id` = 147[0m
+  [4;35;1mPlayer Load (0.0ms)[0m   [0mSELECT * FROM `players` WHERE (`players`.`id` = 55) [0m
+  [4;36;1mPlayer Load (1.0ms)[0m   [0;1mSELECT * FROM `players` WHERE (`players`.`id` = 56) [0m
+  [4;35;1mGamePlayer Load (1.0ms)[0m   [0mSELECT gp.* FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=147 AND player_status_id > 2[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `players` WHERE (`players`.`id` = 55) [0m
+Rendered hockey_mailer/_active_player (3.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `players` WHERE (`players`.`id` = 56) [0m
+Rendered hockey_mailer/_active_player (3.0ms)
+Sent mail to cwise@murmurinformatics.com, Mike.Villeneuve@NRCan-RNCan.gc.ca
+
+Date: Sun, 18 Apr 2010 08:03:26 -0400
+From: mailer@murmurinformatics.com
+Reply-To: cwise@murmurinformatics.com
+To: cwise@murmurinformatics.com, Mike.Villeneuve@NRCan-RNCan.gc.ca
+Subject: NRCan Ball Hockey Game for 2010-04-18: Game ON!
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>Game on! Looks like we have enough. (<a href='mailto:cwise@murmurinformatics.com'>Wise</a>)</p>
+    <br/>
+    <p>The following people are playing today:</p>
+    <p>Chris Wise</p><p>Mike Villeneuve</p>
+  </body>
+</html>
+Redirected to http://localhost:3000/game
+Completed in 1019ms (DB: 9) | 302 Found [http://localhost/game/edit/147]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#index (for 0:0:0:0:0:0:0:1%0 at 2010-04-18 08:03:27) [GET]
+  [4;35;1mGame Load (2.0ms)[0m   [0mSELECT * FROM `games` ORDER BY game_date desc LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering game/index
+  [4;36;1mGamePlayer Count (1.0ms)[0m   [0;1mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=147 AND player_status_id > 2[0m
+  [4;35;1mGameStatus Load (1.0ms)[0m   [0mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 2) [0m
+  [4;36;1mGameGoalie Load (1.0ms)[0m   [0;1mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 147) [0m
+Rendered game/_game (74.0ms)
+  [4;35;1mGamePlayer Count (1.0ms)[0m   [0mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=146 AND player_status_id > 2[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 2) [0m
+  [4;35;1mGameGoalie Load (1.0ms)[0m   [0mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 146) [0m
+Rendered game/_game (13.0ms)
+Completed in 137ms (View: 101, DB: 7) | 200 OK [http://localhost/game]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GlobalController#index (for 0:0:0:0:0:0:0:1%0 at 2010-04-18 08:03:30) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 24ms (View: 16, DB: 1) | 200 OK [http://localhost/global]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PlayerController#index (for 0:0:0:0:0:0:0:1%0 at 2010-04-18 08:03:31) [GET]
+  [4;36;1mPlayer Load (1.0ms)[0m   [0;1mSELECT * FROM `players` ORDER BY name LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering player/index
+Rendered player/_player (35.0ms)
+Rendered player/_player (4.0ms)
+Completed in 102ms (View: 79, DB: 1) | 200 OK [http://localhost/player]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PlayerController#new (for 0:0:0:0:0:0:0:1%0 at 2010-04-18 08:03:33) [GET]
+Rendering template within layouts/application
+Rendering player/edit
+Completed in 139ms (View: 113, DB: 1) | 200 OK [http://localhost/player/new]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PlayerController#new (for 0:0:0:0:0:0:0:1%0 at 2010-04-18 08:03:41) [POST]
+  Parameters: {"authenticity_token"=>"H0a/OuK5xene/xGltEgjyWTmFQHRsiaJo//C1tSvk+M=", "player"=>{"name"=>"Fred", "email_address"=>"info@murmurinformatics.com", "active"=>"1"}}
+  [4;35;1mPlayer Load (1.0ms)[0m   [0mSELECT `players`.id FROM `players` WHERE (`players`.`name` = 'Fred') LIMIT 1[0m
+  [4;36;1mPlayer Load (0.0ms)[0m   [0;1mSELECT `players`.id FROM `players` WHERE (`players`.`email_address` = 'info@murmurinformatics.com') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO `players` (`name`, `email_address`, `created_at`, `updated_at`, `active`) VALUES('Fred', 'info@murmurinformatics.com', '2010-04-18 12:03:41', '2010-04-18 12:03:41', 1)[0m
+Redirected to http://localhost:3000/player
+Completed in 77ms (DB: 2) | 302 Found [http://localhost/player/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PlayerController#index (for 0:0:0:0:0:0:0:1%0 at 2010-04-18 08:03:41) [GET]
+  [4;35;1mPlayer Load (1.0ms)[0m   [0mSELECT * FROM `players` ORDER BY name LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering player/index
+Rendered player/_player (15.0ms)
+Rendered player/_player (4.0ms)
+Rendered player/_player (4.0ms)
+Completed in 62ms (View: 37, DB: 1) | 200 OK [http://localhost/player]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GlobalController#index (for 0:0:0:0:0:0:0:1%0 at 2010-04-18 08:03:43) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 30ms (View: 16, DB: 0) | 200 OK [http://localhost/global]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#index (for 0:0:0:0:0:0:0:1%0 at 2010-04-18 08:03:44) [GET]
+  [4;36;1mGame Load (1.0ms)[0m   [0;1mSELECT * FROM `games` ORDER BY game_date desc LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering game/index
+  [4;35;1mGamePlayer Count (1.0ms)[0m   [0mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=147 AND player_status_id > 2[0m
+  [4;36;1mGameStatus Load (0.0ms)[0m   [0;1mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 2) [0m
+  [4;35;1mGameGoalie Load (1.0ms)[0m   [0mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 147) [0m
+Rendered game/_game (71.0ms)
+  [4;36;1mGamePlayer Count (0.0ms)[0m   [0;1mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=146 AND player_status_id > 2[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 2) [0m
+  [4;36;1mGameGoalie Load (1.0ms)[0m   [0;1mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 146) [0m
+Rendered game/_game (14.0ms)
+Completed in 137ms (View: 96, DB: 5) | 200 OK [http://localhost/game]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#new (for 0:0:0:0:0:0:0:1%0 at 2010-04-18 08:03:45) [GET]
+  [4;36;1mPlayerStatus Load (0.0ms)[0m   [0;1mSELECT * FROM `player_statuses` WHERE (description <> 'Maybe') [0m
+  [4;35;1mGameStatus Load (1.0ms)[0m   [0mSELECT * FROM `game_statuses` WHERE (description <> 'Send Update' ) [0m
+  [4;36;1mEquipment Load (1.0ms)[0m   [0;1mSELECT * FROM `equipment` [0m
+  [4;35;1mPlayer Load (4.0ms)[0m   [0mSELECT * FROM `players` WHERE (active = 1) [0m
+Rendering template within layouts/application
+Rendering game/edit
+  [4;36;1mPlayer Load (1.0ms)[0m   [0;1mSELECT * FROM `players` WHERE (`players`.`id` = 55) [0m
+  [4;35;1mPlayer Load (1.0ms)[0m   [0mSELECT * FROM `players` WHERE (`players`.`id` = 56) [0m
+  [4;36;1mPlayer Load (0.0ms)[0m   [0;1mSELECT * FROM `players` WHERE (`players`.`id` = 57) [0m
+Completed in 245ms (View: 101, DB: 8) | 200 OK [http://localhost/game/new]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#new (for 0:0:0:0:0:0:0:1%0 at 2010-04-18 08:04:07) [POST]
+  Parameters: {"authenticity_token"=>"H0a/OuK5xene/xGltEgjyWTmFQHRsiaJo//C1tSvk+M=", "game"=>{"game_date(1i)"=>"2010", "game_date(2i)"=>"4", "game_date(3i)"=>"19", "game_status_id"=>"1", "organizer"=>"Wise", "organizer_address"=>"cwise@murmurinformatics.com", "message"=>"Just another test Mike - ignore"}, "game_player_55"=>{"player_id"=>"55", "id"=>"", "player_status_id"=>"1", "equipment_id"=>"5", "goalie"=>"0"}, "game_player_56"=>{"player_id"=>"56", "id"=>"", "player_status_id"=>"1", "equipment_id"=>"5", "goalie"=>"0"}, "game_player_57"=>{"player_id"=>"57", "id"=>"", "player_status_id"=>"1", "equipment_id"=>"5", "goalie"=>"0"}}
+  [4;36;1mPlayerStatus Load (1.0ms)[0m   [0;1mSELECT * FROM `player_statuses` WHERE (description <> 'Maybe') [0m
+  [4;35;1mGameStatus Load (0.0ms)[0m   [0mSELECT * FROM `game_statuses` WHERE (description <> 'Send Update' ) [0m
+  [4;36;1mEquipment Load (1.0ms)[0m   [0;1mSELECT * FROM `equipment` [0m
+WARNING: Can't mass-assign these protected attributes: id
+WARNING: Can't mass-assign these protected attributes: id
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mGame Load (1.0ms)[0m   [0mSELECT `games`.id FROM `games` WHERE (`games`.`game_date` = '2010-04-19') LIMIT 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO `games` (`game_date`, `message`, `created_at`, `updated_at`, `game_status_id`, `organizer`, `organizer_address`) VALUES('2010-04-19', 'Just another test Mike - ignore', '2010-04-18 12:04:08', '2010-04-18 12:04:08', 1, 'Wise', 'cwise@murmurinformatics.com')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO `game_players` (`game_id`, `player_id`, `player_status_id`, `equipment_id`, `created_at`, `updated_at`, `goalie`) VALUES(148, 55, 1, 5, '2010-04-18 12:04:08', '2010-04-18 12:04:08', 0)[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO `game_players` (`game_id`, `player_id`, `player_status_id`, `equipment_id`, `created_at`, `updated_at`, `goalie`) VALUES(148, 56, 1, 5, '2010-04-18 12:04:08', '2010-04-18 12:04:08', 0)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO `game_players` (`game_id`, `player_id`, `player_status_id`, `equipment_id`, `created_at`, `updated_at`, `goalie`) VALUES(148, 57, 1, 5, '2010-04-18 12:04:08', '2010-04-18 12:04:08', 0)[0m
+Redirected to http://localhost:3000/game
+  [4;36;1mPlayer Load (0.0ms)[0m   [0;1mSELECT * FROM `players` WHERE (`players`.`id` = 55) [0m
+Sent mail to cwise@murmurinformatics.com
+
+Date: Sun, 18 Apr 2010 08:04:08 -0400
+From: mailer@murmurinformatics.com
+Reply-To: cwise@murmurinformatics.com
+To: cwise@murmurinformatics.com
+Subject: NRCan Ball Hockey Game for 2010-04-19?
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>Just another test Mike - ignore (<a href='mailto:cwise@murmurinformatics.com'>Wise</a>)</p>
+    <br/>
+    <p>Please respond by clicking one of the following links:</p>
+    <p><a href="http://nrcanhockey.murmurinfo.ca/game_player/playing/4319">Playing</a></p>
+    <p><a href="http://nrcanhockey.murmurinfo.ca/game_player/not_playing/4319">NOT Playing</a></p>
+    <p><a href="http://nrcanhockey.murmurinfo.ca/game_player/late/4319">Late</a></p>
+    <br/>
+    <p>To check the status of this game at any time:</p>
+    <p><a href="http://nrcanhockey.murmurinfo.ca/game/view/148">Game Status</a></p>
+  </body>
+</html>
+  [4;35;1mPlayer Load (0.0ms)[0m   [0mSELECT * FROM `players` WHERE (`players`.`id` = 56) [0m
+Sent mail to Mike.Villeneuve@NRCan-RNCan.gc.ca
+
+Date: Sun, 18 Apr 2010 08:04:08 -0400
+From: mailer@murmurinformatics.com
+Reply-To: cwise@murmurinformatics.com
+To: Mike.Villeneuve@NRCan-RNCan.gc.ca
+Subject: NRCan Ball Hockey Game for 2010-04-19?
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>Just another test Mike - ignore (<a href='mailto:cwise@murmurinformatics.com'>Wise</a>)</p>
+    <br/>
+    <p>Please respond by clicking one of the following links:</p>
+    <p><a href="http://nrcanhockey.murmurinfo.ca/game_player/playing/4320">Playing</a></p>
+    <p><a href="http://nrcanhockey.murmurinfo.ca/game_player/not_playing/4320">NOT Playing</a></p>
+    <p><a href="http://nrcanhockey.murmurinfo.ca/game_player/late/4320">Late</a></p>
+    <br/>
+    <p>To check the status of this game at any time:</p>
+    <p><a href="http://nrcanhockey.murmurinfo.ca/game/view/148">Game Status</a></p>
+  </body>
+</html>
+  [4;36;1mPlayer Load (1.0ms)[0m   [0;1mSELECT * FROM `players` WHERE (`players`.`id` = 57) [0m
+Sent mail to info@murmurinformatics.com
+
+Date: Sun, 18 Apr 2010 08:04:09 -0400
+From: mailer@murmurinformatics.com
+Reply-To: cwise@murmurinformatics.com
+To: info@murmurinformatics.com
+Subject: NRCan Ball Hockey Game for 2010-04-19?
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>Just another test Mike - ignore (<a href='mailto:cwise@murmurinformatics.com'>Wise</a>)</p>
+    <br/>
+    <p>Please respond by clicking one of the following links:</p>
+    <p><a href="http://nrcanhockey.murmurinfo.ca/game_player/playing/4321">Playing</a></p>
+    <p><a href="http://nrcanhockey.murmurinfo.ca/game_player/not_playing/4321">NOT Playing</a></p>
+    <p><a href="http://nrcanhockey.murmurinfo.ca/game_player/late/4321">Late</a></p>
+    <br/>
+    <p>To check the status of this game at any time:</p>
+    <p><a href="http://nrcanhockey.murmurinfo.ca/game/view/148">Game Status</a></p>
+  </body>
+</html>
+Completed in 2547ms (DB: 9) | 302 Found [http://localhost/game/new]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#index (for 0:0:0:0:0:0:0:1%0 at 2010-04-18 08:04:10) [GET]
+  [4;36;1mGame Load (1.0ms)[0m   [0;1mSELECT * FROM `games` ORDER BY game_date desc LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering game/index
+  [4;35;1mGamePlayer Count (1.0ms)[0m   [0mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=148 AND player_status_id > 2[0m
+  [4;36;1mGameStatus Load (1.0ms)[0m   [0;1mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 1) [0m
+  [4;35;1mGameGoalie Load (1.0ms)[0m   [0mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 148) [0m
+Rendered game/_game (70.0ms)
+  [4;36;1mGamePlayer Count (1.0ms)[0m   [0;1mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=147 AND player_status_id > 2[0m
+  [4;35;1mGameStatus Load (1.0ms)[0m   [0mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 2) [0m
+  [4;36;1mGameGoalie Load (0.0ms)[0m   [0;1mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 147) [0m
+Rendered game/_game (14.0ms)
+  [4;35;1mGamePlayer Count (1.0ms)[0m   [0mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=146 AND player_status_id > 2[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 2) [0m
+  [4;35;1mGameGoalie Load (1.0ms)[0m   [0mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 146) [0m
+Rendered game/_game (13.0ms)
+Completed in 150ms (View: 105, DB: 9) | 200 OK [http://localhost/game]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GlobalController#index (for 0:0:0:0:0:0:0:1%0 at 2010-04-18 08:04:12) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 32ms (View: 22, DB: 1) | 200 OK [http://localhost/global]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PlayerController#index (for 0:0:0:0:0:0:0:1%0 at 2010-04-18 08:04:14) [GET]
+  [4;36;1mPlayer Load (1.0ms)[0m   [0;1mSELECT * FROM `players` ORDER BY name LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering player/index
+Rendered player/_player (20.0ms)
+Rendered player/_player (4.0ms)
+Rendered player/_player (3.0ms)
+Completed in 65ms (View: 42, DB: 2) | 200 OK [http://localhost/player]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PlayerController#delete (for 0:0:0:0:0:0:0:1%0 at 2010-04-18 08:04:17) [GET]
+  Parameters: {"id"=>"57"}
+  [4;36;1mPlayer Load (1.0ms)[0m   [0;1mSELECT * FROM `players` WHERE (`players`.`id` = 57) [0m
+  [4;35;1mPlayer Delete all (1.0ms)[0m   [0mDELETE FROM `players` WHERE (`id` IN (57)) [0m
+Redirected to http://localhost:3000/player
+Completed in 51ms (DB: 3) | 302 Found [http://localhost/player/delete/57]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PlayerController#index (for 0:0:0:0:0:0:0:1%0 at 2010-04-18 08:04:17) [GET]
+  [4;35;1mPlayer Load (1.0ms)[0m   [0mSELECT * FROM `players` ORDER BY name LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering player/index
+Rendered player/_player (15.0ms)
+Rendered player/_player (3.0ms)
+Completed in 62ms (View: 34, DB: 2) | 200 OK [http://localhost/player]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GlobalController#index (for 0:0:0:0:0:0:0:1%0 at 2010-04-18 08:04:18) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 29ms (View: 15, DB: 1) | 200 OK [http://localhost/global]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#index (for 0:0:0:0:0:0:0:1%0 at 2010-04-18 08:04:19) [GET]
+  [4;36;1mGame Load (1.0ms)[0m   [0;1mSELECT * FROM `games` ORDER BY game_date desc LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering game/index
+  [4;35;1mGamePlayer Count (1.0ms)[0m   [0mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=148 AND player_status_id > 2[0m
+  [4;36;1mGameStatus Load (1.0ms)[0m   [0;1mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 1) [0m
+  [4;35;1mGameGoalie Load (1.0ms)[0m   [0mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 148) [0m
+Rendered game/_game (66.0ms)
+  [4;36;1mGamePlayer Count (1.0ms)[0m   [0;1mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=147 AND player_status_id > 2[0m
+  [4;35;1mGameStatus Load (1.0ms)[0m   [0mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 2) [0m
+  [4;36;1mGameGoalie Load (0.0ms)[0m   [0;1mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 147) [0m
+Rendered game/_game (14.0ms)
+  [4;35;1mGamePlayer Count (1.0ms)[0m   [0mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=146 AND player_status_id > 2[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 2) [0m
+  [4;35;1mGameGoalie Load (1.0ms)[0m   [0mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 146) [0m
+Rendered game/_game (13.0ms)
+Completed in 142ms (View: 100, DB: 8) | 200 OK [http://localhost/game]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#edit (for 0:0:0:0:0:0:0:1%0 at 2010-04-18 08:04:22) [GET]
+  Parameters: {"id"=>"148"}
+  [4;35;1mGame Load (1.0ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 148) [0m
+  [4;36;1mPlayerStatus Load (0.0ms)[0m   [0;1mSELECT * FROM `player_statuses` WHERE (description <> 'Maybe') [0m
+  [4;35;1mGameStatus Load (0.0ms)[0m   [0mSELECT * FROM `game_statuses` [0m
+  [4;36;1mEquipment Load (1.0ms)[0m   [0;1mSELECT * FROM `equipment` [0m
+Rendering template within layouts/application
+Rendering game/edit
+  [4;35;1mGamePlayer Count (1.0ms)[0m   [0mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=148 AND player_status_id > 2[0m
+  [4;36;1mGamePlayer Load (2.0ms)[0m   [0;1mSELECT gp.* FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=148 ORDER BY sp.description, equipment_id DESC[0m
+  [4;35;1mPlayer Load (1.0ms)[0m   [0mSELECT * FROM `players` WHERE (`players`.`id` = 55) [0m
+  [4;36;1mPlayer Load (1.0ms)[0m   [0;1mSELECT * FROM `players` WHERE (`players`.`id` = 56) [0m
+Completed in 232ms (View: 153, DB: 8) | 200 OK [http://localhost/game/edit/148]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#edit (for 0:0:0:0:0:0:0:1%0 at 2010-04-18 08:04:29) [POST]
+  Parameters: {"authenticity_token"=>"H0a/OuK5xene/xGltEgjyWTmFQHRsiaJo//C1tSvk+M=", "game"=>{"game_date(1i)"=>"2010", "game_date(2i)"=>"4", "game_date(3i)"=>"19", "game_status_id"=>"3", "organizer"=>"Wise", "organizer_address"=>"cwise@murmurinformatics.com", "message"=>"Just another test Mike - game cancelled"}, "game_player_55"=>{"player_id"=>"55", "id"=>"4319", "player_status_id"=>"1", "equipment_id"=>"5", "goalie"=>"0"}, "game_player_56"=>{"player_id"=>"56", "id"=>"4320", "player_status_id"=>"1", "equipment_id"=>"5", "goalie"=>"0"}, "id"=>"148"}
+  [4;36;1mGame Load (1.0ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 148) [0m
+  [4;35;1mPlayerStatus Load (1.0ms)[0m   [0mSELECT * FROM `player_statuses` WHERE (description <> 'Maybe') [0m
+  [4;36;1mGameStatus Load (0.0ms)[0m   [0;1mSELECT * FROM `game_statuses` [0m
+  [4;35;1mEquipment Load (1.0ms)[0m   [0mSELECT * FROM `equipment` [0m
+  [4;36;1mGamePlayer Load (1.0ms)[0m   [0;1mSELECT gp.* FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=148 ORDER BY sp.description, equipment_id DESC[0m
+WARNING: Can't mass-assign these protected attributes: id
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mGame Load (1.0ms)[0m   [0mSELECT `games`.id FROM `games` WHERE (`games`.`game_date` = '2010-04-19' AND `games`.id <> 148) LIMIT 1[0m
+  [4;36;1mGame Update (1.0ms)[0m   [0;1mUPDATE `games` SET `game_status_id` = 3, `message` = 'Just another test Mike - game cancelled', `updated_at` = '2010-04-18 12:04:29' WHERE `id` = 148[0m
+  [4;35;1mPlayer Load (1.0ms)[0m   [0mSELECT * FROM `players` WHERE (`players`.`id` = 55) [0m
+  [4;36;1mPlayer Load (1.0ms)[0m   [0;1mSELECT * FROM `players` WHERE (`players`.`id` = 56) [0m
+Sent mail to cwise@murmurinformatics.com, Mike.Villeneuve@NRCan-RNCan.gc.ca
+
+Date: Sun, 18 Apr 2010 08:04:29 -0400
+From: mailer@murmurinformatics.com
+Reply-To: cwise@murmurinformatics.com
+To: cwise@murmurinformatics.com, Mike.Villeneuve@NRCan-RNCan.gc.ca
+Subject: NRCan Ball Hockey Game for 2010-04-19: Game Cancelled
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>Just another test Mike - game cancelled (<a href='mailto:cwise@murmurinformatics.com'>Wise</a>)</p>
+  </body>
+</html>
+Redirected to http://localhost:3000/game
+Completed in 1016ms (DB: 8) | 302 Found [http://localhost/game/edit/148]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#index (for 0:0:0:0:0:0:0:1%0 at 2010-04-18 08:04:30) [GET]
+  [4;36;1mGame Load (1.0ms)[0m   [0;1mSELECT * FROM `games` ORDER BY game_date desc LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering game/index
+  [4;35;1mGamePlayer Count (1.0ms)[0m   [0mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=148 AND player_status_id > 2[0m
+  [4;36;1mGameStatus Load (1.0ms)[0m   [0;1mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 3) [0m
+  [4;35;1mGameGoalie Load (1.0ms)[0m   [0mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 148) [0m
+Rendered game/_game (97.0ms)
+  [4;36;1mGamePlayer Count (0.0ms)[0m   [0;1mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=147 AND player_status_id > 2[0m
+  [4;35;1mGameStatus Load (1.0ms)[0m   [0mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 2) [0m
+  [4;36;1mGameGoalie Load (1.0ms)[0m   [0;1mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 147) [0m
+Rendered game/_game (18.0ms)
+  [4;35;1mGamePlayer Count (1.0ms)[0m   [0mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=146 AND player_status_id > 2[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 2) [0m
+  [4;35;1mGameGoalie Load (0.0ms)[0m   [0mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 146) [0m
+Rendered game/_game (20.0ms)
+Completed in 192ms (View: 155, DB: 8) | 200 OK [http://localhost/game]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GlobalController#index (for 0:0:0:0:0:0:0:1%0 at 2010-04-18 10:08:07) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 24ms (View: 16, DB: 0) | 200 OK [http://localhost/]

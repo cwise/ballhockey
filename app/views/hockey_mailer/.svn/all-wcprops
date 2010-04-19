@@ -1,7 +1,13 @@
 K 25
 svn:wc:ra_dav:version-url
 V 53
-/svn/!svn/ver/349/nrcanhockey/app/views/hockey_mailer
+/svn/!svn/ver/927/nrcanhockey/app/views/hockey_mailer
+END
+update_game.html.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/927/nrcanhockey/app/views/hockey_mailer/update_game.html.rhtml
 END
 cancel_game.html.rhtml
 K 25

@@ -1,14 +1,14 @@
 10
 
 dir
-844
+927
 http://smyth100.local:8800/svn/nrcanhockey/tmp/war
 http://smyth100.local:8800/svn
 
 
 
-2009-09-11T11:35:22.465965Z
-349
+2010-04-18T12:06:00.585000Z
+926
 cwise
 
 
@@ -67,13 +67,6 @@ cwise
 
 204
 
-WEB-INF
-dir
-
-
-
-delete
-
 500.html
 file
 
@@ -107,13 +100,6 @@ cwise
 
 
 948
-
-javascripts
-dir
-
-
-
-delete
 
 404.html
 file

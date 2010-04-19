@@ -1,14 +1,14 @@
 10
 
 dir
-844
+927
 http://smyth100.local:8800/svn/nrcanhockey/db
 http://smyth100.local:8800/svn
 
 
 
-2009-08-19T18:10:52.049633Z
-329
+2010-04-18T12:06:43.552121Z
+927
 cwise
 
 
@@ -28,7 +28,7 @@ cwise
 
 schema.rb
 file
-846
+
 
 
 
@@ -59,6 +59,40 @@ cwise
 
 
 1995
+
+seeds.rb
+file
+
+
+
+
+2010-04-18T11:36:56.000000Z
+ce7020ee86ce21b861e82cc213ff0193
+2010-04-18T12:06:43.552121Z
+927
+cwise
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+117
 
 migrate
 dir

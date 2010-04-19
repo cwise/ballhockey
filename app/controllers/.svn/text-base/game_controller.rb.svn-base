@@ -15,7 +15,7 @@ class GameController < ApplicationController
   def new
     @game=Game.new(params[:game])
     @game.game_status_id=1
-    build_lists
+    build_lists(false)
     
     if request.post?
       params.each do |id, value|
@@ -36,7 +36,7 @@ class GameController < ApplicationController
         end
       else
         flash[:notice] = 'Game add failed'
-        build_lists
+        build_lists(false)
         render :action => 'edit'
       end
     else
@@ -56,7 +56,7 @@ class GameController < ApplicationController
   def edit
     @game=Game.find(params[:id])
     old_game_status_id=@game.game_status_id
-    build_lists
+    build_lists(true)
     
     if request.post?
       @game.attributes=params[:game]
@@ -70,14 +70,23 @@ class GameController < ApplicationController
             HockeyMailer.deliver_cancel_game(@game)
           elsif @game.is_called?
             HockeyMailer.deliver_call_game(@game)
+          elsif @game.is_send_update?
+            @game.game_players.each do |gp|
+              if(gp.player.has_email?)
+                HockeyMailer.deliver_update_game(@game, gp)
+              end
+            end
+            @game.game_status_id=1
+            @game.save
           end
-
         end
 
         flash[:notice] = 'Game update succeeded'
         redirect_to({:action => 'index'})
       else
         flash[:notice] = 'Game update failed'
+        build_lists(true)
+        render :action => 'edit'
       end
     end
   end
@@ -99,9 +108,10 @@ class GameController < ApplicationController
   end
 
   protected
-  def build_lists
+  def build_lists(is_edit)
     @player_statuses=PlayerStatus.find(:all, :conditions => "description <> 'Maybe'")
-    @game_statuses=GameStatus.find(:all)
+    @game_statuses=GameStatus.find(:all, :conditions => ['description <> ? ', 'Send Update']) unless is_edit
+    @game_statuses=GameStatus.find(:all) if is_edit
     @equipment=Equipment.find(:all)
   end
 end

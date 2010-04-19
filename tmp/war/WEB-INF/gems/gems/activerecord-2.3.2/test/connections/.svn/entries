@@ -1,140 +1,0 @@
-10
-
-dir
-844
-http://smyth100.local:8800/svn/nrcanhockey/tmp/war/WEB-INF/gems/gems/activerecord-2.3.2/test/connections
-http://smyth100.local:8800/svn
-delete
-
-
-2009-05-26T13:38:31.121547Z
-216
-cwise
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-2952bf43-23c9-4694-8924-bd5f85576e58
-
-jdbc_jdbchsqldb
-dir
-
-
-
-delete
-
-native_frontbase
-dir
-
-
-
-delete
-
-jdbc_jdbcsqlite3
-dir
-
-
-
-delete
-
-native_sqlite3
-dir
-
-
-
-delete
-
-native_sybase
-dir
-
-
-
-delete
-
-native_firebird
-dir
-
-
-
-delete
-
-native_openbase
-dir
-
-
-
-delete
-
-native_sqlite
-dir
-
-
-
-delete
-
-jdbc_jdbcpostgresql
-dir
-
-
-
-delete
-
-native_postgresql
-dir
-
-
-
-delete
-
-jdbc_jdbcmysql
-dir
-
-
-
-delete
-
-jdbc_jdbcderby
-dir
-
-
-
-delete
-
-native_oracle
-dir
-
-
-
-delete
-
-native_mysql
-dir
-
-
-
-delete
-
-native_db2
-dir
-
-
-
-delete
-
-jdbc_jdbch2
-dir
-
-
-
-delete
-

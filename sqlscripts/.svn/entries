@@ -1,19 +1,34 @@
 10
 
 dir
-844
+927
 http://smyth100.local:8800/svn/nrcanhockey/sqlscripts
 http://smyth100.local:8800/svn
 
 
 
-2009-06-02T01:10:59.709282Z
-241
+2010-04-18T12:06:43.552121Z
+927
 cwise
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2952bf43-23c9-4694-8924-bd5f85576e58
 
 create_views2.sql
 file
-845
+
 
 
 
@@ -45,9 +60,43 @@ cwise
 
 202
 
+create_constraints.sql
+file
+
+
+
+
+2010-04-18T11:53:55.000000Z
+0d342c76443de9a5586cad2dbd797c2a
+2010-04-18T12:06:43.552121Z
+927
+cwise
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+130
+
 create_views.sql
 file
-845
+
 
 
 

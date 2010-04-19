@@ -1,13 +1,19 @@
 K 25
 svn:wc:ra_dav:version-url
 V 40
-/svn/!svn/ver/241/nrcanhockey/sqlscripts
+/svn/!svn/ver/927/nrcanhockey/sqlscripts
 END
 create_views2.sql
 K 25
 svn:wc:ra_dav:version-url
 V 58
 /svn/!svn/ver/845/nrcanhockey/sqlscripts/create_views2.sql
+END
+create_constraints.sql
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/927/nrcanhockey/sqlscripts/create_constraints.sql
 END
 create_views.sql
 K 25

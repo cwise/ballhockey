@@ -1,7 +1,0 @@
-<tr>
-  <td><%= link_to 'Edit', :action => 'edit', :id => game.id %> <%= link_to 'Delete', {:action => 'delete', :id => game.id}, :confirm => 'Do you really want to delete this game?' %></td>
-  <td><%= game.game_date %></td>
-  <td align="center"><%= game.number_playing %></td>
-  <td><%= game.game_status.description %></td>
-  <td><%= game.goalies %></td>
-</tr>

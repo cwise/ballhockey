@@ -26,6 +26,10 @@ class Game < ActiveRecord::Base
     players
   end
 
+  def is_send_update?
+    return game_status_id==4
+  end
+
   def is_cancelled?
     return game_status_id==3
   end

@@ -8,6 +8,15 @@ class HockeyMailer < ActionMailer::Base
     content_type "text/html"
   end
 
+  def update_game(game, recipient)
+    from "mailer@murmurinformatics.com"
+    reply_to game.organizer_address
+    recipients recipient.player.email_address
+    subject "NRCan Ball Hockey Game Update for #{game.game_date}?"
+    body :game => game, :recipient => recipient
+    content_type "text/html"
+  end
+
   def call_game(game)
     from "mailer@murmurinformatics.com"
     reply_to game.organizer_address
