@@ -1,0 +1,5 @@
+<ul>
+  <% for player in @players do %>
+    <li><%=h player.email_address %><</li>
+  <% end %>
+</ul>

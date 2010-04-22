@@ -1,0 +1,27 @@
+<% form_for :game_player do |f| %>
+  <table>
+    <%= f.hidden_field :game_id %>
+    <tr>
+      <th>Game Date</th>
+      <td><%= @game.game_date %></td>
+    </tr>
+    <tr>
+      <th>Game Status</th>
+      <td><%= @game.game_status.description %></td>
+    </tr>
+    <tr>
+      <th>Number Playing</th>
+      <td><%= @game.number_playing %></td>
+    </tr>
+    <tr>
+      <th>Email Address</th>
+      <td><%= text_field :game_player, :email_address %></td>
+    </tr>
+    <tr>
+      <th>Player Status</th>
+      <td><%= f.collection_select :player_status_id, @player_statuses, :id, :description %></td>
+    </tr>
+  </table>
+  <%= submit_tag %>
+  <%= error_messages_for :game_player %>
+<% end %>
