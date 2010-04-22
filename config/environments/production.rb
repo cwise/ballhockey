@@ -10,12 +10,20 @@ config.action_controller.perform_caching             = true
 config.action_view.cache_template_loading            = true
 
 config.action_mailer.default_url_options = { :host => "nrcanhockey.murmurinfo.ca" }
-config.action_mailer.delivery_method = :sendmail
+#config.action_mailer.delivery_method = :sendmail
+#ActionMailer::Base.smtp_settings = {
+#  :address => "smtp.gmail.com",
+#  :port => 587,
+#  :user_name => "mailer@murmurinformatics.com",
+#  :password => "n3v3rspam",
+#  :authentication => :login
+#}
+config.action_mailer.delivery_method = :smtp
 ActionMailer::Base.smtp_settings = {
-  :address => "smtp.gmail.com",
-  :port => 587,
-  :user_name => "mailer@murmurinformatics.com",
-  :password => "n3v3rspam",
+  :address => "smtp.broadband.rogers.com",
+  :port => 25,
+  :user_name => "chriswise@rogers.com",
+  :password => "cat2dogs",
   :authentication => :login
 }
 
