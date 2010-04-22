@@ -8,12 +8,10 @@
     <p>The following people are playing today:</p>
     <%= render :partial => 'active_player', :collection => @game.playing_players %>
     <br/>
-    <p>Please respond by clicking one of the following links:</p>
-    <p><%= link_to 'Playing', url_for(:host => "nrcanhockey.murmurinfo.ca", :controller => 'game_player', :id => @recipient.id, :action => :playing) %></p>
-    <p><%= link_to 'NOT Playing', url_for(:host => "nrcanhockey.murmurinfo.ca", :controller => 'game_player', :id => @recipient.id, :action => :not_playing) %></p>
-    <p><%= link_to 'Late', url_for(:host => "nrcanhockey.murmurinfo.ca", :controller => 'game_player', :id => @recipient.id, :action => :late) %></p>
+    <p>Please respond by clicking the following link:</p>
+    <p><%= link_to 'Update Status', url_for(:controller => 'game_player', :id => @game.id, :action => :update_status, :only_path => false) %></p>
     <br/>
     <p>To check the status of this game at any time:</p>
-    <p><%= link_to 'Game Status', url_for(:host => "nrcanhockey.murmurinfo.ca", :controller => 'game', :id => @game.id, :action => :view) %></p>
+    <p><%= link_to 'Game Status', url_for(:controller => 'game', :id => @game.id, :action => :view, :only_path => false) %></p>
   </body>
 </html>

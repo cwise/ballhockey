@@ -8,12 +8,30 @@ class Game < ActiveRecord::Base
   has_many :game_goalies, :class_name => 'GameGoalie'
   accepts_nested_attributes_for :game_players
   belongs_to :game_status
-
+  attr_accessor :old_game_status_id
   cattr_reader :per_page
   @@per_page = 10
 
   def number_playing
     playing_players.size
+  end
+
+  def after_create
+    HockeyMailer.deliver_announce_game(self)
+  end
+
+  def before_update
+   unless self.old_game_status_id==self.game_status_id
+      if is_cancelled?
+        HockeyMailer.deliver_cancel_game(self)
+      elsif self.is_called?
+        HockeyMailer.deliver_call_game(self)
+      elsif self.is_send_update?
+        HockeyMailer.deliver_update_game(self)
+      end
+   end
+
+    self.game_status_id=1 if is_send_update?
   end
 
   def all_players

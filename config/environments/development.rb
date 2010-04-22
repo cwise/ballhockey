@@ -14,4 +14,16 @@ config.action_view.debug_rjs                         = true
 config.action_controller.perform_caching             = false
 
 # Don't care if the mailer can't send
-config.action_mailer.raise_delivery_errors = false
+config.action_mailer.raise_delivery_errors = true
+
+config.action_mailer.default_url_options = { :host => "localhost:3000" }
+config.action_mailer.delivery_method = :smtp
+ActionMailer::Base.smtp_settings = {
+  :address => "smtp.broadband.rogers.com",
+  :port => 25,
+  :user_name => "chriswise@rogers.com",
+  :password => "cat2dogs",
+  :authentication => :login
+}
+
+MAIL_SENDER="mailer@murmurinformatics.com"

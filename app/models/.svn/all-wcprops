@@ -13,7 +13,7 @@ game_player.rb
 K 25
 svn:wc:ra_dav:version-url
 V 55
-/svn/!svn/ver/196/nrcanhockey/app/models/game_player.rb
+/svn/!svn/ver/943/nrcanhockey/app/models/game_player.rb
 END
 equipment.rb
 K 25
@@ -31,7 +31,7 @@ game.rb
 K 25
 svn:wc:ra_dav:version-url
 V 48
-/svn/!svn/ver/927/nrcanhockey/app/models/game.rb
+/svn/!svn/ver/943/nrcanhockey/app/models/game.rb
 END
 game_goalie.rb
 K 25
@@ -43,7 +43,7 @@ hockey_mailer.rb
 K 25
 svn:wc:ra_dav:version-url
 V 57
-/svn/!svn/ver/927/nrcanhockey/app/models/hockey_mailer.rb
+/svn/!svn/ver/943/nrcanhockey/app/models/hockey_mailer.rb
 END
 game_status.rb
 K 25

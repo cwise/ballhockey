@@ -25,7 +25,7 @@ game_player_controller.rb
 K 25
 svn:wc:ra_dav:version-url
 V 71
-/svn/!svn/ver/200/nrcanhockey/app/controllers/game_player_controller.rb
+/svn/!svn/ver/943/nrcanhockey/app/controllers/game_player_controller.rb
 END
 equipment_controller.rb
 K 25
@@ -37,5 +37,5 @@ game_controller.rb
 K 25
 svn:wc:ra_dav:version-url
 V 64
-/svn/!svn/ver/927/nrcanhockey/app/controllers/game_controller.rb
+/svn/!svn/ver/943/nrcanhockey/app/controllers/game_controller.rb
 END

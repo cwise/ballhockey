@@ -1,24 +1,24 @@
 class HockeyMailer < ActionMailer::Base
-  def announce_game(game, recipient)
-    from "mailer@murmurinformatics.com"
+  def announce_game(game)
+    from MAIL_SENDER
     reply_to game.organizer_address
-    recipients recipient.player.email_address
+    recipients game.all_players
     subject "NRCan Ball Hockey Game for #{game.game_date}?"
-    body :game => game, :recipient => recipient
+    body :game => game
     content_type "text/html"
   end
 
-  def update_game(game, recipient)
-    from "mailer@murmurinformatics.com"
+  def update_game(game)
+    from MAIL_SENDER
     reply_to game.organizer_address
-    recipients recipient.player.email_address
+    recipients game.all_players
     subject "NRCan Ball Hockey Game Update for #{game.game_date}?"
-    body :game => game, :recipient => recipient
+    body :game => game
     content_type "text/html"
   end
 
   def call_game(game)
-    from "mailer@murmurinformatics.com"
+    from MAIL_SENDER
     reply_to game.organizer_address
     recipients game.all_players
     subject "NRCan Ball Hockey Game for #{game.game_date}: Game ON!"
@@ -27,7 +27,7 @@ class HockeyMailer < ActionMailer::Base
   end
 
   def cancel_game(game)
-    from "mailer@murmurinformatics.com"
+    from MAIL_SENDER
     reply_to game.organizer_address
     recipients game.all_players
     subject "NRCan Ball Hockey Game for #{game.game_date}: Game Cancelled"

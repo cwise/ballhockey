@@ -7,7 +7,7 @@ update_game.html.rhtml
 K 25
 svn:wc:ra_dav:version-url
 V 76
-/svn/!svn/ver/927/nrcanhockey/app/views/hockey_mailer/update_game.html.rhtml
+/svn/!svn/ver/943/nrcanhockey/app/views/hockey_mailer/update_game.html.rhtml
 END
 cancel_game.html.rhtml
 K 25
@@ -19,7 +19,7 @@ announce_game.html.rhtml
 K 25
 svn:wc:ra_dav:version-url
 V 78
-/svn/!svn/ver/846/nrcanhockey/app/views/hockey_mailer/announce_game.html.rhtml
+/svn/!svn/ver/943/nrcanhockey/app/views/hockey_mailer/announce_game.html.rhtml
 END
 call_game.html.rhtml
 K 25

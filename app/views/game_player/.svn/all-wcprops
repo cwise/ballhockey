@@ -9,6 +9,18 @@ svn:wc:ra_dav:version-url
 V 65
 /svn/!svn/ver/196/nrcanhockey/app/views/game_player/late.html.erb
 END
+update_status.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/943/nrcanhockey/app/views/game_player/update_status.html.erb
+END
+_email_address.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/943/nrcanhockey/app/views/game_player/_email_address.html.erb
+END
 maybe.html.erb
 K 25
 svn:wc:ra_dav:version-url

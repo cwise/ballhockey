@@ -3,7 +3,8 @@ class GamePlayer < ActiveRecord::Base
   belongs_to :player
   belongs_to :equipment
   belongs_to :player_status
-
+  attr_accessor :email_address
+  
   def name_with_status
     name=player.name
     if is_late? || is_maybe?

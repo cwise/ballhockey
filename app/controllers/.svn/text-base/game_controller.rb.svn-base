@@ -27,13 +27,6 @@ class GameController < ApplicationController
       if @game.save
         flash[:notice] = 'Game add succeeded'
         redirect_to({:action => 'index'})
-
-        # send notification
-        @game.game_players.each do |gp|
-          if(gp.player.has_email?)
-            HockeyMailer.deliver_announce_game(@game, gp)
-          end
-        end
       else
         flash[:notice] = 'Game add failed'
         build_lists(false)
@@ -55,7 +48,7 @@ class GameController < ApplicationController
 
   def edit
     @game=Game.find(params[:id])
-    old_game_status_id=@game.game_status_id
+    @game.old_game_status_id=@game.game_status_id
     build_lists(true)
     
     if request.post?
@@ -65,22 +58,6 @@ class GameController < ApplicationController
         gp.update_attributes(values)
       end
       if @game.save
-        unless old_game_status_id == @game.game_status_id
-          if @game.is_cancelled?
-            HockeyMailer.deliver_cancel_game(@game)
-          elsif @game.is_called?
-            HockeyMailer.deliver_call_game(@game)
-          elsif @game.is_send_update?
-            @game.game_players.each do |gp|
-              if(gp.player.has_email?)
-                HockeyMailer.deliver_update_game(@game, gp)
-              end
-            end
-            @game.game_status_id=1
-            @game.save
-          end
-        end
-
         flash[:notice] = 'Game update succeeded'
         redirect_to({:action => 'index'})
       else
