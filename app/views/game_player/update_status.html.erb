@@ -15,7 +15,7 @@
     </tr>
     <tr>
       <th>Email Address</th>
-      <td><%= text_field :game_player, :email_address %></td>
+      <td><%= f.text_field_with_auto_complete :email_address, {}, {:url => {:controller => :player, :action => :lookup, :format => :js}, :method => :get, :with => "'search=' + element.value"} %></td>
     </tr>
     <tr>
       <th>Player Status</th>

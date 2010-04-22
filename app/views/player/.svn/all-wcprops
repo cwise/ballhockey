@@ -45,3 +45,9 @@ svn:wc:ra_dav:version-url
 V 71
 /svn/!svn/ver/240/nrcanhockey/app/views/player/_goalie_on_deck.html.erb
 END
+lookup.js.erb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/949/nrcanhockey/app/views/player/lookup.js.erb
+END

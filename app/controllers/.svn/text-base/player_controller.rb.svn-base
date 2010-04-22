@@ -1,6 +1,16 @@
 class PlayerController < ApplicationController
   def index
     @players=Player.paginate :order => 'name', :page => params[:page]
+    respond_to do |format|
+      format.html
+    end
+  end
+
+  def lookup  
+    @players=Player.find(:all, :conditions => ['email_address LIKE ?', "%#{params[:search]}%"])
+    if request.xml_http_request?
+      render :lookup, :layout => false
+    end
   end
 
   def new
