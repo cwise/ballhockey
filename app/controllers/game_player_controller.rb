@@ -4,7 +4,7 @@ class GamePlayerController < ApplicationController
 
   def update_status
     @game=Game.find(params[:id])
-    @player_statuses=PlayerStatus.find(:all, :conditions => 'id <> 1 AND id <> 5', :order => :description)
+    @player_statuses=PlayerStatus.find(:all, :conditions => "description NOT IN ('Maybe', 'No response')", :order => :description)
 
     if request.post?
       @game_player=GamePlayer.new(params[:game_player])
