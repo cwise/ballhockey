@@ -77,10 +77,6 @@ class GameController < ApplicationController
     @game=Game.find(params[:id])
     @view_only=true
     render :action => 'edit'
-#    respond_to do |format|
-#      format.html
-#      format.iphone
-#    end
   end
 
   protected
