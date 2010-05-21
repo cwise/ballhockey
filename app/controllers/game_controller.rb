@@ -3,7 +3,6 @@ class GameController < ApplicationController
     @games=Game.paginate(:order => 'game_date desc', :page => params[:page])
     respond_to do |format|
       format.html
-      format.iphone
     end
   end
 
