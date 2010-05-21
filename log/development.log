@@ -5789,3 +5789,476 @@ Rendered game/_game (14.0ms)
   [4;35;1mGameGoalie Load (1.0ms)[0m   [0mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 146) [0m
 Rendered game/_game (14.0ms)
 Completed in 177ms (View: 126, DB: 11) | 200 OK [http://localhost/game]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GlobalController#index (for 0:0:0:0:0:0:0:1%0 at 2010-04-22 17:45:46) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 328ms (View: 309, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#index (for 0:0:0:0:0:0:0:1%0 at 2010-04-22 17:51:06) [GET]
+  [4;36;1mGame Load (10.0ms)[0m   [0;1mSELECT * FROM `games` ORDER BY game_date desc LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering game/index
+  [4;35;1mGamePlayer Count (1.0ms)[0m   [0mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=152 AND player_status_id > 2[0m
+  [4;36;1mGameStatus Load (1.0ms)[0m   [0;1mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 2) [0m
+  [4;35;1mGameGoalie Load (1.0ms)[0m   [0mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 152) [0m
+Rendered game/_game (199.0ms)
+  [4;36;1mGamePlayer Count (1.0ms)[0m   [0;1mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=148 AND player_status_id > 2[0m
+  [4;35;1mGameStatus Load (1.0ms)[0m   [0mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 3) [0m
+  [4;36;1mGameGoalie Load (1.0ms)[0m   [0;1mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 148) [0m
+Rendered game/_game (24.0ms)
+  [4;35;1mGamePlayer Count (1.0ms)[0m   [0mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=147 AND player_status_id > 2[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 2) [0m
+  [4;35;1mGameGoalie Load (1.0ms)[0m   [0mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 147) [0m
+Rendered game/_game (27.0ms)
+  [4;36;1mGamePlayer Count (1.0ms)[0m   [0;1mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=146 AND player_status_id > 2[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 2) [0m
+  [4;36;1mGameGoalie Load (0.0ms)[0m   [0;1mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 146) [0m
+Rendered game/_game (18.0ms)
+Completed in 528ms (View: 430, DB: 20) | 200 OK [http://localhost/game]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#new (for 0:0:0:0:0:0:0:1%0 at 2010-04-22 17:51:10) [GET]
+  [4;36;1mPlayerStatus Load (1.0ms)[0m   [0;1mSELECT * FROM `player_statuses` WHERE (description <> 'Maybe') [0m
+  [4;35;1mGameStatus Load (1.0ms)[0m   [0mSELECT * FROM `game_statuses` WHERE (description <> 'Send Update' ) [0m
+  [4;36;1mEquipment Load (2.0ms)[0m   [0;1mSELECT * FROM `equipment` [0m
+  [4;35;1mPlayer Load (1.0ms)[0m   [0mSELECT * FROM `players` WHERE (active = 1) [0m
+Rendering template within layouts/application
+Rendering game/edit
+  [4;36;1mPlayer Load (1.0ms)[0m   [0;1mSELECT * FROM `players` WHERE (`players`.`id` = 55) [0m
+  [4;35;1mPlayer Load (2.0ms)[0m   [0mSELECT * FROM `players` WHERE (`players`.`id` = 57) [0m
+Completed in 714ms (View: 497, DB: 9) | 200 OK [http://localhost/game/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#new (for 0:0:0:0:0:0:0:1%0 at 2010-04-22 17:51:27) [POST]
+  Parameters: {"authenticity_token"=>"NYZc9Th5M1uv9/bfDO9+PSQe5hAzC8lfDlPwaDu/Ibk=", "game"=>{"game_date(1i)"=>"2010", "game_date(2i)"=>"4", "game_date(3i)"=>"22", "game_status_id"=>"1", "organizer"=>"wise", "organizer_address"=>"cwise@murmurinformatics.com", "message"=>"This is a test"}, "game_player_55"=>{"player_id"=>"55", "id"=>"", "player_status_id"=>"1", "equipment_id"=>"5", "goalie"=>"0"}, "game_player_57"=>{"player_id"=>"57", "id"=>"", "player_status_id"=>"1", "equipment_id"=>"5", "goalie"=>"0"}}
+  [4;35;1mPlayerStatus Load (1.0ms)[0m   [0mSELECT * FROM `player_statuses` WHERE (description <> 'Maybe') [0m
+  [4;36;1mGameStatus Load (1.0ms)[0m   [0;1mSELECT * FROM `game_statuses` WHERE (description <> 'Send Update' ) [0m
+  [4;35;1mEquipment Load (2.0ms)[0m   [0mSELECT * FROM `equipment` [0m
+WARNING: Can't mass-assign these protected attributes: id
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mGame Load (1.0ms)[0m   [0;1mSELECT `games`.id FROM `games` WHERE (`games`.`game_date` = '2010-04-22') LIMIT 1[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mINSERT INTO `games` (`game_date`, `message`, `created_at`, `updated_at`, `game_status_id`, `organizer`, `organizer_address`) VALUES('2010-04-22', 'This is a test', '2010-04-22 21:51:28', '2010-04-22 21:51:28', 1, 'wise', 'cwise@murmurinformatics.com')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO `game_players` (`game_id`, `player_id`, `player_status_id`, `equipment_id`, `created_at`, `updated_at`, `goalie`) VALUES(153, 55, 1, 5, '2010-04-22 21:51:28', '2010-04-22 21:51:28', 0)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO `game_players` (`game_id`, `player_id`, `player_status_id`, `equipment_id`, `created_at`, `updated_at`, `goalie`) VALUES(153, 57, 1, 5, '2010-04-22 21:51:28', '2010-04-22 21:51:28', 0)[0m
+  [4;36;1mPlayer Load (1.0ms)[0m   [0;1mSELECT * FROM `players` WHERE (`players`.`id` = 55) [0m
+  [4;35;1mPlayer Load (1.0ms)[0m   [0mSELECT * FROM `players` WHERE (`players`.`id` = 57) [0m
+Sent mail to cwise@murmurinformatics.com, info@murmurinformatics.com
+
+Date: Thu, 22 Apr 2010 17:51:28 -0400
+From: mailer@murmurinformatics.com
+Reply-To: cwise@murmurinformatics.com
+To: cwise@murmurinformatics.com, info@murmurinformatics.com
+Subject: NRCan Ball Hockey Game for 2010-04-22?
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>This is a test (<a href='mailto:cwise@murmurinformatics.com'>wise</a>)</p>
+    <br/>
+    <p>Please respond by clicking the following link:</p>
+    <p><a href="http://localhost:3000/game_player/update_status/153">Update Status</a></p>
+    <br/>
+    <p>To check the status of this game at any time:</p>
+    <p><a href="http://localhost:3000/game/view/153">Game Status</a></p>
+  </body>
+</html>
+Redirected to http://localhost:3000/game
+Completed in 1545ms (DB: 11) | 302 Found [http://localhost/game/new]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#index (for 0:0:0:0:0:0:0:1%0 at 2010-04-22 17:51:29) [GET]
+  [4;35;1mGame Load (2.0ms)[0m   [0mSELECT * FROM `games` ORDER BY game_date desc LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering game/index
+  [4;36;1mGamePlayer Count (1.0ms)[0m   [0;1mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=153 AND player_status_id > 2[0m
+  [4;35;1mGameStatus Load (1.0ms)[0m   [0mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 1) [0m
+  [4;36;1mGameGoalie Load (2.0ms)[0m   [0;1mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 153) [0m
+Rendered game/_game (100.0ms)
+  [4;35;1mGamePlayer Count (3.0ms)[0m   [0mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=152 AND player_status_id > 2[0m
+  [4;36;1mGameStatus Load (2.0ms)[0m   [0;1mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 2) [0m
+  [4;35;1mGameGoalie Load (4.0ms)[0m   [0mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 152) [0m
+Rendered game/_game (27.0ms)
+  [4;36;1mGamePlayer Count (1.0ms)[0m   [0;1mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=148 AND player_status_id > 2[0m
+  [4;35;1mGameStatus Load (1.0ms)[0m   [0mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 3) [0m
+  [4;36;1mGameGoalie Load (1.0ms)[0m   [0;1mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 148) [0m
+Rendered game/_game (24.0ms)
+  [4;35;1mGamePlayer Count (1.0ms)[0m   [0mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=147 AND player_status_id > 2[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 2) [0m
+  [4;35;1mGameGoalie Load (1.0ms)[0m   [0mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 147) [0m
+Rendered game/_game (16.0ms)
+  [4;36;1mGamePlayer Count (1.0ms)[0m   [0;1mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=146 AND player_status_id > 2[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 2) [0m
+  [4;36;1mGameGoalie Load (1.0ms)[0m   [0;1mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 146) [0m
+Rendered game/_game (17.0ms)
+Completed in 260ms (View: 186, DB: 23) | 200 OK [http://localhost/game]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GamePlayerController#update_status (for 0:0:0:0:0:0:0:1%0 at 2010-04-22 17:52:49) [GET]
+  Parameters: {"id"=>"153"}
+  [4;36;1mGame Load (2.0ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 153) [0m
+  [4;35;1mPlayerStatus Load (1.0ms)[0m   [0mSELECT * FROM `player_statuses` WHERE (id <> 1 AND id <> 5) ORDER BY description[0m
+Rendering template within layouts/application
+Rendering game_player/update_status
+  [4;36;1mGameStatus Load (0.0ms)[0m   [0;1mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 1) [0m
+  [4;35;1mGamePlayer Count (3.0ms)[0m   [0mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=153 AND player_status_id > 2[0m
+
+ActionView::TemplateError (undefined method `text_field_with_auto_complete' for #<ActionView::Helpers::FormBuilder:0x4019eb89>) on line #18 of app/views/game_player/update_status.html.erb:
+15:     </tr>
+16:     <tr>
+17:       <th>Email Address</th>
+18:       <td><%= f.text_field_with_auto_complete :email_address, {}, {:url => {:controller => :player, :action => :lookup, :format => :js}, :method => :get, :with => "'search=' + element.value"} %></td>
+19:     </tr>
+20:     <tr>
+21:       <th>Player Status</th>
+
+    app/views/game_player/update_status.html.erb:18
+    app/views/game_player/update_status.html.erb:1
+    /Library/jruby-1.4.0/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Library/jruby-1.4.0/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.9/bin/rdebug-ide:87
+    /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.9/bin/rdebug-ide:19:in `load'
+    /Library/jruby-1.4.0/bin/rdebug-ide:19
+
+Rendered rescues/_trace (364.0ms)
+Rendered rescues/_request_and_response (16.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GlobalController#index (for 0:0:0:0:0:0:0:1%0 at 2010-04-22 17:55:31) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 1260ms (View: 1242, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GamePlayerController#update_status (for 0:0:0:0:0:0:0:1%0 at 2010-04-22 17:55:35) [GET]
+  Parameters: {"id"=>"153"}
+  [4;36;1mGame Load (8.0ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 153) [0m
+  [4;35;1mPlayerStatus Load (1.0ms)[0m   [0mSELECT * FROM `player_statuses` WHERE (id <> 1 AND id <> 5) ORDER BY description[0m
+Rendering template within layouts/application
+Rendering game_player/update_status
+  [4;36;1mGameStatus Load (1.0ms)[0m   [0;1mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 1) [0m
+  [4;35;1mGamePlayer Count (0.0ms)[0m   [0mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=153 AND player_status_id > 2[0m
+Completed in 292ms (View: 200, DB: 10) | 200 OK [http://localhost/game_player/update_status/153]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PlayerController#lookup to js (for 0:0:0:0:0:0:0:1%0 at 2010-04-22 17:55:38) [GET]
+  Parameters: {"search"=>"c"}
+  [4;35;1mPlayer Load (1.0ms)[0m   [0mSELECT * FROM `players` WHERE (email_address LIKE '%c%') [0m
+Rendering player/lookup
+Completed in 6564ms (View: 6524, DB: 1) | 200 OK [http://localhost/player/lookup?format=js&search=c]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PlayerController#lookup to js (for 0:0:0:0:0:0:0:1%0 at 2010-04-22 17:55:45) [GET]
+  Parameters: {"search"=>"cwis"}
+  [4;35;1mPlayer Load (2.0ms)[0m   [0mSELECT * FROM `players` WHERE (email_address LIKE '%cwis%') [0m
+Rendering player/lookup
+Completed in 52ms (View: 20, DB: 3) | 200 OK [http://localhost/player/lookup?format=js&search=cwis]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PlayerController#lookup to js (for 0:0:0:0:0:0:0:1%0 at 2010-04-22 17:55:45) [GET]
+  Parameters: {"search"=>"cwi"}
+  [4;35;1mPlayer Load (1.0ms)[0m   [0mSELECT * FROM `players` WHERE (email_address LIKE '%cwi%') [0m
+Rendering player/lookup
+Completed in 54ms (View: 21, DB: 2) | 200 OK [http://localhost/player/lookup?format=js&search=cwi]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PlayerController#lookup to js (for 0:0:0:0:0:0:0:1%0 at 2010-04-22 17:55:46) [GET]
+  Parameters: {"search"=>"cw"}
+  [4;35;1mPlayer Load (1.0ms)[0m   [0mSELECT * FROM `players` WHERE (email_address LIKE '%cw%') [0m
+Rendering player/lookup
+Completed in 45ms (View: 17, DB: 2) | 200 OK [http://localhost/player/lookup?format=js&search=cw]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PlayerController#lookup to js (for 0:0:0:0:0:0:0:1%0 at 2010-04-22 17:55:51) [GET]
+  Parameters: {"search"=>"c"}
+  [4;35;1mPlayer Load (1.0ms)[0m   [0mSELECT * FROM `players` WHERE (email_address LIKE '%c%') [0m
+Rendering player/lookup
+Completed in 49ms (View: 17, DB: 1) | 200 OK [http://localhost/player/lookup?format=js&search=c]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PlayerController#lookup to js (for 0:0:0:0:0:0:0:1%0 at 2010-04-22 17:55:52) [GET]
+  Parameters: {"search"=>"cw"}
+  [4;35;1mPlayer Load (1.0ms)[0m   [0mSELECT * FROM `players` WHERE (email_address LIKE '%cw%') [0m
+Rendering player/lookup
+Completed in 52ms (View: 16, DB: 2) | 200 OK [http://localhost/player/lookup?format=js&search=cw]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PlayerController#lookup to js (for 0:0:0:0:0:0:0:1%0 at 2010-04-22 17:55:55) [GET]
+  Parameters: {"search"=>"info"}
+  [4;35;1mPlayer Load (1.0ms)[0m   [0mSELECT * FROM `players` WHERE (email_address LIKE '%info%') [0m
+Rendering player/lookup
+Completed in 54ms (View: 21, DB: 1) | 200 OK [http://localhost/player/lookup?format=js&search=info]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GlobalController#index (for 0:0:0:0:0:0:0:1%0 at 2010-04-22 18:41:43) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 58ms (View: 46, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GlobalController#index (for 0:0:0:0:0:0:0:1%0 at 2010-04-24 10:29:33) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 51ms (View: 35, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GlobalController#index (for 0:0:0:0:0:0:0:1%0 at 2010-04-26 14:36:53) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 42ms (View: 31, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GlobalController#index (for 0:0:0:0:0:0:0:1%0 at 2010-05-11 16:30:42) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 344ms (View: 323, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GlobalController#index (for 192.168.1.190 at 2010-05-11 16:30:49) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 117ms (View: 105, DB: 1) | 200 OK [http://smyth2.local/]
+  [4;36;1mSQL (11.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.190 at 2010-05-11 16:30:50) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.9/bin/rdebug-ide:87
+  /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.9/bin/rdebug-ide:19:in `load'
+  /Library/jruby-1.4.0/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.190 at 2010-05-11 16:30:50) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/prototype.css" with {:method=>:get}):
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.9/bin/rdebug-ide:87
+  /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.9/bin/rdebug-ide:19:in `load'
+  /Library/jruby-1.4.0/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.190 at 2010-05-11 16:30:50) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/toolbar.png" with {:method=>:get}):
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.9/bin/rdebug-ide:87
+  /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.9/bin/rdebug-ide:19:in `load'
+  /Library/jruby-1.4.0/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.190 at 2010-05-11 16:30:50) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/listArrow.png" with {:method=>:get}):
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.9/bin/rdebug-ide:87
+  /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.9/bin/rdebug-ide:19:in `load'
+  /Library/jruby-1.4.0/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 192.168.1.190 at 2010-05-11 16:30:51) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/toolButton.png" with {:method=>:get}):
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.9/bin/rdebug-ide:87
+  /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.9/bin/rdebug-ide:19:in `load'
+  /Library/jruby-1.4.0/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GlobalController#index (for 192.168.1.190 at 2010-05-11 16:33:17) [GET]
+
+ActionView::MissingTemplate (Missing template global/index.erb in view path app/views):
+  app/controllers/global_controller.rb:3:in `index'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.9/bin/rdebug-ide:87
+  /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.9/bin/rdebug-ide:19:in `load'
+  /Library/jruby-1.4.0/bin/rdebug-ide:19
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GlobalController#index (for 192.168.1.190 at 2010-05-11 16:40:33) [GET]
+
+ActionView::MissingTemplate (Missing template global/index.erb in view path app/views):
+  app/controllers/global_controller.rb:3:in `index'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.9/bin/rdebug-ide:87
+  /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.9/bin/rdebug-ide:19:in `load'
+  /Library/jruby-1.4.0/bin/rdebug-ide:19
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GlobalController#index (for 0:0:0:0:0:0:0:1%0 at 2010-05-11 16:40:39) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 36ms (View: 26, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#index (for 0:0:0:0:0:0:0:1%0 at 2010-05-11 16:40:41) [GET]
+  [4;35;1mGame Load (10.0ms)[0m   [0mSELECT * FROM `games` ORDER BY game_date desc LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering game/index
+  [4;36;1mGamePlayer Count (1.0ms)[0m   [0;1mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=153 AND player_status_id > 2[0m
+  [4;35;1mGameStatus Load (1.0ms)[0m   [0mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 1) [0m
+  [4;36;1mGameGoalie Load (1.0ms)[0m   [0;1mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 153) [0m
+Rendered game/_game (296.0ms)
+  [4;35;1mGamePlayer Count (1.0ms)[0m   [0mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=152 AND player_status_id > 2[0m
+  [4;36;1mGameStatus Load (0.0ms)[0m   [0;1mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 2) [0m
+  [4;35;1mGameGoalie Load (0.0ms)[0m   [0mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 152) [0m
+Rendered game/_game (26.0ms)
+  [4;36;1mGamePlayer Count (0.0ms)[0m   [0;1mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=148 AND player_status_id > 2[0m
+  [4;35;1mGameStatus Load (0.0ms)[0m   [0mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 3) [0m
+  [4;36;1mGameGoalie Load (1.0ms)[0m   [0;1mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 148) [0m
+Rendered game/_game (17.0ms)
+  [4;35;1mGamePlayer Count (0.0ms)[0m   [0mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=147 AND player_status_id > 2[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 2) [0m
+  [4;35;1mGameGoalie Load (1.0ms)[0m   [0mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 147) [0m
+Rendered game/_game (16.0ms)
+  [4;36;1mGamePlayer Count (1.0ms)[0m   [0;1mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=146 AND player_status_id > 2[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 2) [0m
+  [4;36;1mGameGoalie Load (1.0ms)[0m   [0;1mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 146) [0m
+Rendered game/_game (17.0ms)
+Completed in 497ms (View: 421, DB: 18) | 200 OK [http://localhost/game]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GlobalController#index (for 0:0:0:0:0:0:0:1%0 at 2010-05-11 16:40:43) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 33ms (View: 23, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PlayerController#index (for 0:0:0:0:0:0:0:1%0 at 2010-05-11 16:40:44) [GET]
+  [4;35;1mPlayer Load (1.0ms)[0m   [0mSELECT * FROM `players` ORDER BY name LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering player/index
+Rendered player/_player (24.0ms)
+Rendered player/_player (5.0ms)
+Rendered player/_player (5.0ms)
+Completed in 152ms (View: 113, DB: 2) | 200 OK [http://localhost/player]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GlobalController#index (for 0:0:0:0:0:0:0:1%0 at 2010-05-11 16:40:46) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 31ms (View: 21, DB: 1) | 200 OK [http://localhost/]

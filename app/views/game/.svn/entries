@@ -1,7 +1,7 @@
 10
 
 dir
-927
+955
 http://smyth100.local:8800/svn/nrcanhockey/app/views/game
 http://smyth100.local:8800/svn
 
@@ -65,7 +65,7 @@ file
 
 
 
-
+delete
 2010-04-12T00:52:32.000000Z
 0122dc6d7a472d9bb1b74b648e553c3f
 2010-04-18T12:06:43.552121Z
@@ -99,7 +99,7 @@ file
 
 
 
-
+delete
 2010-04-12T00:54:50.000000Z
 a80d25a95937917ca7e5b3db9a5927f2
 2010-04-18T12:06:43.552121Z

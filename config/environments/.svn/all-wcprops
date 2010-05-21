@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 49
-/svn/!svn/ver/196/nrcanhockey/config/environments
+/svn/!svn/ver/944/nrcanhockey/config/environments
 END
 test.rb
 K 25
@@ -19,5 +19,5 @@ production.rb
 K 25
 svn:wc:ra_dav:version-url
 V 63
-/svn/!svn/ver/943/nrcanhockey/config/environments/production.rb
+/svn/!svn/ver/944/nrcanhockey/config/environments/production.rb
 END
