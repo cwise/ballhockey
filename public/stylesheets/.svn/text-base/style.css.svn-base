@@ -6,6 +6,8 @@ body {
     font-family: 'Trebuchet MS', 'Lucida Grande',
     Verdana, Lucida, Geneva, Helvetica,
     Arial, sans-serif;
+    background-image: url("/images/hockey.png");
+    background-repeat: repeat;
 }
 
 table {font: 85% "Lucida Grande", "Lucida Sans Unicode", "Trebuchet MS", sans-serif;padding: 0; margin: 0; border-collapse: collapse; color: #333; background: #F3F5F7;}

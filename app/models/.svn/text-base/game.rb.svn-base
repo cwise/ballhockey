@@ -61,7 +61,7 @@ class Game < ActiveRecord::Base
   end
 
   def self.current_game_id
-    game=Game.find_by_sql("SELECT * FROM games ORDER BY game_date DESC LIMIT 1")
+    game=Game.find_by_sql("SELECT * FROM games ORDER BY game_date DESC LIMIT 1").first
     return game.id
   end
 

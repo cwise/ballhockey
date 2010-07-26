@@ -12,14 +12,14 @@ END
 global_controller.rb
 K 25
 svn:wc:ra_dav:version-url
-V 66
-/svn/!svn/ver/845/nrcanhockey/app/controllers/global_controller.rb
+V 67
+/svn/!svn/ver/1024/nrcanhockey/app/controllers/global_controller.rb
 END
 application_controller.rb
 K 25
 svn:wc:ra_dav:version-url
-V 71
-/svn/!svn/ver/845/nrcanhockey/app/controllers/application_controller.rb
+V 72
+/svn/!svn/ver/1024/nrcanhockey/app/controllers/application_controller.rb
 END
 game_player_controller.rb
 K 25
@@ -36,6 +36,6 @@ END
 game_controller.rb
 K 25
 svn:wc:ra_dav:version-url
-V 64
-/svn/!svn/ver/943/nrcanhockey/app/controllers/game_controller.rb
+V 65
+/svn/!svn/ver/1024/nrcanhockey/app/controllers/game_controller.rb
 END

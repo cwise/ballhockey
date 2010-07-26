@@ -62,15 +62,7 @@ cwise
 
 index.iphone.erb
 file
-
-
-
-delete
-2010-04-12T00:52:32.000000Z
-0122dc6d7a472d9bb1b74b648e553c3f
-2010-04-18T12:06:43.552121Z
-927
-cwise
+1024
 
 
 
@@ -90,21 +82,11 @@ cwise
 
 
 
-
-
-109
+deleted
 
 _game.iphone.erb
 file
-
-
-
-delete
-2010-04-12T00:54:50.000000Z
-a80d25a95937917ca7e5b3db9a5927f2
-2010-04-18T12:06:43.552121Z
-927
-cwise
+1024
 
 
 
@@ -124,9 +106,7 @@ cwise
 
 
 
-
-
-77
+deleted
 
 index.html.erb
 file

@@ -2,23 +2,7 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/1"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/1">
-        <file>file:/Users/cwise/RubyApps/nrcanhockey/config/initializers/mime_types.rb</file>
-        <file>file:/Users/cwise/RubyApps/nrcanhockey/app/controllers/application_controller.rb</file>
-        <file>file:/Users/cwise/RubyApps/nrcanhockey/app/controllers/global_controller.rb</file>
-        <file>file:/Users/cwise/RubyApps/nrcanhockey/app/controllers/game_controller.rb</file>
-        <file>file:/Users/cwise/RubyApps/nrcanhockey/app/views/global/index.html.erb</file>
-        <file>file:/Users/cwise/RubyApps/nrcanhockey/app/views/global/index.iphone.erb</file>
-        <file>file:/Users/cwise/RubyApps/nrcanhockey/app/views/layouts/application.iphone.erb</file>
         <file>file:/Users/cwise/RubyApps/nrcanhockey/app/views/layouts/application.rhtml</file>
-        <file>file:/Users/cwise/RubyApps/nrcanhockey/app/views/game/index.iphone.erb</file>
-        <file>file:/Users/cwise/RubyApps/nrcanhockey/app/views/game/index.html.erb</file>
-        <file>file:/Users/cwise/RubyApps/nrcanhockey/app/helpers/application_helper.rb</file>
-        <file>file:/Users/cwise/RubyApps/nrcanhockey/app/models/game.rb</file>
-        <file>file:/Users/cwise/RubyApps/nrcanhockey/config/environments/production.rb</file>
-        <file>file:/Users/cwise/RubyApps/nrcanhockey/config/environments/development.rb</file>
-        <file>file:/Users/cwise/RubyApps/nrcanhockey/config/environment.rb</file>
-        <file>file:/Users/cwise/RubyApps/nrcanhockey/app/views/hockey_mailer/announce_game.html.rhtml</file>
-        <file>file:/Users/cwise/RubyApps/nrcanhockey/app/models/hockey_mailer.rb</file>
-        <file>file:/Users/cwise/RubyApps/nrcanhockey/tmp/war/WEB-INF/app/controllers/game_controller.rb</file>
+        <file>file:/Users/cwise/RubyApps/nrcanhockey/public/stylesheets/style.css</file>
     </open-files>
 </project-private>

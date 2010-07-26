@@ -9,18 +9,6 @@ svn:wc:ra_dav:version-url
 V 58
 /svn/!svn/ver/846/nrcanhockey/app/views/game/edit.html.erb
 END
-index.iphone.erb
-K 25
-svn:wc:ra_dav:version-url
-V 61
-/svn/!svn/ver/927/nrcanhockey/app/views/game/index.iphone.erb
-END
-_game.iphone.erb
-K 25
-svn:wc:ra_dav:version-url
-V 61
-/svn/!svn/ver/927/nrcanhockey/app/views/game/_game.iphone.erb
-END
 index.html.erb
 K 25
 svn:wc:ra_dav:version-url
