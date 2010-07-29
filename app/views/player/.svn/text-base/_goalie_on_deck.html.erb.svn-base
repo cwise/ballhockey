@@ -3,5 +3,5 @@
   <td align="center"><%= goalie_on_deck.times_played %></td>
   <td align="center"><%= goalie_on_deck.times_played_goalie %></td>
   <td><%= goalie_on_deck.last_played_goalie %></td>
-  <td><%= goalie_on_deck.goalie_factor %></td>
+  <td><%= "%.1f" % goalie_on_deck.goalie_factor %></td>
 </tr>

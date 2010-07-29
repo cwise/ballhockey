@@ -14,6 +14,10 @@ class GamePlayer < ActiveRecord::Base
     if is_carrying_equipment?
       name += " (" + equipment.description + ")"
     end
+
+    if self==game.on_deck
+      name += " (On Deck)"
+    end
     name
   end
 

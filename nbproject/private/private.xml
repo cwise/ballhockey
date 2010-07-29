@@ -4,5 +4,14 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/1">
         <file>file:/Users/cwise/RubyApps/nrcanhockey/app/views/layouts/application.rhtml</file>
         <file>file:/Users/cwise/RubyApps/nrcanhockey/public/stylesheets/style.css</file>
+        <file>file:/Users/cwise/RubyApps/nrcanhockey/app/views/game/index.html.erb</file>
+        <file>file:/Users/cwise/RubyApps/nrcanhockey/app/views/game/edit.html.erb</file>
+        <file>file:/Users/cwise/RubyApps/nrcanhockey/app/views/global/index.html.erb</file>
+        <file>file:/Users/cwise/RubyApps/nrcanhockey/app/helpers/application_helper.rb</file>
+        <file>file:/Users/cwise/RubyApps/nrcanhockey/app/helpers/global_helper.rb</file>
+        <file>file:/Users/cwise/RubyApps/nrcanhockey/app/models/game.rb</file>
+        <file>file:/Users/cwise/RubyApps/nrcanhockey/config/routes.rb</file>
+        <file>file:/Users/cwise/RubyApps/nrcanhockey/app/controllers/game_controller.rb</file>
+        <file>file:/Users/cwise/RubyApps/nrcanhockey/app/views/game/no_current_game.html.erb</file>
     </open-files>
 </project-private>

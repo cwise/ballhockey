@@ -78,4 +78,8 @@ class Game < ActiveRecord::Base
   def full_message
     message + " (<a href='mailto:#{organizer_address}'>#{organizer}</a>)"
   end
+
+  def on_deck
+    playing_players.sort_by { |gp| gp.player.goalie_factor }.last
+  end
 end

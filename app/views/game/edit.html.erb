@@ -65,7 +65,7 @@
             <td><%= @game_player.player.name %></td>
             <td><%= @game_player.player_status.description %></td>
             <td><%= @game_player.equipment.description %></td>
-            <td><%= @game_player.goalie ? 'Yes' : '' %></td>
+            <td><%= @game_player.goalie ? 'Yes' : (@game.on_deck==@game_player ? "On Deck" : "") %></td>
           </tr>
         <% else %>
           <% fields_for "game_player_#{@game_player.player_id}", @game_player do |gp_form| %>
