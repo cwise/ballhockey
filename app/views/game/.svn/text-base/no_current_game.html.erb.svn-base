@@ -1,0 +1,2 @@
+<p>No Game Called Today</p>
+<p><%= link_nav("<li>" + link_to('New Game', {:controller => :game, :action => 'new'}) + "</li>") %></p>
