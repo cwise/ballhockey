@@ -9055,3 +9055,188 @@ Rendered game/_game (13.0ms)
   [4;35;1mGameGoalie Load (1.0ms)[0m   [0mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 146) [0m
 Rendered game/_game (13.0ms)
 Completed in 202ms (View: 159, DB: 13) | 200 OK [http://localhost/game]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GlobalController#index (for 0:0:0:0:0:0:0:1%0 at 2010-07-29 09:39:58) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 30ms (View: 21, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GlobalController#index (for 0:0:0:0:0:0:0:1%0 at 2010-07-29 09:50:12) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 532ms (View: 517, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#current (for 0:0:0:0:0:0:0:1%0 at 2010-07-29 09:50:14) [GET]
+  [4;36;1mGame Load (9.0ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`game_date` = '2010-07-29') LIMIT 1[0m
+Redirected to http://localhost:3000/game/view/154
+Completed in 230ms (DB: 10) | 302 Found [http://localhost/game/current]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#view (for 0:0:0:0:0:0:0:1%0 at 2010-07-29 09:50:15) [GET]
+  Parameters: {"id"=>"154"}
+  [4;36;1mGame Load (2.0ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 154) [0m
+Rendering template within layouts/application
+Rendering game/edit
+  [4;35;1mGameStatus Load (0.0ms)[0m   [0mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 2) [0m
+  [4;36;1mGamePlayer Count (1.0ms)[0m   [0;1mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=154 AND player_status_id > 2[0m
+  [4;35;1mGamePlayer Load (2.0ms)[0m   [0mSELECT gp.* FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=154 ORDER BY sp.description, equipment_id DESC[0m
+  [4;36;1mPlayer Load (12.0ms)[0m   [0;1mSELECT * FROM `players` WHERE (`players`.`id` = 55) [0m
+  [4;35;1mPlayerStatus Load (0.0ms)[0m   [0mSELECT * FROM `player_statuses` WHERE (`player_statuses`.`id` = 3) [0m
+  [4;36;1mEquipment Load (1.0ms)[0m   [0;1mSELECT * FROM `equipment` WHERE (`equipment`.`id` = 5) [0m
+  [4;35;1mGamePlayer Load (2.0ms)[0m   [0mSELECT gp.* FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=154 AND player_status_id > 2 AND player_status_id <> 5[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `players` WHERE (`players`.`id` = 55) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM `played_games` WHERE (`played_games`.player_id = 55) [0m
+  [4;36;1mPlayedGame Load (2.0ms)[0m   [0;1mSELECT * FROM `played_games` WHERE (`played_games`.player_id = 55) [0m
+  [4;35;1mPlayer Load (1.0ms)[0m   [0mSELECT * FROM `players` WHERE (`players`.`id` = 57) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `played_games` WHERE (`played_games`.player_id = 57) [0m
+  [4;35;1mPlayedGame Load (1.0ms)[0m   [0mSELECT * FROM `played_games` WHERE (`played_games`.player_id = 57) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `players` WHERE (`players`.`id` = 57) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `player_statuses` WHERE (`player_statuses`.`id` = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `equipment` WHERE (`equipment`.`id` = 5) [0m
+Completed in 510ms (View: 429, DB: 27) | 200 OK [http://localhost/game/view/154]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GlobalController#index (for 0:0:0:0:0:0:0:1%0 at 2010-07-29 09:50:18) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 42ms (View: 31, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#current (for 0:0:0:0:0:0:0:1%0 at 2010-07-29 09:50:20) [GET]
+  [4;35;1mGame Load (1.0ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`game_date` = '2010-07-29') LIMIT 1[0m
+Redirected to http://localhost:3000/game/view/154
+Completed in 62ms (DB: 1) | 302 Found [http://localhost/game/current]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#view (for 0:0:0:0:0:0:0:1%0 at 2010-07-29 09:50:20) [GET]
+  Parameters: {"id"=>"154"}
+  [4;35;1mGame Load (1.0ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 154) [0m
+Rendering template within layouts/application
+Rendering game/edit
+  [4;36;1mGameStatus Load (1.0ms)[0m   [0;1mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 2) [0m
+  [4;35;1mGamePlayer Count (1.0ms)[0m   [0mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=154 AND player_status_id > 2[0m
+  [4;36;1mGamePlayer Load (1.0ms)[0m   [0;1mSELECT gp.* FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=154 ORDER BY sp.description, equipment_id DESC[0m
+  [4;35;1mPlayer Load (1.0ms)[0m   [0mSELECT * FROM `players` WHERE (`players`.`id` = 55) [0m
+  [4;36;1mPlayerStatus Load (1.0ms)[0m   [0;1mSELECT * FROM `player_statuses` WHERE (`player_statuses`.`id` = 3) [0m
+  [4;35;1mEquipment Load (0.0ms)[0m   [0mSELECT * FROM `equipment` WHERE (`equipment`.`id` = 5) [0m
+  [4;36;1mGamePlayer Load (2.0ms)[0m   [0;1mSELECT gp.* FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=154 AND player_status_id > 2 AND player_status_id <> 5[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `players` WHERE (`players`.`id` = 55) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `played_games` WHERE (`played_games`.player_id = 55) [0m
+  [4;35;1mPlayedGame Load (1.0ms)[0m   [0mSELECT * FROM `played_games` WHERE (`played_games`.player_id = 55) [0m
+  [4;36;1mPlayer Load (0.0ms)[0m   [0;1mSELECT * FROM `players` WHERE (`players`.`id` = 57) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM `played_games` WHERE (`played_games`.player_id = 57) [0m
+  [4;36;1mPlayedGame Load (2.0ms)[0m   [0;1mSELECT * FROM `played_games` WHERE (`played_games`.player_id = 57) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `players` WHERE (`players`.`id` = 57) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `player_statuses` WHERE (`player_statuses`.`id` = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `equipment` WHERE (`equipment`.`id` = 5) [0m
+Completed in 333ms (View: 263, DB: 14) | 200 OK [http://localhost/game/view/154]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#edit (for 0:0:0:0:0:0:0:1%0 at 2010-07-29 09:50:22) [GET]
+  Parameters: {"id"=>"154"}
+  [4;35;1mGame Load (1.0ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 154) [0m
+  [4;36;1mPlayerStatus Load (1.0ms)[0m   [0;1mSELECT * FROM `player_statuses` WHERE (description <> 'Maybe') [0m
+  [4;35;1mGameStatus Load (1.0ms)[0m   [0mSELECT * FROM `game_statuses` [0m
+  [4;36;1mEquipment Load (2.0ms)[0m   [0;1mSELECT * FROM `equipment` [0m
+Rendering template within layouts/application
+Rendering game/edit
+  [4;35;1mGamePlayer Count (0.0ms)[0m   [0mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=154 AND player_status_id > 2[0m
+  [4;36;1mGamePlayer Load (1.0ms)[0m   [0;1mSELECT gp.* FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=154 ORDER BY sp.description, equipment_id DESC[0m
+  [4;35;1mPlayer Load (1.0ms)[0m   [0mSELECT * FROM `players` WHERE (`players`.`id` = 55) [0m
+  [4;36;1mPlayer Load (1.0ms)[0m   [0;1mSELECT * FROM `players` WHERE (`players`.`id` = 57) [0m
+Completed in 318ms (View: 210, DB: 8) | 200 OK [http://localhost/game/edit/154]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#edit (for 0:0:0:0:0:0:0:1%0 at 2010-07-29 09:50:25) [POST]
+  Parameters: {"authenticity_token"=>"AxVzfoMu9fogjComUUb+eXeczjFCSNuXibUEv8TmqrA=", "game"=>{"game_date(1i)"=>"2010", "game_date(2i)"=>"7", "game_date(3i)"=>"29", "game_status_id"=>"2", "organizer"=>"Wise", "organizer_address"=>"cwise@murmurinformatics.com", "message"=>"Test to see if on deck shows up"}, "game_player_55"=>{"player_id"=>"55", "id"=>"4331", "player_status_id"=>"3", "equipment_id"=>"5", "goalie"=>"0"}, "game_player_57"=>{"player_id"=>"57", "id"=>"4332", "player_status_id"=>"5", "equipment_id"=>"5", "goalie"=>"0"}, "id"=>"154"}
+  [4;36;1mGame Load (1.0ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 154) [0m
+  [4;35;1mPlayerStatus Load (1.0ms)[0m   [0mSELECT * FROM `player_statuses` WHERE (description <> 'Maybe') [0m
+  [4;36;1mGameStatus Load (1.0ms)[0m   [0;1mSELECT * FROM `game_statuses` [0m
+  [4;35;1mEquipment Load (1.0ms)[0m   [0mSELECT * FROM `equipment` [0m
+  [4;36;1mGamePlayer Load (1.0ms)[0m   [0;1mSELECT gp.* FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=154 ORDER BY sp.description, equipment_id DESC[0m
+WARNING: Can't mass-assign these protected attributes: id
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mGamePlayer Update (1.0ms)[0m   [0mUPDATE `game_players` SET `player_status_id` = 5, `updated_at` = '2010-07-29 13:50:25' WHERE `id` = 4332[0m
+  [4;36;1mGame Load (1.0ms)[0m   [0;1mSELECT `games`.id FROM `games` WHERE (`games`.`game_date` = '2010-07-29' AND `games`.id <> 154) LIMIT 1[0m
+Redirected to http://localhost:3000/game
+Completed in 283ms (DB: 8) | 302 Found [http://localhost/game/edit/154]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#index (for 0:0:0:0:0:0:0:1%0 at 2010-07-29 09:50:26) [GET]
+  [4;36;1mGame Load (2.0ms)[0m   [0;1mSELECT * FROM `games` ORDER BY game_date desc LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering game/index
+  [4;35;1mGamePlayer Count (1.0ms)[0m   [0mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=154 AND player_status_id > 2[0m
+  [4;36;1mGameStatus Load (1.0ms)[0m   [0;1mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 2) [0m
+  [4;35;1mGameGoalie Load (1.0ms)[0m   [0mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 154) [0m
+Rendered game/_game (89.0ms)
+  [4;36;1mGamePlayer Count (1.0ms)[0m   [0;1mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=153 AND player_status_id > 2[0m
+  [4;35;1mGameStatus Load (0.0ms)[0m   [0mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 1) [0m
+  [4;36;1mGameGoalie Load (2.0ms)[0m   [0;1mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 153) [0m
+Rendered game/_game (16.0ms)
+  [4;35;1mGamePlayer Count (1.0ms)[0m   [0mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=152 AND player_status_id > 2[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 2) [0m
+  [4;35;1mGameGoalie Load (2.0ms)[0m   [0mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 152) [0m
+Rendered game/_game (26.0ms)
+  [4;36;1mGamePlayer Count (0.0ms)[0m   [0;1mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=148 AND player_status_id > 2[0m
+  [4;35;1mGameStatus Load (1.0ms)[0m   [0mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 3) [0m
+  [4;36;1mGameGoalie Load (1.0ms)[0m   [0;1mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 148) [0m
+Rendered game/_game (17.0ms)
+  [4;35;1mGamePlayer Count (1.0ms)[0m   [0mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=147 AND player_status_id > 2[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 2) [0m
+  [4;35;1mGameGoalie Load (1.0ms)[0m   [0mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 147) [0m
+Rendered game/_game (15.0ms)
+  [4;36;1mGamePlayer Count (1.0ms)[0m   [0;1mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=146 AND player_status_id > 2[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 2) [0m
+  [4;36;1mGameGoalie Load (1.0ms)[0m   [0;1mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 146) [0m
+Rendered game/_game (15.0ms)
+Completed in 269ms (View: 206, DB: 17) | 200 OK [http://localhost/game]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GlobalController#index (for 0:0:0:0:0:0:0:1%0 at 2010-07-29 09:50:28) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 38ms (View: 28, DB: 1) | 200 OK [http://localhost/global]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#current (for 0:0:0:0:0:0:0:1%0 at 2010-07-29 09:50:29) [GET]
+  [4;35;1mGame Load (0.0ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`game_date` = '2010-07-29') LIMIT 1[0m
+Redirected to http://localhost:3000/game/view/154
+Completed in 57ms (DB: 1) | 302 Found [http://localhost/game/current]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#view (for 0:0:0:0:0:0:0:1%0 at 2010-07-29 09:50:29) [GET]
+  Parameters: {"id"=>"154"}
+  [4;35;1mGame Load (1.0ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 154) [0m
+Rendering template within layouts/application
+Rendering game/edit
+  [4;36;1mGameStatus Load (0.0ms)[0m   [0;1mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 2) [0m
+  [4;35;1mGamePlayer Count (1.0ms)[0m   [0mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=154 AND player_status_id > 2[0m
+  [4;36;1mGamePlayer Load (1.0ms)[0m   [0;1mSELECT gp.* FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=154 ORDER BY sp.description, equipment_id DESC[0m
+  [4;35;1mPlayer Load (1.0ms)[0m   [0mSELECT * FROM `players` WHERE (`players`.`id` = 55) [0m
+  [4;36;1mPlayerStatus Load (1.0ms)[0m   [0;1mSELECT * FROM `player_statuses` WHERE (`player_statuses`.`id` = 3) [0m
+  [4;35;1mEquipment Load (0.0ms)[0m   [0mSELECT * FROM `equipment` WHERE (`equipment`.`id` = 5) [0m
+  [4;36;1mGamePlayer Load (1.0ms)[0m   [0;1mSELECT gp.* FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=154 AND player_status_id > 2 AND player_status_id <> 5[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `players` WHERE (`players`.`id` = 55) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `played_games` WHERE (`played_games`.player_id = 55) [0m
+  [4;35;1mPlayedGame Load (1.0ms)[0m   [0mSELECT * FROM `played_games` WHERE (`played_games`.player_id = 55) [0m
+  [4;36;1mPlayer Load (0.0ms)[0m   [0;1mSELECT * FROM `players` WHERE (`players`.`id` = 57) [0m
+  [4;35;1mPlayerStatus Load (1.0ms)[0m   [0mSELECT * FROM `player_statuses` WHERE (`player_statuses`.`id` = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `equipment` WHERE (`equipment`.`id` = 5) [0m
+Completed in 282ms (View: 226, DB: 10) | 200 OK [http://localhost/game/view/154]

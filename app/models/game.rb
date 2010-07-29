@@ -5,6 +5,7 @@ class Game < ActiveRecord::Base
   validates_presence_of :organizer_address
   has_many :game_players, :finder_sql => 'SELECT gp.* FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=#{id} ORDER BY sp.description, equipment_id DESC'
   has_many :playing_players, :class_name => 'GamePlayer', :finder_sql => 'SELECT gp.* FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=#{id} AND player_status_id > 2'
+  has_many :playing_players_not_late, :class_name => 'GamePlayer', :finder_sql => 'SELECT gp.* FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=#{id} AND player_status_id > 2 AND player_status_id <> 5'
   has_many :game_goalies, :class_name => 'GameGoalie'
   accepts_nested_attributes_for :game_players
   belongs_to :game_status
@@ -80,6 +81,6 @@ class Game < ActiveRecord::Base
   end
 
   def on_deck
-    playing_players.sort_by { |gp| gp.player.goalie_factor }.last
+    playing_players_not_late.sort_by { |gp| gp.player.goalie_factor }.last
   end
 end
