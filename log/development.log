@@ -6768,3 +6768,737 @@ Processing GlobalController#index (for 0:0:0:0:0:0:0:1%0 at 2010-07-26 06:47:31)
 Rendering template within layouts/application
 Rendering global/index
 Completed in 25ms (View: 16, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GlobalController#index (for 0:0:0:0:0:0:0:1%0 at 2010-07-29 06:30:24) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 421ms (View: 408, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#index (for 0:0:0:0:0:0:0:1%0 at 2010-07-29 06:30:58) [GET]
+  [4;36;1mGame Load (9.0ms)[0m   [0;1mSELECT * FROM `games` ORDER BY game_date desc LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering game/index
+  [4;35;1mGamePlayer Count (1.0ms)[0m   [0mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=153 AND player_status_id > 2[0m
+  [4;36;1mGameStatus Load (0.0ms)[0m   [0;1mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 1) [0m
+  [4;35;1mGameGoalie Load (1.0ms)[0m   [0mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 153) [0m
+Rendered game/_game (197.0ms)
+  [4;36;1mGamePlayer Count (1.0ms)[0m   [0;1mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=152 AND player_status_id > 2[0m
+  [4;35;1mGameStatus Load (0.0ms)[0m   [0mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 2) [0m
+  [4;36;1mGameGoalie Load (1.0ms)[0m   [0;1mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 152) [0m
+Rendered game/_game (20.0ms)
+  [4;35;1mGamePlayer Count (1.0ms)[0m   [0mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=148 AND player_status_id > 2[0m
+  [4;36;1mGameStatus Load (0.0ms)[0m   [0;1mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 3) [0m
+  [4;35;1mGameGoalie Load (0.0ms)[0m   [0mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 148) [0m
+Rendered game/_game (17.0ms)
+  [4;36;1mGamePlayer Count (1.0ms)[0m   [0;1mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=147 AND player_status_id > 2[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 2) [0m
+  [4;36;1mGameGoalie Load (1.0ms)[0m   [0;1mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 147) [0m
+Rendered game/_game (17.0ms)
+  [4;35;1mGamePlayer Count (1.0ms)[0m   [0mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=146 AND player_status_id > 2[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 2) [0m
+  [4;35;1mGameGoalie Load (1.0ms)[0m   [0mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 146) [0m
+Rendered game/_game (17.0ms)
+Completed in 415ms (View: 333, DB: 19) | 200 OK [http://localhost/game]
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#index (for 0:0:0:0:0:0:0:1%0 at 2010-07-29 06:30:59) [GET]
+  [4;35;1mGame Load (2.0ms)[0m   [0mSELECT * FROM `games` ORDER BY game_date desc LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering game/index
+  [4;36;1mGamePlayer Count (1.0ms)[0m   [0;1mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=153 AND player_status_id > 2[0m
+  [4;35;1mGameStatus Load (1.0ms)[0m   [0mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 1) [0m
+  [4;36;1mGameGoalie Load (1.0ms)[0m   [0;1mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 153) [0m
+Rendered game/_game (108.0ms)
+  [4;35;1mGamePlayer Count (1.0ms)[0m   [0mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=152 AND player_status_id > 2[0m
+  [4;36;1mGameStatus Load (1.0ms)[0m   [0;1mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 2) [0m
+  [4;35;1mGameGoalie Load (1.0ms)[0m   [0mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 152) [0m
+Rendered game/_game (17.0ms)
+  [4;36;1mGamePlayer Count (0.0ms)[0m   [0;1mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=148 AND player_status_id > 2[0m
+  [4;35;1mGameStatus Load (0.0ms)[0m   [0mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 3) [0m
+  [4;36;1mGameGoalie Load (0.0ms)[0m   [0;1mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 148) [0m
+Rendered game/_game (17.0ms)
+  [4;35;1mGamePlayer Count (0.0ms)[0m   [0mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=147 AND player_status_id > 2[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 2) [0m
+  [4;35;1mGameGoalie Load (1.0ms)[0m   [0mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 147) [0m
+Rendered game/_game (16.0ms)
+  [4;36;1mGamePlayer Count (0.0ms)[0m   [0;1mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=146 AND player_status_id > 2[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 2) [0m
+  [4;36;1mGameGoalie Load (2.0ms)[0m   [0;1mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 146) [0m
+Rendered game/_game (22.0ms)
+Completed in 258ms (View: 204, DB: 14) | 200 OK [http://localhost/game]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#edit (for 0:0:0:0:0:0:0:1%0 at 2010-07-29 06:31:57) [GET]
+  Parameters: {"id"=>"153"}
+  [4;36;1mGame Load (1.0ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 153) [0m
+  [4;35;1mPlayerStatus Load (1.0ms)[0m   [0mSELECT * FROM `player_statuses` WHERE (description <> 'Maybe') [0m
+  [4;36;1mGameStatus Load (1.0ms)[0m   [0;1mSELECT * FROM `game_statuses` [0m
+  [4;35;1mEquipment Load (1.0ms)[0m   [0mSELECT * FROM `equipment` [0m
+Rendering template within layouts/application
+Rendering game/edit
+  [4;36;1mGamePlayer Count (1.0ms)[0m   [0;1mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=153 AND player_status_id > 2[0m
+  [4;35;1mGamePlayer Load (2.0ms)[0m   [0mSELECT gp.* FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=153 ORDER BY sp.description, equipment_id DESC[0m
+  [4;36;1mPlayer Load (1.0ms)[0m   [0;1mSELECT * FROM `players` WHERE (`players`.`id` = 55) [0m
+  [4;35;1mPlayer Load (1.0ms)[0m   [0mSELECT * FROM `players` WHERE (`players`.`id` = 57) [0m
+Completed in 418ms (View: 289, DB: 9) | 200 OK [http://localhost/game/edit/153]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#edit (for 0:0:0:0:0:0:0:1%0 at 2010-07-29 06:32:25) [GET]
+  Parameters: {"id"=>"153"}
+  [4;35;1mGame Load (1.0ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 153) [0m
+  [4;36;1mPlayerStatus Load (1.0ms)[0m   [0;1mSELECT * FROM `player_statuses` WHERE (description <> 'Maybe') [0m
+  [4;35;1mGameStatus Load (1.0ms)[0m   [0mSELECT * FROM `game_statuses` [0m
+  [4;36;1mEquipment Load (1.0ms)[0m   [0;1mSELECT * FROM `equipment` [0m
+Rendering template within layouts/application
+Rendering game/edit
+  [4;35;1mGamePlayer Count (0.0ms)[0m   [0mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=153 AND player_status_id > 2[0m
+  [4;36;1mGamePlayer Load (3.0ms)[0m   [0;1mSELECT gp.* FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=153 ORDER BY sp.description, equipment_id DESC[0m
+  [4;35;1mPlayer Load (1.0ms)[0m   [0mSELECT * FROM `players` WHERE (`players`.`id` = 55) [0m
+  [4;36;1mPlayer Load (0.0ms)[0m   [0;1mSELECT * FROM `players` WHERE (`players`.`id` = 57) [0m
+Completed in 406ms (View: 286, DB: 8) | 200 OK [http://localhost/game/edit/153]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#edit (for 0:0:0:0:0:0:0:1%0 at 2010-07-29 06:34:04) [GET]
+  Parameters: {"id"=>"153"}
+  [4;36;1mGame Load (1.0ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 153) [0m
+  [4;35;1mPlayerStatus Load (1.0ms)[0m   [0mSELECT * FROM `player_statuses` WHERE (description <> 'Maybe') [0m
+  [4;36;1mGameStatus Load (1.0ms)[0m   [0;1mSELECT * FROM `game_statuses` [0m
+  [4;35;1mEquipment Load (1.0ms)[0m   [0mSELECT * FROM `equipment` [0m
+Rendering template within layouts/application
+Rendering game/edit
+  [4;36;1mGamePlayer Count (1.0ms)[0m   [0;1mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=153 AND player_status_id > 2[0m
+  [4;35;1mGamePlayer Load (2.0ms)[0m   [0mSELECT gp.* FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=153 ORDER BY sp.description, equipment_id DESC[0m
+  [4;36;1mPlayer Load (1.0ms)[0m   [0;1mSELECT * FROM `players` WHERE (`players`.`id` = 55) [0m
+  [4;35;1mPlayer Load (1.0ms)[0m   [0mSELECT * FROM `players` WHERE (`players`.`id` = 57) [0m
+Completed in 348ms (View: 244, DB: 10) | 200 OK [http://localhost/game/edit/153]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GlobalController#index (for 0:0:0:0:0:0:0:1%0 at 2010-07-29 06:34:07) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 38ms (View: 29, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GlobalController#index (for 0:0:0:0:0:0:0:1%0 at 2010-07-29 06:34:36) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 44ms (View: 33, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GlobalController#index (for 0:0:0:0:0:0:0:1%0 at 2010-07-29 06:34:57) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 44ms (View: 33, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GlobalController#index (for 0:0:0:0:0:0:0:1%0 at 2010-07-29 06:35:06) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 37ms (View: 29, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GlobalController#index (for 0:0:0:0:0:0:0:1%0 at 2010-07-29 06:35:23) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 40ms (View: 31, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PlayerController#new (for 0:0:0:0:0:0:0:1%0 at 2010-07-29 06:35:25) [GET]
+Rendering template within layouts/application
+Rendering player/edit
+Completed in 118ms (View: 85, DB: 0) | 200 OK [http://localhost/player/new]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GlobalController#index (for 0:0:0:0:0:0:0:1%0 at 2010-07-29 06:35:26) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 32ms (View: 22, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#new (for 0:0:0:0:0:0:0:1%0 at 2010-07-29 06:35:27) [GET]
+  [4;36;1mPlayerStatus Load (1.0ms)[0m   [0;1mSELECT * FROM `player_statuses` WHERE (description <> 'Maybe') [0m
+  [4;35;1mGameStatus Load (1.0ms)[0m   [0mSELECT * FROM `game_statuses` WHERE (description <> 'Send Update' ) [0m
+  [4;36;1mEquipment Load (1.0ms)[0m   [0;1mSELECT * FROM `equipment` [0m
+  [4;35;1mPlayer Load (1.0ms)[0m   [0mSELECT * FROM `players` WHERE (active = 1) [0m
+Rendering template within layouts/application
+Rendering game/edit
+  [4;36;1mPlayer Load (1.0ms)[0m   [0;1mSELECT * FROM `players` WHERE (`players`.`id` = 55) [0m
+  [4;35;1mPlayer Load (1.0ms)[0m   [0mSELECT * FROM `players` WHERE (`players`.`id` = 57) [0m
+Completed in 563ms (View: 409, DB: 7) | 200 OK [http://localhost/game/new]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GlobalController#index (for 0:0:0:0:0:0:0:1%0 at 2010-07-29 06:35:29) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 30ms (View: 20, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (2.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GlobalController#index (for 0:0:0:0:0:0:0:1%0 at 2010-07-29 06:35:47) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 51ms (View: 41, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PlayerController#new (for 0:0:0:0:0:0:0:1%0 at 2010-07-29 06:35:49) [GET]
+Rendering template within layouts/application
+Rendering player/edit
+Completed in 57ms (View: 27, DB: 0) | 200 OK [http://localhost/player/new]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GlobalController#index (for 0:0:0:0:0:0:0:1%0 at 2010-07-29 06:35:50) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 31ms (View: 22, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 0:0:0:0:0:0:0:1%0 at 2010-07-29 06:36:32) [GET]
+
+ActionController::RoutingError (No route matches "/games/current" with {:method=>:get}):
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.9/bin/rdebug-ide:87
+  /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.9/bin/rdebug-ide:19:in `load'
+  /Library/jruby-1.4.0/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#current (for 0:0:0:0:0:0:0:1%0 at 2010-07-29 06:36:40) [GET]
+  [4;36;1mGame Load (2.0ms)[0m   [0;1mSELECT * FROM games ORDER BY game_date DESC LIMIT 1[0m
+Redirected to http://localhost:3000/game/view/153
+Completed in 40ms (DB: 2) | 302 Found [http://localhost/game/current]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#view (for 0:0:0:0:0:0:0:1%0 at 2010-07-29 06:36:40) [GET]
+  Parameters: {"id"=>"153"}
+  [4;36;1mGame Load (0.0ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 153) [0m
+Rendering template within layouts/application
+Rendering game/edit
+  [4;35;1mGameStatus Load (0.0ms)[0m   [0mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 1) [0m
+  [4;36;1mGamePlayer Count (1.0ms)[0m   [0;1mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=153 AND player_status_id > 2[0m
+  [4;35;1mGamePlayer Load (1.0ms)[0m   [0mSELECT gp.* FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=153 ORDER BY sp.description, equipment_id DESC[0m
+  [4;36;1mPlayer Load (1.0ms)[0m   [0;1mSELECT * FROM `players` WHERE (`players`.`id` = 55) [0m
+  [4;35;1mPlayerStatus Load (0.0ms)[0m   [0mSELECT * FROM `player_statuses` WHERE (`player_statuses`.`id` = 1) [0m
+  [4;36;1mEquipment Load (0.0ms)[0m   [0;1mSELECT * FROM `equipment` WHERE (`equipment`.`id` = 5) [0m
+  [4;35;1mPlayer Load (1.0ms)[0m   [0mSELECT * FROM `players` WHERE (`players`.`id` = 57) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `player_statuses` WHERE (`player_statuses`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `equipment` WHERE (`equipment`.`id` = 5) [0m
+Completed in 213ms (View: 172, DB: 5) | 200 OK [http://localhost/game/view/153]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GlobalController#index (for 0:0:0:0:0:0:0:1%0 at 2010-07-29 06:37:12) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 31ms (View: 21, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GlobalController#index (for 0:0:0:0:0:0:0:1%0 at 2010-07-29 06:37:44) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 43ms (View: 33, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GlobalController#index (for 0:0:0:0:0:0:0:1%0 at 2010-07-29 06:37:57) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 40ms (View: 30, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GlobalController#index (for 0:0:0:0:0:0:0:1%0 at 2010-07-29 06:38:27) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 39ms (View: 29, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GlobalController#index (for 0:0:0:0:0:0:0:1%0 at 2010-07-29 06:38:40) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 38ms (View: 30, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GlobalController#index (for 0:0:0:0:0:0:0:1%0 at 2010-07-29 06:38:55) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 48ms (View: 39, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#current (for 0:0:0:0:0:0:0:1%0 at 2010-07-29 06:38:56) [GET]
+  [4;35;1mGame Load (1.0ms)[0m   [0mSELECT * FROM games ORDER BY game_date DESC LIMIT 1[0m
+Redirected to http://localhost:3000/game/view/153
+Completed in 38ms (DB: 1) | 302 Found [http://localhost/game/current]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#view (for 0:0:0:0:0:0:0:1%0 at 2010-07-29 06:38:56) [GET]
+  Parameters: {"id"=>"153"}
+  [4;35;1mGame Load (0.0ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 153) [0m
+Rendering template within layouts/application
+Rendering game/edit
+  [4;36;1mGameStatus Load (0.0ms)[0m   [0;1mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 1) [0m
+  [4;35;1mGamePlayer Count (1.0ms)[0m   [0mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=153 AND player_status_id > 2[0m
+  [4;36;1mGamePlayer Load (1.0ms)[0m   [0;1mSELECT gp.* FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=153 ORDER BY sp.description, equipment_id DESC[0m
+  [4;35;1mPlayer Load (1.0ms)[0m   [0mSELECT * FROM `players` WHERE (`players`.`id` = 55) [0m
+  [4;36;1mPlayerStatus Load (1.0ms)[0m   [0;1mSELECT * FROM `player_statuses` WHERE (`player_statuses`.`id` = 1) [0m
+  [4;35;1mEquipment Load (0.0ms)[0m   [0mSELECT * FROM `equipment` WHERE (`equipment`.`id` = 5) [0m
+  [4;36;1mPlayer Load (0.0ms)[0m   [0;1mSELECT * FROM `players` WHERE (`players`.`id` = 57) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `player_statuses` WHERE (`player_statuses`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `equipment` WHERE (`equipment`.`id` = 5) [0m
+Completed in 209ms (View: 166, DB: 4) | 200 OK [http://localhost/game/view/153]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GlobalController#index (for 0:0:0:0:0:0:0:1%0 at 2010-07-29 06:38:58) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 52ms (View: 43, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GlobalController#index (for 0:0:0:0:0:0:0:1%0 at 2010-07-29 06:41:21) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 30ms (View: 22, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#current (for 0:0:0:0:0:0:0:1%0 at 2010-07-29 06:41:24) [GET]
+
+NoMethodError (undefined method `current_game' for #<Class:0xf32b815>):
+  /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/will_paginate-2.3.14/lib/will_paginate/finder.rb:170:in `method_missing_with_paginate'
+  app/models/game.rb:64:in `current_game_id'
+  app/controllers/game_controller.rb:10:in `current'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.9/bin/rdebug-ide:87
+  /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.9/bin/rdebug-ide:19:in `load'
+  /Library/jruby-1.4.0/bin/rdebug-ide:19
+
+Rendered rescues/_trace (227.0ms)
+Rendered rescues/_request_and_response (29.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GlobalController#index (for 0:0:0:0:0:0:0:1%0 at 2010-07-29 06:41:26) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 30ms (View: 21, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GlobalController#index (for 0:0:0:0:0:0:0:1%0 at 2010-07-29 06:50:50) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 46ms (View: 37, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#current (for 0:0:0:0:0:0:0:1%0 at 2010-07-29 06:50:52) [GET]
+
+NoMethodError (undefined method `current_game' for #<Class:0x7eb4b58e>):
+  /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/will_paginate-2.3.14/lib/will_paginate/finder.rb:170:in `method_missing_with_paginate'
+  app/models/game.rb:64:in `current_game_id'
+  app/controllers/game_controller.rb:10:in `current'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.9/bin/rdebug-ide:87
+  /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.9/bin/rdebug-ide:19:in `load'
+  /Library/jruby-1.4.0/bin/rdebug-ide:19
+
+Rendered rescues/_trace (206.0ms)
+Rendered rescues/_request_and_response (3.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#current (for 0:0:0:0:0:0:0:1%0 at 2010-07-29 06:51:33) [GET]
+
+NoMethodError (private method `now' called for Date:Class):
+  app/models/game.rb:64:in `current_game'
+  app/controllers/game_controller.rb:10:in `current'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.9/bin/rdebug-ide:87
+  /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.9/bin/rdebug-ide:19:in `load'
+  /Library/jruby-1.4.0/bin/rdebug-ide:19
+
+Rendered rescues/_trace (185.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#current (for 0:0:0:0:0:0:0:1%0 at 2010-07-29 06:51:39) [GET]
+
+ArgumentError (Unknown key(s): game_date):
+  /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/will_paginate-2.3.14/lib/will_paginate/finder.rb:170:in `method_missing_with_paginate'
+  app/models/game.rb:64:in `current_game'
+  app/controllers/game_controller.rb:10:in `current'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.9/bin/rdebug-ide:87
+  /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.9/bin/rdebug-ide:19:in `load'
+  /Library/jruby-1.4.0/bin/rdebug-ide:19
+
+Rendered rescues/_trace (191.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#current (for 0:0:0:0:0:0:0:1%0 at 2010-07-29 06:52:31) [GET]
+
+ArgumentError (Unknown key(s): game_date):
+  /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/will_paginate-2.3.14/lib/will_paginate/finder.rb:170:in `method_missing_with_paginate'
+  app/models/game.rb:64:in `current_game'
+  app/controllers/game_controller.rb:10:in `current'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.9/bin/rdebug-ide:87
+  /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.9/bin/rdebug-ide:19:in `load'
+  /Library/jruby-1.4.0/bin/rdebug-ide:19
+
+Rendered rescues/_trace (213.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#current (for 0:0:0:0:0:0:0:1%0 at 2010-07-29 06:53:14) [GET]
+
+ArgumentError (Unknown key(s): game_date):
+  /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/will_paginate-2.3.14/lib/will_paginate/finder.rb:170:in `method_missing_with_paginate'
+  app/models/game.rb:64:in `current_game'
+  app/controllers/game_controller.rb:10:in `current'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.9/bin/rdebug-ide:87
+  /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.9/bin/rdebug-ide:19:in `load'
+  /Library/jruby-1.4.0/bin/rdebug-ide:19
+
+Rendered rescues/_trace (179.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#current (for 0:0:0:0:0:0:0:1%0 at 2010-07-29 06:54:06) [GET]
+
+ArgumentError (Unknown key(s): game_date):
+  /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/will_paginate-2.3.14/lib/will_paginate/finder.rb:170:in `method_missing_with_paginate'
+  app/models/game.rb:64:in `current_game'
+  app/controllers/game_controller.rb:10:in `current'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.9/bin/rdebug-ide:87
+  /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.9/bin/rdebug-ide:19:in `load'
+  /Library/jruby-1.4.0/bin/rdebug-ide:19
+
+Rendered rescues/_trace (173.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#current (for 0:0:0:0:0:0:0:1%0 at 2010-07-29 06:54:29) [GET]
+
+ArgumentError (Unknown key(s): game_date):
+  /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/will_paginate-2.3.14/lib/will_paginate/finder.rb:170:in `method_missing_with_paginate'
+  app/models/game.rb:64:in `current_game'
+  app/controllers/game_controller.rb:10:in `current'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.9/bin/rdebug-ide:87
+  /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.9/bin/rdebug-ide:19:in `load'
+  /Library/jruby-1.4.0/bin/rdebug-ide:19
+
+Rendered rescues/_trace (169.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#current (for 0:0:0:0:0:0:0:1%0 at 2010-07-29 06:54:31) [GET]
+
+ArgumentError (Unknown key(s): game_date):
+  /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/will_paginate-2.3.14/lib/will_paginate/finder.rb:170:in `method_missing_with_paginate'
+  app/models/game.rb:64:in `current_game'
+  app/controllers/game_controller.rb:10:in `current'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.9/bin/rdebug-ide:87
+  /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.9/bin/rdebug-ide:19:in `load'
+  /Library/jruby-1.4.0/bin/rdebug-ide:19
+
+Rendered rescues/_trace (170.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#current (for 0:0:0:0:0:0:0:1%0 at 2010-07-29 06:54:32) [GET]
+
+ArgumentError (Unknown key(s): game_date):
+  /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/will_paginate-2.3.14/lib/will_paginate/finder.rb:170:in `method_missing_with_paginate'
+  app/models/game.rb:64:in `current_game'
+  app/controllers/game_controller.rb:10:in `current'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.9/bin/rdebug-ide:87
+  /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.9/bin/rdebug-ide:19:in `load'
+  /Library/jruby-1.4.0/bin/rdebug-ide:19
+
+Rendered rescues/_trace (171.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#current (for 0:0:0:0:0:0:0:1%0 at 2010-07-29 06:54:40) [GET]
+  [4;36;1mGame Load (0.0ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`game_date` = '2010-07-29') LIMIT 1[0m
+Redirected to http://localhost:3000/game/no_current_game
+Completed in 43ms (DB: 1) | 302 Found [http://localhost/game/current]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#no_current_game (for 0:0:0:0:0:0:0:1%0 at 2010-07-29 06:54:41) [GET]
+Rendering template within layouts/application
+Rendering game/no_current_game
+Completed in 91ms (View: 79, DB: 1) | 200 OK [http://localhost/game/no_current_game]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#new (for 0:0:0:0:0:0:0:1%0 at 2010-07-29 06:54:43) [GET]
+  [4;35;1mPlayerStatus Load (1.0ms)[0m   [0mSELECT * FROM `player_statuses` WHERE (description <> 'Maybe') [0m
+  [4;36;1mGameStatus Load (0.0ms)[0m   [0;1mSELECT * FROM `game_statuses` WHERE (description <> 'Send Update' ) [0m
+  [4;35;1mEquipment Load (1.0ms)[0m   [0mSELECT * FROM `equipment` [0m
+  [4;36;1mPlayer Load (1.0ms)[0m   [0;1mSELECT * FROM `players` WHERE (active = 1) [0m
+Rendering template within layouts/application
+Rendering game/edit
+  [4;35;1mPlayer Load (1.0ms)[0m   [0mSELECT * FROM `players` WHERE (`players`.`id` = 55) [0m
+  [4;36;1mPlayer Load (0.0ms)[0m   [0;1mSELECT * FROM `players` WHERE (`players`.`id` = 57) [0m
+Completed in 257ms (View: 117, DB: 4) | 200 OK [http://localhost/game/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#new (for 0:0:0:0:0:0:0:1%0 at 2010-07-29 06:54:54) [POST]
+  Parameters: {"authenticity_token"=>"VdM6Ql9uFDPLAmkPQ64CQW0RaxBek77qy83qIrM9OkM=", "game"=>{"game_date(1i)"=>"2010", "game_date(2i)"=>"7", "game_date(3i)"=>"29", "game_status_id"=>"1", "organizer"=>"Wise", "organizer_address"=>"cwise@murmurinformatics.com", "message"=>"Just a test"}, "game_player_55"=>{"player_id"=>"55", "id"=>"", "player_status_id"=>"1", "equipment_id"=>"5", "goalie"=>"0"}, "game_player_57"=>{"player_id"=>"57", "id"=>"", "player_status_id"=>"1", "equipment_id"=>"5", "goalie"=>"0"}}
+  [4;36;1mPlayerStatus Load (1.0ms)[0m   [0;1mSELECT * FROM `player_statuses` WHERE (description <> 'Maybe') [0m
+  [4;35;1mGameStatus Load (0.0ms)[0m   [0mSELECT * FROM `game_statuses` WHERE (description <> 'Send Update' ) [0m
+  [4;36;1mEquipment Load (1.0ms)[0m   [0;1mSELECT * FROM `equipment` [0m
+WARNING: Can't mass-assign these protected attributes: id
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mGame Load (0.0ms)[0m   [0mSELECT `games`.id FROM `games` WHERE (`games`.`game_date` = '2010-07-29') LIMIT 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO `games` (`game_date`, `message`, `created_at`, `updated_at`, `game_status_id`, `organizer`, `organizer_address`) VALUES('2010-07-29', 'Just a test', '2010-07-29 10:54:54', '2010-07-29 10:54:54', 1, 'Wise', 'cwise@murmurinformatics.com')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO `game_players` (`game_id`, `player_id`, `player_status_id`, `equipment_id`, `created_at`, `updated_at`, `goalie`) VALUES(154, 55, 1, 5, '2010-07-29 10:54:54', '2010-07-29 10:54:54', 0)[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO `game_players` (`game_id`, `player_id`, `player_status_id`, `equipment_id`, `created_at`, `updated_at`, `goalie`) VALUES(154, 57, 1, 5, '2010-07-29 10:54:54', '2010-07-29 10:54:54', 0)[0m
+  [4;35;1mPlayer Load (1.0ms)[0m   [0mSELECT * FROM `players` WHERE (`players`.`id` = 55) [0m
+  [4;36;1mPlayer Load (0.0ms)[0m   [0;1mSELECT * FROM `players` WHERE (`players`.`id` = 57) [0m
+Sent mail to cwise@murmurinformatics.com, info@murmurinformatics.com
+
+Date: Thu, 29 Jul 2010 06:54:54 -0400
+From: mailer@murmurinformatics.com
+Reply-To: cwise@murmurinformatics.com
+To: cwise@murmurinformatics.com, info@murmurinformatics.com
+Subject: NRCan Ball Hockey Game for 2010-07-29?
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>Just a test (<a href='mailto:cwise@murmurinformatics.com'>Wise</a>)</p>
+    <br/>
+    <p>Please respond by clicking the following link:</p>
+    <p><a href="http://localhost:3000/game_player/update_status/154">Update Status</a></p>
+    <br/>
+    <p>To check the status of this game at any time:</p>
+    <p><a href="http://localhost:3000/game/view/154">Game Status</a></p>
+  </body>
+</html>
+Redirected to http://localhost:3000/game
+Completed in 1561ms (DB: 6) | 302 Found [http://localhost/game/new]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#index (for 0:0:0:0:0:0:0:1%0 at 2010-07-29 06:54:55) [GET]
+  [4;36;1mGame Load (1.0ms)[0m   [0;1mSELECT * FROM `games` ORDER BY game_date desc LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering game/index
+  [4;35;1mGamePlayer Count (0.0ms)[0m   [0mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=154 AND player_status_id > 2[0m
+  [4;36;1mGameStatus Load (1.0ms)[0m   [0;1mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 1) [0m
+  [4;35;1mGameGoalie Load (1.0ms)[0m   [0mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 154) [0m
+Rendered game/_game (71.0ms)
+  [4;36;1mGamePlayer Count (0.0ms)[0m   [0;1mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=153 AND player_status_id > 2[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 1) [0m
+  [4;36;1mGameGoalie Load (0.0ms)[0m   [0;1mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 153) [0m
+Rendered game/_game (14.0ms)
+  [4;35;1mGamePlayer Count (1.0ms)[0m   [0mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=152 AND player_status_id > 2[0m
+  [4;36;1mGameStatus Load (1.0ms)[0m   [0;1mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 2) [0m
+  [4;35;1mGameGoalie Load (0.0ms)[0m   [0mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 152) [0m
+Rendered game/_game (14.0ms)
+  [4;36;1mGamePlayer Count (1.0ms)[0m   [0;1mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=148 AND player_status_id > 2[0m
+  [4;35;1mGameStatus Load (1.0ms)[0m   [0mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 3) [0m
+  [4;36;1mGameGoalie Load (0.0ms)[0m   [0;1mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 148) [0m
+Rendered game/_game (14.0ms)
+  [4;35;1mGamePlayer Count (0.0ms)[0m   [0mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=147 AND player_status_id > 2[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 2) [0m
+  [4;35;1mGameGoalie Load (1.0ms)[0m   [0mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 147) [0m
+Rendered game/_game (21.0ms)
+  [4;36;1mGamePlayer Count (0.0ms)[0m   [0;1mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=146 AND player_status_id > 2[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 2) [0m
+  [4;36;1mGameGoalie Load (1.0ms)[0m   [0;1mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 146) [0m
+Rendered game/_game (13.0ms)
+Completed in 204ms (View: 159, DB: 10) | 200 OK [http://localhost/game]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GlobalController#index (for 0:0:0:0:0:0:0:1%0 at 2010-07-29 06:54:57) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 29ms (View: 21, DB: 1) | 200 OK [http://localhost/global]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#current (for 0:0:0:0:0:0:0:1%0 at 2010-07-29 06:54:58) [GET]
+  [4;35;1mGame Load (1.0ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`game_date` = '2010-07-29') LIMIT 1[0m
+Redirected to http://localhost:3000/game/view/154
+Completed in 48ms (DB: 2) | 302 Found [http://localhost/game/current]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#view (for 0:0:0:0:0:0:0:1%0 at 2010-07-29 06:54:58) [GET]
+  Parameters: {"id"=>"154"}
+  [4;35;1mGame Load (1.0ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 154) [0m
+Rendering template within layouts/application
+Rendering game/edit
+  [4;36;1mGameStatus Load (1.0ms)[0m   [0;1mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 1) [0m
+  [4;35;1mGamePlayer Count (1.0ms)[0m   [0mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=154 AND player_status_id > 2[0m
+  [4;36;1mGamePlayer Load (1.0ms)[0m   [0;1mSELECT gp.* FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=154 ORDER BY sp.description, equipment_id DESC[0m
+  [4;35;1mPlayer Load (1.0ms)[0m   [0mSELECT * FROM `players` WHERE (`players`.`id` = 55) [0m
+  [4;36;1mPlayerStatus Load (1.0ms)[0m   [0;1mSELECT * FROM `player_statuses` WHERE (`player_statuses`.`id` = 1) [0m
+  [4;35;1mEquipment Load (1.0ms)[0m   [0mSELECT * FROM `equipment` WHERE (`equipment`.`id` = 5) [0m
+  [4;36;1mPlayer Load (1.0ms)[0m   [0;1mSELECT * FROM `players` WHERE (`players`.`id` = 57) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `player_statuses` WHERE (`player_statuses`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `equipment` WHERE (`equipment`.`id` = 5) [0m
+Completed in 249ms (View: 203, DB: 9) | 200 OK [http://localhost/game/view/154]

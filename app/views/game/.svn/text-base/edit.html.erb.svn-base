@@ -41,6 +41,10 @@
     </tr>
   </table>
 
+  <% unless @view_only %>
+    <%= entry_nav %>
+  <% end %>
+
   <%= error_messages_for 'game' %>
 
   <br/>

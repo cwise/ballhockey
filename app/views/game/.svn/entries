@@ -1,14 +1,14 @@
 10
 
 dir
-955
+1102
 http://smyth100.local:8800/svn/nrcanhockey/app/views/game
 http://smyth100.local:8800/svn
 
 
 
-2010-04-18T12:06:43.552121Z
-927
+2010-06-02T10:24:49.457459Z
+1024
 cwise
 
 
@@ -28,14 +28,14 @@ cwise
 
 edit.html.erb
 file
+1103
 
 
 
-
-2010-04-06T17:27:28.000000Z
-3644f70a48938c55d2d66d8a0dbc6637
-2010-04-06T17:35:44.081591Z
-846
+2010-07-29T10:32:22.000000Z
+5c070d5d6a2c37848715eef45bdd6ac7
+2010-07-29T10:55:59.931814Z
+1103
 cwise
 
 
@@ -58,55 +58,7 @@ cwise
 
 
 
-2755
-
-index.iphone.erb
-file
-1024
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-deleted
-
-_game.iphone.erb
-file
-1024
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-deleted
+2815
 
 index.html.erb
 file
@@ -141,6 +93,40 @@ cwise
 
 
 356
+
+no_current_game.html.erb
+file
+1103
+
+
+
+2010-07-29T10:50:48.000000Z
+367b24553a5edc929857f17c0fe64420
+2010-07-29T10:55:59.931814Z
+1103
+cwise
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+132
 
 _game.html.erb
 file

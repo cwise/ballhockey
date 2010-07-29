@@ -60,9 +60,8 @@ class Game < ActiveRecord::Base
     return is_called?
   end
 
-  def self.current_game_id
-    game=Game.find_by_sql("SELECT * FROM games ORDER BY game_date DESC LIMIT 1").first
-    return game.id
+  def self.current_game
+    Game.find_by_game_date(Date.today)
   end
 
   def goalies

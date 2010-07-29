@@ -1,14 +1,14 @@
 10
 
 dir
-955
+1102
 http://smyth100.local:8800/svn/nrcanhockey
 http://smyth100.local:8800/svn
 
 
 
-2010-04-22T22:15:36.962973Z
-955
+2010-07-26T10:47:50.579733Z
+1102
 cwise
 has-props
 has-prop-mods
@@ -69,9 +69,6 @@ dir
 spec
 dir
 
-vendor
-dir
-
 README
 file
 
@@ -106,40 +103,19 @@ cwise
 
 10011
 
-tmp
+vendor
 dir
 
-Capfile
-file
-1024
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-deleted
+tmp
+dir
 
 script
 dir
 
-config
+doc
 dir
 
-doc
+config
 dir
 
 lib

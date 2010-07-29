@@ -7,8 +7,12 @@ class GameController < ApplicationController
   end
 
   def current
-    current_id = Game.current_game_id
-    redirect_to({:action => 'view', :id => current_id})
+    current_game=Game.current_game
+    if current_game
+      redirect_to({:action => 'view', :id => current_game.id})
+    else
+      redirect_to({:action => 'no_current_game'})
+    end
   end
 
   def new

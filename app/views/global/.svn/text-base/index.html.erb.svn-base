@@ -1,6 +1,13 @@
 <h1>NRCan Ball Hockey</h1>
+<p><%= link_to("Today's Game", :controller => :game, :action => 'current') %></p>
 <p><%= link_to('Players', :controller => :player, :action => 'index') %></p>
 <p><%= link_to('Games', :controller => :game, :action => 'index') %></p>
 <p><%= link_to('Equipment', :controller => :equipment, :action => 'index') %></p>
 <p><%= link_to('Player Summary', :controller => :player, :action => 'player_summary') %></p>
 <p><%= link_to('Goalies on Deck', :controller => :player, :action => 'goalies_on_deck') %></p>
+<br/>
+<p>
+  <%= link_nav("<li>" + link_to('New Player', {:controller => :player, :action => 'new'}) + "</li>") %>
+  <%= link_nav("<li>" + link_to('New Game', {:controller => :game, :action => 'new'}) + "</li>") %>
+  <%= link_nav("<li>" + link_to('New Equipment', {:controller => :equipment, :action => 'new'}) + "</li>") %>
+</p>
