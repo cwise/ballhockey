@@ -1,4 +1,4 @@
-class PlayerController < ApplicationController
+class PlayerController < ApplicationController  
   def index
     @players=Player.paginate :order => 'name', :page => params[:page]
     respond_to do |format|

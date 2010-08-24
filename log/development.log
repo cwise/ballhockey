@@ -9798,3 +9798,82 @@ Processing GamePlayerController#update_status (for 0:0:0:0:0:0:0:1%0 at 2010-08-
   [4;36;1mGamePlayer Load (1.0ms)[0m   [0;1mSELECT * FROM `game_players` WHERE (`game_players`.`game_id` = 155 AND `game_players`.`player_id` = 55) LIMIT 1[0m
   [4;35;1mPlayerStatus Load (1.0ms)[0m   [0mSELECT * FROM `player_statuses` WHERE (`player_statuses`.`id` = 3) [0m
 Completed in 274ms (View: 3, DB: 5) | 200 OK [http://localhost/game_player/update_status/155]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GlobalController#index (for 0:0:0:0:0:0:0:1%0 at 2010-08-24 16:31:04) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 372ms (View: 361, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GamePlayerController#update_status (for 0:0:0:0:0:0:0:1%0 at 2010-08-24 16:32:16) [GET]
+  Parameters: {"id"=>"155"}
+  [4;36;1mGame Load (11.0ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 155) [0m
+  [4;35;1mPlayerStatus Load (1.0ms)[0m   [0mSELECT * FROM `player_statuses` WHERE (description NOT IN ('Maybe', 'No response')) ORDER BY description[0m
+Rendering template within layouts/application
+Rendering game_player/update_status
+  [4;36;1mGameStatus Load (1.0ms)[0m   [0;1mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 1) [0m
+  [4;35;1mGamePlayer Count (0.0ms)[0m   [0mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=155 AND player_status_id > 2[0m
+
+ActionView::TemplateError (undefined method `text_field_with_auto_complete' for #<ActionView::Helpers::FormBuilder:0x38e02fc4>) on line #18 of app/views/game_player/update_status.html.erb:
+15:     </tr>
+16:     <tr>
+17:       <th>Email Address</th>
+18:       <td><%= f.text_field_with_auto_complete :email_address, {}, {:url => {:controller => :player, :action => :lookup, :format => :js}, :method => :get, :with => "'search=' + element.value"} %></td>
+19:     </tr>
+20:     <tr>
+21:       <th>Player Status</th>
+
+    app/views/game_player/update_status.html.erb:18
+    app/views/game_player/update_status.html.erb:1
+    /Library/jruby-1.4.0/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Library/jruby-1.4.0/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Library/jruby-1.4.0/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.9/bin/rdebug-ide:87
+    /Library/jruby-1.4.0/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.9/bin/rdebug-ide:19:in `load'
+    /Library/jruby-1.4.0/bin/rdebug-ide:19
+
+Rendered rescues/_trace (379.0ms)
+Rendered rescues/_request_and_response (16.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GamePlayerController#update_status (for 0:0:0:0:0:0:0:1%0 at 2010-08-24 16:33:19) [GET]
+  Parameters: {"id"=>"155"}
+  [4;35;1mGame Load (1.0ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 155) [0m
+  [4;36;1mPlayerStatus Load (0.0ms)[0m   [0;1mSELECT * FROM `player_statuses` WHERE (description NOT IN ('Maybe', 'No response')) ORDER BY description[0m
+Rendering template within layouts/application
+Rendering game_player/update_status
+  [4;35;1mGameStatus Load (1.0ms)[0m   [0mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 1) [0m
+  [4;36;1mGamePlayer Count (1.0ms)[0m   [0;1mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=155 AND player_status_id > 2[0m
+Completed in 194ms (View: 104, DB: 3) | 200 OK [http://localhost/game_player/update_status/155]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PlayerController#lookup to js (for 0:0:0:0:0:0:0:1%0 at 2010-08-24 16:33:26) [GET]
+  Parameters: {"search"=>"info@murmurinformatics.com"}
+  [4;36;1mPlayer Load (1.0ms)[0m   [0;1mSELECT * FROM `players` WHERE (email_address LIKE '%info@murmurinformatics.com%') [0m
+Rendering player/lookup
+Completed in 56ms (View: 28, DB: 1) | 200 OK [http://localhost/player/lookup?format=js&search=info%40murmurinformatics.com]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GamePlayerController#update_status (for 0:0:0:0:0:0:0:1%0 at 2010-08-24 16:33:27) [POST]
+  Parameters: {"authenticity_token"=>"F5C6K3LhyQ7rvQsP2yUaijq2TQOjPuc/zLZxqtwta4g=", "game_player"=>{"game_id"=>"", "email_address"=>"info@murmurinformatics.com", "player_status_id"=>"3"}, "commit"=>"Save changes", "id"=>"155"}
+  [4;36;1mGame Load (1.0ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 155) [0m
+  [4;35;1mPlayerStatus Load (1.0ms)[0m   [0mSELECT * FROM `player_statuses` WHERE (description NOT IN ('Maybe', 'No response')) ORDER BY description[0m
+  [4;36;1mPlayer Load (2.0ms)[0m   [0;1mSELECT * FROM `players` WHERE (`players`.`email_address` = 'info@murmurinformatics.com') LIMIT 1[0m
+  [4;35;1mGamePlayer Load (1.0ms)[0m   [0mSELECT * FROM `game_players` WHERE (`game_players`.`game_id` = 155 AND `game_players`.`player_id` = 57) LIMIT 1[0m
+  [4;36;1mGamePlayer Update (0.0ms)[0m   [0;1mUPDATE `game_players` SET `player_status_id` = 3, `updated_at` = '2010-08-24 20:33:27' WHERE `id` = 4334[0m
+  [4;35;1mPlayerStatus Load (1.0ms)[0m   [0mSELECT * FROM `player_statuses` WHERE (`player_statuses`.`id` = 3) [0m
+Completed in 336ms (View: 2, DB: 6) | 200 OK [http://localhost/game_player/update_status/155]
