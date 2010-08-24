@@ -8,6 +8,7 @@ class GamePlayerController < ApplicationController
 
     if request.post?
       @game_player=GamePlayer.new(params[:game_player])
+      cookies.permanent[:email_address]=@game_player.email_address
       player=Player.find_by_email_address(@game_player.email_address)
       if player.nil?
         @game_player.errors.add("Player not found by address") 
@@ -20,6 +21,10 @@ class GamePlayerController < ApplicationController
 
         render :text => "Confirmed #{player.name} as #{gp.player_status.description}"
       end
+    else
+      @game_player=GamePlayer.new
+      logger.info("cookies=#{cookies}")
+      @game_player.email_address=cookies[:email_address]
     end
   end
 
