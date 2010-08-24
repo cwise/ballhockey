@@ -20,6 +20,7 @@ class GamePlayerController < ApplicationController
       end
     else
       @game_player=GamePlayer.new
+      logger.info("cookies=#{cookies}")
       @game_player.email_address=cookies[:email_address]
     end
   end

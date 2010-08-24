@@ -1,6 +1,4 @@
-class PlayerController < ApplicationController
-  skip_before_filter :verify_authenticity_token, :only => [:lookup]
-  
+class PlayerController < ApplicationController  
   def index
     @players=Player.paginate :order => 'name', :page => params[:page]
     respond_to do |format|

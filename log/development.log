@@ -9752,3 +9752,49 @@ Processing PlayerController#lookup to js (for 0:0:0:0:0:0:0:1%0 at 2010-08-24 15
   [4;35;1mPlayer Load (1.0ms)[0m   [0mSELECT * FROM `players` WHERE (email_address LIKE '%i%') [0m
 Rendering player/lookup
 Completed in 62ms (View: 31, DB: 1) | 200 OK [http://localhost/player/lookup?format=js&search=i]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GlobalController#index (for 0:0:0:0:0:0:0:1%0 at 2010-08-24 16:11:05) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 41ms (View: 26, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GamePlayerController#update_status (for 0:0:0:0:0:0:0:1%0 at 2010-08-24 16:11:10) [GET]
+  Parameters: {"id"=>"155"}
+  [4;36;1mGame Load (1.0ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 155) [0m
+  [4;35;1mPlayerStatus Load (0.0ms)[0m   [0mSELECT * FROM `player_statuses` WHERE (description NOT IN ('Maybe', 'No response')) ORDER BY description[0m
+Rendering template within layouts/application
+Rendering game_player/update_status
+  [4;36;1mGameStatus Load (0.0ms)[0m   [0;1mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 1) [0m
+  [4;35;1mGamePlayer Count (1.0ms)[0m   [0mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=155 AND player_status_id > 2[0m
+Completed in 235ms (View: 105, DB: 3) | 200 OK [http://localhost/game_player/update_status/155]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PlayerController#lookup to js (for 0:0:0:0:0:0:0:1%0 at 2010-08-24 16:11:13) [GET]
+  Parameters: {"search"=>"c"}
+  [4;35;1mPlayer Load (1.0ms)[0m   [0mSELECT * FROM `players` WHERE (email_address LIKE '%c%') [0m
+Rendering player/lookup
+Completed in 45ms (View: 17, DB: 1) | 200 OK [http://localhost/player/lookup?format=js&search=c]
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PlayerController#lookup to js (for 0:0:0:0:0:0:0:1%0 at 2010-08-24 16:11:15) [GET]
+  Parameters: {"search"=>"cw"}
+  [4;35;1mPlayer Load (1.0ms)[0m   [0mSELECT * FROM `players` WHERE (email_address LIKE '%cw%') [0m
+Rendering player/lookup
+Completed in 75ms (View: 24, DB: 3) | 200 OK [http://localhost/player/lookup?format=js&search=cw]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GamePlayerController#update_status (for 0:0:0:0:0:0:0:1%0 at 2010-08-24 16:11:17) [POST]
+  Parameters: {"authenticity_token"=>"CctRwWpndNbV/q0gnRRarLvfZEa1PNitWLQ6VX9dN1M=", "game_player"=>{"game_id"=>"", "email_address"=>"cwise@murmurinformatics.com", "player_status_id"=>"3"}, "commit"=>"Save changes", "id"=>"155"}
+  [4;35;1mGame Load (1.0ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 155) [0m
+  [4;36;1mPlayerStatus Load (1.0ms)[0m   [0;1mSELECT * FROM `player_statuses` WHERE (description NOT IN ('Maybe', 'No response')) ORDER BY description[0m
+  [4;35;1mPlayer Load (1.0ms)[0m   [0mSELECT * FROM `players` WHERE (`players`.`email_address` = 'cwise@murmurinformatics.com') LIMIT 1[0m
+  [4;36;1mGamePlayer Load (1.0ms)[0m   [0;1mSELECT * FROM `game_players` WHERE (`game_players`.`game_id` = 155 AND `game_players`.`player_id` = 55) LIMIT 1[0m
+  [4;35;1mPlayerStatus Load (1.0ms)[0m   [0mSELECT * FROM `player_statuses` WHERE (`player_statuses`.`id` = 3) [0m
+Completed in 274ms (View: 3, DB: 5) | 200 OK [http://localhost/game_player/update_status/155]
