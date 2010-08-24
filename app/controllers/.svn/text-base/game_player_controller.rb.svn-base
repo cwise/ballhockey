@@ -1,7 +1,4 @@
 class GamePlayerController < ApplicationController
-  skip_before_filter :verify_authenticity_token, :only => [:auto_complete_for_email_address]
-#  auto_complete_for :game_player, :email_address
-
   def update_status
     @game=Game.find(params[:id])
     @player_statuses=PlayerStatus.find(:all, :conditions => "description NOT IN ('Maybe', 'No response')", :order => :description)
@@ -26,11 +23,5 @@ class GamePlayerController < ApplicationController
       logger.info("cookies=#{cookies}")
       @game_player.email_address=cookies[:email_address]
     end
-  end
-
-  def auto_complete_for_email_address
-    email_address=params[:game_player][:email_address]
-    @players=Player.find_by_email_address(:all , :conditions => "email_address like '%"+email_address.downcase+"%'")
-    render :partial => 'email_address'
   end
 end

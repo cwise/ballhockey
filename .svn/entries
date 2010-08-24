@@ -1,17 +1,17 @@
 10
 
 dir
-1102
+1140
 http://smyth100.local:8800/svn/nrcanhockey
 http://smyth100.local:8800/svn
 
 
 
-2010-07-26T10:47:50.579733Z
-1102
+2010-08-24T19:40:27.895072Z
+1140
 cwise
 has-props
-has-prop-mods
+
 
 
 
@@ -50,7 +50,7 @@ delete
 
 Rakefile
 file
-
+1139
 
 
 
@@ -71,7 +71,7 @@ dir
 
 README
 file
-
+1139
 
 
 
