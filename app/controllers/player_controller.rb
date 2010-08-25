@@ -50,7 +50,7 @@ class PlayerController < ApplicationController
   end
 
   def goalies_on_deck
-    @players=Player.find(:all, :include => [:played_games])
+    @players=Player.find(:all, :conditions => 'active = 1', :include => [:played_games])
     @sorted_players=@players.to_a.sort do |a,b|
       comp=b.goalie_factor <=> a.goalie_factor
       comp.zero? ? (comp=(a.times_played_goalie <=> b.times_played_goalie)) : comp
