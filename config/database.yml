@@ -1,18 +1,21 @@
 development:
-        adapter: jdbcmysql
-        url: jdbc:mysql://smyth100.local/nrcanhockey_dev
-        username: root
-        password: upandatom
+    adapter: mysql2
+    host: smyth100.local
+    database: nrcanhockey_dev
+    username: root
+    password: upandatom
 
 test:
-        adapter: jdbcmysql
-        url: jdbc:mysql://smyth100.local/nrcanhockey_test
-        username: root
-        password: upandatom
+    adapter: mysql2
+    host: smyth100.local
+    database: nrcanhockey_test
+    username: root
+    password: upandatom
 
 production:
-        adapter: jdbcmysql
-        url: jdbc:mysql://smyth100.local/nrcanhockey_prod
-        username: root
-        password: upandatom
+    adapter: mysql2
+    host: smyth100.local
+    database: nrcanhockey_prod
+    username: root
+    password: upandatom
 

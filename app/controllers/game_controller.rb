@@ -71,9 +71,9 @@ class GameController < ApplicationController
     end
   end
 
-  def delete
-    @game=Game.find(params[:id])
-    @game.delete
+  def destroy
+#    @game=Game.find(params[:id])
+#    @game.delete
     redirect_to :back
   end
 

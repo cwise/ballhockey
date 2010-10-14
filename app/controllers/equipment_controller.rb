@@ -28,9 +28,9 @@ class EquipmentController < ApplicationController
     end
   end
 
-  def delete
-    @equipment=Equipment.find(params[:id])
-    @equipment.delete
+  def destroy
+#    @equipment=Equipment.find(params[:id])
+#    @equipment.delete
     redirect_to :back
   end
 end

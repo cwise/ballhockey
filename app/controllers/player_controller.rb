@@ -38,9 +38,9 @@ class PlayerController < ApplicationController
     end
   end
 
-  def delete
-    @player=Player.find(params[:id])
-    @player.delete
+  def destroy
+#    @player=Player.find(params[:id])
+#    @player.delete
     redirect_to :back
   end
 
