@@ -10033,3 +10033,28 @@ Rendering player/goalies_on_deck
 Rendered player/_goalie_on_deck (11.0ms)
 Rendered player/_goalie_on_deck (14.0ms)
 Completed in 160ms (View: 62, DB: 3) | 200 OK [http://localhost/player/goalies_on_deck]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GlobalController#index (for 0:0:0:0:0:0:0:1%0 at 2010-08-30 14:12:44) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 499ms (View: 486, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PlayerController#index (for 0:0:0:0:0:0:0:1%0 at 2010-08-30 14:12:52) [GET]
+  [4;36;1mPlayer Load (8.0ms)[0m   [0;1mSELECT * FROM `players` ORDER BY name LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering player/index
+Rendered player/_player (75.0ms)
+Rendered player/_player (7.0ms)
+Rendered player/_player (6.0ms)
+Completed in 262ms (View: 209, DB: 9) | 200 OK [http://localhost/player]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GlobalController#index (for 0:0:0:0:0:0:0:1%0 at 2010-09-07 07:38:13) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 655ms (View: 642, DB: 1) | 200 OK [http://localhost/]
