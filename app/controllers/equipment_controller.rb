@@ -1,4 +1,6 @@
 class EquipmentController < ApplicationController
+  before_filter :admin_required
+  
   def index
     @equipment=Equipment.all
   end
@@ -28,9 +30,9 @@ class EquipmentController < ApplicationController
     end
   end
 
-  def destroy
-#    @equipment=Equipment.find(params[:id])
-#    @equipment.delete
+  def delete
+    @equipment=Equipment.find(params[:id])
+    @equipment.delete
     redirect_to :back
   end
 end

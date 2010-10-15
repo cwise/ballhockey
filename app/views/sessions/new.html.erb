@@ -1,0 +1,6 @@
+<% form_tag '/sessions/create', :method => :create  do |f| %>  
+  Password: <%= password_field_tag :password %>  
+  <%= submit_tag "Login" %>  
+<% end %>
+<br/>
+<%= link_to 'Home', root_path %>

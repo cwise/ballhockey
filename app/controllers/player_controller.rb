@@ -1,4 +1,6 @@
 class PlayerController < ApplicationController  
+  before_filter :admin_required, :except => [:lookup, :player_summary, :goalies_on_deck]
+  
   def index
     @players=Player.paginate :order => 'name', :page => params[:page]
     respond_to do |format|
@@ -38,9 +40,9 @@ class PlayerController < ApplicationController
     end
   end
 
-  def destroy
-#    @player=Player.find(params[:id])
-#    @player.delete
+  def delete
+    @player=Player.find(params[:id])
+    @player.delete
     redirect_to :back
   end
 

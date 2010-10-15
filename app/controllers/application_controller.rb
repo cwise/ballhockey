@@ -10,4 +10,17 @@ class ApplicationController < ActionController::Base
       @current_action = action_name
       @current_controller = controller_name
   end
+  
+  def admin?
+    session[:password]=='playhockey'
+  end
+  helper_method :admin?
+
+  def admin_required
+    return true if admin?
+    session[:return_to]=request.request_uri
+    redirect_to login_path and
+      return false
+  end
+  helper_method :admin_required
 end

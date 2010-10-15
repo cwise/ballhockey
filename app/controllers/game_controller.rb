@@ -1,4 +1,6 @@
 class GameController < ApplicationController
+  before_filter :admin_required, :except => [:current, :view]
+  
   def index
     @games=Game.paginate(:order => 'game_date desc', :page => params[:page])
     respond_to do |format|
@@ -71,9 +73,9 @@ class GameController < ApplicationController
     end
   end
 
-  def destroy
-#    @game=Game.find(params[:id])
-#    @game.delete
+  def delete
+    @game=Game.find(params[:id])
+    @game.delete
     redirect_to :back
   end
 

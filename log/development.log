@@ -12709,3 +12709,1462 @@ Migrating to CreateBackupTables (20101015111221)
   [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `player_statuses`[0m
   [4;35;1mSQL (0.9ms)[0m   [0mdescribe `players`[0m
   [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `players`[0m
+
+
+Processing GlobalController#index (for 127.0.0.1 at 2010-10-15 07:37:36) [GET]
+Rendering template within layouts/application
+Rendering global/index
+
+ActionView::TemplateError (undefined method `admin?' for #<ActionView::Base:0x1035a4c28>) on line #3 of app/views/global/index.html.erb:
+1: <h1>NRCan Ball Hockey</h1>
+2: <p><%= link_to("Today's Game", :controller => :game, :action => 'current') %></p>
+3: <p><%= link_to('Players', :controller => :player, :action => 'index') if admin? %></p>
+4: <p><%= link_to('Games', :controller => :game, :action => 'index') if admin? %></p>
+5: <p><%= link_to('Equipment', :controller => :equipment, :action => 'index')  if admin? %></p>
+6: <p><%= link_to('Player Summary', :controller => :player, :action => 'player_summary') %></p>
+
+    app/views/global/index.html.erb:3
+    app/controllers/global_controller.rb:3:in `index'
+    /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (44.3ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing GlobalController#index (for 127.0.0.1 at 2010-10-15 07:41:54) [GET]
+Rendering template within layouts/application
+Rendering global/index
+
+ActionView::TemplateError (undefined method `admin?' for #<ActionView::Base:0x103593018>) on line #3 of app/views/global/index.html.erb:
+1: <h1>NRCan Ball Hockey</h1>
+2: <p><%= link_to("Today's Game", :controller => :game, :action => 'current') %></p>
+3: <p><%= link_to('Players', :controller => :player, :action => 'index') if admin? %></p>
+4: <p><%= link_to('Games', :controller => :game, :action => 'index') if admin? %></p>
+5: <p><%= link_to('Equipment', :controller => :equipment, :action => 'index')  if admin? %></p>
+6: <p><%= link_to('Player Summary', :controller => :player, :action => 'player_summary') %></p>
+
+    app/views/global/index.html.erb:3
+    app/controllers/global_controller.rb:3:in `index'
+    /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (106.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+/!\ FAILSAFE /!\  Fri Oct 15 07:42:29 -0400 2010
+  Status: 500 Internal Server Error
+  Missing helper file helpers/admin?_helper.rb
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/actionpack-2.3.5/lib/action_controller/helpers.rb:131:in `helper'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/actionpack-2.3.5/lib/action_controller/helpers.rb:115:in `each'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/actionpack-2.3.5/lib/action_controller/helpers.rb:115:in `helper'
+    /Users/cwise/RubyApps/nrcanhockey/app/controllers/application_controller.rb:17
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:380:in `load_file'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:379:in `load_file'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:259:in `require_or_load'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:425:in `load_missing_constant'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:80:in `const_missing'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:92:in `const_missing'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:89:in `dispatch'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
+    /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/rack-1.0.1/lib/rack/handler/webrick.rb:14:in `run'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/rails-2.3.5/lib/commands/server.rb:111
+    /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+/!\ FAILSAFE /!\  Fri Oct 15 07:42:31 -0400 2010
+  Status: 500 Internal Server Error
+  Missing helper file helpers/admin?_helper.rb
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/actionpack-2.3.5/lib/action_controller/helpers.rb:131:in `helper'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/actionpack-2.3.5/lib/action_controller/helpers.rb:115:in `each'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/actionpack-2.3.5/lib/action_controller/helpers.rb:115:in `helper'
+    /Users/cwise/RubyApps/nrcanhockey/app/controllers/application_controller.rb:17
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:380:in `load_file'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:379:in `load_file'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:259:in `require_or_load'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:425:in `load_missing_constant'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:80:in `const_missing'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:92:in `const_missing'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:89:in `dispatch'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
+    /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/rack-1.0.1/lib/rack/handler/webrick.rb:14:in `run'
+    /Users/cwise/.rvm/gems/ruby-1.8.7-p174/gems/rails-2.3.5/lib/commands/server.rb:111
+    /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+
+Processing GlobalController#index (for 127.0.0.1 at 2010-10-15 07:42:59) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing GlobalController#index (for 127.0.0.1 at 2010-10-15 07:43:16) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-15 07:43:17) [GET]
+
+ActionController::RoutingError (No route matches "/session/login" with {:method=>:get}):
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing GlobalController#index (for 127.0.0.1 at 2010-10-15 07:44:18) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-10-15 07:44:19) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2010-10-15 07:44:22) [POST]
+  Parameters: {"commit"=>"Login", "authenticity_token"=>"ZjXR3NhLbi6ZQ27nKMpuc8LMlxW1kNvWQRWckNDWMiI=", "password"=>"playhockey"}
+
+ActionController::UnknownAction (No action responded to index. Actions: admin?, create, destroy, instantiate_controller_and_action_names, and new):
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-10-15 07:45:21) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2010-10-15 07:45:23) [POST]
+  Parameters: {"commit"=>"Login", "authenticity_token"=>"ZjXR3NhLbi6ZQ27nKMpuc8LMlxW1kNvWQRWckNDWMiI=", "password"=>""}
+
+ActionController::UnknownAction (No action responded to index. Actions: admin?, create, destroy, instantiate_controller_and_action_names, and new):
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-10-15 07:45:25) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2010-10-15 07:45:29) [POST]
+  Parameters: {"commit"=>"Login", "authenticity_token"=>"ZjXR3NhLbi6ZQ27nKMpuc8LMlxW1kNvWQRWckNDWMiI=", "password"=>"playhockey"}
+
+ActionController::UnknownAction (No action responded to index. Actions: admin?, create, destroy, instantiate_controller_and_action_names, and new):
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-10-15 07:45:59) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2010-10-15 07:46:00) [POST]
+  Parameters: {"commit"=>"Login", "authenticity_token"=>"ZjXR3NhLbi6ZQ27nKMpuc8LMlxW1kNvWQRWckNDWMiI=", "password"=>""}
+
+ActionController::UnknownAction (No action responded to index. Actions: admin?, create, destroy, instantiate_controller_and_action_names, and new):
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing GlobalController#index (for 127.0.0.1 at 2010-10-15 07:47:56) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-10-15 07:47:57) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2010-10-15 07:48:01) [POST]
+  Parameters: {"commit"=>"Login", "authenticity_token"=>"ZjXR3NhLbi6ZQ27nKMpuc8LMlxW1kNvWQRWckNDWMiI=", "password"=>"playhockey"}
+
+ActionController::UnknownAction (No action responded to index. Actions: admin?, create, destroy, instantiate_controller_and_action_names, and new):
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing GlobalController#index (for 127.0.0.1 at 2010-10-15 07:49:01) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing GameController#current (for 127.0.0.1 at 2010-10-15 07:49:04) [GET]
+  [4;36;1mGame Load (0.4ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`game_date` = '2010-10-15') LIMIT 1[0m
+Redirected to http://localhost:3000/game/no_current_game
+Completed in 36ms (DB: 0) | 302 Found [http://localhost/game/current]
+
+
+Processing GameController#no_current_game (for 127.0.0.1 at 2010-10-15 07:49:04) [GET]
+Rendering template within layouts/application
+Rendering game/no_current_game
+Completed in 82ms (View: 81, DB: 0) | 200 OK [http://localhost/game/no_current_game]
+
+
+Processing GameController#new (for 127.0.0.1 at 2010-10-15 07:49:05) [GET]
+  [4;35;1mPlayerStatus Load (0.6ms)[0m   [0mSELECT * FROM `player_statuses` WHERE (description <> 'Maybe') [0m
+  [4;36;1mGameStatus Load (0.5ms)[0m   [0;1mSELECT * FROM `game_statuses` WHERE (description <> 'Send Update' ) [0m
+  [4;35;1mEquipment Load (0.3ms)[0m   [0mSELECT * FROM `equipment` [0m
+  [4;36;1mPlayer Load (0.5ms)[0m   [0;1mSELECT * FROM `players` WHERE (active = 1) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering game/edit
+  [4;35;1mPlayer Load (0.5ms)[0m   [0mSELECT * FROM `players` WHERE (`players`.`id` = 55) [0m
+  [4;36;1mPlayer Load (0.6ms)[0m   [0;1mSELECT * FROM `players` WHERE (`players`.`id` = 57) [0m
+Completed in 330ms (View: 257, DB: 4) | 200 OK [http://localhost/game/new]
+
+
+Processing GameController#no_current_game (for 127.0.0.1 at 2010-10-15 07:49:23) [GET]
+Rendering template within layouts/application
+Rendering game/no_current_game
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/game/no_current_game]
+
+
+Processing GameController#new (for 127.0.0.1 at 2010-10-15 07:53:34) [GET]
+Redirected to http://localhost:3000/login
+Filter chain halted as [:admin_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/game/new]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-10-15 07:53:35) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2010-10-15 07:53:38) [POST]
+  Parameters: {"commit"=>"Login", "authenticity_token"=>"ZjXR3NhLbi6ZQ27nKMpuc8LMlxW1kNvWQRWckNDWMiI=", "password"=>"playhockey"}
+
+ActionController::UnknownAction (No action responded to index. Actions: admin?, admin_required, create, destroy, instantiate_controller_and_action_names, and new):
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-10-15 07:55:34) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2010-10-15 07:55:39) [POST]
+  Parameters: {"commit"=>"Login", "authenticity_token"=>"ZjXR3NhLbi6ZQ27nKMpuc8LMlxW1kNvWQRWckNDWMiI=", "password"=>"playhockey"}
+
+ActionController::UnknownAction (No action responded to index. Actions: admin?, admin_required, create, destroy, instantiate_controller_and_action_names, and new):
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing GlobalController#index (for 127.0.0.1 at 2010-10-15 07:55:57) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-10-15 07:55:58) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-10-15 07:56:01) [POST]
+  Parameters: {"commit"=>"Login", "authenticity_token"=>"ZjXR3NhLbi6ZQ27nKMpuc8LMlxW1kNvWQRWckNDWMiI=", "password"=>"playhockey"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/sessions/new]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-10-15 07:56:08) [POST]
+  Parameters: {"commit"=>"Login", "authenticity_token"=>"ZjXR3NhLbi6ZQ27nKMpuc8LMlxW1kNvWQRWckNDWMiI=", "password"=>"playhockey"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/sessions/new]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-10-15 07:56:39) [POST]
+  Parameters: {"commit"=>"Login", "authenticity_token"=>"ZjXR3NhLbi6ZQ27nKMpuc8LMlxW1kNvWQRWckNDWMiI=", "password"=>"playhockey"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/sessions/new]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-10-15 07:56:42) [POST]
+  Parameters: {"commit"=>"Login", "authenticity_token"=>"ZjXR3NhLbi6ZQ27nKMpuc8LMlxW1kNvWQRWckNDWMiI=", "password"=>"playhockey"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/sessions/new]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-10-15 07:57:12) [POST]
+  Parameters: {"commit"=>"Login", "authenticity_token"=>"ZjXR3NhLbi6ZQ27nKMpuc8LMlxW1kNvWQRWckNDWMiI=", "password"=>"playhockey"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://localhost/sessions/new]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-10-15 07:57:28) [POST]
+  Parameters: {"commit"=>"Login", "authenticity_token"=>"ZjXR3NhLbi6ZQ27nKMpuc8LMlxW1kNvWQRWckNDWMiI=", "password"=>"playhockey"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://localhost/sessions/new]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-10-15 07:57:31) [POST]
+  Parameters: {"commit"=>"Login", "authenticity_token"=>"ZjXR3NhLbi6ZQ27nKMpuc8LMlxW1kNvWQRWckNDWMiI=", "password"=>"playhockey"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/sessions/new]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-10-15 07:57:59) [POST]
+  Parameters: {"commit"=>"Login", "authenticity_token"=>"ZjXR3NhLbi6ZQ27nKMpuc8LMlxW1kNvWQRWckNDWMiI=", "password"=>"playhockey"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/sessions/new]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-10-15 07:58:42) [POST]
+  Parameters: {"commit"=>"Login", "authenticity_token"=>"ZjXR3NhLbi6ZQ27nKMpuc8LMlxW1kNvWQRWckNDWMiI=", "password"=>"playhockey"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/sessions/new]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-10-15 07:58:45) [POST]
+  Parameters: {"commit"=>"Login", "authenticity_token"=>"ZjXR3NhLbi6ZQ27nKMpuc8LMlxW1kNvWQRWckNDWMiI=", "password"=>"playhockey"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/sessions/new]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-10-15 08:00:28) [POST]
+  Parameters: {"commit"=>"Login", "authenticity_token"=>"ZjXR3NhLbi6ZQ27nKMpuc8LMlxW1kNvWQRWckNDWMiI=", "password"=>"playhockey"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/sessions/new]
+
+
+Processing GlobalController#index (for 127.0.0.1 at 2010-10-15 08:00:32) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-10-15 08:00:33) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-10-15 08:00:35) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-10-15 08:00:48) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-10-15 08:01:08) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+
+ActionView::TemplateError (session_url failed to generate from {:controller=>"sessions", :action=>"show"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["sessions", :id] - are they all satisfied?) on line #1 of app/views/sessions/new.html.erb:
+1: <% form_for :sessions, session_path  do |f| %>  
+2:   Password: <%= password_field_tag :password %>  
+3:   <%= f.submit "Login" %>  
+4: <% end %>
+
+    (eval):16:in `session_path'
+    app/views/sessions/new.html.erb:1
+    /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (42.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-10-15 08:01:12) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-10-15 08:02:36) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2010-10-15 08:03:06) [POST]
+  Parameters: {"commit"=>"Login", "authenticity_token"=>"ZjXR3NhLbi6ZQ27nKMpuc8LMlxW1kNvWQRWckNDWMiI=", "password"=>"playhockey"}
+
+ActionController::UnknownAction (No action responded to index. Actions: admin?, admin_required, create, destroy, instantiate_controller_and_action_names, and new):
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-10-15 08:03:50) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2010-10-15 08:03:51) [POST]
+  Parameters: {"commit"=>"Login", "authenticity_token"=>"ZjXR3NhLbi6ZQ27nKMpuc8LMlxW1kNvWQRWckNDWMiI=", "password"=>""}
+
+ActionView::MissingTemplate (Missing template sessions/index.erb in view path app/views):
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing GlobalController#index (for 127.0.0.1 at 2010-10-15 08:04:32) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-10-15 08:04:33) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-10-15 08:04:36) [POST]
+  Parameters: {"commit"=>"Login", "authenticity_token"=>"ZjXR3NhLbi6ZQ27nKMpuc8LMlxW1kNvWQRWckNDWMiI=", "password"=>"playhockey"}
+
+NameError (undefined local variable or method `root_path' for #<SessionsController:0x103650848>):
+  app/controllers/sessions_controller.rb:9:in `create'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (30.5ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-10-15 08:05:34) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing GlobalController#index (for 127.0.0.1 at 2010-10-15 08:05:38) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2010-10-15 08:05:39) [GET]
+Redirected to http://localhost:3000/
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/logout]
+
+
+Processing GlobalController#index (for 127.0.0.1 at 2010-10-15 08:05:39) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-10-15 08:05:41) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-10-15 08:05:44) [POST]
+  Parameters: {"commit"=>"Login", "authenticity_token"=>"z4ZRB037YvWDX2LXfXN9pFTvNAKI9StxtatE39F3yvk=", "password"=>"plasfsdf"}
+Redirected to http://localhost:3000/
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/sessions/create]
+
+
+Processing GlobalController#index (for 127.0.0.1 at 2010-10-15 08:05:44) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-10-15 08:06:55) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing GlobalController#index (for 127.0.0.1 at 2010-10-15 08:06:57) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-10-15 08:06:58) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-10-15 08:07:01) [POST]
+  Parameters: {"commit"=>"Login", "authenticity_token"=>"z4ZRB037YvWDX2LXfXN9pFTvNAKI9StxtatE39F3yvk=", "password"=>"playhfdgd"}
+Redirected to http://localhost:3000/login
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/sessions/create]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-10-15 08:07:01) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-10-15 08:07:38) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-10-15 08:07:40) [POST]
+  Parameters: {"commit"=>"Login", "authenticity_token"=>"z4ZRB037YvWDX2LXfXN9pFTvNAKI9StxtatE39F3yvk=", "password"=>"fsdfs"}
+Redirected to http://localhost:3000/login
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/sessions/create]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-10-15 08:07:40) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-10-15 08:07:44) [POST]
+  Parameters: {"commit"=>"Login", "authenticity_token"=>"z4ZRB037YvWDX2LXfXN9pFTvNAKI9StxtatE39F3yvk=", "password"=>"sdfsdfsd"}
+Redirected to http://localhost:3000/login
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/sessions/create]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-10-15 08:07:44) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-10-15 08:07:47) [POST]
+  Parameters: {"commit"=>"Login", "authenticity_token"=>"z4ZRB037YvWDX2LXfXN9pFTvNAKI9StxtatE39F3yvk=", "password"=>"playhockey"}
+Redirected to http://localhost:3000/
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/sessions/create]
+
+
+Processing GlobalController#index (for 127.0.0.1 at 2010-10-15 08:07:47) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PlayerController#new (for 127.0.0.1 at 2010-10-15 08:07:57) [GET]
+Rendering template within layouts/application
+Rendering player/edit
+Completed in 131ms (View: 56, DB: 0) | 200 OK [http://localhost/player/new]
+
+
+Processing PlayerController#new (for 127.0.0.1 at 2010-10-15 08:08:01) [POST]
+  Parameters: {"player"=>{"name"=>"testa", "email_address"=>"werwt", "active"=>"1"}, "authenticity_token"=>"z4ZRB037YvWDX2LXfXN9pFTvNAKI9StxtatE39F3yvk="}
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mPlayer Load (0.4ms)[0m   [0;1mSELECT `players`.id FROM `players` WHERE (`players`.`name` = BINARY 'testa') LIMIT 1[0m
+  [4;35;1mPlayer Load (0.4ms)[0m   [0mSELECT `players`.id FROM `players` WHERE (`players`.`email_address` = BINARY 'werwt') LIMIT 1[0m
+  [4;36;1mPlayer Create (0.3ms)[0m   [0;1mINSERT INTO `players` (`name`, `created_at`, `updated_at`, `email_address`, `active`) VALUES('testa', '2010-10-15 12:08:01', '2010-10-15 12:08:01', 'werwt', 1)[0m
+  [4;35;1mSQL (14.3ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/player
+Completed in 26ms (DB: 16) | 302 Found [http://localhost/player/new]
+
+
+Processing PlayerController#index (for 127.0.0.1 at 2010-10-15 08:08:01) [GET]
+  [4;36;1mPlayer Load (0.7ms)[0m   [0;1mSELECT * FROM `players` ORDER BY name LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering player/index
+Rendered player/_player (10.6ms)
+Rendered player/_player (0.5ms)
+Rendered player/_player (0.5ms)
+Rendered player/_player (0.5ms)
+Completed in 41ms (View: 35, DB: 1) | 200 OK [http://localhost/player]
+
+
+Processing GlobalController#index (for 127.0.0.1 at 2010-10-15 08:08:03) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/global]
+
+
+Processing GameController#current (for 127.0.0.1 at 2010-10-15 08:08:05) [GET]
+  [4;35;1mGame Load (0.3ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`game_date` = '2010-10-15') LIMIT 1[0m
+Redirected to http://localhost:3000/game/no_current_game
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/game/current]
+
+
+Processing GameController#no_current_game (for 127.0.0.1 at 2010-10-15 08:08:05) [GET]
+Rendering template within layouts/application
+Rendering game/no_current_game
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/game/no_current_game]
+
+
+Processing GameController#new (for 127.0.0.1 at 2010-10-15 08:08:06) [GET]
+  [4;36;1mPlayerStatus Load (0.5ms)[0m   [0;1mSELECT * FROM `player_statuses` WHERE (description <> 'Maybe') [0m
+  [4;35;1mGameStatus Load (0.3ms)[0m   [0mSELECT * FROM `game_statuses` WHERE (description <> 'Send Update' ) [0m
+  [4;36;1mEquipment Load (0.4ms)[0m   [0;1mSELECT * FROM `equipment` [0m
+  [4;35;1mPlayer Load (0.4ms)[0m   [0mSELECT * FROM `players` WHERE (active = 1) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering game/edit
+  [4;36;1mPlayer Load (0.6ms)[0m   [0;1mSELECT * FROM `players` WHERE (`players`.`id` = 55) [0m
+  [4;35;1mPlayer Load (0.5ms)[0m   [0mSELECT * FROM `players` WHERE (`players`.`id` = 57) [0m
+  [4;36;1mPlayer Load (0.4ms)[0m   [0;1mSELECT * FROM `players` WHERE (`players`.`id` = 60) [0m
+Completed in 51ms (View: 20, DB: 5) | 200 OK [http://localhost/game/new]
+
+
+Processing GameController#no_current_game (for 127.0.0.1 at 2010-10-15 08:08:08) [GET]
+Rendering template within layouts/application
+Rendering game/no_current_game
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/game/no_current_game]
+
+
+Processing GlobalController#index (for 127.0.0.1 at 2010-10-15 08:08:11) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2010-10-15 08:08:12) [GET]
+Redirected to http://localhost:3000/
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/logout]
+
+
+Processing GlobalController#index (for 127.0.0.1 at 2010-10-15 08:08:12) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing GameController#current (for 127.0.0.1 at 2010-10-15 08:08:13) [GET]
+  [4;35;1mGame Load (0.4ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`game_date` = '2010-10-15') LIMIT 1[0m
+Redirected to http://localhost:3000/game/no_current_game
+Completed in 8ms (DB: 0) | 302 Found [http://localhost/game/current]
+
+
+Processing GameController#no_current_game (for 127.0.0.1 at 2010-10-15 08:08:13) [GET]
+Redirected to http://localhost:3000/login
+Filter chain halted as [:admin_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/game/no_current_game]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-10-15 08:08:14) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-10-15 08:08:19) [POST]
+  Parameters: {"commit"=>"Login", "authenticity_token"=>"bHfIxgMjMEW1gcMGJEdJmAMGRFzu2Lo8rliWvQ1SsbY=", "password"=>"playhockey"}
+Redirected to http://localhost:3000/
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/sessions/create]
+
+
+Processing GlobalController#index (for 127.0.0.1 at 2010-10-15 08:08:19) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing GameController#current (for 127.0.0.1 at 2010-10-15 08:08:25) [GET]
+  [4;36;1mGame Load (0.4ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`game_date` = '2010-10-15') LIMIT 1[0m
+Redirected to http://localhost:3000/game/no_current_game
+Completed in 9ms (DB: 0) | 302 Found [http://localhost/game/current]
+
+
+Processing GameController#no_current_game (for 127.0.0.1 at 2010-10-15 08:08:25) [GET]
+Rendering template within layouts/application
+Rendering game/no_current_game
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/game/no_current_game]
+
+
+Processing GlobalController#index (for 127.0.0.1 at 2010-10-15 08:09:22) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2010-10-15 08:09:23) [GET]
+Redirected to http://localhost:3000/
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/logout]
+
+
+Processing GlobalController#index (for 127.0.0.1 at 2010-10-15 08:09:23) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-10-15 08:09:24) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-10-15 08:09:28) [POST]
+  Parameters: {"commit"=>"Login", "authenticity_token"=>"fZx00xsP6dzLs8dN0ofHFp4mzo/XHU953YR7aiR9WnY=", "password"=>"playhockey"}
+Redirected to http://localhost:3000/
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/sessions/create]
+
+
+Processing GlobalController#index (for 127.0.0.1 at 2010-10-15 08:09:28) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2010-10-15 08:09:29) [GET]
+Redirected to http://localhost:3000/
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/logout]
+
+
+Processing GlobalController#index (for 127.0.0.1 at 2010-10-15 08:09:29) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing GameController#current (for 127.0.0.1 at 2010-10-15 08:09:31) [GET]
+  [4;35;1mGame Load (0.3ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`game_date` = '2010-10-15') LIMIT 1[0m
+Redirected to http://localhost:3000/game/no_current_game
+Completed in 8ms (DB: 0) | 302 Found [http://localhost/game/current]
+
+
+Processing GameController#no_current_game (for 127.0.0.1 at 2010-10-15 08:09:31) [GET]
+Redirected to http://localhost:3000/login
+Filter chain halted as [:admin_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/game/no_current_game]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-10-15 08:09:31) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-10-15 08:09:34) [POST]
+  Parameters: {"commit"=>"Login", "authenticity_token"=>"s8/YJHkMJk8ZFaATl6j2o8x0vW0QF40PSMmjJtKaxeE=", "password"=>"playhockey"}
+Redirected to http://localhost:3000/game/no_current_game
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/sessions/create]
+
+
+Processing GameController#no_current_game (for 127.0.0.1 at 2010-10-15 08:09:34) [GET]
+Rendering template within layouts/application
+Rendering game/no_current_game
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/game/no_current_game]
+
+
+Processing GameController#new (for 127.0.0.1 at 2010-10-15 08:09:40) [GET]
+  [4;36;1mPlayerStatus Load (0.4ms)[0m   [0;1mSELECT * FROM `player_statuses` WHERE (description <> 'Maybe') [0m
+  [4;35;1mGameStatus Load (0.4ms)[0m   [0mSELECT * FROM `game_statuses` WHERE (description <> 'Send Update' ) [0m
+  [4;36;1mEquipment Load (0.3ms)[0m   [0;1mSELECT * FROM `equipment` [0m
+  [4;35;1mPlayer Load (0.4ms)[0m   [0mSELECT * FROM `players` WHERE (active = 1) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering game/edit
+  [4;36;1mPlayer Load (0.3ms)[0m   [0;1mSELECT * FROM `players` WHERE (`players`.`id` = 55) [0m
+  [4;35;1mPlayer Load (0.4ms)[0m   [0mSELECT * FROM `players` WHERE (`players`.`id` = 57) [0m
+  [4;36;1mPlayer Load (0.4ms)[0m   [0;1mSELECT * FROM `players` WHERE (`players`.`id` = 60) [0m
+Completed in 150ms (View: 121, DB: 4) | 200 OK [http://localhost/game/new]
+
+
+Processing GameController#no_current_game (for 127.0.0.1 at 2010-10-15 08:09:48) [GET]
+Rendering template within layouts/application
+Rendering game/no_current_game
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/game/no_current_game]
+
+
+Processing GameController#new (for 127.0.0.1 at 2010-10-15 08:10:15) [GET]
+  [4;35;1mPlayerStatus Load (0.2ms)[0m   [0mSELECT * FROM `player_statuses` WHERE (description <> 'Maybe') [0m
+  [4;36;1mGameStatus Load (0.3ms)[0m   [0;1mSELECT * FROM `game_statuses` WHERE (description <> 'Send Update' ) [0m
+  [4;35;1mEquipment Load (0.4ms)[0m   [0mSELECT * FROM `equipment` [0m
+  [4;36;1mPlayer Load (0.3ms)[0m   [0;1mSELECT * FROM `players` WHERE (active = 1) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering game/edit
+  [4;35;1mPlayer Load (0.3ms)[0m   [0mSELECT * FROM `players` WHERE (`players`.`id` = 55) [0m
+  [4;36;1mPlayer Load (0.3ms)[0m   [0;1mSELECT * FROM `players` WHERE (`players`.`id` = 57) [0m
+  [4;35;1mPlayer Load (0.4ms)[0m   [0mSELECT * FROM `players` WHERE (`players`.`id` = 60) [0m
+Completed in 50ms (View: 20, DB: 4) | 200 OK [http://localhost/game/new]
+
+
+Processing GameController#no_current_game (for 127.0.0.1 at 2010-10-15 08:10:17) [GET]
+Rendering template within layouts/application
+Rendering game/no_current_game
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/game/no_current_game]
+
+
+Processing GameController#new (for 127.0.0.1 at 2010-10-15 08:10:18) [GET]
+  [4;36;1mPlayerStatus Load (0.4ms)[0m   [0;1mSELECT * FROM `player_statuses` WHERE (description <> 'Maybe') [0m
+  [4;35;1mGameStatus Load (0.3ms)[0m   [0mSELECT * FROM `game_statuses` WHERE (description <> 'Send Update' ) [0m
+  [4;36;1mEquipment Load (0.3ms)[0m   [0;1mSELECT * FROM `equipment` [0m
+  [4;35;1mPlayer Load (0.7ms)[0m   [0mSELECT * FROM `players` WHERE (active = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering game/edit
+  [4;36;1mPlayer Load (0.5ms)[0m   [0;1mSELECT * FROM `players` WHERE (`players`.`id` = 55) [0m
+  [4;35;1mPlayer Load (0.5ms)[0m   [0mSELECT * FROM `players` WHERE (`players`.`id` = 57) [0m
+  [4;36;1mPlayer Load (0.4ms)[0m   [0;1mSELECT * FROM `players` WHERE (`players`.`id` = 60) [0m
+Completed in 121ms (View: 20, DB: 5) | 200 OK [http://localhost/game/new]
+
+
+Processing GameController#no_current_game (for 127.0.0.1 at 2010-10-15 08:10:19) [GET]
+Rendering template within layouts/application
+Rendering game/no_current_game
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/game/no_current_game]
+
+
+Processing GameController#no_current_game (for 127.0.0.1 at 2010-10-15 08:10:43) [GET]
+Rendering template within layouts/application
+Rendering game/no_current_game
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/game/no_current_game]
+
+
+Processing GlobalController#index (for 127.0.0.1 at 2010-10-15 08:10:44) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PlayerController#index (for 127.0.0.1 at 2010-10-15 08:10:48) [GET]
+  [4;35;1mPlayer Load (0.5ms)[0m   [0mSELECT * FROM `players` ORDER BY name LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering player/index
+Rendered player/_player (3.1ms)
+Rendered player/_player (0.6ms)
+Rendered player/_player (0.5ms)
+Rendered player/_player (0.5ms)
+Completed in 13ms (View: 8, DB: 0) | 200 OK [http://localhost/player]
+
+
+Processing PlayerController#delete (for 127.0.0.1 at 2010-10-15 08:10:50) [GET]
+  Parameters: {"id"=>"60"}
+
+ActionController::UnknownAction (No action responded to delete. Actions: admin?, admin_required, destroy, edit, goalies_on_deck, index, instantiate_controller_and_action_names, lookup, new, and player_summary):
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PlayerController#index (for 127.0.0.1 at 2010-10-15 08:11:25) [GET]
+  [4;36;1mPlayer Load (0.4ms)[0m   [0;1mSELECT * FROM `players` ORDER BY name LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering player/index
+Rendered player/_player (3.2ms)
+Rendered player/_player (0.5ms)
+Rendered player/_player (0.5ms)
+Rendered player/_player (0.5ms)
+Completed in 13ms (View: 8, DB: 0) | 200 OK [http://localhost/player]
+
+
+Processing PlayerController#delete (for 127.0.0.1 at 2010-10-15 08:11:28) [GET]
+  Parameters: {"id"=>"60"}
+  [4;35;1mPlayer Load (0.4ms)[0m   [0mSELECT * FROM `players` WHERE (`players`.`id` = 60) [0m
+  [4;36;1mPlayer Delete all (0.9ms)[0m   [0;1mDELETE FROM `players` WHERE (`id` IN (60)) [0m
+Redirected to http://localhost:3000/player
+Completed in 44ms (DB: 1) | 302 Found [http://localhost/player/delete/60]
+
+
+Processing PlayerController#index (for 127.0.0.1 at 2010-10-15 08:11:28) [GET]
+  [4;35;1mPlayer Load (0.5ms)[0m   [0mSELECT * FROM `players` ORDER BY name LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering player/index
+Rendered player/_player (3.1ms)
+Rendered player/_player (0.5ms)
+Rendered player/_player (0.5ms)
+Completed in 13ms (View: 7, DB: 1) | 200 OK [http://localhost/player]
+
+
+Processing GlobalController#index (for 127.0.0.1 at 2010-10-15 08:11:29) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 68ms (View: 66, DB: 0) | 200 OK [http://localhost/global]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2010-10-15 08:11:31) [GET]
+Redirected to http://localhost:3000/
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/logout]
+
+
+Processing GlobalController#index (for 127.0.0.1 at 2010-10-15 08:11:31) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing GameController#current (for 127.0.0.1 at 2010-10-15 08:11:41) [GET]
+  [4;36;1mGame Load (0.3ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`game_date` = '2010-10-15') LIMIT 1[0m
+Redirected to http://localhost:3000/game/no_current_game
+Completed in 8ms (DB: 0) | 302 Found [http://localhost/game/current]
+
+
+Processing GameController#no_current_game (for 127.0.0.1 at 2010-10-15 08:11:42) [GET]
+Redirected to http://localhost:3000/login
+Filter chain halted as [:admin_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/game/no_current_game]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-10-15 08:11:42) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 8ms (View: 7, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-10-15 08:11:47) [POST]
+  Parameters: {"commit"=>"Login", "authenticity_token"=>"uHL7I2ZlbNaZg7dMnkIxDvPVbXUG355qhLGHZkh7sy4=", "password"=>"playhockey"}
+Redirected to http://localhost:3000/game/no_current_game
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/sessions/create]
+
+
+Processing GameController#no_current_game (for 127.0.0.1 at 2010-10-15 08:11:47) [GET]
+Rendering template within layouts/application
+Rendering game/no_current_game
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/game/no_current_game]
+
+
+Processing GameController#new (for 127.0.0.1 at 2010-10-15 08:11:47) [GET]
+  [4;35;1mPlayerStatus Load (0.4ms)[0m   [0mSELECT * FROM `player_statuses` WHERE (description <> 'Maybe') [0m
+  [4;36;1mGameStatus Load (0.4ms)[0m   [0;1mSELECT * FROM `game_statuses` WHERE (description <> 'Send Update' ) [0m
+  [4;35;1mEquipment Load (0.5ms)[0m   [0mSELECT * FROM `equipment` [0m
+  [4;36;1mPlayer Load (0.4ms)[0m   [0;1mSELECT * FROM `players` WHERE (active = 1) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering game/edit
+  [4;35;1mPlayer Load (0.4ms)[0m   [0mSELECT * FROM `players` WHERE (`players`.`id` = 55) [0m
+  [4;36;1mPlayer Load (0.4ms)[0m   [0;1mSELECT * FROM `players` WHERE (`players`.`id` = 57) [0m
+Completed in 45ms (View: 17, DB: 3) | 200 OK [http://localhost/game/new]
+
+
+Processing GameController#new (for 127.0.0.1 at 2010-10-15 08:11:59) [POST]
+  Parameters: {"game"=>{"organizer_address"=>"cwise@murmurinformatics.com", "organizer"=>"Wise", "game_date(1i)"=>"2010", "game_status_id"=>"1", "game_date(2i)"=>"10", "game_date(3i)"=>"15", "message"=>"Just a test"}, "game_player_57"=>{"player_status_id"=>"1", "goalie"=>"0", "equipment_id"=>"5", "id"=>"", "player_id"=>"57"}, "authenticity_token"=>"uHL7I2ZlbNaZg7dMnkIxDvPVbXUG355qhLGHZkh7sy4=", "game_player_55"=>{"player_status_id"=>"1", "goalie"=>"0", "equipment_id"=>"5", "id"=>"", "player_id"=>"55"}}
+  [4;35;1mPlayerStatus Load (0.3ms)[0m   [0mSELECT * FROM `player_statuses` WHERE (description <> 'Maybe') [0m
+  [4;36;1mGameStatus Load (0.4ms)[0m   [0;1mSELECT * FROM `game_statuses` WHERE (description <> 'Send Update' ) [0m
+  [4;35;1mEquipment Load (0.3ms)[0m   [0mSELECT * FROM `equipment` [0m
+WARNING: Can't mass-assign these protected attributes: id
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mSQL (0.4ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mGame Load (0.5ms)[0m   [0mSELECT `games`.id FROM `games` WHERE (`games`.`game_date` = '2010-10-15') LIMIT 1[0m
+  [4;36;1mGame Create (0.4ms)[0m   [0;1mINSERT INTO `games` (`created_at`, `updated_at`, `organizer`, `organizer_address`, `game_date`, `game_status_id`, `message`) VALUES('2010-10-15 12:11:59', '2010-10-15 12:11:59', 'Wise', 'cwise@murmurinformatics.com', '2010-10-15', 1, 'Just a test')[0m
+  [4;35;1mGamePlayer Create (0.4ms)[0m   [0mINSERT INTO `game_players` (`created_at`, `player_status_id`, `updated_at`, `goalie`, `player_id`, `equipment_id`, `game_id`) VALUES('2010-10-15 12:11:59', 1, '2010-10-15 12:11:59', 0, 57, 5, 156)[0m
+  [4;36;1mGamePlayer Create (0.3ms)[0m   [0;1mINSERT INTO `game_players` (`created_at`, `player_status_id`, `updated_at`, `goalie`, `player_id`, `equipment_id`, `game_id`) VALUES('2010-10-15 12:11:59', 1, '2010-10-15 12:11:59', 0, 55, 5, 156)[0m
+  [4;35;1mPlayer Load (0.4ms)[0m   [0mSELECT * FROM `players` WHERE (`players`.`id` = 57) [0m
+  [4;36;1mPlayer Load (0.4ms)[0m   [0;1mSELECT * FROM `players` WHERE (`players`.`id` = 55) [0m
+Sent mail to info@murmurinformatics.com, cwise@murmurinformatics.com
+
+Date: Fri, 15 Oct 2010 08:11:59 -0400
+From: mailer@murmurinformatics.com
+Reply-To: cwise@murmurinformatics.com
+To: info@murmurinformatics.com, cwise@murmurinformatics.com
+Subject: NRCan Ball Hockey Game for 2010-10-15?
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>Just a test (<a href='mailto:cwise@murmurinformatics.com'>Wise</a>)</p>
+    <br/>
+    <p>Please respond by clicking the following link:</p>
+    <p><a href="http://localhost:3000/game_player/update_status/156">Update Status</a></p>
+    <br/>
+    <p>To check the status of this game at any time:</p>
+    <p><a href="http://localhost:3000/game/view/156">Game Status</a></p>
+  </body>
+</html>
+  [4;35;1mSQL (1.3ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/game
+Completed in 1108ms (DB: 5) | 302 Found [http://localhost/game/new]
+
+
+Processing GameController#index (for 127.0.0.1 at 2010-10-15 08:12:00) [GET]
+  [4;36;1mGame Load (0.7ms)[0m   [0;1mSELECT * FROM `games` ORDER BY game_date desc LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering game/index
+  [4;35;1mGamePlayer Count (0.7ms)[0m   [0mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=156 AND player_status_id > 2[0m
+  [4;36;1mGameStatus Load (0.3ms)[0m   [0;1mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 1) [0m
+  [4;35;1mGameGoalie Load (0.7ms)[0m   [0mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 156) [0m
+Rendered game/_game (98.8ms)
+  [4;36;1mGamePlayer Count (0.4ms)[0m   [0;1mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=155 AND player_status_id > 2[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 1) [0m
+  [4;36;1mGameGoalie Load (0.6ms)[0m   [0;1mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 155) [0m
+Rendered game/_game (3.2ms)
+  [4;35;1mGamePlayer Count (0.3ms)[0m   [0mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=154 AND player_status_id > 2[0m
+  [4;36;1mGameStatus Load (0.5ms)[0m   [0;1mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 2) [0m
+  [4;35;1mGameGoalie Load (0.5ms)[0m   [0mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 154) [0m
+Rendered game/_game (3.2ms)
+  [4;36;1mGamePlayer Count (0.4ms)[0m   [0;1mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=153 AND player_status_id > 2[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 1) [0m
+  [4;36;1mGameGoalie Load (0.5ms)[0m   [0;1mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 153) [0m
+Rendered game/_game (2.9ms)
+  [4;35;1mGamePlayer Count (0.5ms)[0m   [0mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=152 AND player_status_id > 2[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 2) [0m
+  [4;35;1mGameGoalie Load (0.4ms)[0m   [0mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 152) [0m
+Rendered game/_game (4.9ms)
+  [4;36;1mGamePlayer Count (0.5ms)[0m   [0;1mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=148 AND player_status_id > 2[0m
+  [4;35;1mGameStatus Load (0.4ms)[0m   [0mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 3) [0m
+  [4;36;1mGameGoalie Load (0.6ms)[0m   [0;1mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 148) [0m
+Rendered game/_game (3.3ms)
+  [4;35;1mGamePlayer Count (0.4ms)[0m   [0mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=147 AND player_status_id > 2[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 2) [0m
+  [4;35;1mGameGoalie Load (0.6ms)[0m   [0mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 147) [0m
+Rendered game/_game (2.8ms)
+  [4;36;1mGamePlayer Count (0.5ms)[0m   [0;1mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=146 AND player_status_id > 2[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 2) [0m
+  [4;36;1mGameGoalie Load (0.5ms)[0m   [0;1mSELECT * FROM `game_goalies` WHERE (`game_goalies`.game_id = 146) [0m
+Rendered game/_game (2.6ms)
+Completed in 158ms (View: 141, DB: 10) | 200 OK [http://localhost/game]
+
+
+Processing GlobalController#index (for 127.0.0.1 at 2010-10-15 08:12:02) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/global]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2010-10-15 08:12:03) [GET]
+Redirected to http://localhost:3000/
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/logout]
+
+
+Processing GlobalController#index (for 127.0.0.1 at 2010-10-15 08:12:03) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing GameController#view (for 127.0.0.1 at 2010-10-15 08:12:12) [GET]
+  Parameters: {"id"=>"156"}
+  [4;35;1mGame Load (0.5ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 156) [0m
+Rendering template within layouts/application
+Rendering game/edit
+  [4;36;1mGameStatus Load (0.3ms)[0m   [0;1mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 1) [0m
+  [4;35;1mGamePlayer Count (0.4ms)[0m   [0mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=156 AND player_status_id > 2[0m
+  [4;36;1mGamePlayer Load (0.5ms)[0m   [0;1mSELECT gp.* FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=156 ORDER BY sp.description, equipment_id DESC[0m
+  [4;35;1mPlayer Load (0.2ms)[0m   [0mSELECT * FROM `players` WHERE (`players`.`id` = 57) [0m
+  [4;36;1mPlayerStatus Load (0.4ms)[0m   [0;1mSELECT * FROM `player_statuses` WHERE (`player_statuses`.`id` = 1) [0m
+  [4;35;1mEquipment Load (0.3ms)[0m   [0mSELECT * FROM `equipment` WHERE (`equipment`.`id` = 5) [0m
+  [4;36;1mGamePlayer Load (25.0ms)[0m   [0;1mSELECT gp.* FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=156 AND player_status_id > 2 AND player_status_id <> 5[0m
+  [4;35;1mPlayer Load (0.4ms)[0m   [0mSELECT * FROM `players` WHERE (`players`.`id` = 55) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `player_statuses` WHERE (`player_statuses`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `equipment` WHERE (`equipment`.`id` = 5) [0m
+Completed in 138ms (View: 33, DB: 28) | 200 OK [http://localhost/game/view/156]
+
+
+Processing GamePlayerController#update_status (for 127.0.0.1 at 2010-10-15 08:12:17) [GET]
+  Parameters: {"id"=>"156"}
+  [4;36;1mGame Load (0.3ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 156) [0m
+  [4;35;1mPlayerStatus Load (0.4ms)[0m   [0mSELECT * FROM `player_statuses` WHERE (description NOT IN ('Maybe', 'No response')) ORDER BY description[0m
+Rendering template within layouts/application
+Rendering game_player/update_status
+  [4;36;1mGameStatus Load (0.4ms)[0m   [0;1mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 1) [0m
+  [4;35;1mGamePlayer Count (0.3ms)[0m   [0mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=156 AND player_status_id > 2[0m
+Completed in 57ms (View: 43, DB: 1) | 200 OK [http://localhost/game_player/update_status/156]
+
+
+Processing GamePlayerController#update_status (for 127.0.0.1 at 2010-10-15 08:12:19) [POST]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"rAUk4LFSrhlpJ1Gl7yEoq1ZgRNU9lxCDIpAke3gnkaI=", "id"=>"156", "game_player"=>{"player_status_id"=>"3", "email_address"=>"cwise@murmurinformatics.com", "game_id"=>""}}
+  [4;36;1mGame Load (0.3ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 156) [0m
+  [4;35;1mPlayerStatus Load (0.4ms)[0m   [0mSELECT * FROM `player_statuses` WHERE (description NOT IN ('Maybe', 'No response')) ORDER BY description[0m
+  [4;36;1mPlayer Load (0.5ms)[0m   [0;1mSELECT * FROM `players` WHERE (`players`.`email_address` = 'cwise@murmurinformatics.com') LIMIT 1[0m
+  [4;35;1mGamePlayer Load (0.5ms)[0m   [0mSELECT * FROM `game_players` WHERE (`game_players`.`player_id` = 55 AND `game_players`.`game_id` = 156) LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mGamePlayer Update (0.5ms)[0m   [0mUPDATE `game_players` SET `updated_at` = '2010-10-15 12:12:19', `player_status_id` = 3 WHERE `id` = 4336[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mPlayerStatus Load (0.4ms)[0m   [0mSELECT * FROM `player_statuses` WHERE (`player_statuses`.`id` = 3) [0m
+Completed in 90ms (View: 1, DB: 4) | 200 OK [http://localhost/game_player/update_status/156]
+
+
+Processing GlobalController#index (for 127.0.0.1 at 2010-10-15 08:12:35) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing GameController#current (for 127.0.0.1 at 2010-10-15 08:12:37) [GET]
+  [4;36;1mGame Load (0.5ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`game_date` = '2010-10-15') LIMIT 1[0m
+Redirected to http://localhost:3000/game/view/156
+Completed in 9ms (DB: 0) | 302 Found [http://localhost/game/current]
+
+
+Processing GameController#view (for 127.0.0.1 at 2010-10-15 08:12:37) [GET]
+  Parameters: {"id"=>"156"}
+  [4;35;1mGame Load (0.4ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 156) [0m
+Rendering template within layouts/application
+Rendering game/edit
+  [4;36;1mGameStatus Load (0.9ms)[0m   [0;1mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 1) [0m
+  [4;35;1mGamePlayer Count (0.5ms)[0m   [0mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=156 AND player_status_id > 2[0m
+  [4;36;1mGamePlayer Load (0.5ms)[0m   [0;1mSELECT gp.* FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=156 ORDER BY sp.description, equipment_id DESC[0m
+  [4;35;1mPlayer Load (0.2ms)[0m   [0mSELECT * FROM `players` WHERE (`players`.`id` = 55) [0m
+  [4;36;1mPlayerStatus Load (0.4ms)[0m   [0;1mSELECT * FROM `player_statuses` WHERE (`player_statuses`.`id` = 3) [0m
+  [4;35;1mEquipment Load (0.2ms)[0m   [0mSELECT * FROM `equipment` WHERE (`equipment`.`id` = 5) [0m
+  [4;36;1mGamePlayer Load (0.4ms)[0m   [0;1mSELECT gp.* FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=156 AND player_status_id > 2 AND player_status_id <> 5[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `players` WHERE (`players`.`id` = 55) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM `played_games` WHERE (`played_games`.player_id = 55) [0m
+  [4;35;1mPlayedGame Load (0.4ms)[0m   [0mSELECT * FROM `played_games` WHERE (`played_games`.player_id = 55) [0m
+  [4;36;1mPlayer Load (0.4ms)[0m   [0;1mSELECT * FROM `players` WHERE (`players`.`id` = 57) [0m
+  [4;35;1mPlayerStatus Load (0.4ms)[0m   [0mSELECT * FROM `player_statuses` WHERE (`player_statuses`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `equipment` WHERE (`equipment`.`id` = 5) [0m
+Completed in 78ms (View: 64, DB: 5) | 200 OK [http://localhost/game/view/156]
+
+
+Processing GlobalController#index (for 127.0.0.1 at 2010-10-15 08:12:38) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PlayerController#player_summary (for 127.0.0.1 at 2010-10-15 08:12:39) [GET]
+Redirected to http://localhost:3000/login
+Filter chain halted as [:admin_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/player/player_summary]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-10-15 08:12:39) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing GlobalController#index (for 127.0.0.1 at 2010-10-15 08:12:40) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PlayerController#player_summary (for 127.0.0.1 at 2010-10-15 08:12:41) [GET]
+Redirected to http://localhost:3000/login
+Filter chain halted as [:admin_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/player/player_summary]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-10-15 08:12:41) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing GlobalController#index (for 127.0.0.1 at 2010-10-15 08:12:42) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PlayerController#goalies_on_deck (for 127.0.0.1 at 2010-10-15 08:12:43) [GET]
+Redirected to http://localhost:3000/login
+Filter chain halted as [:admin_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/player/goalies_on_deck]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-10-15 08:12:43) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing GlobalController#index (for 127.0.0.1 at 2010-10-15 08:12:44) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing GlobalController#index (for 127.0.0.1 at 2010-10-15 08:13:00) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PlayerController#player_summary (for 127.0.0.1 at 2010-10-15 08:13:01) [GET]
+  [4;35;1mPlayer Load (0.3ms)[0m   [0mSELECT * FROM `players` [0m
+  [4;36;1mPlayedGame Load (0.7ms)[0m   [0;1mSELECT `played_games`.* FROM `played_games` WHERE (`played_games`.player_id IN (55,56,57)) [0m
+Rendering template within layouts/application
+Rendering player/player_summary
+Rendered player/_player_summary (8.9ms)
+Rendered player/_player_summary (0.3ms)
+Rendered player/_player_summary (0.3ms)
+Completed in 45ms (View: 31, DB: 1) | 200 OK [http://localhost/player/player_summary]
+
+
+Processing GlobalController#index (for 127.0.0.1 at 2010-10-15 08:13:01) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/global]
+
+
+Processing PlayerController#goalies_on_deck (for 127.0.0.1 at 2010-10-15 08:13:03) [GET]
+  [4;35;1mPlayer Load (0.4ms)[0m   [0mSELECT * FROM `players` WHERE (active = 1) [0m
+  [4;36;1mPlayedGame Load (0.8ms)[0m   [0;1mSELECT `played_games`.* FROM `played_games` WHERE (`played_games`.player_id IN (55,57)) [0m
+Rendering template within layouts/application
+Rendering player/goalies_on_deck
+Rendered player/_goalie_on_deck (12.8ms)
+Rendered player/_goalie_on_deck (0.5ms)
+Completed in 37ms (View: 22, DB: 1) | 200 OK [http://localhost/player/goalies_on_deck]
+
+
+Processing GlobalController#index (for 127.0.0.1 at 2010-10-15 08:13:06) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/global]
