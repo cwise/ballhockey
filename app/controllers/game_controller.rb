@@ -1,5 +1,5 @@
 class GameController < ApplicationController
-  before_filter :admin_required, :except => [:current, :view]
+  before_filter :admin_required, :except => [:current, :view, :no_current_game]
   
   def index
     @games=Game.paginate(:order => 'game_date desc', :page => params[:page])
