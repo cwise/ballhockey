@@ -9,7 +9,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100406165859) do
+ActiveRecord::Schema.define(:version => 20101015111221) do
+
+  create_table "backup", :force => true do |t|
+    t.string   "trigger"
+    t.string   "adapter"
+    t.string   "filename"
+    t.string   "md5sum"
+    t.string   "path"
+    t.string   "bucket"
+    t.string   "type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "equipment", :force => true do |t|
     t.string   "description"
@@ -17,15 +29,15 @@ ActiveRecord::Schema.define(:version => 20100406165859) do
     t.datetime "updated_at"
   end
 
-  create_table "game_players", :force => true do |t|
-    t.integer  "game_id"
-    t.integer  "player_id"
-    t.integer  "player_status_id"
-    t.integer  "equipment_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.boolean  "goalie"
+  create_table "game_goalies", :id => false, :force => true do |t|
+    t.integer "game_id"
+    t.date    "game_date"
+    t.integer "player_id"
+    t.string  "name"
   end
+
+# Could not dump table "game_players" because of following ArgumentError
+#   struct size differs
 
   create_table "game_statuses", :force => true do |t|
     t.string   "description"
@@ -38,9 +50,21 @@ ActiveRecord::Schema.define(:version => 20100406165859) do
     t.text     "message"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "game_status_id",    :limit => 11
+    t.integer  "game_status_id"
     t.string   "organizer",         :limit => 256
     t.string   "organizer_address", :limit => 256
+  end
+
+  create_table "played_games", :id => false, :force => true do |t|
+    t.integer  "id",               :default => 0, :null => false
+    t.integer  "game_id"
+    t.integer  "player_id"
+    t.integer  "player_status_id"
+    t.integer  "equipment_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.boolean  "goalie"
+    t.date     "game_date"
   end
 
   create_table "player_statuses", :force => true do |t|

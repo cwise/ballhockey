@@ -12559,3 +12559,153 @@ ActionController::RoutingError (No route matches "/players/new" with {:method=>:
   /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
 
 Rendering rescues/layout (not_found)
+
+
+Processing GlobalController#index (for 127.0.0.1 at 2010-10-14 18:31:07) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 79ms (View: 78, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PlayerController#index (for 127.0.0.1 at 2010-10-14 18:31:09) [GET]
+  [4;36;1mPlayer Load (0.5ms)[0m   [0;1mSELECT * FROM `players` ORDER BY name LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering player/index
+Rendered player/_player (4.1ms)
+Rendered player/_player (0.5ms)
+Rendered player/_player (0.5ms)
+Completed in 21ms (View: 16, DB: 1) | 200 OK [http://localhost/player]
+
+
+Processing PlayerController#delete (for 127.0.0.1 at 2010-10-14 18:31:10) [GET]
+  Parameters: {"id"=>"56"}
+
+ActionController::UnknownAction (No action responded to delete. Actions: destroy, edit, goalies_on_deck, index, instantiate_controller_and_action_names, lookup, new, and player_summary):
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PlayerController#index (for 127.0.0.1 at 2010-10-14 18:31:13) [GET]
+  [4;35;1mPlayer Load (0.3ms)[0m   [0mSELECT * FROM `players` ORDER BY name LIMIT 0, 10[0m
+Rendering template within layouts/application
+Rendering player/index
+Rendered player/_player (3.7ms)
+Rendered player/_player (0.6ms)
+Rendered player/_player (0.5ms)
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://localhost/player]
+
+
+Processing EquipmentController#new (for 127.0.0.1 at 2010-10-14 18:31:17) [GET]
+Rendering template within layouts/application
+Rendering equipment/edit
+Completed in 11ms (View: 7, DB: 0) | 200 OK [http://localhost/equipment/new]
+
+
+Processing EquipmentController#new (for 127.0.0.1 at 2010-10-14 18:31:19) [POST]
+  Parameters: {"authenticity_token"=>"PsjgGlQdMkagv8T3DyfDR6vEddXXTCyjGPfLqbCC6LQ=", "equipment"=>{"description"=>"test"}}
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mEquipment Load (0.5ms)[0m   [0mSELECT `equipment`.id FROM `equipment` WHERE (`equipment`.`description` = BINARY 'test') LIMIT 1[0m
+  [4;36;1mEquipment Create (0.4ms)[0m   [0;1mINSERT INTO `equipment` (`created_at`, `updated_at`, `description`) VALUES('2010-10-14 22:31:19', '2010-10-14 22:31:19', 'test')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/equipment
+Completed in 10ms (DB: 2) | 302 Found [http://localhost/equipment/new]
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-10-14 18:31:19) [GET]
+  [4;36;1mEquipment Load (0.6ms)[0m   [0;1mSELECT * FROM `equipment` [0m
+Rendering template within layouts/application
+Rendering equipment/index
+Rendered equipment/_equipment (2.8ms)
+Rendered equipment/_equipment (0.5ms)
+Rendered equipment/_equipment (0.5ms)
+Rendered equipment/_equipment (0.5ms)
+Rendered equipment/_equipment (0.5ms)
+Rendered equipment/_equipment (0.6ms)
+Rendered equipment/_equipment (0.7ms)
+Rendered equipment/_equipment (0.6ms)
+Rendered equipment/_equipment (0.6ms)
+Rendered equipment/_equipment (0.6ms)
+Rendered equipment/_equipment (0.6ms)
+Rendered equipment/_equipment (0.6ms)
+Completed in 23ms (View: 19, DB: 1) | 200 OK [http://localhost/equipment]
+
+
+Processing EquipmentController#delete (for 127.0.0.1 at 2010-10-14 18:31:21) [GET]
+  Parameters: {"id"=>"15"}
+
+ActionController::UnknownAction (No action responded to delete. Actions: destroy, edit, index, instantiate_controller_and_action_names, and new):
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-10-14 18:31:22) [GET]
+  [4;35;1mEquipment Load (0.3ms)[0m   [0mSELECT * FROM `equipment` [0m
+Rendering template within layouts/application
+Rendering equipment/index
+Rendered equipment/_equipment (2.6ms)
+Rendered equipment/_equipment (0.5ms)
+Rendered equipment/_equipment (0.5ms)
+Rendered equipment/_equipment (0.5ms)
+Rendered equipment/_equipment (0.5ms)
+Rendered equipment/_equipment (0.5ms)
+Rendered equipment/_equipment (0.5ms)
+Rendered equipment/_equipment (0.5ms)
+Rendered equipment/_equipment (0.5ms)
+Rendered equipment/_equipment (0.5ms)
+Rendered equipment/_equipment (0.5ms)
+Rendered equipment/_equipment (0.5ms)
+Completed in 16ms (View: 12, DB: 0) | 200 OK [http://localhost/equipment]
+  [4;36;1mSQL (12.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePlayers (20090520124247)
+Migrating to CreateGames (20090520124405)
+Migrating to CreateGamePlayers (20090520125220)
+Migrating to CreateEquipment (20090520125535)
+Migrating to CreatePlayerStatuses (20090520125609)
+Migrating to CreateGameStatuses (20090520192037)
+Migrating to AddColumnsToPlayers (20090729123904)
+Migrating to AddColumnsToGame (20100406165859)
+Migrating to CreateBackupTables (20101015111221)
+  [4;36;1mSQL (81.4ms)[0m   [0;1mCREATE TABLE `backup` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `trigger` varchar(255), `adapter` varchar(255), `filename` varchar(255), `md5sum` varchar(255), `path` varchar(255), `bucket` varchar(255), `type` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20101015111221')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mdescribe `backup`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `backup`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mdescribe `equipment`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `equipment`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mdescribe `game_goalies`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `game_goalies`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mdescribe `game_players`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `game_players`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mdescribe `game_statuses`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `game_statuses`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mdescribe `games`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `games`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mdescribe `played_games`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `played_games`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mdescribe `player_statuses`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `player_statuses`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mdescribe `players`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `players`[0m
