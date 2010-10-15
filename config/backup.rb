@@ -5,7 +5,7 @@ backup 'nrcanhockey-offsite' do
   adapter :mysql do
     user        'cwise'
     password    'PCyvASHo86'
-    database    'nrcanhockey'
+    database    'nrcanhockey_production'
   end
   
   storage :scp do
