@@ -1,6 +1,6 @@
 # Initialize with:
-#   rake backup:run trigger='golocavore-offsite'
-backup 'nrcan-offsite' do
+#   rake backup:run trigger='nrcanhockey-offsite'
+backup 'nrcanhockey-offsite' do
   
   adapter :mysql do
     user        'cwise'
