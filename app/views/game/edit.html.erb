@@ -43,6 +43,8 @@
 
   <% unless @view_only %>
     <%= entry_nav %>
+  <% else %>
+    <%= edit_nav(@game.id) %>    
   <% end %>
 
   <%= error_messages_for 'game' %>

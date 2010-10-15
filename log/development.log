@@ -14168,3 +14168,216 @@ Processing GlobalController#index (for 127.0.0.1 at 2010-10-15 08:13:06) [GET]
 Rendering template within layouts/application
 Rendering global/index
 Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/global]
+
+
+Processing GlobalController#index (for 127.0.0.1 at 2010-10-15 08:28:36) [GET]
+Rendering template within layouts/application
+Rendering global/index
+Completed in 42ms (View: 40, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing GameController#current (for 127.0.0.1 at 2010-10-15 08:28:38) [GET]
+  [4;36;1mGame Load (0.3ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`game_date` = '2010-10-15') LIMIT 1[0m
+Redirected to http://localhost:3000/game/view/156
+Completed in 17ms (DB: 0) | 302 Found [http://localhost/game/current]
+
+
+Processing GameController#view (for 127.0.0.1 at 2010-10-15 08:28:38) [GET]
+  Parameters: {"id"=>"156"}
+  [4;35;1mGame Load (0.3ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 156) [0m
+Rendering template within layouts/application
+Rendering game/edit
+  [4;36;1mGameStatus Load (0.3ms)[0m   [0;1mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 1) [0m
+  [4;35;1mGamePlayer Count (0.3ms)[0m   [0mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=156 AND player_status_id > 2[0m
+  [4;36;1mGamePlayer Load (0.3ms)[0m   [0;1mSELECT gp.* FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=156 ORDER BY sp.description, equipment_id DESC[0m
+  [4;35;1mPlayer Load (0.4ms)[0m   [0mSELECT * FROM `players` WHERE (`players`.`id` = 55) [0m
+  [4;36;1mPlayerStatus Load (0.3ms)[0m   [0;1mSELECT * FROM `player_statuses` WHERE (`player_statuses`.`id` = 3) [0m
+  [4;35;1mEquipment Load (0.3ms)[0m   [0mSELECT * FROM `equipment` WHERE (`equipment`.`id` = 5) [0m
+  [4;36;1mGamePlayer Load (0.4ms)[0m   [0;1mSELECT gp.* FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=156 AND player_status_id > 2 AND player_status_id <> 5[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `players` WHERE (`players`.`id` = 55) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM `played_games` WHERE (`played_games`.player_id = 55) [0m
+  [4;35;1mPlayedGame Load (0.3ms)[0m   [0mSELECT * FROM `played_games` WHERE (`played_games`.player_id = 55) [0m
+  [4;36;1mPlayer Load (0.4ms)[0m   [0;1mSELECT * FROM `players` WHERE (`players`.`id` = 57) [0m
+  [4;35;1mPlayerStatus Load (0.2ms)[0m   [0mSELECT * FROM `player_statuses` WHERE (`player_statuses`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `equipment` WHERE (`equipment`.`id` = 5) [0m
+Completed in 79ms (View: 68, DB: 4) | 200 OK [http://localhost/game/view/156]
+
+
+Processing GameController#view (for 127.0.0.1 at 2010-10-15 08:28:44) [GET]
+  Parameters: {"id"=>"156"}
+  [4;35;1mGame Load (0.3ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 156) [0m
+Rendering template within layouts/application
+Rendering game/edit
+  [4;36;1mGameStatus Load (0.5ms)[0m   [0;1mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 1) [0m
+  [4;35;1mGamePlayer Count (0.4ms)[0m   [0mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=156 AND player_status_id > 2[0m
+  [4;36;1mGamePlayer Load (0.4ms)[0m   [0;1mSELECT gp.* FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=156 ORDER BY sp.description, equipment_id DESC[0m
+  [4;35;1mPlayer Load (0.3ms)[0m   [0mSELECT * FROM `players` WHERE (`players`.`id` = 55) [0m
+  [4;36;1mPlayerStatus Load (0.3ms)[0m   [0;1mSELECT * FROM `player_statuses` WHERE (`player_statuses`.`id` = 3) [0m
+  [4;35;1mEquipment Load (0.4ms)[0m   [0mSELECT * FROM `equipment` WHERE (`equipment`.`id` = 5) [0m
+  [4;36;1mGamePlayer Load (0.3ms)[0m   [0;1mSELECT gp.* FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=156 AND player_status_id > 2 AND player_status_id <> 5[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `players` WHERE (`players`.`id` = 55) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `played_games` WHERE (`played_games`.player_id = 55) [0m
+  [4;35;1mPlayedGame Load (0.2ms)[0m   [0mSELECT * FROM `played_games` WHERE (`played_games`.player_id = 55) [0m
+  [4;36;1mPlayer Load (0.2ms)[0m   [0;1mSELECT * FROM `players` WHERE (`players`.`id` = 57) [0m
+  [4;35;1mPlayerStatus Load (0.2ms)[0m   [0mSELECT * FROM `player_statuses` WHERE (`player_statuses`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `equipment` WHERE (`equipment`.`id` = 5) [0m
+Completed in 112ms (View: 43, DB: 4) | 200 OK [http://localhost/game/view/156]
+
+
+Processing GameController#view (for 127.0.0.1 at 2010-10-15 08:28:46) [GET]
+  Parameters: {"id"=>"156"}
+  [4;35;1mGame Load (0.4ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 156) [0m
+Rendering template within layouts/application
+Rendering game/edit
+  [4;36;1mGameStatus Load (0.4ms)[0m   [0;1mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 1) [0m
+  [4;35;1mGamePlayer Count (0.5ms)[0m   [0mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=156 AND player_status_id > 2[0m
+  [4;36;1mGamePlayer Load (0.5ms)[0m   [0;1mSELECT gp.* FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=156 ORDER BY sp.description, equipment_id DESC[0m
+  [4;35;1mPlayer Load (0.4ms)[0m   [0mSELECT * FROM `players` WHERE (`players`.`id` = 55) [0m
+  [4;36;1mPlayerStatus Load (0.2ms)[0m   [0;1mSELECT * FROM `player_statuses` WHERE (`player_statuses`.`id` = 3) [0m
+  [4;35;1mEquipment Load (0.3ms)[0m   [0mSELECT * FROM `equipment` WHERE (`equipment`.`id` = 5) [0m
+  [4;36;1mGamePlayer Load (0.3ms)[0m   [0;1mSELECT gp.* FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=156 AND player_status_id > 2 AND player_status_id <> 5[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `players` WHERE (`players`.`id` = 55) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM `played_games` WHERE (`played_games`.player_id = 55) [0m
+  [4;35;1mPlayedGame Load (0.4ms)[0m   [0mSELECT * FROM `played_games` WHERE (`played_games`.player_id = 55) [0m
+  [4;36;1mPlayer Load (0.4ms)[0m   [0;1mSELECT * FROM `players` WHERE (`players`.`id` = 57) [0m
+  [4;35;1mPlayerStatus Load (0.3ms)[0m   [0mSELECT * FROM `player_statuses` WHERE (`player_statuses`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `equipment` WHERE (`equipment`.`id` = 5) [0m
+Completed in 107ms (View: 95, DB: 5) | 200 OK [http://localhost/game/view/156]
+
+
+Processing GameController#view (for 127.0.0.1 at 2010-10-15 08:29:01) [GET]
+  Parameters: {"id"=>"156"}
+  [4;35;1mGame Load (0.3ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 156) [0m
+Rendering template within layouts/application
+Rendering game/edit
+  [4;36;1mGameStatus Load (0.2ms)[0m   [0;1mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 1) [0m
+  [4;35;1mGamePlayer Count (0.3ms)[0m   [0mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=156 AND player_status_id > 2[0m
+
+ActionView::TemplateError (undefined local variable or method `edit_nav_items' for #<ActionView::Base:0x1037574f8>) on line #47 of app/views/game/edit.html.erb:
+44:   <% unless @view_only %>
+45:     <%= entry_nav %>
+46:   <% else %>
+47:     <%= edit_nav %>    
+48:   <% end %>
+49: 
+50:   <%= error_messages_for 'game' %>
+
+    app/helpers/application_helper.rb:37:in `edit_nav'
+    app/views/game/edit.html.erb:47
+    app/views/game/edit.html.erb:1
+    app/controllers/game_controller.rb:85:in `view'
+    /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (41.5ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing GameController#view (for 127.0.0.1 at 2010-10-15 08:29:12) [GET]
+  Parameters: {"id"=>"156"}
+  [4;36;1mGame Load (0.3ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 156) [0m
+Rendering template within layouts/application
+Rendering game/edit
+  [4;35;1mGameStatus Load (0.4ms)[0m   [0mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 1) [0m
+  [4;36;1mGamePlayer Count (0.3ms)[0m   [0;1mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=156 AND player_status_id > 2[0m
+  [4;35;1mGamePlayer Load (0.3ms)[0m   [0mSELECT gp.* FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=156 ORDER BY sp.description, equipment_id DESC[0m
+  [4;36;1mPlayer Load (0.3ms)[0m   [0;1mSELECT * FROM `players` WHERE (`players`.`id` = 55) [0m
+  [4;35;1mPlayerStatus Load (0.3ms)[0m   [0mSELECT * FROM `player_statuses` WHERE (`player_statuses`.`id` = 3) [0m
+  [4;36;1mEquipment Load (0.4ms)[0m   [0;1mSELECT * FROM `equipment` WHERE (`equipment`.`id` = 5) [0m
+  [4;35;1mGamePlayer Load (0.5ms)[0m   [0mSELECT gp.* FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=156 AND player_status_id > 2 AND player_status_id <> 5[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `players` WHERE (`players`.`id` = 55) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM `played_games` WHERE (`played_games`.player_id = 55) [0m
+  [4;36;1mPlayedGame Load (0.3ms)[0m   [0;1mSELECT * FROM `played_games` WHERE (`played_games`.player_id = 55) [0m
+  [4;35;1mPlayer Load (0.3ms)[0m   [0mSELECT * FROM `players` WHERE (`players`.`id` = 57) [0m
+  [4;36;1mPlayerStatus Load (0.5ms)[0m   [0;1mSELECT * FROM `player_statuses` WHERE (`player_statuses`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `equipment` WHERE (`equipment`.`id` = 5) [0m
+Completed in 119ms (View: 107, DB: 4) | 200 OK [http://localhost/game/view/156]
+
+
+Processing GameController#edit (for 127.0.0.1 at 2010-10-15 08:29:14) [GET]
+Redirected to http://localhost:3000/login
+Filter chain halted as [:admin_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/game/edit]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-10-15 08:29:14) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 20ms (View: 19, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-10-15 08:29:17) [POST]
+  Parameters: {"commit"=>"Login", "authenticity_token"=>"kBBc8bvfCBOInqp/BU7dIlGFfNUsRZNlBxUDpXbB0oI=", "password"=>"playhockey"}
+Redirected to http://localhost:3000/game/edit
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/sessions/create]
+
+
+Processing GameController#edit (for 127.0.0.1 at 2010-10-15 08:29:17) [GET]
+
+ActiveRecord::RecordNotFound (Couldn't find Game without an ID):
+  app/controllers/game_controller.rb:55:in `edit'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/cwise/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (31.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-10-15 08:29:58) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing GameController#view (for 127.0.0.1 at 2010-10-15 08:29:59) [GET]
+  Parameters: {"id"=>"156"}
+  [4;36;1mGame Load (0.5ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 156) [0m
+Rendering template within layouts/application
+Rendering game/edit
+  [4;35;1mGameStatus Load (0.3ms)[0m   [0mSELECT * FROM `game_statuses` WHERE (`game_statuses`.`id` = 1) [0m
+  [4;36;1mGamePlayer Count (0.4ms)[0m   [0;1mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=156 AND player_status_id > 2[0m
+  [4;35;1mGamePlayer Load (0.4ms)[0m   [0mSELECT gp.* FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=156 ORDER BY sp.description, equipment_id DESC[0m
+  [4;36;1mPlayer Load (0.4ms)[0m   [0;1mSELECT * FROM `players` WHERE (`players`.`id` = 55) [0m
+  [4;35;1mPlayerStatus Load (0.5ms)[0m   [0mSELECT * FROM `player_statuses` WHERE (`player_statuses`.`id` = 3) [0m
+  [4;36;1mEquipment Load (0.2ms)[0m   [0;1mSELECT * FROM `equipment` WHERE (`equipment`.`id` = 5) [0m
+  [4;35;1mGamePlayer Load (0.4ms)[0m   [0mSELECT gp.* FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=156 AND player_status_id > 2 AND player_status_id <> 5[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `players` WHERE (`players`.`id` = 55) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM `played_games` WHERE (`played_games`.player_id = 55) [0m
+  [4;36;1mPlayedGame Load (0.3ms)[0m   [0;1mSELECT * FROM `played_games` WHERE (`played_games`.player_id = 55) [0m
+  [4;35;1mPlayer Load (0.3ms)[0m   [0mSELECT * FROM `players` WHERE (`players`.`id` = 57) [0m
+  [4;36;1mPlayerStatus Load (0.3ms)[0m   [0;1mSELECT * FROM `player_statuses` WHERE (`player_statuses`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `equipment` WHERE (`equipment`.`id` = 5) [0m
+Completed in 113ms (View: 102, DB: 4) | 200 OK [http://localhost/game/view/156]
+
+
+Processing GameController#edit (for 127.0.0.1 at 2010-10-15 08:30:03) [GET]
+  Parameters: {"id"=>"156"}
+  [4;36;1mGame Load (0.3ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 156) [0m
+  [4;35;1mPlayerStatus Load (0.4ms)[0m   [0mSELECT * FROM `player_statuses` WHERE (description <> 'Maybe') [0m
+  [4;36;1mGameStatus Load (0.5ms)[0m   [0;1mSELECT * FROM `game_statuses` [0m
+  [4;35;1mEquipment Load (0.4ms)[0m   [0mSELECT * FROM `equipment` [0m
+Rendering template within layouts/application
+Rendering game/edit
+  [4;36;1mGamePlayer Count (0.3ms)[0m   [0;1mSELECT COUNT(*) FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=156 AND player_status_id > 2[0m
+  [4;35;1mGamePlayer Load (0.4ms)[0m   [0mSELECT gp.* FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=156 ORDER BY sp.description, equipment_id DESC[0m
+  [4;36;1mPlayer Load (0.2ms)[0m   [0;1mSELECT * FROM `players` WHERE (`players`.`id` = 55) [0m
+  [4;35;1mPlayer Load (0.3ms)[0m   [0mSELECT * FROM `players` WHERE (`players`.`id` = 57) [0m
+Completed in 45ms (View: 27, DB: 3) | 200 OK [http://localhost/game/edit/156]

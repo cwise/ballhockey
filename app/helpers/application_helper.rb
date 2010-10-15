@@ -6,6 +6,11 @@ module ApplicationHelper
     menu_items += "<li>" + link_to('Cancel', :back) + "</li>"
   end
 
+  def edit_nav_items(id)
+    menu_items = ""
+    menu_items += "<li>" + link_to('Edit ' + @current_controller.capitalize, :action => 'edit', :id => id)+ "</li>"
+  end
+  
   def index_nav_items
     menu_items = ""
     menu_items += "<li>" + link_to('New ' + @current_controller.capitalize, :action => 'new') + "</li>"
@@ -26,6 +31,10 @@ module ApplicationHelper
 
   def entry_nav
     link_nav(entry_nav_items)
+  end
+
+  def edit_nav(id)
+    link_nav(edit_nav_items(id))
   end
 
   def controller_header
