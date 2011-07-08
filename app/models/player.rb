@@ -57,7 +57,7 @@ class Player < ActiveRecord::Base
   end
 
   def goalie_factor
-    unless times_played==0
+    unless times_played < 5
       unless times_played_goalie==0
         100-((times_played_goalie.to_f/times_played.to_f)*100)
       else
