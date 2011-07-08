@@ -1,63 +1,0 @@
-10
-
-dir
-1141
-http://smyth100.local:8800/svn/nrcanhockey/tmp
-http://smyth100.local:8800/svn
-
-
-
-2010-04-18T12:06:00.585000Z
-926
-cwise
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-2952bf43-23c9-4694-8924-bd5f85576e58
-
-pids
-dir
-
-
-
-delete
-
-cache
-dir
-
-
-
-delete
-
-sessions
-dir
-
-
-
-delete
-
-war
-dir
-
-
-
-delete
-
-sockets
-dir
-
-
-
-delete
-
