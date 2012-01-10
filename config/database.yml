@@ -1,21 +1,21 @@
 development:
     adapter: mysql2
-    host: smyth100.local
+    host: localhost
     database: nrcanhockey_dev
     username: root
-    password: upandatom
+    password: 
 
 test:
     adapter: mysql2
-    host: smyth100.local
+    host: localhost
     database: nrcanhockey_test
     username: root
-    password: upandatom
+    password: 
 
 production:
     adapter: mysql2
-    host: smyth100.local
+    host: slocalhost
     database: nrcanhockey_prod
     username: root
-    password: upandatom
+    password: 
 
