@@ -12,6 +12,14 @@ GIT
       rails (>= 3.0.0)
       sass (>= 3.1.0)
 
+GIT
+  remote: https://github.com/Papipo/hassle
+  revision: 3a12feb7ae8c94acde7bdf1cc8a34bb89ab39f44
+  specs:
+    hassle (0.0.1)
+      haml
+      rack
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -69,6 +77,7 @@ GEM
       actionpack (>= 2.3.7)
       activesupport (>= 2.3.7)
       i18n (~> 0.4)
+    haml (3.1.4)
     has_scope (0.5.1)
     heroku (2.4.1)
       launchy (>= 0.3.2)
@@ -148,6 +157,7 @@ PLATFORMS
 
 DEPENDENCIES
   activeadmin!
+  hassle!
   heroku_backup_task
   heroku_cloud_backup
   mysql2 (= 0.2.7)

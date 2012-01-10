@@ -2,6 +2,7 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.0.9'
 gem 'activeadmin', :git => 'git://github.com/gregbell/active_admin.git'
+gem 'hassle', :git => 'https://github.com/Papipo/hassle'
 gem 'heroku_backup_task'
 gem 'heroku_cloud_backup'
 gem 'will_paginate', '3.0.pre2'
