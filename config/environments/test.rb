@@ -1,31 +1,34 @@
-# Settings specified here will take precedence over those in config/environment.rb
+Nrcanhockey::Application.configure do
 
-# The test environment is used exclusively to run your application's
-# test suite.  You never need to work with it otherwise.  Remember that
-# your test database is "scratch space" for the test suite and is wiped
-# and recreated between test runs.  Don't rely on the data there!
-config.cache_classes = true
+  # Settings specified here will take precedence over those in config/environment.rb
 
-# Log error messages when you accidentally call methods on nil.
-config.whiny_nils = true
+  # The test environment is used exclusively to run your application's
+  # test suite.  You never need to work with it otherwise.  Remember that
+  # your test database is "scratch space" for the test suite and is wiped
+  # and recreated between test runs.  Don't rely on the data there!
+  config.cache_classes = true
 
-# Show full error reports and disable caching
-config.action_controller.consider_all_requests_local = true
-config.action_controller.perform_caching             = false
-config.action_view.cache_template_loading            = true
+  # Log error messages when you accidentally call methods on nil.
+  config.whiny_nils = true
 
-# Disable request forgery protection in test environment
-config.action_controller.allow_forgery_protection    = false
+  # Show full error reports and disable caching
+  config.action_controller.consider_all_requests_local = true
+  config.action_controller.perform_caching             = false
+  config.action_view.cache_template_loading            = true
+
+  # Disable request forgery protection in test environment
+  config.action_controller.allow_forgery_protection    = false
 
 
-config.action_mailer.default_url_options = { :host => "localhost:3000" }
-config.action_mailer.delivery_method = :smtp
-ActionMailer::Base.smtp_settings = {
-  :address => "smtp.broadband.rogers.com",
-  :port => 25,
-  :user_name => "chriswise@rogers.com",
-  :password => "cat2dogs",
-  :authentication => :login
-}
+  config.action_mailer.default_url_options = { :host => "localhost:3000" }
+  config.action_mailer.delivery_method = :smtp
+  ActionMailer::Base.smtp_settings = {
+    :address => "smtp.broadband.rogers.com",
+    :port => 25,
+    :user_name => "chriswise@rogers.com",
+    :password => "cat2dogs",
+    :authentication => :login
+  }
 
-MAIL_SENDER="mailer@murmurinformatics.com"
+  MAIL_SENDER="mailer@murmurinformatics.com"
+end
