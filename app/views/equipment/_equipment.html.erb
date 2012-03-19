@@ -1,4 +1,7 @@
 <tr>
-  <td><%= link_to 'Edit', :action => 'edit', :id => equipment.id %> <%= link_to 'Delete', {:action => 'delete', :id => equipment.id}, :confirm => 'Do you really want to delete this equipment?' %></td>
+  <td>
+    <%= link_to 'Edit', edit_equipment_path(equipment) %> 
+    <%= link_to 'Delete', equipment_path(equipment), :method => :delete, :confirm => 'Do you really want to delete this equipment?' %>
+  </td>
   <td><%= equipment.description %></td>
 </tr>

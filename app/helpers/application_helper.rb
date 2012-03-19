@@ -14,11 +14,11 @@ module ApplicationHelper
   def index_nav_items
     menu_items = ""
     menu_items += "<li>" + link_to('New ' + @current_controller.capitalize, :action => 'new') + "</li>"
-    menu_items += "<li>" + link_to('Back to Index', :controller => :global, :action => 'index') + "</li>"
+    menu_items += "<li>" + link_to('Back to Index', root_path) + "</li>"
   end
 
   def index_only_nav_items
-     "<li>" + link_to('Back to Index', :controller => :global, :action => 'index') + "</li>"
+     "<li>" + link_to('Back to Index', root_path) + "</li>"
   end
 
   def link_nav(nav_items)

@@ -1,0 +1,7 @@
+<%= content_tag :h1, 'Equipment' %>
+
+<% simple_form_for @equipment do |f| %>
+  <%= error_messages_for 'equipment' %>
+  <%= f.input :description %>
+  <%= f.submit %>  
+<% end %>

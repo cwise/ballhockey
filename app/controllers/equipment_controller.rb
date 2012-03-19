@@ -2,37 +2,50 @@ class EquipmentController < ApplicationController
   before_filter :admin_required
   
   def index
-    @equipment=Equipment.all
+    @equipment=Equipment.order('description').all
   end
 
   def new
     @equipment=Equipment.new(params[:equipment])
+  end
+  
+  def create
+    @equipment=Equipment.new(params[:equipment])
 
-    if request.post? and @equipment.save
-        flash[:notice] = 'Equipment add succeeded'
-        redirect_to({:action => 'index'})
-    else
-      #use the same form for editting
-      render :action => 'edit'
+    respond_to do |format|
+      if @equipment.save
+        flash[:notice]='Equipment add succeeded'
+        format.html { redirect_to equipment_index_path }
+      else
+        format.html { render :action => 'new' }
+      end
     end
   end
 
   def edit
     @equipment=Equipment.find(params[:id])
-    if request.post?
-      @equipment.attributes=params[:equipment]
+    
+  end
+  
+  def update
+    @equipment=Equipment.find(params[:id])
+    @equipment.attributes=params[:equipment]
+    
+    respond_to do |format|
       if @equipment.save
-        flash[:notice] = 'Equipment update succeeded'
-        redirect_to({:action => 'index'})
+        flash[:notice]='Equipment update succeeded'
+        format.html { redirect_to equipment_index_path }
       else
         flash[:notice] = 'Equipment update failed'
+        format.html { render :action => 'edit' }        
       end
     end
   end
 
-  def delete
+  def destroy
     @equipment=Equipment.find(params[:id])
     @equipment.delete
-    redirect_to :back
+    flash[:alert]="Successfully deleted #{@equipment.description}"
+    redirect_to equipment_index_path
   end
 end

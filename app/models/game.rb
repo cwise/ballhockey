@@ -10,6 +10,10 @@ class Game < ActiveRecord::Base
   accepts_nested_attributes_for :game_players
   belongs_to :game_status
   attr_accessor :old_game_status_id
+  
+  after_create :mail_invites
+  before_update :mail_updates
+  
   cattr_reader :per_page
   @@per_page = 10
 
@@ -17,11 +21,11 @@ class Game < ActiveRecord::Base
     playing_players.size
   end
 
-  def after_create
+  def mail_invites
     HockeyMailer.deliver_announce_game(self)
   end
 
-  def before_update
+  def mail_updates
    unless self.old_game_status_id==self.game_status_id
       if is_cancelled?
         HockeyMailer.deliver_cancel_game(self)

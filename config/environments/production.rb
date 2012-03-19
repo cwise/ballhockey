@@ -8,11 +8,6 @@ Nrcanhockey::Application.configure do
 
   # Specifies the header that your server uses for sending files
   config.action_dispatch.x_sendfile_header = "X-Sendfile"
-
-  # Full error reports are disabled and caching is turned on
-  config.action_controller.consider_all_requests_local = false
-  config.action_controller.perform_caching             = true
-  config.active_support.deprecation = :notify
   
   config.action_mailer.default_url_options = { :host => "nrcanhockey.murmurinfo.ca" }
   #config.action_mailer.delivery_method = :sendmail
