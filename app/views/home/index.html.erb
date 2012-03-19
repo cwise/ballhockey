@@ -1,21 +1,19 @@
 <h1>NRCan Ball Hockey</h1>
 
-<p>I am presently upgrading the application - it is unavailable for use until the upgrades are complete later this week.</p>
-
-<p><% link_to 'Login', login_path unless admin? %></p>
-<p><% link_to 'Logout', logout_path if admin? %></p>
+<p><%= link_to 'Login', login_path unless admin? %></p>
+<p><%= link_to 'Logout', logout_path if admin? %></p>
 <br/>
-<p><% link_to "Today's Game", current_games_path %></p>
+<p><%= link_to "Today's Game", current_games_path %></p>
 <% if admin? %>
-  <p><% link_to 'Players', players_path %></p>
-  <p><% link_to 'Games', games_path %></p>
-  <p><% link_to 'Equipment', equipment_index_path %></p>
+  <p><%= link_to 'Players', players_path %></p>
+  <p><%= link_to 'Games', games_path %></p>
+  <p><%= link_to 'Equipment', equipment_index_path %></p>
 <% end %>
-<p><% link_to 'Player Summary', summary_players_path %></p>
-<p><% link_to 'Goalies on Deck', on_deck_players_path %></p>
+<p><%= link_to 'Player Summary', summary_players_path %></p>
+<p><%= link_to 'Goalies on Deck', on_deck_players_path %></p>
 <br/>
 <% if admin? %>
-  <% link_to 'New Player', new_player_path, :class => 'button' %>
-  <% link_to 'New Game', new_game_path, :class => 'button' %>
-  <% link_to 'New Equipment', new_equipment_path, :class => 'button' %>
+  <%= link_to 'New Player', new_player_path, :class => 'button' %>
+  <%= link_to 'New Game', new_game_path, :class => 'button' %>
+  <%= link_to 'New Equipment', new_equipment_path, :class => 'button' %>
 <% end %>
