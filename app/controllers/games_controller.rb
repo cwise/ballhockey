@@ -1,5 +1,5 @@
 class GamesController < ApplicationController
-  before_filter :admin_required, :except => [:current, :view, :no_current_game]
+  before_filter :admin_required, :except => [:current, :view, :no_current_game, :player_status, :update_player_status]
   before_filter :load_game, :only => [:show, :edit, :update, :destroy, :player_status, :update_player_status]
   
   def index
