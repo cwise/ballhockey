@@ -3,7 +3,7 @@
 
 class ApplicationController < ActionController::Base
   helper :all # include all helpers, all the time
-  protect_from_forgery :except => [:lookup]
+  protect_from_forgery
   before_filter :instantiate_controller_and_action_names
 
   def instantiate_controller_and_action_names

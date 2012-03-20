@@ -1,58 +1,66 @@
 class PlayersController < ApplicationController  
-  before_filter :admin_required, :except => [:lookup, :player_summary, :goalies_on_deck]
+  before_filter :admin_required, :except => [:summary, :on_deck]
+  before_filter :load_player, :only => [:show, :edit, :update, :destroy]
   
   def index
-    @players=Player.paginate :order => 'name', :page => params[:page]
+    @players=Player.order(:name).paginate :page => params[:page]
     respond_to do |format|
       format.html
     end
   end
 
-  def lookup  
-    @players=Player.find(:all, :conditions => ['email_address LIKE ?', "%#{params[:search]}%"])
-    if request.xml_http_request?
-      render :lookup, :layout => false
+  def search
+    @players=Player.search(params[:term]).order("lower(name)")
+    
+    respond_to do |format|
+      format.json { render :json => @players.collect {|player| player.autocomplete_response } }
     end
   end
-
+  
   def new
+    @player=Player.new
+  end
+  
+  def create
     @player=Player.new(params[:player])
 
-    if request.post? and @player.save
-      flash[:notice] = 'Player add succeeded'
-      redirect_to({:action => 'index'})
-    else
-      #use the same form for editting
-      render :action => 'edit'
-    end
-  end
-
-  def edit
-    @player=Player.find(params[:id])
-    if request.post?
-      @player.attributes=params[:player]
+    respond_to do |format|
       if @player.save
-        flash[:notice] = 'Player update succeeded'
-        redirect_to({:action => 'index'})
+        flash[:notice]='Player add succeeded'
+        format.html { redirect_to players_path }
+      else
+        format.html { render :action => 'new' }
+      end
+    end
+  end  
+  
+  def update
+    @player.attributes=params[:player]
+    
+    respond_to do |format|
+      if @player.save
+        flash[:notice]='Player update succeeded'
+        format.html { redirect_to players_path }
       else
         flash[:notice] = 'Player update failed'
+        format.html { render :action => 'edit' }        
       end
     end
   end
 
-  def delete
-    @player=Player.find(params[:id])
+  def destroy
     @player.delete
-    redirect_to :back
+    flash[:alert]="Successfully deleted #{@player.full_name}"
+    redirect_to players_path
+  end  
+
+  def summary
+    @players=Player.includes(:played_games).all
+    @players.to_a.sort { |a,b| b.times_played <=> a.times_played }
   end
 
-  def player_summary
-    @players=Player.find(:all, :include => [:played_games])
-    @sorted_players=@players.to_a.sort { |a,b| b.times_played <=> a.times_played }
-  end
-
-  def goalies_on_deck
-    @players=Player.find(:all, :conditions => 'active = 1', :include => [:played_games])
+  def on_deck
+    @players=Player.active.includes(:played_games).all
     @sorted_players=@players.to_a.sort do |a,b|
       comp=b.goalie_factor <=> a.goalie_factor
       comp.zero? ? (comp=(a.times_played_goalie <=> b.times_played_goalie)) : comp
@@ -60,5 +68,10 @@ class PlayersController < ApplicationController
       comp.zero? ? (comp=(b.times_played <=> a.times_played)) : comp
       comp.zero? ? (comp=(a.name <=> b.name)) : comp
     end
+  end
+  
+  private
+  def load_player
+    @player=Player.find(params[:id])
   end
 end

@@ -1,0 +1,40 @@
+<%= content_tag :h1, 'Game' %>
+
+<% simple_form_for @game do|f| %>
+  <%= error_messages_for 'game' %>
+  <%= f.input :game_date %>
+  <%= f.association :game_status, :collection => @game_statuses, :label_method => :description, :include_blank => false %>
+  <%= f.input :organizer_address, :label => 'Organizer Email' %>
+  <%= f.input :organizer, :label => 'Organizer Name' %>
+  <%= f.input :message %>
+  
+  <br/>
+  <table id="game_players">
+    <caption>Players</caption>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Status</th>
+        <th>Assignment</th>
+        <th>Goalie</th>
+      </tr>
+    </thead>
+    <tbody>
+        <%= f.fields_for :game_players do |gp_form| %>
+        <% game_player=gp_form.object %>
+        <tr>
+          <td>
+            <%= game_player.player.name %>
+            <%= gp_form.hidden_field :player_id %>
+            <%= gp_form.hidden_field :id %>
+          </td>
+          <td><%= gp_form.select(:player_status_id, options_from_collection_for_select(@player_statuses, :id, :description, game_player.player_status_id)) %></td>
+          <td><%= gp_form.select(:equipment_id, options_from_collection_for_select(@equipment, :id, :description, game_player.equipment_id)) %></td>
+          <td><%= gp_form.check_box(:goalie, :checked => game_player.goalie? ? 'checked' : '') %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>  
+  
+  <%= f.submit %>
+<% end %>

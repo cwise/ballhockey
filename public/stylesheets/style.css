@@ -38,32 +38,7 @@ table tbody  tr:hover {background: #EAECEE; color: #111;}
 
 table tfoot td, table tfoot th, table tfoot tr {text-align: left; font: 120%  "Lucida Grande", "Lucida Sans Unicode", "Trebuchet MS", sans-serif; text-transform: uppercase; background: #fff; padding: 10px;}
 
-.link_button ul {
-    margin: 0;
-    padding: 0;
-    border: none;
-}
-
-.link_button li {
-    border-right: 10px solid #fff;
-    font-size: smaller;
-    list-style: none;
-    display: inline;
-}
-
-.link_button li a {
-    padding: 5px 5px 5px 0.5em;
-    border: 1px solid;
-    background-color: #ff0000;
-    background: #DDE;
-    text-decoration: none;
-}
-
-.link_button li a:hover {
-    background-color: #2586d7;
-    color: #fff;
-}
-
+a {text-decoration: none !important;}
 
 .murmur_pagination {
     background: white;

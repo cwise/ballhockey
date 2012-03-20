@@ -6,6 +6,7 @@ gem 'hassle', :git => 'https://github.com/Papipo/hassle'
 gem 'heroku_backup_task'
 gem 'heroku_cloud_backup'
 gem 'simple_form'
+gem 'show_for'
 gem 'will_paginate', '3.0.pre2'
 
 group :development do

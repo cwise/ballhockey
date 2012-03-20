@@ -161,6 +161,7 @@ GEM
       rspec (~> 2.9.0)
     ruby-hmac (0.4.0)
     sass (3.1.7)
+    show_for (0.2.4)
     simple_form (1.5.2)
       actionpack (~> 3.0)
       activemodel (~> 3.0)
@@ -186,5 +187,6 @@ DEPENDENCIES
   mysql2 (= 0.2.7)
   rails (= 3.0.9)
   rspec-rails
+  show_for
   simple_form
   will_paginate (= 3.0.pre2)

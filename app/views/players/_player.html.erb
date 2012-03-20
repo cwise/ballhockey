@@ -1,5 +1,8 @@
 <tr>
-  <td><%= link_to 'Edit', :action => 'edit', :id => player.id %> <%= link_to 'Delete', {:action => 'delete', :id => player.id}, :confirm => 'Do you really want to delete this player?' %></td>
+  <td>
+    <%= link_to 'Edit', edit_player_path(player) %>
+    <%= link_to 'Delete', player_path(player), :method => :delete, :confirm => 'Do you really want to delete this player?' %>
+  </td>
   <td><%= player.name %></td>
   <td><%= player.email_address %></td>
   <td><%= player.active_desc %></td>

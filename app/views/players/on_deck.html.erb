@@ -1,4 +1,4 @@
-<br/>
+<%= content_tag :h2, 'On Deck' %>
 <p>Goalies on deck is determined by the following criteria:</p>
 <ul>
   <li>Ratio of games played to games played as goalie (highest to lowest)</li>
@@ -19,5 +19,7 @@
   </thead>
   <%= render :partial => 'goalie_on_deck', :collection => @sorted_players %>
 </table>
-<br/>
-<%= index_only_nav %>
+<hr />
+<p>
+  <%= link_to 'Back to Index', root_path, :class => 'button' %>
+</p>

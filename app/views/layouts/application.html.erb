@@ -2,15 +2,25 @@
 <html>
 <head>
   <title>NRCan Ball Hockey</title>
-  <%= stylesheet_link_tag :all %>
+  <%= stylesheet_link_tag 'blueprint/screen.css', :media => 'screen, projection' %>
+  <%= stylesheet_link_tag 'blueprint/print.css', :media => :print %>  
+  <%= stylesheet_link_tag 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/themes/base/jquery-ui.css', :media => 'screen projection' %>
+  <%= stylesheet_link_tag 'active_admin.css' %>  
+  <%= stylesheet_link_tag 'style.css' %>
+  <%= yield :stylesheet_includes %>
+  
   <%= javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js' %>
+  <%= javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.6/jquery-ui.js' %>  
+  <%= javascript_include_tag 'application' %>  
   <%= javascript_include_tag 'rails' %>
+  <%= yield :javascript_includes %>
 
   <%= csrf_meta_tag %>
 </head>
 <body>
-  <div id="content">
-    <div id="contentpane">
+  <div class="container">
+    <div id="content" class="span-24 last">
+    	<%= content_tag :h1, link_to('NRCan Ball Hockey', root_path) %>
     	<% unless flash[:notice].blank? %>
     		<div id="notification"><%= flash[:notice] %></div>
     	<% end %>		

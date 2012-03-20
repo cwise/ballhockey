@@ -3,6 +3,7 @@ Nrcanhockey::Application.routes.draw do
     collection do
       get :summary
       get :on_deck
+      get :search
     end
   end
   
@@ -10,9 +11,14 @@ Nrcanhockey::Application.routes.draw do
     collection do
       get :current
     end
+    member do
+      get :player_status
+      post :update_player_status
+    end
   end
   
   resources :equipment
+  resources :game_players
   
   get :login, :to => 'sessions#new'
   post :login, :to => 'sessions#create'

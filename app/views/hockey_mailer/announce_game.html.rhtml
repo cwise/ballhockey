@@ -3,12 +3,7 @@
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
   </head>
   <body>
-    <p><%= @game.full_message %></p>
-    <br/>
-    <p>Please respond by clicking the following link:</p>
-    <p><%= link_to 'Update Status', url_for(:controller => 'game_player', :id => @game.id, :action => :update_status, :only_path => false) %></p>
-    <br/>
-    <p>To check the status of this game at any time:</p>
-    <p><%= link_to 'Game Status', url_for(:controller => 'game', :id => @game.id, :action => :view, :only_path => false) %></p>
+    <p><%= @game.full_message.html_safe %></p>
+	<%= render :partial => 'status' %>
   </body>
 </html>

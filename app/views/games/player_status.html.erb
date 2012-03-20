@@ -1,0 +1,30 @@
+<%= content_for :javascript_includes do %>
+  <script type="text/javascript">
+  $(function() {
+    $('#game_player_email_address').live('focus', function(i){
+      $(this).autocomplete({
+        source: '/players/search',
+        select: function(event, ui) {
+          $(this).val(ui.item.value);
+          $('#game_player_player_id').val(ui.item.id);
+          return false;
+        }
+      });
+    });
+  });
+  </script>
+<% end %>
+
+
+
+<%= render :template => 'games/show' %>
+
+<% simple_form_for @game_player, :url => update_player_status_game_path do |f| %>
+  <%= error_messages_for :game_player %>  
+  <%= f.hidden_field :game_id %>
+  <%= f.input :email_address %>
+  <%= f.association :player_status, :collection => @player_status, :label_method => :description, :include_blank => false %>
+  <%= f.hidden_field :player_id %>
+  <hr />
+  <%= f.submit 'Update' %>
+<% end %>

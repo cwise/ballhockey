@@ -2,7 +2,8 @@ class Player < ActiveRecord::Base
   validates_presence_of :name
   validates_uniqueness_of :name
   validates_uniqueness_of :email_address
-
+  scope :active, where(:active => 1)
+  scope :search, lambda {|q| q.blank? ? scoped : where(["lower(name) LIKE ? OR email_address LIKE ?", "%#{q}%", "%#{q}%"])}  
   has_many :played_games
 
   cattr_reader :per_page
@@ -71,4 +72,8 @@ class Player < ActiveRecord::Base
   def has_email?
     !email_address.nil? && email_address.length > 0
   end
+  
+  def autocomplete_response
+     {"id" => id, "label" => name, "value" => email_address}
+  end  
 end

@@ -13,9 +13,9 @@ describe EquipmentController do
     
   describe "GET index" do
     it "assigns all equipment to @equipment" do
-      equipment = Factory(:equipment)
+      equipment=Factory(:equipment)
       get :index
-      assigns(:equipment).should eq([equipment])
+      assigns(:equipment).should include(equipment)
     end
     
     it "should render successfully" do
@@ -27,7 +27,7 @@ describe EquipmentController do
   
   describe "GET new" do
     it "assigns equipment to @equipment" do
-      get :index
+      get :new
       assigns(:equipment).should be_true
     end    
     
@@ -47,6 +47,39 @@ describe EquipmentController do
     
     it "should render successfully" do
       post :create, :equipment => @params
+      response.should be_redirect
+    end    
+  end  
+  
+  describe "GET edit" do
+    before(:each) do
+      @equipment=Factory(:equipment)
+    end
+        
+    it "assigns equipment to @equipment" do
+      get :edit, :id => @equipment.id
+      assigns(:equipment).should be_true
+    end    
+    
+    it "should render successfully" do
+      get :edit, :id => @equipment.id
+      response.should be_success
+    end    
+  end
+  
+  describe "PUT update" do
+    before(:each) do
+      @equipment=Factory(:equipment)
+    end
+    
+    it "should update equipment" do
+      @_before = Equipment.count
+      post :update, :id => @equipment.id, :equipment => @equipment.attributes
+      Equipment.count.should == (@_before)
+    end    
+    
+    it "should render successfully" do
+      put :update, :id => @equipment.id, :equipment => @equipment.attributes
       response.should be_redirect
     end    
   end  

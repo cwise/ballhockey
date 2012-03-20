@@ -1,5 +1,6 @@
 class EquipmentController < ApplicationController
   before_filter :admin_required
+  before_filter :load_equipment, :only => [:show, :edit, :update, :destroy]
   
   def index
     @equipment=Equipment.order('description').all
@@ -23,12 +24,9 @@ class EquipmentController < ApplicationController
   end
 
   def edit
-    @equipment=Equipment.find(params[:id])
-    
   end
   
   def update
-    @equipment=Equipment.find(params[:id])
     @equipment.attributes=params[:equipment]
     
     respond_to do |format|
@@ -43,9 +41,13 @@ class EquipmentController < ApplicationController
   end
 
   def destroy
-    @equipment=Equipment.find(params[:id])
-    @equipment.delete
+    @equipment.destroy
     flash[:alert]="Successfully deleted #{@equipment.description}"
     redirect_to equipment_index_path
+  end
+  
+  private
+  def load_equipment
+    @equipment=Equipment.find(params[:id])  
   end
 end

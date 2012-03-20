@@ -9,7 +9,9 @@
     <th>Last Played Goalie</th>
   </tr>
   </thead>
-  <%= render :partial => 'player_summary', :collection => @sorted_players %>
+  <%= render :partial => 'player_summary', :collection => @players %>
 </table>
-<br/>
-<%= index_only_nav %>
+<hr />
+<p>
+  <%= link_to 'Back to Index', root_path, :class => 'button' %>
+</p>

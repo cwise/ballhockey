@@ -1,8 +1,9 @@
 class GamesController < ApplicationController
   before_filter :admin_required, :except => [:current, :view, :no_current_game]
+  before_filter :load_game, :only => [:show, :edit, :update, :destroy, :player_status, :update_player_status]
   
   def index
-    @games=Game.paginate(:order => 'game_date desc', :page => params[:page])
+    @games=Game.order('game_date desc').paginate(:page => params[:page])
     
     respond_to do |format|
       format.html
@@ -21,76 +22,99 @@ class GamesController < ApplicationController
   def new
     @game=Game.new(params[:game])
     @game.game_status_id=1
-    build_lists(false)
+    build_lists
     
-    if request.post?
-      params.each do |id, value|
-        if(id.match(/^game_player/))
-          @game.game_players.build(value)
-        end
-      end
+    @players=Player.active.all
+    @players.each{|pl| @game.game_players << GamePlayer.new(:player_id => pl.id, :equipment_id => 5, :player_status_id => 1) }
 
-      if @game.save
-        flash[:notice] = 'Game add succeeded'
-        redirect_to({:action => 'index'})
-      else
-        flash[:notice] = 'Game add failed'
-        build_lists(false)
-        render :action => 'edit'
-      end
+    respond_to do |format|
+      format.html
+    end
+  end
+  
+  def create
+    @game=Game.new(params[:game])
+
+    if @game.save
+      flash[:notice] = 'Game add succeeded'
+      redirect_to({:action => 'index'})
     else
-      #need to add the default players
-      @players=Player.find(:all, :conditions => "active = 1")
-      @players.each { |pl| @game.game_players << GamePlayer.new do |gp|
-          gp.player_id=pl.id
-          gp.equipment_id=5 #none
-          gp.player_status_id=1 #no response
-        end }
-
-      #use the same form for editting
-      render :action => 'edit'
+      flash[:notice] = 'Game add failed'
+      build_lists
+      render :action => 'new'
     end
   end
 
   def edit
-    @game=Game.find(params[:id])
-    @game.old_game_status_id=@game.game_status_id
-    build_lists(true)
+    build_lists true
     
-    if request.post?
-      @game.attributes=params[:game]
-      @game.game_players.each do | gp |
-        values=params["game_player_#{gp.player_id}"]
-        gp.update_attributes(values)
-      end
+    respond_to do |format|
+      format.html
+    end  
+  end
+  
+  def update
+    build_lists true
+    @game.attributes=params[:game]
+
+    respond_to do |format|
       if @game.save
         flash[:notice] = 'Game update succeeded'
-        redirect_to({:action => 'index'})
+        format.html { redirect_to games_path }
       else
         flash[:notice] = 'Game update failed'
-        build_lists(true)
-        render :action => 'edit'
+        build_lists true
+        format.html { render :action => 'edit' }
       end
     end
   end
 
-  def delete
-    @game=Game.find(params[:id])
+  def player_status
+    @game_player=GamePlayer.new
+    @game_player.email_address=cookies[:email_address]    
+	  @player_statuses=PlayerStatus.where("description NOT IN ('Maybe', 'No response')").order(:description).all
+  end
+  
+	def update_player_status
+	  @player_statuses=PlayerStatus.where("description NOT IN ('Maybe', 'No response')").order(:description).all
+    @game_player=GamePlayer.new(params[:game_player])
+    cookies[:email_address]={ :value => @game_player.email_address, :expires => 1.year.from_now }
+    
+    player=Player.where(:email_address => @game_player.email_address).first
+    
+    respond_to do |format|
+      unless player
+        @game_player.errors.add("Player not found by address") 
+        format.html { render :action => :edit }
+      else
+        gp=GamePlayer.where(["game_id = ? AND player_id = ?", @game.id, player.id]).first
+        gp.player_status_id=@game_player.player_status_id
+        gp.save
+
+        format.html { render :text => "Confirmed #{player.name} as #{gp.player_status.description}" }
+      end
+    end
+	end
+
+  def destroy
     @game.delete
-    redirect_to :back
+    flash[:alert]="Successfully deleted #{@game.game_date}"
+    redirect_to games_path
   end
 
-  def view
-    @game=Game.find(params[:id])
-    @view_only=true
-    render :action => 'edit'
+  def show
   end
 
   protected
-  def build_lists(is_edit)
+  def build_lists is_edit=false
     @player_statuses=PlayerStatus.find(:all, :conditions => "description <> 'Maybe'")
     @game_statuses=GameStatus.find(:all, :conditions => ['description <> ? ', 'Send Update']) unless is_edit
     @game_statuses=GameStatus.find(:all) if is_edit
     @equipment=Equipment.find(:all)
   end
+  
+  private
+  def load_game
+    @game=Game.find(params[:id])
+  end  
 end

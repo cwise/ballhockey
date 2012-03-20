@@ -1,0 +1,7 @@
+<%= show_for @game do |a| %>
+  <%= a.attribute :game_date %>
+  <%= a.attribute :number_playing %>
+  <%= a.association :game_status, :using => :description %>
+  
+  <%= a.association :playing_players, :using => :name_with_status %>
+<% end %>

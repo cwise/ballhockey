@@ -1,0 +1,9 @@
+<%= content_tag :h1, 'Player' %>
+
+<% simple_form_for @player do |f| %>
+  <%= error_messages_for 'player' %>
+  <%= f.input :name %>
+  <%= f.input :email_address %>
+  <%= f.input :active, :as => :boolean %>
+  <%= f.submit %>
+<% end %>
