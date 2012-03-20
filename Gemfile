@@ -8,6 +8,7 @@ gem 'heroku_cloud_backup'
 gem 'simple_form'
 gem 'show_for'
 gem 'will_paginate', '3.0.pre2'
+#gem 'pg'
 
 group :development do
 	gem 'mysql2', '0.2.7'
