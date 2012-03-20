@@ -12,3 +12,10 @@ unless Equipment.exists?
   Equipment.create(:id => 4, :description => 'Fence')
   Equipment.create(:id => 5, :description => 'None')
 end
+
+unless PlayerStatus.exists?
+  PlayerStatus.create(:description => 'No response')
+  PlayerStatus.create(:description => 'Out')
+  PlayerStatus.create(:description => 'In')
+  PlayerStatus.create(:description => 'Maybe')
+end

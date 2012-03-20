@@ -4,9 +4,6 @@ class Game < ActiveRecord::Base
   validates_presence_of :organizer
   validates_presence_of :organizer_address
   has_many :game_players, :dependent => :destroy
-  has_many :playing_players, :class_name => 'GamePlayer', :finder_sql => 'SELECT gp.* FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=#{id} AND player_status_id > 2'
-  has_many :playing_players_not_late, :class_name => 'GamePlayer', :finder_sql => 'SELECT gp.* FROM game_players gp JOIN player_statuses sp ON (gp.player_status_id = sp.id) WHERE game_id=#{id} AND player_status_id > 2 AND player_status_id <> 5'
-  has_many :game_goalies, :class_name => 'GameGoalie'
   accepts_nested_attributes_for :game_players
   belongs_to :game_status
   attr_accessor :old_game_status_id
@@ -25,6 +22,14 @@ class Game < ActiveRecord::Base
     HockeyMailer.deliver_announce_game(self)
   end
 
+  def playing_players
+    game_players.select{|gp| gp.player_status_id > 2}
+  end
+  
+  def playing_players_not_late
+    playing_players.reject{|gp| gp.player_status_id==5}
+  end
+  
   def mail_updates
    unless self.old_game_status_id==self.game_status_id
       if is_cancelled?
@@ -70,6 +75,7 @@ class Game < ActiveRecord::Base
   end
 
   def goalies
+    return []
     goalie_names=""
     game_goalies.each do |g|
       if(goalie_names.length > 0) then

@@ -5,6 +5,7 @@ class CreateGamePlayers < ActiveRecord::Migration
       t.integer :player_id
       t.integer :player_status_id
       t.integer :equipment_id
+      t.boolean :goalie, :default => true
       t.timestamps
     end
   end

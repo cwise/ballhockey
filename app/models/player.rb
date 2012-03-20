@@ -2,7 +2,7 @@ class Player < ActiveRecord::Base
   validates_presence_of :name
   validates_uniqueness_of :name
   validates_uniqueness_of :email_address
-  scope :active, where(:active => 1)
+  scope :active, where(:active => true)
   scope :search, lambda {|q| q.blank? ? scoped : where(["lower(name) LIKE ? OR email_address LIKE ?", "%#{q}%", "%#{q}%"])}  
   has_many :played_games
 
@@ -58,6 +58,7 @@ class Player < ActiveRecord::Base
   end
 
   def goalie_factor
+    return 0
     unless times_played < 5
       unless times_played_goalie==0
         100-((times_played_goalie.to_f/times_played.to_f)*100)

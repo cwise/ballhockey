@@ -4,6 +4,8 @@ class GamePlayer < ActiveRecord::Base
   belongs_to :equipment
   belongs_to :player_status
   attr_accessor :email_address
+  scope :playing, where('player_status_id > 2')
+  scope :not_late, where('player_status_id <> 5')
   
   def name_with_status
     name=player.name

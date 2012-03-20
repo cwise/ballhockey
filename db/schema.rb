@@ -43,24 +43,15 @@ ActiveRecord::Schema.define(:version => 20110811171457) do
     t.datetime "updated_at"
   end
 
-  create_table "game_goalies", :id => false, :force => true do |t|
-    t.integer "game_id"
-    t.date    "game_date"
-    t.integer "player_id"
-    t.string  "name"
-  end
-
   create_table "game_players", :force => true do |t|
     t.integer  "game_id"
     t.integer  "player_id"
     t.integer  "player_status_id"
     t.integer  "equipment_id"
+    t.boolean  "goalie",           :default => true
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "goalie"
   end
-
-  add_index "game_players", ["player_id"], :name => "fk_gameplayer_2_player"
 
   create_table "game_statuses", :force => true do |t|
     t.string   "description"
@@ -71,23 +62,11 @@ ActiveRecord::Schema.define(:version => 20110811171457) do
   create_table "games", :force => true do |t|
     t.date     "game_date"
     t.text     "message"
+    t.integer  "game_status_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "game_status_id"
     t.string   "organizer",         :limit => 256
     t.string   "organizer_address", :limit => 256
-  end
-
-  create_table "played_games", :id => false, :force => true do |t|
-    t.integer  "id",               :default => 0, :null => false
-    t.integer  "game_id"
-    t.integer  "player_id"
-    t.integer  "player_status_id"
-    t.integer  "equipment_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.boolean  "goalie"
-    t.date     "game_date"
   end
 
   create_table "player_statuses", :force => true do |t|

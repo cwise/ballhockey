@@ -84,8 +84,8 @@ class GamesController < ApplicationController
     
     respond_to do |format|
       unless player
-        @game_player.errors.add("Player not found by address") 
-        format.html { render :action => :edit }
+        flash[:alert]="Player not found by address"
+        format.html { render :action => :player_status }
       else
         gp=GamePlayer.where(["game_id = ? AND player_id = ?", @game.id, player.id]).first
         gp.player_status_id=@game_player.player_status_id

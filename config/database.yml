@@ -1,21 +1,15 @@
 development:
-    adapter: mysql2
+    adapter: postgresql
     host: localhost
     database: nrcanhockey_dev
-    username: root
-    password: 
 
 test:
-    adapter: mysql2
+    adapter: postgresql
     host: localhost
     database: nrcanhockey_test
-    username: root
-    password: 
 
 production:
-    adapter: mysql2
+    adapter: postgresql
     host: localhost
     database: nrcanhockey_prod
-    username: root
-    password: 
 

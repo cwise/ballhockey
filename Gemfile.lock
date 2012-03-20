@@ -121,6 +121,7 @@ GEM
     net-ssh (2.1.4)
     nokogiri (1.5.0)
     orm_adapter (0.0.5)
+    pg (0.9.0)
     polyglot (0.3.2)
     rack (1.2.3)
     rack-mount (0.6.14)
@@ -185,6 +186,7 @@ DEPENDENCIES
   heroku_backup_task
   heroku_cloud_backup
   mysql2 (= 0.2.7)
+  pg
   rails (= 3.0.9)
   rspec-rails
   show_for
