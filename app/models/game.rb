@@ -75,15 +75,7 @@ class Game < ActiveRecord::Base
   end
 
   def goalies
-    return []
-    goalie_names=""
-    game_goalies.each do |g|
-      if(goalie_names.length > 0) then
-        goalie_names+=", "
-      end
-      goalie_names+=g.name
-    end
-    goalie_names
+    playing_players.select{|pp| pp.goalie}.map{|pp| pp.player.name}.join(', ')
   end
 
   def full_message
