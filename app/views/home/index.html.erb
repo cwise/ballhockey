@@ -1,5 +1,5 @@
-<p><%= link_to 'Login', login_path unless admin? %></p>
-<p><%= link_to 'Logout', logout_path if admin? %></p>
+<p><%= link_to('Login', login_path, :class => 'button') unless admin? %></p>
+<p><%= link_to('Logout', logout_path, :class => 'button') if admin? %></p>
 <br/>
 <p><%= link_to "Today's Game", current_games_path %></p>
 <% if admin? %>
