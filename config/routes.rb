@@ -10,6 +10,7 @@ Nrcanhockey::Application.routes.draw do
   resources :games do
     collection do
       get :current
+      get :no_current_game
     end
     member do
       get :player_status
