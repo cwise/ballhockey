@@ -10,3 +10,7 @@
     <% end %>
   </ul>
 <% end %>
+
+<% if admin? %>
+  <%= link_to 'Edit', edit_game_path(@game), :class => 'button' %>
+<% end %>
