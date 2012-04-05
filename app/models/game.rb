@@ -6,7 +6,6 @@ class Game < ActiveRecord::Base
   has_many :game_players, :dependent => :destroy
   accepts_nested_attributes_for :game_players
   belongs_to :game_status
-  attr_accessor :old_game_status_id
   
   after_create :mail_invites
   before_update :mail_updates
@@ -31,7 +30,7 @@ class Game < ActiveRecord::Base
   end
   
   def mail_updates
-   unless self.old_game_status_id==self.game_status_id
+   if self.game_status_id_changed?
       if is_cancelled?
         HockeyMailer.deliver_cancel_game(self)
       elsif self.is_called?
@@ -41,7 +40,7 @@ class Game < ActiveRecord::Base
       end
    end
 
-    self.game_status_id=1 if is_send_update?
+    self.game_status_id=game_status_id_was if is_send_update?
   end
 
   def all_players
