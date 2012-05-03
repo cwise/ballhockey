@@ -18,7 +18,8 @@ Nrcanhockey::Application.configure do
     :user_name => "mailer@murmurinformatics.com",
     :password => "mailer!!",
     :authentication => :plain,
-    :domain => 'murmurinfo.ca'
+    :domain => 'murmurinfo.ca',
+    :enable_starttls_auto => true
   }
 
   MAIL_SENDER="mailer@murmurinformatics.com"
