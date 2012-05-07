@@ -6,6 +6,7 @@ class Game < ActiveRecord::Base
   has_many :game_players, :dependent => :destroy
   accepts_nested_attributes_for :game_players
   belongs_to :game_status
+  scope :played, where(:game_status_id => 2)
   
   after_create :mail_invites
   before_update :mail_updates

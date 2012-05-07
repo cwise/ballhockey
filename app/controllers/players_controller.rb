@@ -55,8 +55,8 @@ class PlayersController < ApplicationController
   end  
 
   def summary
-    @players=Player.includes(:played_games).all
-    @players.to_a.sort { |a,b| b.times_played <=> a.times_played }
+    @players=Player.all
+    @players.sort!{|a,b| b.times_played <=> a.times_played}
   end
 
   def on_deck

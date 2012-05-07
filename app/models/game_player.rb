@@ -6,6 +6,7 @@ class GamePlayer < ActiveRecord::Base
   attr_accessor :email_address
   scope :playing, where('player_status_id > 2')
   scope :not_late, where('player_status_id <> 5')
+  scope :goalie, where(:goalie => true)
   
   def name_with_status
     name=player.name

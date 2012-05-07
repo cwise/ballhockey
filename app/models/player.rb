@@ -4,27 +4,26 @@ class Player < ActiveRecord::Base
   validates_uniqueness_of :email_address
   scope :active, where(:active => true)
   scope :search, lambda {|q| q.blank? ? scoped : where(["lower(name) LIKE ? OR email_address LIKE ?", "%#{q}%", "%#{q}%"])}  
-  has_many :played_games
-
+  has_many :game_players
+  has_many :games, :through => :game_players
+  
   cattr_reader :per_page
   @@per_page = 10
 
   def active_desc
-    if(active)
-      "Yes"
-    else
-      "No"
-    end
+    active ? 'Yes' : 'No'
   end
 
   def times_played_goalie
-    goalie_count=0
-      played_games.each do |pg|
-      if pg.goalie
-        goalie_count=goalie_count+1
-      end
-    end
-    goalie_count
+    played_games_goalie.size
+  end
+
+  def played_games_goalie
+    played_games.select{|g| game_players.goalie.map{|gp| gp.game_id}.include? g.id}
+  end
+  
+  def played_games
+    game_players.playing.map{|gp| gp.game}.select{|g| g.was_played?}
   end
 
   def times_played
@@ -32,29 +31,13 @@ class Player < ActiveRecord::Base
   end
 
   def last_played_goalie
-    last_date=nil
-    played_games.each do |pg|
-      if pg.goalie && (last_date.nil? || last_date < pg.game_date)
-        last_date=pg.game_date
-      end
-    end
-    if last_date.nil?
-      last_date='Never'
-    end
-    last_date
+    game=played_games_goalie.sort_by{|g| g.game_date}.last
+    game ? game.game_date : 'Never'
   end
 
   def last_played
-    last_date=nil
-    played_games.each do |pg|
-      if (last_date.nil? || last_date < pg.game_date)
-        last_date=pg.game_date
-      end
-    end
-    if last_date.nil?
-      last_date='Never'
-    end
-    last_date
+    game=played_games.sort_by{|g| g.game_date}.last
+    game ? game.game_date : 'Never'
   end
 
   def goalie_factor
