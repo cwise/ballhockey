@@ -28,7 +28,7 @@
             <%= gp_form.hidden_field :player_id %>
             <%= gp_form.hidden_field :id %>
           </td>
-          <td><%= gp_form.select(:player_status_id, options_from_collection_for_select(@player_statuses, :id, :description, game_player.player_status_id)) %></td>
+          <td><%= gp_form.select(:current_state, @player_statuses, :include_blank => false) %></td>
           <td><%= gp_form.select(:equipment_id, options_from_collection_for_select(@equipment, :id, :description, game_player.equipment_id)) %></td>
           <td><%= gp_form.check_box(:goalie, :checked => game_player.goalie? ? 'checked' : '') %></td>
         </tr>

@@ -1,38 +1,36 @@
 class GamePlayer < ActiveRecord::Base
+  include AASM
+  
   belongs_to :game
   belongs_to :player
   belongs_to :equipment
   belongs_to :player_status
   attr_accessor :email_address
-  scope :playing, where('player_status_id > 2')
-  scope :not_late, where('player_status_id <> 5')
+  scope :not_responded, where(:current_state => :no_response)
+  scope :not_playing, where(:current_state => :out)
+  scope :playing, where(:current_state => [:in, :late])
+  scope :not_late, where(:current_state => :in)
   scope :goalie, where(:goalie => true)
+  
+  aasm_column :current_state
+  aasm_initial_state :no_response
+  aasm_state :out
+  aasm_state :in
+  aasm_state :late  
   
   def name_with_status
     name=player.name
-    if is_late? || is_maybe?
-      name += " (" + player_status.description + ")"
-    end
-
-    if is_carrying_equipment?
-      name += " (" + equipment.description + ")"
-    end
-
-    if self==game.on_deck
-      name += " (On Deck)"
-    end
+    name += " (" + player_status.description + ")" if late?
+    name += " (" + equipment.description + ")" if carrying_equipment?
+    name += " (On Deck)" if self==game.on_deck
     name
   end
 
-  def is_late?
-    player_status_id==5
+  def late?
+    current_state==:late
   end
 
-  def is_maybe?
-    player_status_id==4
-  end
-
-  def is_carrying_equipment?
+  def carrying_equipment?
     equipment_id != 5
   end
 end

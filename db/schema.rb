@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120507102050) do
+ActiveRecord::Schema.define(:version => 20120507115721) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.integer  "resource_id",   :null => false
@@ -83,6 +83,7 @@ ActiveRecord::Schema.define(:version => 20120507102050) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "goalie"
+    t.string   "current_state"
   end
 
   add_index "game_players", ["player_id"], :name => "fk_gameplayer_2_player"

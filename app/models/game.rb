@@ -23,19 +23,19 @@ class Game < ActiveRecord::Base
   end
 
   def playing_players
-    game_players.select{|gp| gp.player_status_id > 2}
+    game_players.playing
   end
   
   def not_playing_players
-    game_players.select{|gp| gp.player_status_id == 2}
+    game_players.not_playing
   end
   
   def not_responded_players
-    game_players.select{|gp| gp.player_status_id == 1}
+    game_players.not_responded
   end  
   
   def playing_players_not_late
-    playing_players.reject{|gp| gp.player_status_id==5}
+    playing_players.not_late
   end
   
   def mail_updates
@@ -55,9 +55,7 @@ class Game < ActiveRecord::Base
   def all_players
     players=Array.new
     game_players.each do |p|
-      if(p.player.has_email?)
-        players << p.player.email_address
-      end
+      players << p.player.email_address if(p.player.has_email?)
     end
     players
   end
@@ -83,14 +81,14 @@ class Game < ActiveRecord::Base
   end
 
   def goalies
-    playing_players.select{|pp| pp.goalie}.map{|pp| pp.player.name}.join(', ')
+    game_players.select{|gp| gp.goalie}.map{|gp| gp.player.name}.join(', ')
   end
 
   def full_message
-    message + " (<a href='mailto:#{organizer_address}'>#{organizer}</a>)"
+    "#{message} (<a href='mailto:#{organizer_address}'>#{organizer}</a>)"
   end
 
   def on_deck
-    playing_players_not_late.sort_by { |gp| gp.player.goalie_factor }.last
+    playing_players_not_late.sort_by {|gp| gp.player.goalie_factor }.last
   end
 end

@@ -7,6 +7,8 @@ class Player < ActiveRecord::Base
   has_many :game_players
   has_many :games, :through => :game_players
   
+  PLAYER_STATUSES=[:no_response, :in, :out, :late]
+  
   cattr_reader :per_page
   @@per_page = 10
 

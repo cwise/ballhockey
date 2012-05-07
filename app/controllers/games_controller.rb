@@ -72,11 +72,11 @@ class GamesController < ApplicationController
   def player_status
     @game_player=GamePlayer.new
     @game_player.email_address=cookies[:email_address]    
-	  @player_statuses=PlayerStatus.where("description NOT IN ('Maybe', 'No response')").order(:description).all
+	  @player_statuses=Player::PLAYER_STATUSES
   end
   
 	def update_player_status
-	  @player_statuses=PlayerStatus.where("description NOT IN ('Maybe', 'No response')").order(:description).all
+	  @player_statuses=Player::PLAYER_STATUSES
     @game_player=GamePlayer.new(params[:game_player])
     cookies[:email_address]={ :value => @game_player.email_address, :expires => 1.year.from_now }
     
@@ -107,7 +107,7 @@ class GamesController < ApplicationController
 
   protected
   def build_lists is_edit=false
-    @player_statuses=PlayerStatus.find(:all, :conditions => "description <> 'Maybe'")
+    @player_statuses=Player::PLAYER_STATUSES
     @game_statuses=GameStatus.find(:all, :conditions => ['description <> ? ', 'Send Update']) unless is_edit
     @game_statuses=GameStatus.find(:all) if is_edit
     @equipment=Equipment.find(:all)
