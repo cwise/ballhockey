@@ -2,7 +2,7 @@
   <%= a.attribute :game_date %>
   <%= a.attribute :number_playing %>
   <%= a.association :game_status, :using => :description %>
-  <div class='span-4'>
+  <div class='span-6'>
     <%= content_tag :h4, 'Playing' %>
     <ul>
       <% @game.playing_players.each do |gp| %>
@@ -10,7 +10,7 @@
       <% end %>
     </ul>
   </div>
-  <div class='span-4'>
+  <div class='span-6'>
   <%= content_tag :h4, 'Not Playing' %>
     <ul>
       <% @game.not_playing_players.each do |gp| %>
@@ -18,7 +18,7 @@
       <% end %>
     </ul>
   </div>
-  <div class='span-4 last'>
+  <div class='span-6 last'>
     <%= content_tag :h4, 'No Response' %>
     <ul>
       <% @game.not_responded_players.each do |gp| %>
