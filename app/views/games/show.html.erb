@@ -2,13 +2,31 @@
   <%= a.attribute :game_date %>
   <%= a.attribute :number_playing %>
   <%= a.association :game_status, :using => :description %>
-  <%= content_tag :label, 'Playing' %>
-  <br>
-  <ul>
-    <% @game.playing_players.each do |gp| %>
-      <%= content_tag :li, gp.name_with_status %>
-    <% end %>
-  </ul>
+  <div class='span-4'>
+    <%= content_tag :h4, 'Playing' %>
+    <ul>
+      <% @game.playing_players.each do |gp| %>
+        <%= content_tag :li, gp.name_with_status %>
+      <% end %>
+    </ul>
+  </div>
+  <div class='span-4'>
+  <%= content_tag :h4, 'Not Playing' %>
+    <ul>
+      <% @game.not_playing_players.each do |gp| %>
+        <%= content_tag :li, gp.name_with_status %>
+      <% end %>
+    </ul>
+  </div>
+  <div class='span-4 last'>
+    <%= content_tag :h4, 'No Response' %>
+    <ul>
+      <% @game.not_responded_players.each do |gp| %>
+        <%= content_tag :li, gp.name_with_status %>
+      <% end %>
+    </ul>
+  </div> 
+  <hr /> 
 <% end %>
 
 <% if admin? %>

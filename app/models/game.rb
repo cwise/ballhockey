@@ -26,6 +26,14 @@ class Game < ActiveRecord::Base
     game_players.select{|gp| gp.player_status_id > 2}
   end
   
+  def not_playing_players
+    game_players.select{|gp| gp.player_status_id == 2}
+  end
+  
+  def not_responded_players
+    game_players.select{|gp| gp.player_status_id == 1}
+  end  
+  
   def playing_players_not_late
     playing_players.reject{|gp| gp.player_status_id==5}
   end
