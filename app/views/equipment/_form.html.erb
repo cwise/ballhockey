@@ -1,7 +1,10 @@
 <%= content_tag :h1, 'Equipment' %>
 
-<% simple_form_for @equipment do |f| %>
+<%= simple_form_for @equipment, :html => { :novalidate => true } do |f| %>
   <%= error_messages_for 'equipment' %>
   <%= f.input :description %>
-  <%= f.submit %>  
+  <div class="form-actions">
+    <%= f.button :submit, :class => 'btn-primary' %>
+    <%= link_to 'Cancel', equipment_path, :class => 'btn' %>
+  </div>
 <% end %>

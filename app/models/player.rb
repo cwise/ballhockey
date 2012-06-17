@@ -8,9 +8,6 @@ class Player < ActiveRecord::Base
   has_many :games, :through => :game_players
   
   PLAYER_STATUSES=[:no_response, :in, :out, :late]
-  
-  cattr_reader :per_page
-  @@per_page = 10
 
   def active_desc
     active ? 'Yes' : 'No'

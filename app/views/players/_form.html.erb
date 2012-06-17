@@ -1,9 +1,12 @@
 <%= content_tag :h1, 'Player' %>
 
-<% simple_form_for @player do |f| %>
+<%= simple_form_for @player, :html => { :novalidate => true } do |f| %>
   <%= error_messages_for 'player' %>
   <%= f.input :name %>
   <%= f.input :email_address %>
   <%= f.input :active, :as => :boolean %>
-  <%= f.submit %>
+  <div class="form-actions">
+    <%= f.button :submit, :class => 'btn-primary' %>
+    <%= link_to 'Cancel', players_path, :class => 'btn' %>
+  </div>
 <% end %>

@@ -1,9 +1,9 @@
 <tr>
-  <td>
-    <%= link_to 'Edit', edit_player_path(player) %>
-    <%= link_to 'Delete', player_path(player), :method => :delete, :confirm => 'Do you really want to delete this player?' %>
-  </td>
   <td><%= player.name %></td>
   <td><%= player.email_address %></td>
   <td><%= player.active_desc %></td>
+  <td>
+    <%= link_to 'Edit', edit_player_path(player), :class => 'btn btn-mini' %>
+    <%= link_to 'Delete', player_path(player), :method => :delete, :confirm => 'Do you really want to delete this player?', :class => 'btn btn-mini btn-danger' %>
+  </td>
 </tr>

@@ -6,8 +6,7 @@
   <li>Last date played goalie (oldest to most recent)</li>
 </ul>
 <br/>
-<table>
-  <caption>Goalies on Deck</caption>
+<table class='table table-striped'>
   <thead>
   <tr>
     <th>Player</th>
@@ -19,7 +18,3 @@
   </thead>
   <%= render :partial => 'goalie_on_deck', :collection => @sorted_players %>
 </table>
-<hr />
-<p>
-  <%= link_to 'Home', root_path, :class => 'button' %>
-</p>

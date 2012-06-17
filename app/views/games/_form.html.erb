@@ -1,12 +1,12 @@
 <%= content_tag :h1, 'Game' %>
 
-<% simple_form_for @game do|f| %>
+<%= simple_form_for @game, :html => { :novalidate => true } do|f| %>
   <%= error_messages_for 'game' %>
   <%= f.input :game_date %>
   <%= f.association :game_status, :collection => @game_statuses, :label_method => :description, :include_blank => false %>
   <%= f.input :organizer_address, :label => 'Organizer Email' %>
   <%= f.input :organizer, :label => 'Organizer Name' %>
-  <%= f.input :message %>
+  <%= f.input :message, :input_html => {:rows => 4, :cols => 80} %>
   
   <br/>
   <table id="game_players">
@@ -36,5 +36,8 @@
     </tbody>
   </table>  
   
-  <%= f.submit %>
+  <div class="form-actions">
+    <%= f.button :submit, :class => 'btn-primary' %>
+    <%= link_to 'Cancel', games_path, :class => 'btn' %>
+  </div>
 <% end %>

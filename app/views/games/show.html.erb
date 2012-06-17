@@ -1,8 +1,9 @@
+<div class="row">
 <%= show_for @game do |a| %>
   <%= a.attribute :game_date %>
   <%= a.attribute :number_playing %>
   <%= a.association :game_status, :using => :description %>
-  <div class='span-6'>
+  <div class='span3'>
     <%= content_tag :h4, 'Playing' %>
     <ul>
       <% @game.playing_players.each do |gp| %>
@@ -10,7 +11,7 @@
       <% end %>
     </ul>
   </div>
-  <div class='span-6'>
+  <div class='span3'>
   <%= content_tag :h4, 'Not Playing' %>
     <ul>
       <% @game.not_playing_players.each do |gp| %>
@@ -18,7 +19,7 @@
       <% end %>
     </ul>
   </div>
-  <div class='span-6 last'>
+  <div class='span3'>
     <%= content_tag :h4, 'No Response' %>
     <ul>
       <% @game.not_responded_players.each do |gp| %>
@@ -26,9 +27,11 @@
       <% end %>
     </ul>
   </div> 
-  <hr /> 
 <% end %>
+</div>
+
+<hr /> 
 
 <% if admin? %>
-  <%= link_to 'Edit Game', edit_game_path(@game), :class => 'button' %>
+  <%= link_to 'Edit Game', edit_game_path(@game), :class => 'btn' %>
 <% end %>

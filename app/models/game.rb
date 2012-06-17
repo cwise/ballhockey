@@ -10,16 +10,13 @@ class Game < ActiveRecord::Base
   
   after_create :mail_invites
   before_update :mail_updates
-  
-  cattr_reader :per_page
-  @@per_page = 10
 
   def number_playing
     playing_players.size
   end
 
   def mail_invites
-    HockeyMailer.deliver_announce_game(self)
+    HockeyMailer.announce_game(self).deliver
   end
 
   def playing_players
@@ -41,11 +38,11 @@ class Game < ActiveRecord::Base
   def mail_updates
    if self.game_status_id_changed?
       if is_cancelled?
-        HockeyMailer.deliver_cancel_game(self)
+        HockeyMailer.cancel_game(self).deliver
       elsif self.is_called?
-        HockeyMailer.deliver_call_game(self)
+        HockeyMailer.call_game(self).deliver
       elsif self.is_send_update?
-        HockeyMailer.deliver_update_game(self)
+        HockeyMailer.update_game(self).deliver
       end
    end
 
@@ -53,11 +50,7 @@ class Game < ActiveRecord::Base
   end
 
   def all_players
-    players=Array.new
-    game_players.each do |p|
-      players << p.player.email_address if(p.player.has_email?)
-    end
-    players
+    game_players.select{|gp| gp.player.has_email?}.map{|gp| gp.player}
   end
 
   def is_send_update?

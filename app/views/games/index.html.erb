@@ -1,23 +1,22 @@
-<table>
-  <caption>Game</caption>
+<h1>Games</H1>
+
+<table class='table table-striped'>
   <thead>
-    <th>Action</th>
     <th>Date</th>
     <th align="center">Number Playing</th>
     <th>Status</th>
     <th>Goalies</th>
+    <th>Action</th>
   </thead>
   <tbody>
     <%= render :partial => 'game', :collection => @games %>
   </tbody>
 </table>
 
-<div class='murmur_pagination'>
-  <%= paginate @games %>
-</div>
+
+<%= paginate @games %>
 
 <hr />
 <p>
-  <%= link_to 'New Game', new_game_path, :class => 'button' %>
-  <%= link_to 'Home', root_path, :class => 'button' %>
+  <%= link_to 'New Game', new_game_path, :class => 'btn btn-primary' %>
 </p>

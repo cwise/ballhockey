@@ -1,8 +1,9 @@
-<table>
-  <caption>Equipment</caption>
+<h1>Equipment</h1>
+
+<table class='table table-striped'>
   <thead>
-    <th>Action</th>
     <th>Equipment</th>
+    <th>Action</th>
   </thead>
   <tbody>
     <%= render :partial => 'equipment', :collection => @equipment %>
@@ -11,6 +12,5 @@
 
 <hr />
 <p>
-  <%= link_to 'New Equipment', new_equipment_path, :class => 'button' %>
-  <%= link_to 'Home', root_path, :class => 'button' %>
+  <%= link_to 'New Equipment', new_equipment_path, :class => 'btn btn-primary' %>
 </p>
