@@ -3,7 +3,7 @@ class Player < ActiveRecord::Base
   validates_uniqueness_of :name
   validates_uniqueness_of :email_address
   scope :active, where(:active => true)
-  scope :search, lambda {|q| q.blank? ? scoped : where(["lower(name) LIKE ? OR email_address LIKE ?", "%#{q}%", "%#{q}%"])}  
+  scope :search, lambda {|q| q.blank? ? scoped : where(["lower(name) LIKE ? OR email_address LIKE ?", "%#{q.downcase}%", "%#{q.downcase}%"])}  
   has_many :game_players
   has_many :games, :through => :game_players
   

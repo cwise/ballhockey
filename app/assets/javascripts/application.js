@@ -1,3 +1,8 @@
+//= require jquery
+//= require jquery_ujs
+//= require_self
+//= require_tree .
+
 function load_date_pickers() {
     $('.date_picker').each(function() {
        if($(this).is(":visible"))

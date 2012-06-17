@@ -3,7 +3,7 @@ class PlayersController < ApplicationController
   before_filter :load_player, :only => [:show, :edit, :update, :destroy]
   
   def index
-    @players=Player.order(:name).paginate :page => params[:page]
+    @players=Player.order(:name).page(params[:page]).per(20)
     respond_to do |format|
       format.html
     end

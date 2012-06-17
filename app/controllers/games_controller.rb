@@ -3,7 +3,7 @@ class GamesController < ApplicationController
   before_filter :load_game, :only => [:show, :edit, :update, :destroy, :player_status, :update_player_status]
   
   def index
-    @games=Game.order('game_date desc').paginate(:page => params[:page])
+    @games=Game.order('game_date desc').page(params[:page]).per(20)
     
     respond_to do |format|
       format.html

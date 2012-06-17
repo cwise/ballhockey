@@ -27,4 +27,7 @@ Nrcanhockey::Application.configure do
     :enable_starttls_auto => true
   }
   MAIL_SENDER="mailer@murmurinformatics.com"
+  
+  config.assets.compress = false
+  config.assets.debug = true  
 end
