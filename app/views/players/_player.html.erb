@@ -4,6 +4,8 @@
   <td><%= player.active_desc %></td>
   <td>
     <%= link_to 'Edit', edit_player_path(player), :class => 'btn btn-mini' %>
-    <%= link_to 'Delete', player_path(player), :method => :delete, :confirm => 'Do you really want to delete this player?', :class => 'btn btn-mini btn-danger' %>
+    <% if player.can_delete? %>
+      <%= link_to 'Delete', player_path(player), :method => :delete, :confirm => 'Do you really want to delete this player?', :class => 'btn btn-mini btn-danger' %>
+    <% end %>
   </td>
 </tr>

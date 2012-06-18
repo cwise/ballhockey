@@ -59,4 +59,8 @@ class Player < ActiveRecord::Base
   def autocomplete_response
      {"id" => id, "label" => name, "value" => email_address}
   end  
+  
+  def can_delete?
+    game_players.playing.size==0
+  end
 end
