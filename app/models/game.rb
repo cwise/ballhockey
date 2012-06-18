@@ -37,36 +37,40 @@ class Game < ActiveRecord::Base
   
   def mail_updates
    if self.game_status_id_changed?
-      if is_cancelled?
+      if cancelled?
         HockeyMailer.cancel_game(self).deliver
-      elsif self.is_called?
+      elsif self.called?
         HockeyMailer.call_game(self).deliver
-      elsif self.is_send_update?
+      elsif self.send_update?
         HockeyMailer.update_game(self).deliver
       end
    end
 
-    self.game_status_id=game_status_id_was if is_send_update?
+    self.game_status_id=game_status_id_was if send_update?
   end
 
   def all_players
     game_players.select{|gp| gp.player.has_email?}.map{|gp| gp.player}
   end
 
-  def is_send_update?
+  def not_called?
+    game_status_id==1
+  end
+  
+  def send_update?
     return game_status_id==4
   end
 
-  def is_cancelled?
+  def cancelled?
     return game_status_id==3
   end
 
-  def is_called?
+  def called?
     return game_status_id==2
   end
 
   def was_played?
-    return is_called?
+    return called?
   end
 
   def self.current_game
@@ -86,6 +90,6 @@ class Game < ActiveRecord::Base
   end
   
   def can_delete?
-    game_status_id==1
+    not_called?
   end
 end
