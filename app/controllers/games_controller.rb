@@ -21,7 +21,6 @@ class GamesController < ApplicationController
 
   def new
     @game=Game.new(params[:game])
-    @game.game_status_id=1
     build_lists
     
     @players=Player.active.all
@@ -107,9 +106,9 @@ class GamesController < ApplicationController
   protected
   def build_lists is_edit=false
     @player_statuses=Player::PLAYER_STATUSES
-    @game_statuses=GameStatus.find(:all, :conditions => ['description <> ? ', 'Send Update']) unless is_edit
-    @game_statuses=GameStatus.find(:all) if is_edit
-    @equipment=Equipment.find(:all)
+    @game_statuses=Game::GAME_STATUSES
+    @game_statuses.reject{|s| s=="send_update"} unless is_edit
+    @equipment=Equipment.all
   end
   
   private

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120618114911) do
+ActiveRecord::Schema.define(:version => 20120618131550) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.integer  "resource_id",   :null => false
@@ -88,26 +88,14 @@ ActiveRecord::Schema.define(:version => 20120618114911) do
 
   add_index "game_players", ["player_id"], :name => "fk_gameplayer_2_player"
 
-  create_table "game_statuses", :force => true do |t|
-    t.string   "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "games", :force => true do |t|
     t.date     "game_date"
     t.text     "message"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "game_status_id"
     t.string   "organizer",         :limit => 256
     t.string   "organizer_address", :limit => 256
-  end
-
-  create_table "player_statuses", :force => true do |t|
-    t.string   "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string   "current_state"
   end
 
   create_table "players", :force => true do |t|

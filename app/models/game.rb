@@ -1,15 +1,24 @@
 class Game < ActiveRecord::Base
+  include AASM
+    
   validates_uniqueness_of :game_date
   validates_presence_of :message
   validates_presence_of :organizer
   validates_presence_of :organizer_address
   has_many :game_players, :dependent => :destroy
   accepts_nested_attributes_for :game_players
-  belongs_to :game_status
-  scope :played, where(:game_status_id => 2)
+  scope :played, where("current_state = 'game_on'")
   
   after_create :mail_invites
   before_update :mail_updates
+
+  GAME_STATUSES=[:not_called, :game_on, :cancelled, :send_update]
+  
+  aasm_column :current_state
+  aasm_initial_state :not_called
+  aasm_state :game_on
+  aasm_state :cancelled
+  aasm_state :send_update
 
   def number_playing
     playing_players.size
@@ -35,8 +44,20 @@ class Game < ActiveRecord::Base
     playing_players.not_late
   end
   
+  def not_called?
+    current_state=="not_called"
+  end
+  
+  def called?
+    current_state=="game_on"
+  end
+  
+  def was_played?
+    called?
+  end
+  
   def mail_updates
-   if self.game_status_id_changed?
+   if self.current_state_changed?
       if cancelled?
         HockeyMailer.cancel_game(self).deliver
       elsif self.called?
@@ -46,31 +67,11 @@ class Game < ActiveRecord::Base
       end
    end
 
-    self.game_status_id=game_status_id_was if send_update?
+    self.current_state=current_state_was if send_update?
   end
 
   def all_players
     game_players.select{|gp| gp.player.has_email?}.map{|gp| gp.player}
-  end
-
-  def not_called?
-    game_status_id==1
-  end
-  
-  def send_update?
-    return game_status_id==4
-  end
-
-  def cancelled?
-    return game_status_id==3
-  end
-
-  def called?
-    return game_status_id==2
-  end
-
-  def was_played?
-    return called?
   end
 
   def self.current_game

@@ -1,7 +1,7 @@
 <tr>
   <td><%= game.game_date %></td>
   <td align="center"><%= game.number_playing %></td>
-  <td><%= game.game_status.description %></td>
+  <td><%= game.current_state %></td>
   <td><%= game.goalies %></td>
   <td>
     <%= link_to 'Edit', edit_game_path(game), :class => 'btn btn-mini' %>

@@ -1,5 +1,5 @@
 class PlayersController < ApplicationController  
-  before_filter :admin_required, :except => [:summary, :on_deck]
+  before_filter :admin_required, :except => [:summary, :on_deck, :search]
   before_filter :load_player, :only => [:show, :edit, :update, :destroy]
   
   def index
@@ -10,7 +10,7 @@ class PlayersController < ApplicationController
   end
 
   def search
-    @players=Player.search(params[:term]).order("lower(name)")
+    @players=Player.search(params[:term].downcase).order("lower(name)")
     
     respond_to do |format|
       format.json { render :json => @players.collect {|player| player.autocomplete_response } }
@@ -60,7 +60,7 @@ class PlayersController < ApplicationController
   end
 
   def on_deck
-    @players=Player.active.includes(:played_games).all
+    @players=Player.active.all
     @sorted_players=@players.to_a.sort do |a,b|
       comp=b.goalie_factor <=> a.goalie_factor
       comp.zero? ? (comp=(a.times_played_goalie <=> b.times_played_goalie)) : comp

@@ -1,15 +1,13 @@
 <%= content_for :javascript_includes do %>
   <script type="text/javascript">
   $(function() {
-    $('#game_player_email_address').live('focus', function(i){
-      $(this).autocomplete({
-        source: '/players/search',
-        select: function(event, ui) {
-          $(this).val(ui.item.value);
-          $('#game_player_player_id').val(ui.item.id);
-          return false;
-        }
-      });
+    $('#game_player_email_address').autocomplete({
+      source: '/players/search',
+      select: function(event, ui) {
+        $(this).val(ui.item.value);
+        $('#game_player_player_id').val(ui.item.id);
+        return false;
+      }
     });
   });
   </script>

@@ -1,10 +1,3 @@
-unless GameStatus.exists?
-  GameStatus.create(:description => 'Not called')
-  GameStatus.create(:description => 'Game On!')
-  GameStatus.create(:description => 'Cancelled')
-  GameStatus.create(:description => 'Send Update')
-end
-
 unless Equipment.exists?
   Equipment.create(:id => 1, :description => 'Bag and pinnies')
   Equipment.create(:id => 2, :description => 'Net (one)')
