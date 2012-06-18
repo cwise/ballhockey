@@ -49,7 +49,7 @@ class PlayersController < ApplicationController
   end
 
   def destroy
-    @player.delete
+    @player.destroy
     flash[:alert]="Successfully deleted #{@player.name}"
     redirect_to players_path
   end  

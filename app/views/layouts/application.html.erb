@@ -56,6 +56,7 @@
     <div class="container">
       <div class="content">
         <div class="row">
+          <%= render :partial => 'layouts/messages' %>
            <div class="span9">
               <%= yield %>
             </div>
@@ -75,10 +76,11 @@
         </div><!--/row-->
       </div><!--/content-->
 
+      <hr>
       <footer>
         <p>&copy; Murmur Informatics Inc. 2012</p>
       </footer>
-
+  
     </div> <!-- /container -->
 
     <!-- Javascripts

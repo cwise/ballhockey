@@ -1,33 +1,35 @@
 <div class="row">
-<%= show_for @game do |a| %>
-  <%= a.attribute :game_date %>
-  <%= a.attribute :number_playing %>
-  <%= a.association :game_status, :using => :description %>
-  <div class='span3'>
-    <%= content_tag :h4, 'Playing' %>
-    <ul>
-      <% @game.playing_players.each do |gp| %>
-        <%= content_tag :li, gp.name_with_status %>
-      <% end %>
-    </ul>
-  </div>
-  <div class='span3'>
-  <%= content_tag :h4, 'Not Playing' %>
-    <ul>
-      <% @game.not_playing_players.each do |gp| %>
-        <%= content_tag :li, gp.name_with_status %>
-      <% end %>
-    </ul>
-  </div>
-  <div class='span3'>
-    <%= content_tag :h4, 'No Response' %>
-    <ul>
-      <% @game.not_responded_players.each do |gp| %>
-        <%= content_tag :li, gp.name_with_status %>
-      <% end %>
-    </ul>
-  </div> 
-<% end %>
+  <%= show_for @game do |a| %>
+    <div class='span3'>
+    <%= a.attribute :game_date %>
+    <%= a.attribute :number_playing %>
+    <%= a.association :game_status, :using => :description %>
+    </div>
+    <div class='span2'>
+      <%= content_tag :h4, 'Playing' %>
+      <ul>
+        <% @game.playing_players.each do |gp| %>
+          <%= content_tag :li, gp.name_with_status %>
+        <% end %>
+      </ul>
+    </div>
+    <div class='span2'>
+    <%= content_tag :h4, 'Not Playing' %>
+      <ul>
+        <% @game.not_playing_players.each do |gp| %>
+          <%= content_tag :li, gp.name_with_status %>
+        <% end %>
+      </ul>
+    </div>
+    <div class='span2'>
+      <%= content_tag :h4, 'No Response' %>
+      <ul>
+        <% @game.not_responded_players.each do |gp| %>
+          <%= content_tag :li, gp.name_with_status %>
+        <% end %>
+      </ul>
+    </div> 
+  <% end %>
 </div>
 
 <hr /> 

@@ -17,7 +17,7 @@
 
 <%= render :template => 'games/show' %>
 
-<% simple_form_for @game_player, :url => update_player_status_game_path do |f| %>
+<%= simple_form_for @game_player, :url => update_player_status_game_path do |f| %>
   <%= error_messages_for :game_player %>  
   <%= f.hidden_field :game_id %>
   <%= f.input :email_address %>

@@ -25,7 +25,7 @@ class GamesController < ApplicationController
     build_lists
     
     @players=Player.active.all
-    @players.each{|pl| @game.game_players << GamePlayer.new(:player_id => pl.id, :equipment_id => 5, :player_status_id => 1) }
+    @players.each{|pl| @game.game_players << GamePlayer.new(:player_id => pl.id, :equipment_id => 5) }
 
     respond_to do |format|
       format.html
@@ -70,7 +70,7 @@ class GamesController < ApplicationController
   end
 
   def player_status
-    @game_player=GamePlayer.new
+    @game_player=GamePlayer.new(:game_id => @game.id)
     @game_player.email_address=cookies[:email_address]    
 	  @player_statuses=Player::PLAYER_STATUSES
   end
@@ -88,16 +88,15 @@ class GamesController < ApplicationController
         format.html { render :action => :player_status }
       else
         gp=GamePlayer.where(["game_id = ? AND player_id = ?", @game.id, player.id]).first
-        gp.player_status_id=@game_player.player_status_id
-        gp.save
+        gp.update_attribute(:current_state, params[:game_player][:current_state])
 
-        format.html { render :text => "Confirmed #{player.name} as #{gp.player_status.description}" }
+        format.html { redirect_to game_path(@game), :notice => "Confirmed #{player.name} as #{gp.current_state}" }
       end
     end
 	end
 
   def destroy
-    @game.delete
+    @game.destroy
     flash[:alert]="Successfully deleted #{@game.game_date}"
     redirect_to games_path
   end

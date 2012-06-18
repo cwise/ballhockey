@@ -84,4 +84,8 @@ class Game < ActiveRecord::Base
   def on_deck
     playing_players_not_late.sort_by {|gp| gp.player.goalie_factor }.last
   end
+  
+  def can_delete?
+    game_status_id==1
+  end
 end

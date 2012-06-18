@@ -5,6 +5,8 @@
   <td><%= game.goalies %></td>
   <td>
     <%= link_to 'Edit', edit_game_path(game), :class => 'btn btn-mini' %>
-    <%= link_to 'Delete',game_path(game), :method => :delete, :confirm => 'Do you really want to delete this game?', :class => 'btn btn-mini btn-danger' %>
+    <% if game.can_delete? %>
+      <%= link_to 'Delete',game_path(game), :method => :delete, :confirm => 'Do you really want to delete this game?', :class => 'btn btn-mini btn-danger' %>
+    <% end %>
   </td>
 </tr>
