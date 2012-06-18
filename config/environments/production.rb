@@ -25,6 +25,6 @@ Nrcanhockey::Application.configure do
   MAIL_SENDER="mailer@murmurinformatics.com"
   
   config.assets.compress = true
-  config.assets.compile = false
+  config.assets.compile = true
   config.assets.digest = true  
 end
