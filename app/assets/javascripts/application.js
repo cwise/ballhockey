@@ -6,9 +6,8 @@
 //= require_tree .
 
 function load_date_pickers() {
-    $('.date_picker').each(function() {
-       if($(this).is(":visible"))
-            $(this).datepicker({ dateFormat: 'yy-mm-dd', showOn : 'focus', constrainInput : true });
+    $('.datepicker').each(function() {
+       $(this).datepicker({ dateFormat: 'yy-mm-dd', showOn : 'focus', constrainInput : true });
     });
 	$('#ui-datepicker-div').css('clip', 'auto');
 }

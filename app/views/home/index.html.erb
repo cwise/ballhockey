@@ -1,8 +1,5 @@
-<% if admin? %>
-  <%= link_to 'New Player', new_player_path, :class => 'btn' %>
-  <%= link_to 'New Game', new_game_path, :class => 'btn' %>
-  <hr >
+<% if @game %>
+  <%= render :template => 'games/show' %>
+<% else %>
+  <%= render :template => 'games/no_current_game' %>
 <% end %>
-<p><%= link_to "Today's Game", current_games_path %></p>
-<p><%= link_to 'Player Summary', summary_players_path %></p>
-<p><%= link_to 'Goalies on Deck', on_deck_players_path %></p>

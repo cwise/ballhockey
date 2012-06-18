@@ -44,7 +44,7 @@
           <div class="container nav-collapse">
             <ul class="nav pull-right">
 							<% if admin? %>
-              	<li><%= link_to "Sign Out", logout_path %></li>
+              	<li><%= link_to "Sign Out", logout_path, :method => :delete %></li>
 							<% else %>
             		<li><%= link_to "Sign In", login_path %></li>
 							<% end %>
@@ -61,19 +61,24 @@
            <div class="span9">
               <%= yield %>
             </div>
-						<% if admin? %>
-	            <div class="span3">
-	              <div class="well sidebar-nav">
-	                <h3>Administration</h3>
-	                <ul class="nav nav-list">
-	                  <li class="nav-header">Maintenance</li>
+            <div class="span3">
+              <div class="well sidebar-nav">
+                <h3>Actions</h3>
+                <ul class="nav nav-list">
+    						  <% if admin? %>
+                    <li class="nav-header">Administration</li>
 	                  <li><%= link_to 'Players', players_path  %></li>
 	                  <li><%= link_to 'Games', games_path  %></li>
 	                  <li><%= link_to 'Equipment', equipment_index_path  %></li>
-	                </ul>
-	              </div><!--/.well -->
-	            </div><!--/span-->
-						<% end %>
+                  <% end %>                  
+                  <li class="nav-header">Current</li>
+                  <li><%= link_to "Today's Game", current_games_path %></li>
+                  <li class="nav-header">Past</li>
+                  <li><%= link_to 'Player Summary', summary_players_path %></li>
+                  <li><%= link_to 'Goalies on Deck', on_deck_players_path %></li>                  
+                </ul>
+              </div><!--/.well -->
+            </div><!--/span-->
         </div><!--/row-->
       </div><!--/content-->
 
