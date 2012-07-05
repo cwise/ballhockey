@@ -22,7 +22,7 @@ class GamePlayer < ActiveRecord::Base
     name=player.name
     name += " (" + player_status.description + ")" if late?
     name += " (" + equipment.description + ")" if carrying_equipment?
-    name += " (On Deck)" if self==game.on_deck
+#    name += " (On Deck)" if self==game.on_deck
     name
   end
 

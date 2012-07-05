@@ -13,8 +13,6 @@
   </script>
 <% end %>
 
-<%= render :template => 'games/show' %>
-
 <%= simple_form_for @game_player, :url => update_player_status_game_path do |f| %>
   <%= error_messages_for :game_player %>  
   <%= f.hidden_field :game_id %>
@@ -22,5 +20,5 @@
   <%= f.select :current_state, @player_statuses, :include_blank => false %>
   <%= f.hidden_field :player_id %>
   <hr />
-  <%= f.submit 'Update' %>
+  <%= f.submit 'Update Status' %>
 <% end %>
