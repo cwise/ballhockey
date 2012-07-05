@@ -34,6 +34,7 @@
 
 <hr /> 
 
+<%= link_to 'Update My Status', player_status_game_path(@game), :class => 'btn' %>
 <% if admin? %>
   <%= link_to 'Edit Game', edit_game_path(@game), :class => 'btn' %>
 <% end %>

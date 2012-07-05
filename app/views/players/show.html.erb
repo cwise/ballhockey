@@ -1,0 +1,9 @@
+<div class="row">
+  <%= show_for @player do |a| %>
+    <div class='span3'>
+    <%= a.attribute :name %>
+    <%= a.attribute :email_address %>
+    <%= a.attribute :active %>
+    </div>
+  <% end %>
+</div>

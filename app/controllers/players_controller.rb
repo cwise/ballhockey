@@ -34,6 +34,9 @@ class PlayersController < ApplicationController
     end
   end  
   
+  def show
+  end
+  
   def update
     @player.attributes=params[:player]
     
@@ -55,12 +58,12 @@ class PlayersController < ApplicationController
   end  
 
   def summary
-    @players=Player.all
+    @players=Player.includes(:game_players).all
     @players.sort!{|a,b| b.times_played <=> a.times_played}
   end
 
   def on_deck
-    @players=Player.active.all
+    @players=Player.active.includes(:game_players).all
     @sorted_players=@players.to_a.sort do |a,b|
       comp=b.goalie_factor <=> a.goalie_factor
       comp.zero? ? (comp=(a.times_played_goalie <=> b.times_played_goalie)) : comp

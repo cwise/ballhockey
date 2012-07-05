@@ -26,6 +26,9 @@ class EquipmentController < ApplicationController
   def edit
   end
   
+  def show
+  end
+  
   def update
     @equipment.attributes=params[:equipment]
     

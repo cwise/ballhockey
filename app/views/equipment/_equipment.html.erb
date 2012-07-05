@@ -1,5 +1,5 @@
 <tr>
-  <td><%= equipment.description %></td>
+  <td><%= link_to equipment.description, equipment %></td>
   <td>
     <%= link_to 'Edit', edit_equipment_path(equipment), :class => 'btn btn-mini' %> 
     <%= link_to 'Delete', equipment_path(equipment), :method => :delete, :confirm => 'Do you really want to delete this equipment?', :class => 'btn btn-mini btn-danger' %>

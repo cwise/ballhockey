@@ -2,6 +2,7 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.1.1'
 gem 'aasm'
+gem 'bootstrap-kaminari-views'
 gem 'jquery-rails'
 gem 'kaminari'
 gem 'pg'

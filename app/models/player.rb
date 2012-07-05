@@ -6,7 +6,7 @@ class Player < ActiveRecord::Base
   scope :search, lambda {|q| q.blank? ? scoped : where(["lower(name) LIKE ? OR email_address LIKE ?", "%#{q.downcase}%", "%#{q.downcase}%"])}  
   has_many :game_players, :dependent => :destroy
   has_many :games, :through => :game_players
-  
+
   PLAYER_STATUSES=[:no_response, :in, :out, :late]
 
   def active_desc
@@ -40,7 +40,6 @@ class Player < ActiveRecord::Base
   end
 
   def goalie_factor
-    return 0
     unless times_played < 5
       unless times_played_goalie==0
         100-((times_played_goalie.to_f/times_played.to_f)*100)
