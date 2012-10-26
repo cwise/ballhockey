@@ -5,7 +5,7 @@
 # Make sure the secret is at least 30 characters and all random, 
 # no regular words or you'll be exposed to dictionary attacks.
 
-Nrcanhockey::Application.config.session_store :cookie_store, :key => '_nrcanhockey_session'
+BallHockey::Application.config.session_store :cookie_store, :key => '_ballhockey_session'
 
 # Use the database for sessions instead of the cookie-based default,
 # which shouldn't be used to store highly confidential information

@@ -1,4 +1,4 @@
-Nrcanhockey::Application.configure do
+BallHockey::Application.configure do
 
   # Settings specified here will take precedence over those in config/environment.rb
 

@@ -1,4 +1,4 @@
-Nrcanhockey::Application.routes.draw do 
+BallHockey::Application.routes.draw do 
   resources :players do
     collection do
       get :summary

@@ -6,10 +6,10 @@ development:
 test:
     adapter: postgresql
     host: localhost
-    database: nrcanhockey_test
+    database: ballhockey_test
 
 production:
     adapter: postgresql
     host: localhost
-    database: nrcanhockey_prod
+    database: ballhockey_prod
 

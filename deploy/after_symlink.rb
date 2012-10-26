@@ -1,1 +1,0 @@
-run "cd #{release_path} && whenever --update-crontab #{app}"

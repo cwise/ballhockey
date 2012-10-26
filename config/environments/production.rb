@@ -1,4 +1,4 @@
-Nrcanhockey::Application.configure do
+BallHockey::Application.configure do
 
   # Settings specified here will take precedence over those in config/environment.rb
 
@@ -9,7 +9,7 @@ Nrcanhockey::Application.configure do
   # Specifies the header that your server uses for sending files
   config.action_dispatch.x_sendfile_header = "X-Sendfile"
   
-  config.action_mailer.default_url_options = { :host => "nrcanhockey.murmurinfo.ca" }
+  config.action_mailer.default_url_options = { :host => ENV['mailer_host'] }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     :tls => true,

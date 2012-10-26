@@ -4,4 +4,4 @@
 require File.expand_path('../config/application', __FILE__)
 require 'rake'
 
-Nrcanhockey::Application.load_tasks
+BallHockey::Application.load_tasks

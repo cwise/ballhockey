@@ -1,11 +1,11 @@
 # Initialize with:
-#   rake backup:run trigger='nrcanhockey-offsite'
-backup 'nrcanhockey-offsite' do
+#   rake backup:run trigger='ballhockey-offsite'
+backup 'ballhockey-offsite' do
   
   adapter :mysql do
     user        'cwise'
     password    'PCyvASHo86'
-    database    'nrcanhockey_production'
+    database    'ballhockey_production'
   end
   
   storage :scp do
