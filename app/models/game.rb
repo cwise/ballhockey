@@ -8,6 +8,7 @@ class Game < ActiveRecord::Base
   has_many :game_players, :dependent => :destroy
   accepts_nested_attributes_for :game_players
   scope :played, where("current_state = 'game_on'")
+  scope :not_called, where("current_state = 'not_called'")
   
   after_create :mail_invites
   before_update :mail_updates
@@ -75,7 +76,7 @@ class Game < ActiveRecord::Base
   end
 
   def self.current_game
-    Game.find_by_game_date(Date.today)
+    Game.find_by_game_date(Date.today) || Game.not_called.order('game_date').first
   end
 
   def goalies
