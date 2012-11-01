@@ -30,6 +30,6 @@ class GamePlayer < ActiveRecord::Base
   end
 
   def carrying_equipment?
-    !equipment.name[/None/i]
+    !equipment.description[/None/i]
   end
 end
