@@ -1,7 +1,7 @@
 development:
     adapter: postgresql
     host: localhost
-    database: nrcanhockey_dev
+    database: ballhockey_dev
 
 test:
     adapter: postgresql

@@ -19,10 +19,9 @@ class GamePlayer < ActiveRecord::Base
   aasm_state :late  
   
   def name_with_status
-    name=player.name
+    name = player.try(:name)
     name += " (" + player_status.description + ")" if late?
     name += " (" + equipment.try(:description) + ")" if carrying_equipment?
-#    name += " (On Deck)" if self==game.on_deck
     name
   end
 
@@ -31,6 +30,6 @@ class GamePlayer < ActiveRecord::Base
   end
 
   def carrying_equipment?
-    equipment_id != 5
+    !equipment.name[/None/i]
   end
 end
