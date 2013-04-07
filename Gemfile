@@ -14,7 +14,8 @@ gem 'simple_form'
 gem 'show_for'
 gem "therubyracer"
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
-		
+gem 'unicorn'
+
 gem "rspec-rails", :group => [:test, :development]
 group :test do
   gem "factory_girl_rails"
