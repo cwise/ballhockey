@@ -4,21 +4,25 @@ class HockeyMailer < ActionMailer::Base
   
   def announce_game game 
     @game = game
+    uniq_args({ :type => 'game', :id => game, :state => 'announce' })
     mail base_options(game).merge({ :subject => "#{ENV['LEAGUE_NAME']} Ball Hockey Game for #{game.game_date}?"})
   end
 
   def update_game game
     @game = game
+    uniq_args({ :type => 'game', :id => game, :state => 'update' })
     mail base_options(game).merge({ :subject => "#{ENV['LEAGUE_NAME']} Ball Hockey Game Update for #{game.game_date}"})
   end
 
   def call_game game
     @game = game
+    uniq_args({ :type => 'game', :id => game, :state => 'call' })
     mail base_options(game).merge({ :subject => "#{ENV['LEAGUE_NAME']} Ball Hockey Game for #{game.game_date}: Game ON!"})
   end
 
   def cancel_game game
     @game = game
+    uniq_args({ :type => 'game', :id => game, :state => 'cancel' })
     mail base_options(game).merge({ :subject => "#{ENV['LEAGUE_NAME']} Ball Hockey Game for #{game.game_date}: Game Cancelled"})
   end
   

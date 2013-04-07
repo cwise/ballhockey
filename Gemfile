@@ -10,6 +10,7 @@ gem 'less-rails'
 gem 'pg'
 gem 'resque'
 gem 'resque_mailer'
+gem 'sendgrid-rails', '~> 2.0'
 gem 'simple_form'
 gem 'show_for'
 gem "therubyracer"

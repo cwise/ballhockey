@@ -29,6 +29,9 @@ BallHockey::Application.routes.draw do
   post :login, :to => 'sessions#create'
   delete :logout, :to => 'sessions#destroy'  
       
+  # webhooks
+  post 'sendgrid_notify' => 'web_hooks#sendgrid_notify'      
+      
   root :to => "home#index"  
 end
 
