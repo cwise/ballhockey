@@ -3,7 +3,7 @@ source 'http://rubygems.org'
 gem 'rails', '3.1.12'
 gem 'aasm'
 gem 'bootstrap-kaminari-views'
-gem 'hirefire'
+gem 'hirefire', :group => [:production]
 gem 'jquery-rails'
 gem 'kaminari'
 gem 'less-rails'

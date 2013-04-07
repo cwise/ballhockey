@@ -22,6 +22,10 @@ class HockeyMailer < ActionMailer::Base
     mail base_options(game).merge({ :subject => "#{ENV['LEAGUE_NAME']} Ball Hockey Game for #{game.game_date}: Game Cancelled"})
   end
   
+  def test to
+    mail :to => to, :content_type => "text/html", :subject => 'Test Message'
+  end
+  
   private
   def base_options game
     { :reply_to => game.organizer_address, :content_type => "text/html", :to => game.all_players.map{|p| p.email_address} }
