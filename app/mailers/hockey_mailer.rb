@@ -2,24 +2,24 @@ class HockeyMailer < ActionMailer::Base
   include Resque::Mailer
   default :from => ENV['MAIL_SENDER']  
   
-  def announce_game game 
-    load_game game['id']
-    mail base_options(game).merge({ :subject => "#{ENV['LEAGUE_NAME']} Ball Hockey Game for #{game.game_date}?"})
+  def announce_game game_id
+    load_game game_id
+    mail base_options.merge({ :subject => "#{ENV['LEAGUE_NAME']} Ball Hockey Game for #{@game.game_date}?"})
   end
 
-  def update_game game
-    load_game game['id']
-    mail base_options(game).merge({ :subject => "#{ENV['LEAGUE_NAME']} Ball Hockey Game Update for #{game.game_date}"})
+  def update_game game_id
+    load_game game_id
+    mail base_options.merge({ :subject => "#{ENV['LEAGUE_NAME']} Ball Hockey Game Update for #{@game.game_date}"})
   end
 
-  def call_game game
-    load_game game['id']
-    mail base_options(game).merge({ :subject => "#{ENV['LEAGUE_NAME']} Ball Hockey Game for #{game.game_date}: Game ON!"})
+  def call_game game_id
+    load_game game_id
+    mail base_options.merge({ :subject => "#{ENV['LEAGUE_NAME']} Ball Hockey Game for #{@game.game_date}: Game ON!"})
   end
 
-  def cancel_game game
-    load_game game['id']
-    mail base_options(game).merge({ :subject => "#{ENV['LEAGUE_NAME']} Ball Hockey Game for #{game.game_date}: Game Cancelled"})
+  def cancel_game game_id
+    load_game game_id
+    mail base_options.merge({ :subject => "#{ENV['LEAGUE_NAME']} Ball Hockey Game for #{@game.game_date}: Game Cancelled"})
   end
   
   def test to
@@ -27,12 +27,12 @@ class HockeyMailer < ActionMailer::Base
   end
   
   private
-  def base_options game
-    { :reply_to => game.organizer_address, :content_type => "text/html", :to => game.all_players.map{|p| p.email_address} }
+  def base_options
+    { :reply_to => @game.organizer_address, :content_type => "text/html", :to => @game.all_players.map{|p| p.email_address} }
   end
   
-  def load_game id
-    @game = Game.find id
+  def load_game game_id
+    @game = Game.find game_id
     uniq_args({ :type => 'game', :id => @game.id })    
   end
 end

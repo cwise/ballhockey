@@ -26,7 +26,7 @@ class Game < ActiveRecord::Base
   end
 
   def mail_invites
-    HockeyMailer.announce_game(self).deliver
+    HockeyMailer.announce_game(self.id).deliver
   end
 
   def playing_players
@@ -60,11 +60,11 @@ class Game < ActiveRecord::Base
   def mail_updates
    if self.current_state_changed?
       if cancelled?
-        HockeyMailer.cancel_game(self).deliver
+        HockeyMailer.cancel_game(self.id).deliver
       elsif self.called?
-        HockeyMailer.call_game(self).deliver
+        HockeyMailer.call_game(self.id).deliver
       elsif self.send_update?
-        HockeyMailer.update_game(self).deliver
+        HockeyMailer.update_game(self.id).deliver
       end
    end
 
