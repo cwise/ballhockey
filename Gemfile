@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.10'
+gem 'rails', '3.1.12'
 gem 'aasm'
 gem 'bootstrap-kaminari-views'
 gem 'jquery-rails'
