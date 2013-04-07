@@ -11,4 +11,8 @@ BallHockey::Application.configure do
     :domain               => ENV['MAIL_DOMAIN'],
     :enable_starttls_auto => true
   }
+      
+  config.before_initialize do                                                                                                                                                                                                       
+    BallHockey::Application.routes.default_url_options[:host] = ENV['DEFAULT_HOST']
+  end  
 end
