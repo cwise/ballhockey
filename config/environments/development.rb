@@ -13,20 +13,6 @@ BallHockey::Application.configure do
 
   # Don't care if the mailer can't send
   config.action_mailer.raise_delivery_errors = true
-
-  config.action_mailer.default_url_options = { :host => "localhost:3000" }
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    :tls => true,
-    :address => "smtp.gmail.com",
-    :port => 587,
-    :user_name => "mailer@murmurinformatics.com",
-    :password => "mailer!!",
-    :authentication => :plain,
-    :domain => 'localhost:3000',
-    :enable_starttls_auto => true
-  }
-  MAIL_SENDER="mailer@murmurinformatics.com"
   
   config.assets.compress = false
   config.assets.debug = true  

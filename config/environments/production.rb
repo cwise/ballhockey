@@ -8,22 +8,7 @@ BallHockey::Application.configure do
 
   # Specifies the header that your server uses for sending files
   config.action_dispatch.x_sendfile_header = "X-Sendfile"
-  
-  config.action_mailer.default_url_options = { :host => ENV['mailer_host'] }
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    :tls => true,
-    :address => "smtp.gmail.com",
-    :port => 587,
-    :user_name => "mailer@murmurinformatics.com",
-    :password => "mailer!!",
-    :authentication => :plain,
-    :domain => 'murmurinfo.ca',
-    :enable_starttls_auto => true
-  }
-
-  MAIL_SENDER="mailer@murmurinformatics.com"
-  
+    
   config.assets.compress = true
   config.assets.compile = true
   config.assets.digest = true  

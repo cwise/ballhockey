@@ -3,3 +3,4 @@
 /log
 /tmp
 .sass-cache/
+config/_heroku_env.rb

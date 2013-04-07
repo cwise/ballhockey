@@ -1,4 +1,8 @@
+require 'resque/server'
+
 BallHockey::Application.routes.draw do 
+  mount Resque::Server.new, :at => "/resque"
+  
   resources :players do
     collection do
       get :summary

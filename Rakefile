@@ -4,4 +4,8 @@
 require File.expand_path('../config/application', __FILE__)
 require 'rake'
 
+if %w(staging production).include? Rails.env
+	$heroku_deploying = true if File.basename($0) == 'rake' && ARGV.include?('assets:precompile')
+end
+
 BallHockey::Application.load_tasks

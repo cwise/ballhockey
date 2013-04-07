@@ -20,7 +20,7 @@ class GamesController < ApplicationController
   end
 
   def new
-    @game=Game.new(params[:game])
+    @game=Game.new(params[:game] || { :game_date => Date.today })
     build_lists
     
     @players=Player.active.all
