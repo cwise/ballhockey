@@ -1,5 +1,4 @@
 ActionMailer::Base.smtp_settings = {
-  :tls                  => true,
   :address              => ENV['MAIL_HOST'],
   :port                 => ENV['MAIL_PORT'],
   :user_name            => ENV['MAIL_USER'],
