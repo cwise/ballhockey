@@ -25,6 +25,10 @@ class Game < ActiveRecord::Base
     playing_players.size
   end
 
+  def friendly_state
+    current_state.titleize
+  end
+
   def mail_invites
     HockeyMailer.announce_game(self.id).deliver
   end

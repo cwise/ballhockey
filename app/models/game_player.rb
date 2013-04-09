@@ -24,6 +24,10 @@ class GamePlayer < ActiveRecord::Base
     name += " (" + equipment.try(:description) + ")" if carrying_equipment?
     name
   end
+  
+  def friendly_state
+    current_state.titleize
+  end
 
   def late?
     current_state==:late
