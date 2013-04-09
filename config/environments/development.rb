@@ -16,4 +16,6 @@ BallHockey::Application.configure do
   
   config.assets.compress = false
   config.assets.debug = true  
+  
+  config.action_mailer.delivery_method = :smtp
 end
