@@ -11,7 +11,7 @@ class SendgridNotifier
       game = Game.find id.to_i
       
       # with the game in hand, locate the player
-      player = Player.where(:email => email).first
+      player = Player.where(:email_address => email).first
       gp = GamePlayer.where('game_id = ? AND player_id = ?', game.id, player.id)
       
       # we need to do something to guard against out of sequence events
