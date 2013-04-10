@@ -14,7 +14,22 @@ class SendgridNotifier
       player = Player.where(:email => email).first
       gp = GamePlayer.where('game_id = ? AND player_id = ?', game.id, player.id)
       
-      gp.update_attribute(:delivery_state, event)
+      # we need to do something to guard against out of sequence events
+      case event
+      when 'deferred'
+        gp.update_attribute(:delivery_state, event) if gp.sent?          
+      when 'processed'
+        gp.update_attribute(:delivery_state, event) if gp.sent? || gp.deferred?
+      when 'dropped'
+        gp.update_attribute(:delivery_state, event) if gp.sent? || gp.deferred?
+      when 'delivered'
+        gp.update_attribute(:delivery_state, event) if gp.sent? || gp.processed? || gp.deferred?      
+      when 'bounce'
+        gp.update_attribute(:delivery_state, event) if gp.sent? || gp.processed? || gp.deferred?
+      else
+        gp.update_attribute(:delivery_state, event)
+      end
+
     end
   end  
 end

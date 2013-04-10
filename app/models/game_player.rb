@@ -36,4 +36,16 @@ class GamePlayer < ActiveRecord::Base
   def carrying_equipment?
     !equipment.description[/None/i]
   end
+  
+  def sent?
+    delivery_state==:sent    
+  end
+  
+  def processed?
+    delivery_state==:processed
+  end
+  
+  def deferred?
+    delivery_state==:deferred
+  end
 end
