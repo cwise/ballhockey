@@ -8,6 +8,8 @@ ActionMailer::Base.smtp_settings = {
   :enable_starttls_auto => true
 }
 
+ActionMailer::Base.register_interceptor(SendGrid::MailInterceptor)
+
 BallHockey::Application.configure do
   config.action_mailer.default_url_options = { :host => ENV['DEFAULT_HOST'] }
 
