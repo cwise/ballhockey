@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130407180049) do
+ActiveRecord::Schema.define(:version => 20130410155036) do
 
   create_table "backup", :force => true do |t|
     t.string   "trigger"
@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(:version => 20130407180049) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "current_state"
-    t.string   "delivery_state"
+    t.string   "delivery_state", :default => "sent"
   end
 
   create_table "games", :force => true do |t|
