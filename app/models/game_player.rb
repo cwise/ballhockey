@@ -39,14 +39,14 @@ class GamePlayer < ActiveRecord::Base
   end
   
   def sent?
-    delivery_state==:sent    
+    delivery_state=="sent"
   end
   
   def processed?
-    delivery_state==:processed
+    delivery_state=="processed"
   end
   
   def deferred?
-    delivery_state==:deferred
+    delivery_state=="deferred"
   end
 end
