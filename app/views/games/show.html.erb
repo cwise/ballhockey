@@ -9,7 +9,7 @@
       <%= content_tag :h4, 'Playing' %>
       <ul>
         <% @game.playing_players.each do |gp| %>
-          <%= content_tag :li, gp.name_with_status %>
+          <%= content_tag :li, gp.name_with_status, :class => gp.delivery_state %>
         <% end %>
       </ul>
     </div>
@@ -17,7 +17,7 @@
     <%= content_tag :h4, 'Not Playing' %>
       <ul>
         <% @game.not_playing_players.each do |gp| %>
-          <%= content_tag :li, gp.name_with_status %>
+          <%= content_tag :li, gp.name_with_status, :class => gp.delivery_state %>
         <% end %>
       </ul>
     </div>
@@ -25,7 +25,7 @@
       <%= content_tag :h4, 'No Response' %>
       <ul>
         <% @game.not_responded_players.each do |gp| %>
-          <%= content_tag :li, gp.name_with_status %>
+          <%= content_tag :li, gp.name_with_status, :class => gp.delivery_state %>
         <% end %>
       </ul>
     </div> 

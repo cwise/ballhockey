@@ -22,7 +22,6 @@ class GamePlayer < ActiveRecord::Base
     name = player.try(:name)
     name += " (#{player_status.description})" if late?
     name += " (#{equipment.try(:description)})" if carrying_equipment?
-    name += " (#{delivery_state})" if delivery_state.present?
     name
   end
   
