@@ -2,6 +2,22 @@ require 'heroku-api'
 module HireFire
   module Environment
     class Heroku < Base
+      def environment
+        @environment ||= HireFire::Environment.const_get(
+          if environment = HireFire.configuration.environment
+            environment.to_s.camelize
+          else
+            ::Rails.env.production? ? 'Heroku' : 'Noop'
+          end
+        ).new
+      end
+            
+      def hirefire_hire
+        if Resque.working == [] && Resque.info[:pending] > 1
+          Resque.workers.each do |w| w.unregister_worker end
+          environment.hire
+        end
+      end
 
       private
 
