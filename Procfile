@@ -1,2 +1,2 @@
 web: bundle exec unicorn -p $PORT -E $RACK_ENV
-worker: bundle exec rake resque:work
+all_worker: QUEUE=* bundle exec rake resque:work
