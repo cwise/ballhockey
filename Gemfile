@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.12'
+gem 'rails', '3.2.13'
 gem 'aasm'
 gem 'bootstrap-kaminari-views'
 gem 'heroku-api'
@@ -24,7 +24,7 @@ group :test do
 end
 
 group :assets do
-  gem 'sass-rails', " ~> 3.1.0"
-  gem 'coffee-rails', " ~> 3.1.0"
+  gem 'sass-rails', " ~> 3.2.0"
+  gem 'coffee-rails', " ~> 3.2.0"
   gem 'uglifier'
 end
