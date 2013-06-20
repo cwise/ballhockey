@@ -63,9 +63,9 @@ class PlayersController < ApplicationController
   end
 
   def on_deck
-    @players=Player.active.includes(:game_players).all
-    @sorted_players=@players.to_a.sort do |a,b|
-      comp=b.goalie_factor <=> a.goalie_factor
+    @players = Player.active.includes({ :game_players => :game }).all
+    @sorted_players = @players.to_a.sort do |a,b|
+      comp = b.goalie_factor <=> a.goalie_factor
       comp.zero? ? (comp=(a.times_played_goalie <=> b.times_played_goalie)) : comp
       comp.zero? ? (comp=(a.last_played_goalie <=> b.last_played_goalie)) : comp
       comp.zero? ? (comp=(b.times_played <=> a.times_played)) : comp

@@ -6,12 +6,13 @@ class GamePlayer < ActiveRecord::Base
   belongs_to :equipment
   belongs_to :player_status
   attr_accessor :email_address
-  scope :not_responded, where(:current_state => :no_response)
-  scope :not_playing, where(:current_state => :out)
-  scope :playing, where(:current_state => [:in, :late])
-  scope :not_late, where(:current_state => :in)
+  scope :not_responded, where('game_players.current_state = ?', :no_response)
+  scope :not_playing, where('game_players.current_state = ?', :out)
+  scope :playing, where('game_players.current_state IN (?)', [:in, :late])
+  scope :not_late, where('game_players.current_state = ?', :in)
   scope :goalie, where(:goalie => true)
-  
+  scope :played_games, joins(:game).merge(Game.played).playing
+
   aasm_column :current_state
   aasm_initial_state :no_response
   aasm_state :out

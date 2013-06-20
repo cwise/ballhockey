@@ -7,8 +7,8 @@ class Game < ActiveRecord::Base
   validates_presence_of :organizer_address
   has_many :game_players, :dependent => :destroy
   accepts_nested_attributes_for :game_players
-  scope :played, where("current_state = 'game_on'")
-  scope :not_called, where("current_state = 'not_called'")
+  scope :played, where("games.current_state = ?", :game_on)
+  scope :not_called, where("games.current_state = ?", :not_called)
   
   after_create :mail_invites
   before_update :mail_updates

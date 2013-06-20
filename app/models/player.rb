@@ -6,7 +6,7 @@ class Player < ActiveRecord::Base
   scope :search, lambda {|q| q.blank? ? scoped : where(["lower(name) LIKE ? OR email_address LIKE ?", "%#{q.downcase}%", "%#{q.downcase}%"])}  
   has_many :game_players, :dependent => :destroy
   has_many :games, :through => :game_players
-
+  
   PLAYER_STATUSES=[:no_response, :in, :out, :late]
 
   def active_desc
@@ -14,15 +14,15 @@ class Player < ActiveRecord::Base
   end
 
   def times_played_goalie
-    played_games_goalie.size
+    game_players.played_games.select{ |gp| gp.goalie? }.size
+  end
+
+  def played_games
+    game_players.played_games.map(&:game)
   end
 
   def played_games_goalie
-    played_games.select{|g| game_players.goalie.map{|gp| gp.game_id}.include? g.id}
-  end
-  
-  def played_games
-    game_players.playing.map{|gp| gp.game}.select{|g| g.was_played?}
+    game_players.played_games.select{ |gp| gp.goalie? }.map(&:game)
   end
 
   def times_played
@@ -30,18 +30,18 @@ class Player < ActiveRecord::Base
   end
 
   def last_played_goalie
-    game=played_games_goalie.sort_by{|g| g.game_date}.last
+    game = played_games_goalie.sort_by{|g| g.game_date}.last
     game ? game.game_date : 'Never'
   end
 
   def last_played
-    game=played_games.sort_by{|g| g.game_date}.last
+    game = played_games.sort_by{|g| g.game_date}.last
     game ? game.game_date : 'Never'
   end
 
   def goalie_factor
     unless times_played < 5
-      unless times_played_goalie==0
+      unless times_played_goalie.zero?
         100-((times_played_goalie.to_f/times_played.to_f)*100)
       else
         100
