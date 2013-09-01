@@ -49,4 +49,10 @@ class GamePlayer < ActiveRecord::Base
   def deferred?
     delivery_state=="deferred"
   end
+  
+  def <=> other
+    compare = current_state <=> other.current_state
+    player.name <=> other.player.name if compare.zero?
+    compare
+  end  
 end

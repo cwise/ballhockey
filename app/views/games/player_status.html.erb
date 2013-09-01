@@ -17,7 +17,10 @@
   <%= error_messages_for :game_player %>  
   <%= f.hidden_field :game_id %>
   <%= f.input :email_address %>
-  <%= f.select :current_state, @player_statuses, :include_blank => false %>
+  <span>
+    <%= f.hidden_field :current_state %>
+    <%= render :partial => 'game_player', :locals => { :game_player => @game_player } %>
+  </span>
   <%= f.hidden_field :player_id %>
   <hr />
   <%= f.submit 'Update Status' %>

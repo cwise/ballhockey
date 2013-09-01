@@ -25,4 +25,14 @@ function ajax_headers() {
 $(function () {
 	ajax_headers();
 	load_date_pickers();
+	
+	$('.icon-clickable').tooltip();
+  $('.icon-clickable').click( function() {
+    var newValue = $(this).attr('data-original-title');
+    
+    $(this).addClass('selected');
+    $(this).siblings().removeClass('selected');
+    $(this).parent().children('input').val(newValue);
+  });	
 });
+
