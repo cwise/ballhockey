@@ -10,7 +10,11 @@ class Player < ActiveRecord::Base
   PLAYER_STATUSES=[:no_response, :in, :out, :late]
 
   def active_desc
-    active ? 'Yes' : 'No'
+    active ? 'active' : 'inactive'
+  end
+  
+  def bs_state
+    active ? 'success' : 'important'
   end
 
   def times_played_goalie

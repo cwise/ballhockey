@@ -1,7 +1,7 @@
 <tr>
   <td><%= link_to game.game_date, game %></td>
-  <td align="center"><%= game.number_playing %></td>
-  <td><%= game.friendly_state %></td>
+  <td style='text-align:center'><%= game.number_playing %></td>
+  <%= content_tag :td, "<span class='label label-#{game.bs_state}'>#{game.friendly_state}</span>".html_safe, :style => 'text-align:center' %>
   <td><%= game.goalies %></td>
   <td>
     <%= link_to 'Edit', edit_game_path(game), :class => 'btn btn-mini' %>

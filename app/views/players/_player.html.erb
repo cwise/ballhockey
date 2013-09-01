@@ -1,7 +1,7 @@
 <tr>
   <td><%= link_to player.name, player %></td>
   <td><%= player.email_address %></td>
-  <td><%= player.active_desc %></td>
+  <td style='text-align:center'><%= content_tag :span, player.active_desc, :class => "badge badge-#{player.bs_state}" %></td>
   <td>
     <%= link_to 'Edit', edit_player_path(player), :class => 'btn btn-mini' %>
     <% if player.can_delete? %>

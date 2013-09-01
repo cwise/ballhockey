@@ -3,7 +3,9 @@
     <div class='span3'>
     <%= a.attribute :game_date %>
     <%= a.attribute :number_playing %>
-    <%= a.attribute :friendly_state %>
+    <%= a.attribute :friendly_state, :label => "" do %>
+      <%= content_tag :span, "#{@game.friendly_state}", :class => "badge badge-#{@game.bs_state}".html_safe %>
+    <% end %>
     </div>
     <div class='span2'>
       <%= content_tag :h4, 'Playing' %>

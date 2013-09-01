@@ -3,7 +3,9 @@
     <div class='span3'>
     <%= a.attribute :name %>
     <%= a.attribute :email_address %>
-    <%= a.attribute :active %>
+    <%= a.attribute :active, :label => "" do %>
+      <%= content_tag :span, "#{@player.active_desc}", :class => "badge badge-#{@player.bs_state}".html_safe %>
+    <% end %>
     </div>
   <% end %>
 </div>

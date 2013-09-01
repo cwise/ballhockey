@@ -61,6 +61,17 @@ class Game < ActiveRecord::Base
     called?
   end
   
+  def bs_state
+    case current_state
+    when 'game_on'
+      'success'
+    when 'cancelled'
+      'important'
+    when 'not_called'
+      game_players.playing.size < 8 ? 'warning' : 'info'
+    end
+  end
+  
   def mail_updates
    if self.current_state_changed?
       if cancelled?
