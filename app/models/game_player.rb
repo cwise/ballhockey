@@ -14,10 +14,11 @@ class GamePlayer < ActiveRecord::Base
   scope :played_games, joins(:game).merge(Game.played).playing
 
   aasm_column :current_state
-  aasm_initial_state :no_response
+  aasm_state :no_response
   aasm_state :out
   aasm_state :in
   aasm_state :late  
+  aasm_initial_state :no_response
   
   def name_with_status
     name = player.try(:name)
@@ -30,8 +31,20 @@ class GamePlayer < ActiveRecord::Base
     current_state.titleize
   end
 
+  def playing?
+    current_state=='late' || current_state=='in'
+  end
+  
+  def not_playing?
+    current_state=='out'
+  end
+  
+  def no_response?
+    current_state=='no_response'
+  end
+
   def late?
-    current_state==:late
+    current_state=='late'
   end
 
   def carrying_equipment?
