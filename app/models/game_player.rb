@@ -4,7 +4,6 @@ class GamePlayer < ActiveRecord::Base
   belongs_to :game
   belongs_to :player
   belongs_to :equipment
-  belongs_to :player_status
   attr_accessor :email_address
   scope :not_responded, where('game_players.current_state = ?', :no_response)
   scope :not_playing, where('game_players.current_state = ?', :out)
@@ -22,7 +21,7 @@ class GamePlayer < ActiveRecord::Base
   
   def name_with_status
     name = player.try(:name)
-    name += " (#{player_status.description})" if late?
+    name += " (#{current_state})" if late?
     name += " (#{equipment.try(:description)})" if carrying_equipment?
     name
   end
@@ -31,23 +30,32 @@ class GamePlayer < ActiveRecord::Base
     current_state.titleize
   end
 
-  def playing?
-    current_state=='late' || current_state=='in'
+  def in?
+    current_state=='in'
   end
-  
-  def not_playing?
+
+  def out?
     current_state=='out'
   end
   
-  def no_response?
-    current_state=='no_response'
-  end
-
   def late?
     current_state=='late'
   end
 
+  def no_response?
+    current_state=='no_response'
+  end
+
+  def playing?
+    late? || in?
+  end
+  
+  def not_playing?
+    out?
+  end
+  
   def carrying_equipment?
+    return false unless equipment
     !equipment.description[/None/i]
   end
   

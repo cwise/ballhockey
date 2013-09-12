@@ -27,12 +27,13 @@ $(function () {
 	load_date_pickers();
 	
 	$('.icon-clickable').tooltip();
-  $('.icon-clickable').click( function() {
+	
+  $('.icon-clickable').on('click touchstart', function() {
     var newValue = $(this).attr('data-original-title');
     
     $(this).addClass('selected');
     $(this).siblings().removeClass('selected');
     $(this).parent().children('input').val(newValue);
-  });	
+  });
 });
 

@@ -20,11 +20,11 @@ class GamesController < ApplicationController
   end
 
   def new
-    @game=Game.new(params[:game] || { :game_date => Date.today })
+    @game=Game.new(params[:game] || { :game_date => Date.today, :organizer_address => cookies[:email_address], :organizer => cookies[:organizer] })
     build_lists
     
     @players=Player.active.all
-    @players.each{|pl| @game.game_players << GamePlayer.new(:player_id => pl.id, :equipment_id => 5) }
+    @players.each{|pl| @game.game_players << GamePlayer.new(:player_id => pl.id, :current_state => 'no_response') }
 
     respond_to do |format|
       format.html
@@ -58,6 +58,9 @@ class GamesController < ApplicationController
 
     respond_to do |format|
       if @game.save
+        cookies[:email_address]={ :value => @game.organizer_address, :expires => 1.year.from_now }
+        cookies[:organizer]={ :value => @game.organizer, :expires => 1.year.from_now }
+        
         flash[:notice] = 'Game update succeeded'
         format.html { redirect_to games_path }
       else
@@ -69,17 +72,24 @@ class GamesController < ApplicationController
   end
 
   def player_status
-    @game_player=GamePlayer.new(:game_id => @game.id)
-    @game_player.email_address=cookies[:email_address]    
-	  @player_statuses=Player::PLAYER_STATUSES
+    player = Player.find_by_email_address cookies[:email_address]
+    @game_player = GamePlayer.where('game_id = ? AND player_id = ?', @game.id, player.try(:id)).first
+    
+    unless @game_player
+      @game_player = GamePlayer.new(:game_id => @game.id)
+      @game_player.current_state = :no_response      
+    end
+
+    @game_player.email_address = cookies[:email_address]    
+	  @player_statuses = Player::PLAYER_STATUSES
   end
   
 	def update_player_status
-	  @player_statuses=Player::PLAYER_STATUSES
-    @game_player=GamePlayer.new(params[:game_player])
-    cookies[:email_address]={ :value => @game_player.email_address, :expires => 1.year.from_now }
+	  @player_statuses = Player::PLAYER_STATUSES
+    @game_player = GamePlayer.new(params[:game_player])
+    cookies[:email_address] = { :value => @game_player.email_address, :expires => 1.year.from_now }
     
-    player=Player.where(:email_address => @game_player.email_address).first
+    player = Player.where(:email_address => @game_player.email_address).first
     
     respond_to do |format|
       unless player

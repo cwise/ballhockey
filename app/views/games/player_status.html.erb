@@ -9,6 +9,25 @@
         return false;
       }
     });
+    
+    $('.icon-clickable').on('click touchstart', function(target) {
+      var email_address = $('#game_player_email_address').val();
+      var player_id = $('#game_player_player_id').val();
+      
+      if(email_address.length < 5) {
+        alert('You must enter a valid email address');
+        $('.icon-clickable').removeClass('selected');
+        return;
+      }
+      
+      if(player_id == null) {
+        alert('Your address was not found. Please enter a valid email address/name.');
+        $('.icon-clickable').removeClass('selected');
+        return;
+      }      
+
+      $('form').submit();
+    });
   });
   </script>
 <% end %>
@@ -22,6 +41,4 @@
     <%= render :partial => 'game_player', :locals => { :game_player => @game_player } %>
   </span>
   <%= f.hidden_field :player_id %>
-  <hr />
-  <%= f.submit 'Update Status' %>
 <% end %>

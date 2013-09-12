@@ -2,41 +2,26 @@
 
 <%= simple_form_for @game, :html => { :novalidate => true } do|f| %>
   <%= error_messages_for 'game' %>
-  <%= f.input :game_date, :as => :string, :input_html => { :class => 'datepicker' } %>
-  <%= f.input :current_state, :collection => @game_statuses, :include_blank => false %>
-  <%= f.input :organizer_address, :label => 'Organizer Email' %>
-  <%= f.input :organizer, :label => 'Organizer Name' %>
-  <%= f.input :message, :input_html => {:rows => 4, :cols => 80} %>
+  <div class='row'>
+    <div class='span3'>
+      <%= f.input :game_date, :as => :string, :input_html => { :class => 'datepicker' } %>
+      <%= f.input :current_state, :collection => @game_statuses, :include_blank => false %>
+    </div>
+    <div class='span3'>
+      <%= f.input :organizer_address, :label => 'Organizer Email' %>
+      <%= f.input :organizer, :label => 'Organizer Name' %>
+    </div>
+    <div class='span3'>
+      <%= f.input :message, :input_html => {:rows => 4, :cols => 80} %>
+    </div>
+  </div>
   
-  <br/>
-  <table id="game_players" class='table table-striped table-condensed'>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Status</th>
-        <th>Assignment</th>
-        <th>Goalie</th>
-      </tr>
-    </thead>
-    <tbody>
-        <%= f.fields_for :game_players, @game.game_players.sort do |gp_form| %>
-        <% game_player=gp_form.object %>
-        <tr>
-          <td>
-            <%= game_player.player.name %>
-            <%= gp_form.hidden_field :player_id %>
-            <%= gp_form.hidden_field :id %>
-          </td>
-          <td>
-            <%= gp_form.hidden_field :current_state %>
-            <%= render :partial => 'game_player', :locals => {:game_player => game_player } %>
-          </td>
-          <td><%= gp_form.select(:equipment_id, options_from_collection_for_select(@equipment, :id, :description, game_player.equipment_id)) %></td>
-          <td><%= gp_form.check_box(:goalie, :checked => game_player.goalie? ? 'checked' : '') %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>  
+  <hr>
+  <div class='row'>
+    <%= render :partial => 'game_player_table', :locals => { :section => 'Playing', :game_players => @game.game_players.select{ |gp| gp.playing? }, :f => f } %>
+    <%= render :partial => 'game_player_table', :locals => { :section => 'No Response', :game_players => @game.game_players.select{ |gp| gp.no_response? }, :f => f } %>
+    <%= render :partial => 'game_player_table', :locals => { :section => 'Not Playing', :game_players => @game.game_players.select{ |gp| gp.not_playing? }, :f => f } %>
+  </div>
   
   <div class="form-actions">
     <%= f.button :submit, :class => 'btn-primary' %>
