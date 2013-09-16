@@ -18,7 +18,7 @@ BallHockey::Application.routes.draw do
     end
     member do
       get :player_status
-      put :update_player_status
+      match :update_player_status, :via => [:put, :post]
     end
   end
   
