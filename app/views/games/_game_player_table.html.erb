@@ -15,7 +15,7 @@
             <%= gp_form.hidden_field :current_state %>
             <%= render :partial => 'game_player', :locals => {:game_player => game_player } %>
             <br>
-            <%= gp_form.select(:equipment_id, options_from_collection_for_select(@equipment, :id, :description, game_player.equipment_id), { :allow_blank => true }) if game_player.playing? %>
+            <%= gp_form.select(:equipment_id, options_from_collection_for_select(@equipment, :id, :description, game_player.equipment_id), { :include_blank => true }) if game_player.playing? %>
           </td>
         </tr>
       <% end %>
