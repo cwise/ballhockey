@@ -1,0 +1,21 @@
+/*
+  =require twitter-bootstrap-static/bootstrap
+
+  Use Font Awesome icons (default)
+  To use Glyphicons sprites instead of Font Awesome, replace with "require twitter-bootstrap-static/sprites"
+  =require twitter-bootstrap-static/fontawesome
+  */
+
+body { 
+	padding-top: 60px;
+	padding-left: 20px;
+}
+
+.icon-clickable {
+  font-size: 2em;
+  color: #A8A8A8;
+}
+
+.icon-remove-circle:hover, .icon-remove-circle.selected { color: red; }
+.icon-ok-circle:hover, .icon-ok-circle.selected { color: green; }
+.icon-time:hover, .icon-time.selected { color: blue; }
