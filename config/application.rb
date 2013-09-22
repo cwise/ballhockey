@@ -16,6 +16,11 @@ module BallHockey
     config.filter_parameters += [:password]    
     config.autoload_paths += %W(#{Rails.root}/lib)
     config.assets.enabled = true
-    config.assets.version = '1.0'        
+    config.assets.version = '1.0'
+    
+    config.assets.precompile += ["fontawesome-webfont.ttf",
+                             "fontawesome-webfont.eot",
+                             "fontawesome-webfont.svg",
+                             "fontawesome-webfont.woff"]            
   end
 end
