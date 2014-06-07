@@ -23,22 +23,22 @@ There are several apps deployed to Heroku.
 			<td>NRCan</td>
 			<td>nrcanhockey</td>
 			<td>nrcanhockey</td>
-			<td>heroku_nrcanhockey</td>
-			<td>git push heroku_nrcanhockey master</td>			
+			<td>heroku-nrcan</td>
+			<td>git push heroku-nrcan master</td>			
 		</tr>
 		<tr>
 			<td>Beech Street</td>
 			<td>beechstreethockey</td>
 			<td>beechstreethockey</td>
-			<td>heroku_beechstreethockey</td>
-			<td>git push heroku_beechstreethockey master</td>			
+			<td>heroku-beech</td>
+			<td>git push heroku-beech master</td>			
 		</tr>		
 		<tr>
 			<td>Winter Hockey</td>
 			<td>winterhockey</td>
 			<td>winterhockey</td>
-			<td>heroku_winterhockey</td>
-			<td>git push heroku_winterhockey master</td>			
+			<td>heroku-winter</td>
+			<td>git push heroku-winter master</td>			
 		</tr>		
 	</tbody>
 </table>
