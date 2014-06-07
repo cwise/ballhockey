@@ -91,7 +91,7 @@ class Game < ActiveRecord::Base
   end
 
   def self.current_game
-    Game.find_by_game_date(Date.today) || Game.not_called.order('game_date').first
+    Game.not_called.order('game_date').first || Game.find_by_game_date(Date.today)
   end
 
   def goalies
