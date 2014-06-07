@@ -91,7 +91,10 @@ class Game < ActiveRecord::Base
   end
 
   def self.current_game
-    Game.not_called.order('game_date').first || Game.find_by_game_date(Date.today)
+    # last uncalled game
+    # or today
+    # or next called future game
+    Game.not_called.order('game_date').first || Game.find_by_game_date(Date.today) || Game.game_on.where('game_date > ?', Date.today).order('game_date').first 
   end
 
   def goalies
