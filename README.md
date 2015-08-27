@@ -13,7 +13,6 @@ There are several apps deployed to Heroku.
 		<tr>
 			<th>Site</th>
 			<th>App Name</th>
-			<th>Local Branch</th>
 			<th>Heroku Remote</th>
 			<th>Deployment Command</th>
 		</tr>
@@ -21,21 +20,18 @@ There are several apps deployed to Heroku.
 	<tbody>
 		<tr>
 			<td>NRCan</td>
-			<td>nrcanhockey</td>
-			<td>nrcanhockey</td>
+			<td>nrcan-hockey</td>
 			<td>heroku-nrcan</td>
 			<td>git push heroku-nrcan master</td>			
 		</tr>
 		<tr>
 			<td>Beech Street</td>
-			<td>beechstreethockey</td>
-			<td>beechstreethockey</td>
+			<td>beechs-hockey</td>
 			<td>heroku-beech</td>
 			<td>git push heroku-beech master</td>			
 		</tr>		
 		<tr>
 			<td>Winter Hockey</td>
-			<td>winterhockey</td>
 			<td>winterhockey</td>
 			<td>heroku-winter</td>
 			<td>git push heroku-winter master</td>			

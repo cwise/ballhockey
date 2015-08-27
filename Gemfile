@@ -1,8 +1,8 @@
 source 'http://rubygems.org'
 
-ruby '1.9.3'
+ruby '2.0.0'
 
-gem 'rails', '3.2.13'
+gem 'rails', '3.2.19'
 gem 'aasm'
 gem 'bootstrap-kaminari-views'
 gem 'dynamic_form'
@@ -21,6 +21,10 @@ gem 'unicorn'
 gem "rspec-rails", :group => [:test, :development]
 group :test do
   gem "factory_girl_rails"
+end
+
+group :production do
+  gem 'rails_12factor'
 end
 
 group :assets do
