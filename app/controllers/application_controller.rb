@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
   end
   
   def admin?
-    session[:password]=='playhockey'
+    session[:password]==ENV['PASSWORD']
   end
   helper_method :admin?
 

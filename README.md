@@ -26,7 +26,7 @@ There are several apps deployed to Heroku.
 		</tr>
 		<tr>
 			<td>Beech Street</td>
-			<td>beechs-hockey</td>
+			<td>beech-hockey</td>
 			<td>heroku-beech</td>
 			<td>git push heroku-beech master</td>			
 		</tr>		
