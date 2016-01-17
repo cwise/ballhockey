@@ -5,25 +5,25 @@ class HockeyMailer < ActionMailer::Base
   def announce_game game_id
     load_game game_id
     uniq_args({ :type => 'game', :id => @game.id })    
-    mail base_options.merge({ :subject => "#{ENV['LEAGUE_NAME']} Ball Hockey Game for #{@game.game_date}?"})
+    mail base_options.merge({ :subject => "[#{ENV['LEAGUE_NAME']}] #{ENV['SPORT']} Game for #{@game.game_date}?"})
   end
 
   def update_game game_id
     load_game game_id
     uniq_args({ :type => 'game', :id => @game.id })    
-    mail base_options.merge({ :subject => "#{ENV['LEAGUE_NAME']} Ball Hockey Game Update for #{@game.game_date}"})
+    mail base_options.merge({ :subject => "[#{ENV['LEAGUE_NAME']}] #{ENV['SPORT']} Game Update for #{@game.game_date}"})
   end
 
   def call_game game_id
     load_game game_id
     uniq_args({ :type => 'game', :id => @game.id })    
-    mail base_options.merge({ :subject => "#{ENV['LEAGUE_NAME']} Ball Hockey Game for #{@game.game_date}: Game ON!"})
+    mail base_options.merge({ :subject => "[#{ENV['LEAGUE_NAME']}] #{ENV['SPORT']} Game for #{@game.game_date}: Game ON!"})
   end
 
   def cancel_game game_id
     load_game game_id
     uniq_args({ :type => 'game', :id => @game.id })    
-    mail base_options.merge({ :subject => "#{ENV['LEAGUE_NAME']} Ball Hockey Game for #{@game.game_date}: Game Cancelled"})
+    mail base_options.merge({ :subject => "[#{ENV['LEAGUE_NAME']}] #{ENV['SPORT']} Game for #{@game.game_date}: Game Cancelled"})
   end
   
   def test to
