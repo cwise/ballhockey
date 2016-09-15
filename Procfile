@@ -1,2 +1,2 @@
-web: bundle exec unicorn -p $PORT -E $RACK_ENV
+web: bundle exec puma -C config/puma.rb
 all_worker: QUEUE=* bundle exec rake resque:work
