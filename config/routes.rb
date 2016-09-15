@@ -9,6 +9,9 @@ BallHockey::Application.routes.draw do
       get :on_deck
       get :search
     end
+    member do
+      put :clear_unsubscribe
+    end
   end
   
   resources :games do

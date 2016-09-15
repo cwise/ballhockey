@@ -1,9 +1,10 @@
 class PlayersController < ApplicationController  
   before_filter :admin_required, :except => [:summary, :on_deck, :search]
-  before_filter :load_player, :only => [:show, :edit, :update, :destroy]
+  before_filter :load_player, :only => [:show, :edit, :update, :destroy, :clear_unsubscribe]
   
   def index
-    @players=Player.order(:name).page(params[:page]).per(20)
+    @unsubscribes = SendGridUtility.get_unsubscribes
+    @players = Player.order(:name).page(params[:page]).per(20)
     respond_to do |format|
       format.html
     end
@@ -19,6 +20,12 @@ class PlayersController < ApplicationController
   
   def new
     @player=Player.new
+  end
+
+  def clear_unsubscribe
+    SendGridUtility.clear_unsubscribe @player.email_address
+    flash[:notice] = 'Clear unsubscribe succeeded'
+    redirect_to :back
   end
   
   def create

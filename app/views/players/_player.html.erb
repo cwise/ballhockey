@@ -1,11 +1,21 @@
+<% unsubscribed = @unsubscribes.detect{ |u| u["email"].downcase==player.email_address.downcase } %>
+
 <tr>
   <td><%= link_to player.name, player %></td>
   <td><%= player.email_address %></td>
   <td style='text-align:center'><%= content_tag :span, player.active_desc, :class => "badge badge-#{player.bs_state}" %></td>
+  <td style='text-align:center'>
+    <%= content_tag(:span, 'unsubscribed', :class => "badge badge-important") if unsubscribed %>
+  </td>
   <td>
     <%= link_to 'Edit', edit_player_path(player), :class => 'btn btn-mini' %>
     <% if player.can_delete? %>
       <%= link_to 'Delete', player_path(player), :method => :delete, :confirm => 'Do you really want to delete this player?', :class => 'btn btn-mini btn-danger' %>
     <% end %>
+
+    <% if unsubscribed %>
+      <%= link_to 'Clear Unsubscribe', clear_unsubscribe_player_path(player), :method => :put, :confirm => 'Do you really want to clear the unsubscribe on this player?', :class => 'btn btn-mini btn-danger' %>
+    <% end %>
+
   </td>
 </tr>
