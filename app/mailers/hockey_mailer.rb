@@ -4,25 +4,21 @@ class HockeyMailer < ActionMailer::Base
   
   def announce_game game_id
     load_game game_id
-    uniq_args({ :type => 'game', :id => @game.id })    
     mail base_options.merge({ :subject => "[#{ENV['LEAGUE_NAME']}] #{ENV['SPORT']} Game for #{@game.game_date}?"})
   end
 
   def update_game game_id
     load_game game_id
-    uniq_args({ :type => 'game', :id => @game.id })    
     mail base_options.merge({ :subject => "[#{ENV['LEAGUE_NAME']}] #{ENV['SPORT']} Game Update for #{@game.game_date}"})
   end
 
   def call_game game_id
     load_game game_id
-    uniq_args({ :type => 'game', :id => @game.id })    
     mail base_options.merge({ :subject => "[#{ENV['LEAGUE_NAME']}] #{ENV['SPORT']} Game for #{@game.game_date}: Game ON!"})
   end
 
   def cancel_game game_id
     load_game game_id
-    uniq_args({ :type => 'game', :id => @game.id })    
     mail base_options.merge({ :subject => "[#{ENV['LEAGUE_NAME']}] #{ENV['SPORT']} Game for #{@game.game_date}: Game Cancelled"})
   end
   
@@ -37,5 +33,6 @@ class HockeyMailer < ActionMailer::Base
   
   def load_game game_id
     @game = Game.find game_id
+#    uniq_args({ :type => 'game', :id => @game.id })    
   end
 end
