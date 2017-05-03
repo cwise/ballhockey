@@ -1,8 +1,8 @@
 source 'http://rubygems.org'
 
-ruby '2.3.1'
+ruby '2.3.3'
 
-gem 'rails', '3.2.19'
+gem 'rails', '3.2.22.5'
 gem 'aasm'
 gem 'bootstrap-kaminari-views'
 gem 'dynamic_form'
@@ -11,7 +11,6 @@ gem 'kaminari'
 gem 'pg'
 gem 'resque'
 gem 'resque_mailer'
-#gem 'sendgrid-rails'
 gem 'sendgrid-ruby'
 gem 'simple_form'
 gem 'show_for'
