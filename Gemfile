@@ -14,13 +14,13 @@ gem 'resque_mailer'
 gem 'sendgrid-ruby'
 gem 'simple_form'
 gem 'show_for'
-gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+gem 'twitter-bootstrap-rails', github: 'seyhunak/twitter-bootstrap-rails'
 gem 'puma'
+gem 'test-unit'
 
-gem "rspec-rails", :group => [:test, :development]
 group :test do
-  gem "factory_girl_rails"
-  gem 'test-unit'
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
 end
 
 group :production do
